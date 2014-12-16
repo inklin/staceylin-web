@@ -1,28 +1,49 @@
-<style>
-
-/* Introduction */
-header {}
-
-/* Welcome message */
-.welcome {
-	color: blue;
+/* Apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
-/* Today's Work */
+body {
+	color: black;
+	font-family: Helvetica, Arial;
+	font-weight: 350;
+	font-size: 20px;
+}
+
+header {
+	text-align: left;
+	font-family: Arial;
+	font-size: 25px;
+	font-weight: 500;
+	color: #0BE0D2;
+	margin-left: 20px;
+	margin-top: 40px;
+}
+
+h2 {
+	font-family: Helvetica;
+	text-transform: lowercase;
+	color: #2980b9;
+	font-size: 20px;
+}
+
+.intro {
+	margin-left: 20px;
+}
 
 .today {
-	color: red;
+	padding: 20px;
+	text-align: center;
 }
 
-/* Contact me */
 .contact {
-	color: green;
+	padding-left: 20px;
 }
-
-/* List of Completed Work */
 
 .complete {
-	color: yellow;
+	padding-left: 20px;
 }
-
 </style>
