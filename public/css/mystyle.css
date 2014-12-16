@@ -1,0 +1,28 @@
+<style>
+
+/* Introduction */
+header {}
+
+/* Welcome message */
+.welcome {
+	color: blue;
+}
+
+/* Today's Work */
+
+.today {
+	color: red;
+}
+
+/* Contact me */
+.contact {
+	color: green;
+}
+
+/* List of Completed Work */
+
+.complete {
+	color: yellow;
+}
+
+</style>
