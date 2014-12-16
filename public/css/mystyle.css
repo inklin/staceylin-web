@@ -7,26 +7,32 @@ html {
 }
 
 body {
-	color: black;
+	color: #505756;
 	font-family: Helvetica, Arial;
 	font-weight: 350;
-	font-size: 20px;
+	font-size: 23px;
 }
 
 header {
 	text-align: left;
 	font-family: Arial;
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: 500;
-	color: #0BE0D2;
+	color: #0ABAB5;
 	margin-left: 20px;
 	margin-top: 40px;
 }
 
 h2 {
 	font-family: Helvetica;
-	text-transform: lowercase;
-	color: #2980b9;
+	color: orange;
+	font-size: 25px;
+}
+
+h3 {
+	font-family: Helvetica;
+	text-transform: uppercase;
+	color: orange;
 	font-size: 20px;
 }
 
@@ -45,5 +51,7 @@ h2 {
 
 .complete {
 	padding-left: 20px;
+	font-family: Helvetica;
+	font-size: 20px;
 }
 </style>
