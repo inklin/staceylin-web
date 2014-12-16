@@ -1,0 +1,32 @@
+h1 {
+  font-family: Helvetica;
+  padding: 5px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 50px;
+}
+
+.intro {
+  font-family: Arial;
+  padding: 30px;
+  text-align: center;
+}
+
+.cookie {
+  text-align: center;
+}
+
+.instruction {
+}
+
+.eat {
+}
+
+.fortune {
+  font-size: 30px;
+  font-family: Helvetica;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

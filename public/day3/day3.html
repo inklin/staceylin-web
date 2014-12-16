@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Day 3: The Fortune Cookie</title>
+  <script type="text/javascript" src="day3.js"></script>
+  <link rel="stylesheet" type="text/css" href="day3.css">
+  </head>
+
+<body>
+  <!-- This is the title -->
+  <div class="intro">
+  <h1>Welcome to Happy Panda Restaurant</h1>
+  <p>Here's a fortune cookie for you.</p>
+  </div>
+  <!-- The cookie picture -->
+  <div class="cookie">
+    <img src="cookie.png" width=500>
+  </div>
+
+  <div class="instruction">
+    <p>Eat the cookie to get your fortune!</p>
+  </div>
+
+  <div class="eat">
+    <input type="button" id="nom" onclick="getfortune()" value="Nom Nom"></input>
+  </div>
+  
+  <div id="fortune" class="fortune">
+  </div>
+
+  </body>
+</html>
