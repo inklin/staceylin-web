@@ -1,7 +1,10 @@
+body {
+  text-align: center;
+  }
+
 h1 {
   font-family: Helvetica;
   padding-top: 25px;
-  text-align: center;
   font-weight: 600;
   font-size: 50px;
 }
@@ -11,17 +14,14 @@ h1 {
   font-weight: 500;
   padding-bottom: 15px;
   font-size: 20px;
-  text-align: center;
   color: orange;
 }
 
 .cookie {
-  text-align: center;
-  padding: 20px;
+  padding: 25px;
 }
 
 .eat {
-  text-align: center;
   padding: 20px;
 }
 
@@ -36,14 +36,12 @@ input {
 
 .fortune {
   padding-top: 10px;
-  text-align: center;
   font-family: Arial;
   font-size: 25px;
   font-weight: 200;
 }
 
 .eaten {
-  text-align: center;
   font-family: Helvetica;
   font-size: 20px;
 }
