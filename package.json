@@ -1,0 +1,13 @@
+{
+  "name": "staceylin-web",
+  "description": "Stacey Learns to Code",
+  "author": "Stacey Lin",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "node-static": "0.7.x"
+  },
+  "engine": "node 0.10.x"
+}
