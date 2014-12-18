@@ -1,0 +1,28 @@
+.monster {
+  visibility: hidden;
+}
+
+#eyeball {
+  visibility: hidden;
+}
+
+.video {
+  visibility: hidden;
+}
+
+.story {
+  font-family: Arial;
+  font-size: 35px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+#switch {
+  position: absolute;
+  right: 150px;
+  top: 200px;
+  border: none;
+  background: none;
+  outline: 0;
+}
+
