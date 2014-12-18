@@ -29,7 +29,7 @@ body {
 #clockDate {
   margin: auto;
   position: absolute;
-  top: -100; left: 0; bottom: 0; right: 0;
+  top: -150; left: 0; bottom: 0; right: 0;
   padding-top: 0px;
   height: 50px;
   width: 800px;
