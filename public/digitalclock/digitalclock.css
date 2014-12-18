@@ -1,0 +1,44 @@
+body {
+  background-color: #E6005C;
+  color: white;
+  font-family: courier;
+    text-align: center;
+}
+
+#clockTime {
+    height: 100px;
+    width: 800px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding-top: 100px;
+    font-size: 100px;
+}
+
+#clockDay {
+  margin: auto;
+  position: absolute;
+  top: -500; left: 0; bottom: 0; right: 0;
+  padding-top: 0px;
+  height: 50px;
+  width: 800px;
+  font-size: 150px;
+  text-transform: uppercase;
+}
+
+#clockDate {
+  margin: auto;
+  position: absolute;
+  top: -100; left: 0; bottom: 0; right: 0;
+  padding-top: 0px;
+  height: 50px;
+  width: 800px;
+  font-size: 50px;
+}
+
+footer {
+  background-color: white;
+  width: 200px;
+  padding: 10px;
+  letter-spacing: 5px;
+}
