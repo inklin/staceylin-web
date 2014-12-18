@@ -7,23 +7,27 @@
 <body>
 
   <div id="story" class="story">
-    <p>Hey! It's too bright in here! I'm trying to sleep! Lights off, please.</p>
+    Hey! It's too bright in here! I'm trying to sleep! Lights off, please.
   </div>
 
   <div id="lightswitch" class="lightswitch">
-    <button type="button" id="switch" onclick="lights()"><img src="switch.png" id="switchimage"></button>
+    <button type="button" id="switch" onclick="lights()"><img src="switch.png"></button>
   </div>
 
-  <div id="monster" class="monster">
-    <img src="monster1.png" width = 300 onclick="disappear()">
-  </div>
+  <img id="monster" src="monster1.png" width = 300 onclick="disappear()">
 
-  <div id="eye" class="eye">
-    <img id="eyeball" src="eyeball.png">
-  </div>
+  <img id="eyeball" src="eyeball.png">
 
   <div id="video" class="video">
-    <iframe width="560" height="315" src="http://www.youtube.com/embed/FUQhNGEu2KA" frameborder="0" allowfullscreen></iframe>
+    <iframe width="600" height="350" src="http://www.youtube.com/embed/FUQhNGEu2KA" frameborder="0" allowfullscreen></iframe>
   </div>
+
+  <div id="tip" class="tip">
+    <p>(Psst, watch it with the lights off!)</p>
+  </div>
+  <footer>
+    <a href="index.html" id="box1">Home</a>
+    <a href="staceylin.wordpress.com" id="box2">Blog</a>
+  </footer>
   </body>
 </html>

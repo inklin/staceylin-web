@@ -35,8 +35,9 @@ function lights(){
 
 function disappear(){
   document.getElementById('monster').style.visibility = 'hidden';
-  document.getElementById('story').innerHTML = "Inspired by Lights Off, a short film. <br> (Psst, watch it with the lights off!)";
+  document.getElementById('story').innerHTML = "Oops! Looks like you weren't fast enough...<br><h2>Inspired by Lights Off, a short film.";
   document.getElementById('video').style.visibility = 'visible';
+  document.getElementById('tip').style.visibility = 'visible';
 }
 
 function togglelights(status){

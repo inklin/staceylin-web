@@ -1,4 +1,4 @@
-.monster {
+#monster {
   visibility: hidden;
 }
 
@@ -8,13 +8,27 @@
 
 .video {
   visibility: hidden;
+  position: absolute;
+  left: 550px;
+  top: 250px;
+}
+
+body {
+  font-family: "Comic Sans MS";
+}
+.tip {
+  visibility: hidden;
+  color: black;
+  position: absolute;
+  left: 600px;
+  top: 600px;
+  font-size: 25px;
 }
 
 .story {
-  font-family: Arial;
-  font-size: 35px;
   padding-top: 50px;
   text-align: center;
+  font-size: 35px;
 }
 
 #switch {
@@ -26,3 +40,40 @@
   outline: 0;
 }
 
+#monster {
+  position: absolute;
+  left: 350px;
+  top: 250px;
+}
+
+#eyeball {
+  position: absolute;
+  left: 450px;
+  top: 300px;
+  width: 100px;
+}
+
+
+h2 {
+  font-family: Helvetica;
+  font-size: 40px;
+  padding: 10px;
+  color: orange;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+footer {
+  position: absolute;
+  top: 0;
+  padding: 20px 40px;
+  background-color: #F2F0D0;
+}
+
+footer a:link {
+  color: gray;
+  letter-spacing: 2px;
+  padding: 10px;
+}
