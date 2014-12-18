@@ -6,20 +6,32 @@
   visibility: hidden;
 }
 
-.video {
-  visibility: hidden;
+#switch {
   position: absolute;
-  left: 550px;
-  top: 250px;
+  right: 150px;
+  top: 200px;
+  border: none;
+  background: none;
+  outline: 0;
+  z-index: 3;
+}
+
+.video {
+  width: 650px;
+  margin: 0 auto;
+  visibility: hidden;
+  z-index: 5;
 }
 
 body {
   font-family: "Comic Sans MS";
+  min-width: 800px;
 }
+
 .tip {
   visibility: hidden;
   color: black;
-  position: absolute;
+  text-align: center;
   left: 600px;
   top: 600px;
   font-size: 25px;
@@ -29,15 +41,6 @@ body {
   padding-top: 50px;
   text-align: center;
   font-size: 35px;
-}
-
-#switch {
-  position: absolute;
-  right: 150px;
-  top: 200px;
-  border: none;
-  background: none;
-  outline: 0;
 }
 
 #monster {
