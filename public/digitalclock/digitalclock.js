@@ -58,6 +58,7 @@ $(document).ready(function() {
     dayDiv.innerText = day;
   }
 
+  showTime();
   showDate();
   showDay();
   setInterval(showTime, 1000);
