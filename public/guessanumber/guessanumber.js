@@ -3,6 +3,9 @@ var x = Math.floor((Math.random() * 100) + 1);
 var turns = 5;
 
 function guessNumber() {
+  if (document.getElementById("guess").value === '') {
+    return;
+  }
   var guess = parseInt(document.getElementById("guess").value);
   if (guess === x) {
     document.getElementById("result").innerHTML = "You win! " + guess + " is the answer!";
@@ -30,11 +33,12 @@ function guessNumber() {
 }
 
 function playAgain() {
-  turns = 5;
-  x = Math.floor((Math.random() * 100) + 1);
-  document.getElementById("userguess").style.visibility = 'visible';
-  document.getElementById("turns").innerHTML = "You have 5 guesses. Good luck!";
-  document.getElementById("playagain").style.visibility = 'hidden';
+  turns = 5;
+  x = Math.floor((Math.random() * 100) + 1);
+  document.getElementById("userguess").style.visibility = 'visible';
+  document.getElementById("turns").innerHTML = "You have 5 guesses. Good luck!";
+  document.getElementById("playagain").style.visibility = 'hidden';
+  document.getElementById("guess").value = ""
 }
 
 
