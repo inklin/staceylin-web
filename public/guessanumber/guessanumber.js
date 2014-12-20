@@ -5,7 +5,7 @@ var turns = 5;
 function guessNumber() {
   var guess = parseInt(document.getElementById("guess").value);
   if (guess === x) {
-    document.getElementById("result").innerHTML = "You win! " + guess + "is the answer!";
+    document.getElementById("result").innerHTML = "You win! " + guess + " is the answer!";
     document.getElementById("userguess").style.visibility = 'hidden';
     document.getElementById("playagain").style.visibility = 'visible';
     turns = 0; 

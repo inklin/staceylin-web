@@ -41,7 +41,7 @@ body {
 #result {
   height: 100px;
   position: fixed;
-  top: 400px;
+  top: 500px;
   font-size: 30px;
   width: 100%;
 }
@@ -65,7 +65,7 @@ input[type=submit] {
   cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px; 
-  font-size: 35px;
+  font-size: 30px;
   position: fixed;
   left: 900;
 }
