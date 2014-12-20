@@ -5,28 +5,28 @@
   <script type="text/javascript" src="guessanumber.js"></script>
   </head>
 <body>
-  <div id="question">
-    <h1>Guess a number from 1 to 100</h1>
-  </div>
+    <div class="container">
+      <h1>Guess a number from 1 to 100</h1>
+      <p id="turns">You have 5 guesses. Good luck!</p>
 
-  <div id="turns">
-  You have 5 guesses. Good luck!
-  </div>
+      <div id="userguess" class="userguess">
+        <input type="text" id="guess" placeholder="Enter your guess">
+        <input type="submit" id="guessbutton" value="Guess!" onclick="guessNumber()">
+      </div>
 
-  <div id="userguess" class="userguess">
-  <input type="text" id="guess" placeholder="Enter your # here"><input type="submit" id="guessbutton" value="Guess!" onclick="guessNumber()">
-  </div>
+      <p id="result" class="result"></p>
 
-  <div id="result" class="result">
-  </div>
+      <div id="playagain" class="playagain">
+        <img src="http://placecorgi.com/390/270" />
+        <br />
+        <input type="button" id="play" onclick="playAgain()" value="Play Again">
+      </div>
+    </div>
 
-  <div class="playagain" id="playagain">
-    <input type="button" id="play" onclick="playAgain()" value="Play Again">
-  </div>
-
-  <footer>
-    <a href="/" id="box1">Home</a>
-    <a href="staceylin.wordpress.com" id="box2">Blog</a>
-  </footer>
+    <div class="navigation">
+      <a href="/" id="box1">Home</a>
+      <a href="staceylin.wordpress.com" id="box2">Blog</a>
+    </div>
+  
   </body>
 </html>
