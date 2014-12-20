@@ -1,0 +1,26 @@
+.playagain {
+  visibility: hidden;
+}
+
+body {
+  font-family: "Optima", "Tahoma";
+  text-align: left;
+  background-color: #00FFFF;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+}
+
+h1 {
+  padding-top: 20px;
+  font-size: 60px;
+}
+
+#guessbutton {
+  font-family: Arial;
+  font-size: 20px;
+}
+
+#guess {
+
+}

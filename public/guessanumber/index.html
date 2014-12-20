@@ -6,7 +6,7 @@
   </head>
 <body>
   <div id="question">
-    <h1>Guess a number from 0 to 99!</h1>
+    <h1>Guess a number from 1 to 100</h1>
   </div>
 
   <div id="turns">
@@ -17,7 +17,11 @@
       <input type="text" id="guess"><input type="submit" value="Guess!" onclick="guessNumber()">
   </div>
 
-  <div id="answer">
+  <div id="result">
+  </div>
+
+  <div class="playagain" id="playagain">
+    <input type="button" id="play" onclick="playAgain()" value="Play Again">
   </div>
 
   <footer>
