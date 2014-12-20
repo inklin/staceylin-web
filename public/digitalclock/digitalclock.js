@@ -51,7 +51,7 @@ $(document).ready(function() {
     var currentDay = new Date();
     var day = currentDay.getDay();
 
-    var dayName = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    var dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     day = dayName[day];
 
     var dayDiv = document.getElementById('clockDay');
