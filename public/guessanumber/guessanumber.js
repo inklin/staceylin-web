@@ -12,10 +12,10 @@ function guessNumber() {
     document.getElementById("turns").innerHTML = "You have 0 guesses left.";
   } else {
     if (guess < x) {
-      document.getElementById("result").innerHTML = "Sorry! " + guess + " is too small!";
+      document.getElementById("result").innerHTML = "Sorry, " + guess + " is too small!";
     }
     if (guess > x) {
-      document.getElementById("result").innerHTML = "Sorry! " + guess + " is too big!";
+      document.getElementById("result").innerHTML = "Sorry, " + guess + " is too big!";
     }
     turns = turns - 1;
     document.getElementById("turns").innerHTML = "You have " + turns + " guesses left.";
