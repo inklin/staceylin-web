@@ -4,23 +4,57 @@
 
 body {
   font-family: "Optima", "Tahoma";
-  text-align: left;
-  background-color: #00FFFF;
+  text-align: center;
+  background-color: white;
+}
+
+#question {
+  padding: 30px;
+  font-family: "Andale Mono";
+  font-size: 25px;
+  font-weight: bold;
+  color: #02026d;
+  text-shadow: -1px 1px 0px rgba(60,0,0,0.2);
+  background-color: #ECF6CE;
   position: fixed;
-  top: 5%;
-  left: 5%;
+  top: 50px;
+  width: 100%;
 }
 
-h1 {
-  padding-top: 20px;
-  font-size: 60px;
+#turns {
+  font-size: 30px;
+  padding-top: 30px;
+  height: 50px;
+  position: fixed;
+  top: 250px;
+  width: 100%;
 }
 
-#guessbutton {
-  font-family: Arial;
+#userguess {
+  padding-top: 0px;
+  position: fixed;
+  top: 350px;
+  width: 100%;
+  text-align: center;
+}
+
+#result {
+  height: 100px;
+  position: fixed;
+  top: 400px;
+  font-size: 30px;
+  width: 100%;
+}
+
+footer {
+  background-color: #FE2E64;
   font-size: 20px;
-}
-
-#guess {
-
+  height: 100%;
+  width: 150px;
+  padding: 5px;
+  letter-spacing: 3px;
+  position: fixed;
+  left: 50px;
+  top: 0px;
+  opacity: 0.7;
 }
