@@ -44,8 +44,8 @@ input[type=radio]{
 }
 
 .drink {
-  width: 400px;
-  height: 450px;
+  width: 350px;
+  height: 400px;
   background-size: contain;
   background-repeat: no-repeat;
 }
