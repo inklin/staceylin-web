@@ -1,10 +1,11 @@
 body {
+  font-family: Helvetica;
 }
 
-.food {
+.eggs, .meat, .carbs, .drink{
   display: none;
 }
 
-#hungry {
+.plate {
   display: none;
 }

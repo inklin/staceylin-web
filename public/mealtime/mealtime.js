@@ -8,19 +8,20 @@ $(document).ready(function(){
       var carbs = $("input[name=carbs]:checked").val();
       var drink = $("input[name=drink]:checked").val();
 
+      $("#plate").show();
       $("#" + eggs).show();
       $("#" + meat).show();
       $("#" + carbs).show();
       $("#" + drink).show();
       $("#menu").hide();
-      $("#hungry").show();
+     /* $("#hungry").show();*/ 
     });
 
-    $("#hungry").click(function newMeal(){
+   /* $("#hungry").click(function newMeal(){
       console.log("test");
       $("input:radio").attr("checked", false);
       $("#menu").show();
       $("#meal").hide();
       $("#hungry").hide();
-    })
+    })*/ 
 });
