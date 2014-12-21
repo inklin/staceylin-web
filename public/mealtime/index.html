@@ -14,61 +14,69 @@
       <a href="staceylin.wordpress.com">Blog</a>
     </div>
 
-    <div class="menu" id="menu">
-      <p>How do you like your eggs?</p>
-      <input type="radio" name="eggs" value="boiled" />Boiled
-      <input type="radio" name="eggs" value="sunny" />Sunny side up
-      <input type="radio" name="eggs" value="painted" />Painted
-      <input type="radio" name="eggs" value="green" />Green
+    <div class="container">
+
+      <h1>Choose your Meal</h1> 
+
+      <div class="menu" id="menu">
+        <p>1. How do you like your eggs?</p>
+        <input type="radio" name="eggs" value="boiled" />Boiled
+        <input type="radio" name="eggs" value="sunny" />Sunny side up
+        <input type="radio" name="eggs" value="painted" />Painted
+        <input type="radio" name="eggs" value="green" />Green
 
 
-      <p>Choose your meat!</p>
-      <input type="radio" name="meat" value="bacon" />Bacon
-      <input type="radio" name="meat" value="sausage" />Sausage
-      <input type="radio" name="meat" value="drumstick" />Drumstick
-      <input type="radio" name="meat" value="vegetable" />No meat! Vegetables, please.
+        <p>2. Give me meat!</p>
+        <input type="radio" name="meat" value="bacon" />Bacon
+        <input type="radio" name="meat" value="sausage" />Sausage
+        <input type="radio" name="meat" value="drumstick" />Drumstick
+        <input type="radio" name="meat" value="vegetable" />No meat! Vegetables, please.
 
 
 
-      <p>What carbs would you like to consume?</p>
-      <input type="radio" name="carbs" value="pancakes" />Pancakes
-      <input type="radio" name="carbs" value="waffles" />Waffles
-      <input type="radio" name="carbs" value="fries" />Fries
-      <input type="radio" name="carbs" value="bread" />Bread
+        <p>3. Choose a carb source. </p>
+        <input type="radio" name="carbs" value="pancakes" />Pancakes
+        <input type="radio" name="carbs" value="waffles" />Waffles
+        <input type="radio" name="carbs" value="fries" />Fries
+        <input type="radio" name="carbs" value="bread" />Bread
 
 
-      <p>What would you like to drink?</p>
-      <input type="radio" name="drink" value="orange" />Orange juice
-      <input type="radio" name="drink" value="coffee" />Coffee
-      <input type="radio" name="drink" value="milk" />Milk
-      <input type="radio" name="drink" value="bbtea" />Bubbletea
+        <p>4. Pick a drink. </p>
+        <input type="radio" name="drink" value="orange" />Orange juice
+        <input type="radio" name="drink" value="coffee" />Coffee
+        <input type="radio" name="drink" value="milk" />Milk
+        <input type="radio" name="drink" value="beer" />Beer
+        <br>
+        <button id="submit">Feed Me!</button>
+      </div>
 
 
-      <button id="submit">Feed Me!</button>
-    </div>
 
-    <div class="meal" id="meal">
-      <img src="boiled.png" id="boiled" class="eggs">
-      <img src="painted.png" id="painted" class="eggs">
-      <img src="sunny.png" id="sunny" class="eggs">
-      <img src="green.png" id="green" class="eggs">
+      <div class="meal" id="meal">
+        <div class="glass">
+          <div id="orange" class="drink" style="background-image: url('orange.png')"></div>
+          <div id="coffee" class="drink" style="background-image: url('coffee.png')"></div>
+          <div id="milk" class="drink" style="background-image: url('milk.png')"></div>
+          <div id="beer" class="drink" style="background-image: url('beer.png')"></div>
+        </div>
 
-      <img src="bacon.png" id="bacon" class="meat">
-      <img src="sausage.png" id="sausage" class="meat">
-      <img src="drumstick.png" id="drumstick" class="meat">
-      <img src="vegetable.png" id="vegetable" class="meat">
+        <div class="plate">
+          <div id="boiled" class="plate-item egg" style="background-image: url('boiled.png')"></div>
+          <div id="painted" class="plate-item egg" style="background-image: url('painted.png')"></div>
+          <div id="sunny" class="plate-item egg" style="background-image: url('sunny.png')"></div>
+          <div id="greeen" class="plate-item egg" style="background-image: url('green.png')"></div>
 
-      <img src="pancakes.png" id="pancakes" class="carbs">
-      <img src="waffles.png" id="waffles" class="carbs">
-      <img src="fries.png" id="fries" class="carbs">
-      <img src="bread.png" id="bread" class="carbs">
-
-      <img src="orange.png" id="orange" class="drink">
-      <img src="coffee.png" id="coffee" class="drink">
-      <img src="milk.png" id="milk" class="drink">
-      <img src="bbtea.png" id="bbtea" class="drink">
-
-    <img src="plate.png" id="plate" class="plate">
+          <div id="bacon" class="plate-item meat" style="background-image: url('bacon.png')"></div>
+          <div id="sausage" class="plate-item meat" style="background-image: url('sausage.png')"></div>
+          <div id="drumstick" class="plate-item meat" style="background-image: url('drumstick.png')"></div>
+          <div id="vegetable" class="plate-item meat" style="background-image: url('vegetable.png')"></div>
+          
+          <div id="pancakes" class="plate-item carbs" style="background-image: url('pancakes.png')"></div>
+          <div id="waffles" class="plate-item carbs" style="background-image: url('waffles.png')"></div>
+          <div id="fries" class="plate-item carbs" style="background-image: url('fries.png')"></div>
+          <div id="bread" class="plate-item carbs" style="background-image: url('bread.png')"></div>
+        </div>
+      </div>
     </div>
 
     <!-- Google Analytics -->

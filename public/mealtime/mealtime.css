@@ -1,11 +1,74 @@
 body {
-  font-family: Helvetica;
+  font-family: "courier";
+  background-color: #FFFFCC;
+  font-size: 25px;
+  padding: 20px;
+  color: #29293D;
 }
 
-.eggs, .meat, .carbs, .drink{
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #800000;
+}
+
+input[type=radio]{
+  margin: 25px;
+}
+
+.container {
+  min-width: 1024px;
+}
+
+#submit {
+  font-size: 30px;
+  position: absolute;
+  left: 50%;
+  background-color: #29293D;
+  color: white;
+  border: 2px solid #29293D;
+}
+
+#meal {
   display: none;
+}
+
+.egg, .meat, .carbs, .drink {
+  display: none;
+}
+
+.glass {
+  width: 400px;
+  margin-left: 100px;
+  float: left;
+}
+
+.drink {
+  width: 400px;
+  height: 450px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .plate {
-  display: none;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 100px;
+  background-image: url("plate.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.plate-item {  
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.plate-item.carbs {
+  margin-left: 150px;
 }
