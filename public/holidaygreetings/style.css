@@ -1,0 +1,103 @@
+body {
+  font-family: Arial;
+}
+
+.navigation {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  font-size: 30px;
+  padding: 20px;
+}
+
+a:link {
+  color: #FF1919;
+}
+
+a:hover {
+  color: #003300;
+}
+
+a:visited {
+  color: #000000;
+}
+
+#instruction {
+  position: fixed;
+  top: 300px;
+  right: 350px;
+  font-size: 35px;
+}
+
+#fixed-scene {
+  background-color: blue;
+  position: fixed;
+  top: 100px;
+  width: 1500px;
+  height: 1000px;
+  background-image: url("background.jpg");
+}
+
+#float-scene {
+  position: absolute;
+  top: 1500px;
+  height: 1000px;
+  width: 1000px;
+  color: white;
+  font-size: 50px;
+}
+
+#greeting {
+  position: absolute;
+  top: 0px;
+  left: 500px;
+  font-size: 50px;
+}
+
+
+#tree {
+  width: 450px;
+  padding-top: 300px;
+  padding-left: 100px;
+}
+
+#present1 { 
+  width: 200px;
+  position: absolute; 
+  bottom: 70px; 
+  left: 480px;
+}
+
+#present2 {
+  width: 200px;
+  position: absolute;
+  bottom: 70px;
+  left: 380px;
+}
+
+#wreath {
+  width: 200px;
+  position: absolute;
+  left: 220px;
+  bottom: 420px;
+}
+
+#candy {
+  width: 100px;
+  position: absolute;
+  left: 220px;
+  bottom: 260px;
+}
+
+#candy2 {
+  width: 70px;
+  position: absolute;
+  left: 350px;
+  bottom: 350px;
+}
+
+#owl {
+  position: absolute;
+  left: 800px;
+  bottom: 100px;
+}
