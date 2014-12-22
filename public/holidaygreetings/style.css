@@ -24,9 +24,16 @@ a:visited {
 
 #instruction {
   position: fixed;
-  top: 300px;
-  right: 350px;
+  top: 30px;
+  left: 350px;
   font-size: 35px;
+}
+
+#snowflake {
+  position: fixed;
+  left: 0px;
+  opacity: 0.3;
+  width: 80px;
 }
 
 #fixed-scene {
