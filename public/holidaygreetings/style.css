@@ -29,13 +29,6 @@ a:visited {
   font-size: 35px;
 }
 
-#snowflake {
-  position: fixed;
-  left: 0px;
-  opacity: 0.3;
-  width: 80px;
-}
-
 #fixed-scene {
   background-color: blue;
   position: fixed;
