@@ -12,8 +12,8 @@ $(document).ready(function() {
       var meridian = "PM"
     }
 
-    if (hours < 10){
-      hours = "0" + hours;
+    if (hours === 12){
+      var meridian = "PM"
     }
 
     /* 0AM and 0PM should be 12 */
