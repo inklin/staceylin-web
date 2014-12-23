@@ -1,0 +1,37 @@
+body {
+  height: 100%;
+}
+
+.key {
+  position: relative;
+  float: left;
+  width: 50px;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.content {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px
+}
+
+#one {
+  background-color: black;
+}
+
+#two {
+  background-color: white;
+}
+
+.navigation {
+  font-family: Arial;
+  font-size: 25px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+a:visited {
+  color: red;
+}

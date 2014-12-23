@@ -49,12 +49,6 @@ a:visited {
   z-index: -10;
 }
 
-#tree {
-  position: fixed;
-  bottom: 15px;
-  width: 500px;
-}
-
 #bg {
   position: absolute;
   top: 0;
@@ -64,6 +58,12 @@ a:visited {
   margin: auto;
   min-width: 50%;
   min-height: 50%
+}
+
+#tree {
+  position: fixed;
+  bottom: 15px;
+  width: 500px;
 }
 
 #top-scene {
