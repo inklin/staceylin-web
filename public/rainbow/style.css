@@ -7,7 +7,7 @@ body {
   float: left;
   width: 50px;
   height: 400px;
-  border: 1px solid black;
+  border: 1px solid #000000;
 }
 
 .content {
@@ -17,11 +17,11 @@ body {
 }
 
 #one {
-  background-color: black;
+  background-color: #000000;
 }
 
 #two {
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 .navigation {
@@ -30,8 +30,13 @@ body {
   position: absolute;
   left: 20px;
   top: 20px;
+  letter-spacing: 2px;
 }
 
 a:visited {
-  color: red;
+  color: #808000;
+}
+
+a:hover {
+  color: #800000;
 }

@@ -23,10 +23,12 @@ $(document).ready(function(){
   /* When the mouse goes over a key, change the background color, 
   increment the index value so that you get a different color the next time*/ 
 
-  $(".key").hover(function(){
+  $(".key").hover( function(){
     $(this).css("background-color", getColor(rainbowIndex));
     rainbowIndex = rainbowIndex + 1;
-  });
+    }, function() {
+      $(this).css("background-color", "");
+    });
 
 
 });
