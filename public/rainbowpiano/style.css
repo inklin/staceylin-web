@@ -13,7 +13,7 @@ body {
 .content {
   width: 1200px;
   margin: 0 auto;
-  padding-top: 100px
+  padding-top: 150px
 }
 
 #one {
@@ -25,12 +25,13 @@ body {
 }
 
 .navigation {
-  font-family: Arial;
+  font-family: Helvetica;
   font-size: 25px;
   position: absolute;
   left: 20px;
   top: 20px;
   letter-spacing: 2px;
+  padding: 5px;
 }
 
 a:visited {
@@ -40,3 +41,4 @@ a:visited {
 a:hover {
   color: #800000;
 }
+
