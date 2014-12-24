@@ -2,17 +2,17 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #009933;
-
+  font-family: Arial;
 }
 
 .cookie {
   position: absolute;
-  width: 200px;
+  width: 150px;
   z-index: 5;
 }
 
 #santa {
-  width: 200px;
+  width: 300px;
   position: absolute;
   left: 50px;
   top: 150px;
@@ -21,7 +21,7 @@ body {
 
 h1 {
   color: #FF0000;
-  font-size: 55px;
+  font-size: 60px;
   text-align: center;
   padding: 10px;
   text-shadow: 2px 2px #000000;
@@ -32,7 +32,7 @@ h1 {
   top: 0px;
   left: 20px;
   word-spacing: 10px;
-  font-size: 35px;
+  font-size: 30px;
   padding: 10px;
   background-color: #FFFFFF;
 }
@@ -40,7 +40,7 @@ h1 {
 #eaten {
   text-align: center;
   color: #FFFFFF;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 a:link {
