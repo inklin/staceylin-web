@@ -23,8 +23,8 @@ $(document).ready(function() {
     /* Remove the cookie after Santa gets there */
 
     function moveSanta (x, y, number){
-      var xMove = x - santaX;
-      var yMove = y - santaY;
+      var xMove = x - santaX - 10;
+      var yMove = y - santaY - 10;
 
       $("#santa").animate({top: "+=" + yMove, left: "+=" + xMove}, "slow", function(){
         $("#cookie" + number).remove();
