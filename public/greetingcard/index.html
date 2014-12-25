@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="/js/jquery-1.11.2.min.js"></script>
     <script src="scripts.js"></script>
+    <script src="html2canvas.js"></script>
+    <script src="analytics.js"></script>
   </head>
   <body>
     <div class="navigation">
@@ -15,19 +17,25 @@
     </div>
 
     <div class="content">
-    
-    <input type="text" placeholder="Type your card content here" id="greeting">
-    <input type="submit" id="inputgreeting" value="Make your card!">
+    <h1>Greeting Card Maker<h1>
+
+    <div class="makecard">
+    <textarea rows="3" placeholder="Type your message" id="greeting"></textarea>
+    <input type="submit" id="inputgreeting" value="Add text">
     
 
     <input type="file" id="picture" accept="image/*" />
-    <input type="submit" id="inputimage" value="Show image" />
-
-
-    <div class="card" id="card">
-      <image id="preview" src="#" alt="your image" />
+    <input type="submit" id="inputimage" value="Add image" />
+    <br>
+    <input type="button" id="save" value="SAVE CARD" />
     </div>
 
+    <div id="envelope">
+      <div class="card" id="card">
+       <image id="preview" src="#" alt="your image" />
+       <p id="message"></p>
+     </div>
+    </div>
 
     </div>
 

@@ -15,11 +15,11 @@ $(document).ready(function() {
     if (greeting === "") {
       alert("You haven't entered a greeting yet!");
     } else {
-      $("#card").append(greeting);
-      $("#greeting, #inputgreeting").hide();
+      $("#message").html(greeting);
     }
   });
 
+  /* Function to check the input image and add it to the preview html */
   function readURL(input){
     if(input.files && input.files[0]){
       var reader = new FileReader();
@@ -32,9 +32,20 @@ $(document).ready(function() {
     }
   }
 
+  /* When the picture changes, call readURL function and change hasImage value */
   $("#picture").change(function(){
     readURL(this);
     hasImage = 2;
+  });
+
+  $("#save").click(function(){
+    var card = $("#envelope");
+    html2canvas(card[0], {
+      onrendered: function(canvas){
+        window.open(canvas.toDataURL("image/png"));
+      }
+    });
+
   });
 
 });
