@@ -18,7 +18,7 @@
 .video {
   width: 650px;
   margin: 0 auto;
-  visibility: hidden;
+  display: none;
 }
 
 body {
