@@ -39,7 +39,7 @@ $(document).ready(function() {
   });
 
   $("#save").click(function(){
-    var card = $("#envelope");
+    var card = $("#card");
     html2canvas(card[0], {
       onrendered: function(canvas){
         window.open(canvas.toDataURL("image/png"));
