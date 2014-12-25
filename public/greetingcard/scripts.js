@@ -1,4 +1,15 @@
 $(document).ready(function() {
+
+  var hasImage = 1;
+
+  $("#inputimage").click(function(){
+    if (hasImage === 1){
+      alert("You haven't chosen an image yet!");
+    } else {
+      $("#preview").show();
+    }
+  });
+
   $("#inputgreeting").click(function(){
     var greeting = $("#greeting").val();
     if (greeting === "") {
@@ -15,7 +26,6 @@ $(document).ready(function() {
 
       reader.onload = function(e){
         $("#preview").attr("src", e.target.result);
-        $("#preview").hide();
       };
 
       reader.readAsDataURL(input.files[0]);
@@ -24,10 +34,7 @@ $(document).ready(function() {
 
   $("#picture").change(function(){
     readURL(this);
-  });
-
-  $("#inputimage").click(function(){
-    $("#preview").show();
+    hasImage = 2;
   });
 
 });
