@@ -1,25 +1,24 @@
 body {
   font-family: Helvetica;
-  font-size: 15px;
+  font-size: 1.5em;
   background-color: #ecf0f1;
 }
 
 #preview {
   display: none;
-  max-width: 70%;
-  max-height: 60%;
+  max-width: 80%;
+  max-height: 75%;
   border: 1px solid #000000;
-  margin: 10px;
+  margin-top: 15px;
 }
 
 .card {
-  border: 1px solid #FFFFFF;
-  width: 500px;
+  width: 600px;
   text-align: center;
   height: 400px;
   margin-left: 250px;
   background-color: #FFFFFF;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .navigation {
@@ -39,6 +38,10 @@ body {
 #blog {
   border-left: 5px solid #2980b9;
   padding-left: 5px;
+}
+
+#message {
+  margin: 10px;
 }
 
 #greeting {
