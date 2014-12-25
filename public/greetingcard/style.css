@@ -1,7 +1,7 @@
 body {
   font-family: Helvetica;
-  background-color: #00CC99;
   font-size: 15px;
+  background-color: #ecf0f1;
 }
 
 #preview {
@@ -18,8 +18,8 @@ body {
   text-align: center;
   height: 400px;
   margin-left: 250px;
-  box-shadow: 5px 5px 5px #888888;
   background-color: #FFFFFF;
+  font-size: 20px;
 }
 
 .navigation {
@@ -32,17 +32,18 @@ body {
 }
 
 #home {
-  border-left: 5px solid #FF0066;
+  border-left: 5px solid #f1c40f;
   padding-left: 5px;
 }
 
 #blog {
-  border-left: 5px solid #FF6600;
+  border-left: 5px solid #2980b9;
   padding-left: 5px;
 }
 
 #greeting {
   font-size: 15px;
+  background-color: #FFFFFF;
 }
 
 .makecard {
@@ -54,28 +55,29 @@ body {
 
 h1 {
   text-align: center;
-  color: #CC0066;
+  color: #2c3e50;
 }
 
 input[type=submit]{
-  background-color: #00CC99;
+  background-color: #2980b9;
   color: #FFFFFF;
-  border: 3px solid #FFFFFF;
+  border: 3px solid #34495e;
   padding: 5px;
   font-size: 15px;
   border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 input[type=button]{
-  border: 3px solid #FFFFFF;
-  background-color: #CC0066;
+  border: 3px solid #34495e;
+  background-color: #f1c40f;
   border-radius: 5px;
   font-size: 15px;
-  margin-top: 10px;
+  margin-top: 5px;
   padding: 5px;
   color: #FFFFFF;
 }
 
 #picture {
-  
 }
