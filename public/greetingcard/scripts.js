@@ -21,8 +21,7 @@ $(document).ready(function() {
     }
   }
 
-  $("#inputimage").click(function(){
-    var image = $("#picture");
-    readURL(image);
+  $("#picture").change(function(){
+    readURL(this);
   });
 });
