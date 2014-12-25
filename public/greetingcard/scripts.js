@@ -15,6 +15,7 @@ $(document).ready(function() {
 
       reader.onload = function(e){
         $("#preview").attr("src", e.target.result);
+        $("#preview").hide();
       };
 
       reader.readAsDataURL(input.files[0]);
@@ -24,4 +25,9 @@ $(document).ready(function() {
   $("#picture").change(function(){
     readURL(this);
   });
+
+  $("#inputimage").click(function(){
+    $("#preview").show();
+  });
+
 });
