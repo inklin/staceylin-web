@@ -35,7 +35,10 @@ text-align: center;
 }
 
 #open span {
+  animation: upper 11s linear infinite;
+  -moz-animation: upper 11s linear infinite;
   -webkit-animation: upper 11s linear infinite;
+  -o-animation: upper 11s linear infinite;
 }
 
 #broken {
@@ -43,7 +46,28 @@ text-align: center;
 }
 
 #flicker {
+  animation: lower 11s linear infinite;
+  -moz-animation: lower 11s linear infinite;
   -webkit-animation: lower 11s linear infinite;
+  -o-animation: lower 11s linear infinite;
+}
+
+@keyframes upper {
+  0%,9.999%,11%,13%,21%,23%,62.999%,65%,75%,100% {
+    opacity:.99; text-shadow: 0 0 80px #F88017, 0 0 30px #FF0000,0 0 10px #800517,0 0 6px #8B0000;
+  }
+  10%,12%,20.999%,22%,63%,63.999%,74.999% {
+    opacity:0.4; text-shadow: none; 
+  }
+}
+
+@-moz-keyframes upper {
+  0%,9.999%,11%,13%,21%,23%,62.999%,65%,75%,100% {
+    opacity:.99; text-shadow: 0 0 80px #F88017, 0 0 30px #FF0000,0 0 10px #800517,0 0 6px #8B0000;
+  }
+  10%,12%,20.999%,22%,63%,63.999%,74.999% {
+    opacity:0.4; text-shadow: none; 
+  }
 }
 
 @-webkit-keyframes upper {
@@ -55,7 +79,43 @@ text-align: center;
   }
 }
 
+@-o-keyframes upper {
+  0%,9.999%,11%,13%,21%,23%,62.999%,65%,75%,100% {
+    opacity:.99; text-shadow: 0 0 80px #F88017, 0 0 30px #FF0000,0 0 10px #800517,0 0 6px #8B0000;
+  }
+  10%,12%,20.999%,22%,63%,63.999%,74.999% {
+    opacity:0.4; text-shadow: none; 
+  }
+}
+
+@keyframes lower {
+  0%,4.999%,6.999%,7.999%,8.1%,39.999%,40.999%,41.999%,42.999%,100%{
+    opacity:.99; text-shadow: 0 0 80px #00FF00,0 0 30px #347C17,0 0 5px #254117;
+  }
+  5%,7%,8%,40%,41%,42%{
+    opacity:0.4; text-shadow: none; 
+  }
+}
+
+@-moz-keyframes lower {
+  0%,4.999%,6.999%,7.999%,8.1%,39.999%,40.999%,41.999%,42.999%,100%{
+    opacity:.99; text-shadow: 0 0 80px #00FF00,0 0 30px #347C17,0 0 5px #254117;
+  }
+  5%,7%,8%,40%,41%,42%{
+    opacity:0.4; text-shadow: none; 
+  }
+}
+
 @-webkit-keyframes lower {
+  0%,4.999%,6.999%,7.999%,8.1%,39.999%,40.999%,41.999%,42.999%,100%{
+    opacity:.99; text-shadow: 0 0 80px #00FF00,0 0 30px #347C17,0 0 5px #254117;
+  }
+  5%,7%,8%,40%,41%,42%{
+    opacity:0.4; text-shadow: none; 
+  }
+}
+
+@-o-keyframes lower {
   0%,4.999%,6.999%,7.999%,8.1%,39.999%,40.999%,41.999%,42.999%,100%{
     opacity:.99; text-shadow: 0 0 80px #00FF00,0 0 30px #347C17,0 0 5px #254117;
   }
