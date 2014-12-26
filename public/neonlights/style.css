@@ -1,0 +1,85 @@
+body {
+font-family: 'Verdana';
+background-color: black;
+text-align: center;
+}
+
+.lights {
+  width: 400px;
+  height: 250px;
+  border: 10px solid #CCFFFF;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00FFFF, 0 0 5px #0033CC;
+  margin-top: 100px;
+  margin-left: 30%;
+  padding: 10px;
+}
+
+#open {
+  text-shadow: 0 0 80px #F88017, 0 0 30px #FF0000,0 0 10px #800517,0 0 6px #8B0000;
+  color: #FFF8C6;
+  font-size: 100px;
+  opacity: .99;
+  padding-top: 0px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+#hours {
+  color: #C3FDB8;
+  text-shadow: 0 0 80px #00FF00,0 0 30px #347C17,0 0 5px #254117;
+  font-size: 80px;
+  opacity: .99;
+  margin: 0px;
+  padding: 0px;
+}
+
+#open span {
+  -webkit-animation: upper 11s linear infinite;
+}
+
+#broken {
+  opacity: 0.5;
+}
+
+#flicker {
+  -webkit-animation: lower 11s linear infinite;
+}
+
+@-webkit-keyframes upper {
+  0%,9.999%,11%,13%,21%,23%,62.999%,65%,75%,100% {
+    opacity:.99; text-shadow: 0 0 80px #F88017, 0 0 30px #FF0000,0 0 10px #800517,0 0 6px #8B0000;
+  }
+  10%,12%,20.999%,22%,63%,63.999%,74.999% {
+    opacity:0.4; text-shadow: none; 
+  }
+}
+
+@-webkit-keyframes lower {
+  0%,4.999%,6.999%,7.999%,8.1%,39.999%,40.999%,41.999%,42.999%,100%{
+    opacity:.99; text-shadow: 0 0 80px #00FF00,0 0 30px #347C17,0 0 5px #254117;
+  }
+  5%,7%,8%,40%,41%,42%{
+    opacity:0.4; text-shadow: none; 
+  }
+}
+
+.navigation {
+  position: absolute;
+  font-size: 25px;
+  word-spacing: 5px;
+  left: 10px;
+  top: 10px;
+}
+
+a:link {
+  color: #FFCC00;
+}
+
+a:hover {
+  color: #FF6600;
+}
+
+a:visited{
+  color:#00FFFF;
+}
