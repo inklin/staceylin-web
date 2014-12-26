@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+  $("body").bind('touchstart', function(e) {
+    var xPosition = e.pageX || e.originalEvent.touches[0].pageX;
+    var yPosition = e.pageX || e.originalEvent.touches[0].pageY;
+
+    handleClick(xPosition, yPosition);
+    e.preventDefault();
+
+  });
+
   var santaX = parseInt($("#santa").css("left"), 10);
   var santaY = parseInt($("#santa").css("top"), 10);
   var cookies = 0;
@@ -7,17 +16,20 @@ $(document).ready(function() {
 
   $("body").click(function(e){
 
-    $("#content").append("<img src=\"cookie.png\" class=\"cookie\" id=\"cookie" + cookienumber + "\" />");
-    $("#cookie" + cookienumber).css({top: e.pageY - 50, left: e.pageX - 50});
-
     /* Get the x and y positions of where the cookie was placed */
     var xPosition = e.pageX;
     var yPosition = e.pageY;
+    handleClick(xPosition, yPosition);
+
+  });
+
+    function handleClick(xPosition, yPosition){
+    $("#content").append("<img src=\"cookie.png\" class=\"cookie\" id=\"cookie" + cookienumber + "\" />");
+    $("#cookie" + cookienumber).css({top: yPosition - 50, left: xPosition - 50});
 
     moveSanta(xPosition, yPosition, cookienumber);
     cookienumber = cookienumber + 1;
-
-  });
+    }
 
     /* Function to move Santa to where the cookie is */
     /* Remove the cookie after Santa gets there */
@@ -33,7 +45,7 @@ $(document).ready(function() {
           $("#eaten").html("Santa has eaten " + cookies + " cookie!");
         } else {
           $("#eaten").html("Santa has eaten " + cookies + " cookies!");
-        }  
+        }
       });
       santaX = x;
       santaY = y;
