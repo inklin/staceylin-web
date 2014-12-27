@@ -1,5 +1,13 @@
 .navigation {
   font-size: 20px;
+  font-family: 'Arial';
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+h1 {
+  text-align: center;
 }
 
 .box {
@@ -7,7 +15,7 @@
   margin: auto;
   width: 600px;
   height: 500px;
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   padding: 0px;
   }
 
@@ -42,8 +50,8 @@
   position: relative;
   height: 100px;
   width: 100px;
-  background-color: #0066FF;
   border-radius: 50%;
+  background: radial-gradient(circle at 50px 30px, #66FFFF, #0066FF);
   bottom: 0px;
   -webkit-animation-name: bounce;
   -webkit-animation-iteration-count: infinite;
@@ -105,3 +113,6 @@
   100% {top: 0px; animation-timing-function: ease-out;}
 }
 
+a:link {
+  color: #0066FF;
+}
