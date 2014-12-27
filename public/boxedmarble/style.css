@@ -1,3 +1,6 @@
+body{
+}
+
 .navigation {
   font-size: 20px;
   font-family: 'Arial';
@@ -17,6 +20,7 @@ h1 {
   height: 500px;
   border: 2px solid #000000;
   padding: 0px;
+  background-color: #FFFFCC; 
   }
 
 #horizontal {
