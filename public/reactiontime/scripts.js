@@ -23,7 +23,7 @@ $(document).ready(function() {
       if (startTime) {
         var endTime = new Date().getTime();
         var speed = endTime - startTime;
-        $("#instruction").html(speed + " miliseconds!");
+        $("#instruction").html(speed + " milliseconds!");
         $("#background").css("background-color", "#3498db");
         $("#continue").html("Click to keep going!");
       } else {
