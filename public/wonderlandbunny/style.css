@@ -1,0 +1,55 @@
+body {
+ font-family: 'Arial';
+ font-size: 18px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.bunnycontainer {
+  margin: 100px 300px 0 300px;
+  text-align: center;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+
+#bunny {
+  width: 200px;
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rorateX(0deg);
+}
+
+.choices {
+  text-align: center;
+  width: 200px;
+  margin-left: 100px;
+  float: left;
+}
+
+#drink {
+  width: 75px;
+}
+
+#eat {
+  width: 150px;
+}
+
+#result {
+  text-align: center;
+  font-size: 45px;
+}
+
+#result {
+}
+
+.navigation {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  word-spacing: 20px;
+}
