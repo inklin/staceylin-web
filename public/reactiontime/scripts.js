@@ -5,7 +5,7 @@ $(document).ready(function() {
   var timeout;
 
   /* A function to start when the user clicks and changes background color when time is up */
-  $("#background").click(function() {
+  $("#background").mousedown(function() {
     if (!gameStarted) {
       $("#background").css("background-color", "#2ecc71");
       $("#continue").html("");
