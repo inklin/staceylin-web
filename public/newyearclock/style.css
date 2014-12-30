@@ -1,0 +1,17 @@
+body {
+  font-family: 'Lucida Grande', 'Calibri';
+  background-color: #9b59b6;
+  color: #FFFFFF;
+  font-size: 25px;
+  text-align: center;
+}
+
+h1 {
+  padding: 20px;
+}
+
+.navigation {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
