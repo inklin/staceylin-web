@@ -40,7 +40,9 @@ function countDown() {
   }
 
 /* Show remaining days on the page */
-  $("#timer").html(remainingDay + " days " + remainingHour + " hours " + remainingMinute + " minutes " + remainingSecond + " seconds until New Year's!");
+  $("#hours").html(remainingHour);
+  $("#minutes").html(remainingMinute);
+  $("#seconds").html(remainingSecond);
   }
 }
 
@@ -50,6 +52,6 @@ updateRemaining = setInterval(countDown, 1000);
 
 /* Drop the ball if user is too impatient */
   $("#dropit").click(function(){
-    $("#ball").addClass("ballfall");
+    $("#ball").toggleClass("impatient");
   });
 });
