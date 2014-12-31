@@ -1,8 +1,6 @@
 body {
   font-family: 'Lucida Grande', 'Calibri';
-  background-color: #9b59b6;
-  color: #FFFFFF;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -14,4 +12,42 @@ h1 {
   position: absolute;
   left: 10px;
   top: 10px;
+}
+
+#ball {
+  width: 150px;
+  position: relative;
+  top: -510px;
+}
+
+.ballfall {
+  -webkit-animation: fall 50s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.poletip {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #000000;
+  margin: auto;
+}
+
+.pole {
+  width: 30px;
+  height: 500px;
+  background-color: #000000;
+  position: relative;
+  top: -20px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.balldropcontainer {
+  padding-top: 20px;
+}
+
+@-webkit-keyframes fall {
+  from {top: -510px;}
+  to {top: -170px;}
 }

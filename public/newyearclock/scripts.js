@@ -28,8 +28,19 @@ function countDown() {
   var remainingMinute = Math.floor((remaining % hour) / minute);
   var remainingSecond = Math.floor((remaining % minute) / second);
 
+/* When there is only one minut left, drop the ball */
+  if (remaining === 60000){
+    $("#timer").html(remainingSecond + "seconds to New Year's!");
+    $("#ball").addClass("ballfall");
+  }
+
+  if (remaining === 0){
+    $("#timer").html("HAPPY NEW YEAR 2015!");
+    $("#dropit").val("Relive the ball drop");
+  }
+
 /* Show remaining days on the page */
-  $("#timer").html(remainingDay + " day " + remainingHour + " hours " + remainingMinute + " minutes " + remainingSecond + " seconds until New Year's!");
+  $("#timer").html(remainingDay + " days " + remainingHour + " hours " + remainingMinute + " minutes " + remainingSecond + " seconds until New Year's!");
   }
 }
 
@@ -37,4 +48,8 @@ function countDown() {
 countDown();
 updateRemaining = setInterval(countDown, 1000);
 
+/* Drop the ball if user is too impatient */
+  $("#dropit").click(function(){
+    $("#ball").addClass("ballfall");
+  });
 });
