@@ -1,0 +1,87 @@
+body {
+ text-align: center;
+ background-color: #ecf0f1;
+ color: #2c3e50;
+ font-family: 'Arial';
+ font-size: 20px;
+}
+
+.navigation {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  word-spacing: 5px;
+  text-decoration: none;
+  padding: 15px;
+  background-color: #C2D6FF;
+}
+
+a:link {
+  text-decoration: none;
+  color: #2c3e50;
+}
+
+.bubblewrap {
+  width: 650px;
+  height: 490px;
+  background-color: #B2CCFF;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: auto;
+}
+
+.bubble {
+  background-color:  #94B8FF;
+  border: 3px solid  #E0EBFF;
+  box-shadow: inset 3px 3px 10px 7px  #C2D6FF;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin: 15px;
+  display: inline-block;
+}
+
+ .shine {
+  background-color: #FFFFFF;
+  border-radius: 45%;
+  opacity: .8;
+  transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  width: 7px;
+  height: 14px;
+  z-index: 10;
+  position: relative;
+  top: 20px;
+  left: 18px;
+  }
+
+.gloss {
+  position: relative;
+  top: 8px;
+  left: 18px;
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  border-right: 5px solid #FFFFFF;
+  border-radius: 50%;
+  opacitY: .4;
+  width: 25px;
+  height: 30px;
+  }
+
+.popped {
+  background-color: #C2D6FF;
+  border: 3px solid #E0EBFF;
+  box-shadow: inset 2px 2px 3px 5px   #B2CCFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin: 15px;
+  display: inline-block;
+}
+
+
