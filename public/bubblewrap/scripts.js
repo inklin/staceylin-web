@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var n = 0;
 
   $(".bubble").click(function(){
     $(this).removeClass("bubble");
@@ -8,7 +9,8 @@ $(document).ready(function() {
 
     var flatness = $(this).hasClass("flat");
     if (!flatness){
-      $("#pop")[0].play();
+      $("#pop" + (n % 3))[0].play();
+      n = n + 1;
     }
 
     $(this).addClass("flat");
