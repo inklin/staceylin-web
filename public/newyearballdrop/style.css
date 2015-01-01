@@ -36,10 +36,21 @@ h1 {
 .ballfall {
   -webkit-animation: fall 50s;
   -webkit-animation-fill-mode: forwards;
+  -moz-animation: fall 50s;
+  -moz-animation-fill-mode: forwards;
+  -o-animation: fall 50s;
+  -o-animation-fill-mode: forwards;
+  animation: fall 50s;
+  animation-fill-mode: forwards;
 }
 
 .impatient {
+  position: relative;
+  top: -510px;
   -webkit-animation: fall 10s linear;
+  -moz-animation: fall 10s linear;
+  -o-animation: fall 10s linear;
+  animation: fall 10s linear;  
 }
 
 .poletip {
@@ -65,6 +76,21 @@ h1 {
 }
 
 @-webkit-keyframes fall {
+  from {top: -510px;}
+  to {top: -170px;}
+}
+
+@-moz-keyframes fall {
+  from {top: -510px;}
+  to {top: -170px;}
+}
+
+@-o-keyframes fall {
+  from {top: -510px;}
+  to {top: -170px;}
+}
+
+@keyframes fall {
   from {top: -510px;}
   to {top: -170px;}
 }

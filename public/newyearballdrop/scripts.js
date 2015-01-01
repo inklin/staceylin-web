@@ -11,7 +11,6 @@ function countDown() {
   var currentTime = new Date();
 /* Subtract to get the remaining milliseconds until date */
   var remaining = newYear - currentTime;
-  if (remaining > 0 ){
 /* 1000 milliseconds in one second */
   var second = 1000;
 /* 60 seconds in one minute */
@@ -29,12 +28,12 @@ function countDown() {
   var remainingSecond = Math.floor((remaining % minute) / second);
 
 /* When there is only one minut left, drop the ball */
-  if (remaining === 60000){
+  if (remaining <= 60000){
     $("#timer").html(remainingSecond + "seconds to New Year's!");
     $("#ball").addClass("ballfall");
   }
 
-  if (remaining === 0){
+  if (remaining <= 0 ){
     $("#timer").html("HAPPY NEW YEAR 2015!");
     $("#dropit").val("Relive the ball drop");
   }
@@ -44,7 +43,6 @@ function countDown() {
   $("#minutes").html(remainingMinute);
   $("#seconds").html(remainingSecond);
   }
-}
 
 /* call the function, then update the remaining time every second, every 1000 milliseconds */
 countDown();
