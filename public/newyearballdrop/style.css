@@ -8,7 +8,20 @@ h1 {
   padding: 20px;
 }
 
+.number {
+  font-size: 30px;
+  color: #8e44ad;
+}
+
+#dropit {
+  background-color: #8e44ad;
+  background-color: #FFFFFF;
+  font-size: 15px;
+  border: 3px solid #8e44ad;
+}
+
 .navigation {
+  word-spacing: 5px;
   position: absolute;
   left: 10px;
   top: 10px;

@@ -76,7 +76,7 @@ a:link {
 .popped {
   background-color: #C2D6FF;
   border: 3px solid #E0EBFF;
-  box-shadow: inset 2px 2px 3px 5px   #B2CCFF;
+  box-shadow: inset 2px 2px 3px 5px  #B2CCFF;
   width: 60px;
   height: 60px;
   border-radius: 30px;
