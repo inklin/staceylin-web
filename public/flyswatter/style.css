@@ -1,5 +1,13 @@
 body {
+  font-family: 'Arial', 'Verdana';
+  font-size: 20px;
+  text-align: center;
+}
 
+.navigation {
+  position: absolute;
+  left: 10px;
+  top: 10px;
 }
 
 #sandwich {
@@ -16,7 +24,7 @@ body {
   position: relative;
 }
 
-#fly {
+.fly {
   width: 50px;
   position: absolute;
   top: 0px;

@@ -1,29 +1,66 @@
 $(document).ready(function() {
 
-var flycount = 0;
-var top;
-var left;
+  var topValue;
+  var leftValue;
 
-/* Make a fly appear randomly in the sandwich container */
-function getLocation(){
-  top = Math.random();
-  left = Math.random();
-}
+  var leftStarting;
+  var topStarting;
 
-/* Make the fly land on the sandwich - center of the div */
-function placeFly(){
-  $("#fly").delay(600).animate({top: "100px", left: "500px"}, 1000);
-}
+  /* User clicks Start to play the game */
+  var flies = [];
+  var gameover;
 
-/* Make the fly disappear when you click on it */
-$("#fly" + flyid).click(function(){
-  $("#fly" + flyid).hide();
-});
+  var fliesSwatted = 0;
 
-/* If more than 5 flies are on the page at one time, sandwich disappears */ 
 
-/* If 5 flies have been killed, user goes to next level */
+  setInterval(function(){
+    if (flies.length < 5) {
+      createFly();
+      if (flies.length === 5) {
+        $("#instruction").html("Game over.");
+        gameover = true;
+      }
+    }
+  }, 3000);
 
-/* Increase speed that flies appear */
 
+  function createFly() {
+    leftStarting = Math.random() * 800;
+    topStarting = Math.random() * 500;
+    var fly = $("<img src=\"fly.png\" class=\"fly\">");
+    fly.css({top: topStarting, left: leftStarting});
+    flies.push(fly);
+    $("#sandwichcontainer").append(fly);
+
+    fly.click(function() {
+      if (!gameover){
+        swatFly(fly);
+      }
+    });
+  }
+
+
+  /* Make the fly move to the sandwich - center of the div */
+  function movefly(){
+  /* Make a random location in the sandwich container for the fly to go to */
+    for (var i = 0; i < flies.length; i++) {
+      topValue = (Math.random() * (350) + 50);
+      leftValue = (Math.random() * (200) + 200);
+      var fly = flies[i];
+      fly.delay(300).animate({top: topValue, left: leftValue}, 500);
+    }
+  }
+
+  function swatFly(fly) {
+      fly.hide();
+      var index = flies.indexOf(fly);
+      if (index > -1) {
+        flies.splice(index,1);
+      }
+      fliesSwatted++;
+  }
+
+  setInterval(function() {
+      movefly();
+  }, 100);
 });
