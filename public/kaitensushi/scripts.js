@@ -6,11 +6,12 @@ $(document).ready(function() {
 
   $(".item").click(function(){
     if (sushiCount < 5){
+      $("#tip").html("Sushi is coming!");
       var ordered = this.id;
       sushiQueue.push(ordered);
       sushiCount = sushiCount + 1;
     } else {
-      $("#tip").html("Maximum number of sushi ordered!");
+      $("#tip").html("Maximum number of sushi ordered! Click to eat.");
     }
   });
 
@@ -19,6 +20,7 @@ $(document).ready(function() {
     sushi.click(function(){
       $(this).remove();
       sushiCount = sushiCount - 1;
+      $("#tip").html("Yumm! Order more sushi?");
     });
     $(".sushicontainer").append(sushi);
     sushi.animate({"left":"0px"}, 33500, "linear");
