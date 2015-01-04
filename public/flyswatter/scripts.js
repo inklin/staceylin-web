@@ -58,6 +58,7 @@ $(document).ready(function() {
         flies.splice(index,1);
       }
       fliesSwatted++;
+      $("#flycount").html(fliesSwatted);
   }
 
   setInterval(function() {
