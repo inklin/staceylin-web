@@ -37,7 +37,7 @@ body {
 
 .sushicontainer {
   width: 100%;
-  height: 200px;
+  height: 210px;
   padding: 0px;
   margin: 0px;
   position: relative;
@@ -45,7 +45,7 @@ body {
 
 .food {
   padding: 0;
-  position: absolute;
+  position: relative;
   left: 100%;
   bottom: 0;
   margin-left: 10px;
@@ -55,4 +55,20 @@ body {
 @-webkit-keyframes slideleft {
   from {left: 0;}
   to { left: -200px;}
+}
+
+.futomaki {
+  margin-top: 45px;
+}
+
+.saba {
+  margin-top: 50px;
+}
+
+.tamago  {
+  margin-top: 15px;
+}
+
+.ikura {
+  margin-top: 15px;
 }

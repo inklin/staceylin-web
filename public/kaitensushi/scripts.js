@@ -8,7 +8,7 @@ $(document).ready(function() {
   });
 
   function addSushi(item){
-    var sushi = $("<img src='" + item + ".png' class='food' />");
+    var sushi = $("<img src='" + item + ".png' class='food " + item + "' />");
     $(".sushicontainer").append(sushi);
     sushi.animate({"left":"0px"}, 33500, "linear");
   }
@@ -22,6 +22,6 @@ $(document).ready(function() {
     }
   }
 
-setInterval(checkSushiQueue, 6000);
+setInterval(checkSushiQueue, 5000);
 
 });
