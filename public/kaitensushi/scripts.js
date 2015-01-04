@@ -1,10 +1,17 @@
 $(document).ready(function() {
 
+  var width = $(window).width();
+  var sushiCount = 0;
   var sushiQueue = [];
 
   $(".item").click(function(){
-    var ordered = this.id;
-    sushiQueue.push(ordered);
+    if (sushiCount < 5){
+      var ordered = this.id;
+      sushiQueue.push(ordered);
+      sushiCount = sushiCount + 1;
+    } else {
+      $("#tip").html("Maximum number of sushi ordered!");
+    }
   });
 
   function addSushi(item){
@@ -15,13 +22,12 @@ $(document).ready(function() {
 
   function checkSushiQueue() {
     if (sushiQueue.length){
-      console.log('dequeed');
       var food = sushiQueue[0];
       addSushi(food);
       sushiQueue.splice(0, 1);
     }
   }
 
-setInterval(checkSushiQueue, 5000);
+setInterval(checkSushiQueue, 3000);
 
 });
