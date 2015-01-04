@@ -5,7 +5,7 @@ $(document).ready(function() {
   var sushiQueue = [];
 
   $(".item").click(function(){
-    if (sushiCount <= 5){
+    if (sushiCount < 5){
       var ordered = this.id;
       sushiQueue.push(ordered);
       sushiCount = sushiCount + 1;
@@ -16,6 +16,10 @@ $(document).ready(function() {
 
   function addSushi(item){
     var sushi = $("<img src='" + item + ".png' class='food " + item + "' />");
+    sushi.click(function(){
+      $(this).remove();
+      sushiCount = sushiCount - 1;
+    });
     $(".sushicontainer").append(sushi);
     sushi.animate({"left":"0px"}, 33500, "linear");
   }
