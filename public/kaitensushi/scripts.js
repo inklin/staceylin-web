@@ -5,7 +5,7 @@ $(document).ready(function() {
   var sushiQueue = [];
 
   $(".item").click(function(){
-    if (sushiCount < 5){
+    if (sushiCount <= 5){
       var ordered = this.id;
       sushiQueue.push(ordered);
       sushiCount = sushiCount + 1;

@@ -33,6 +33,18 @@ body {
   -webkit-animation: slideleft 4s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+
+  -moz-animation: slideleft 4s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  -o-animation: slideleft 4s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+
+  animation: slideleft 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .sushicontainer {
@@ -53,6 +65,21 @@ body {
 }
 
 @-webkit-keyframes slideleft {
+  from {left: 0;}
+  to { left: -200px;}
+}
+
+@-moz-keyframes slideleft {
+  from {left: 0;}
+  to { left: -200px;}
+}
+
+@-o-keyframes slideleft {
+  from {left: 0;}
+  to { left: -200px;}
+}
+
+@keyframes slideleft {
   from {left: 0;}
   to { left: -200px;}
 }
