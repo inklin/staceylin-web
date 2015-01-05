@@ -23,7 +23,7 @@ $(document).ready(function() {
       $("#tip").html("Yumm! Order more sushi?");
     });
     $(".sushicontainer").append(sushi);
-    sushi.animate({"left":"0px"}, 33500, "linear");
+    sushi.animate({"left":"0px"}, 28000, "linear");
   }
 
   function checkSushiQueue() {
