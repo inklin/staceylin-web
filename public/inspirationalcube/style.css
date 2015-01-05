@@ -1,3 +1,55 @@
 body {
 
 }
+
+#wrapper {
+  -webkit-perspective: 8000px;
+  -webkit-perspective: 50% 200px;
+}
+
+#cube {
+  position: relative;
+  margin: 0 auto;
+  height: 500px;
+  width: 500px;
+  -webkit-transition: -webkit-transform 2s linear;
+  -webkit-transform-style: preserve-3d;
+}
+
+.face {
+  position: absolute;
+  height: 450px;
+  width: 450px;
+  padding: 20px;
+  background-color: rgba(10, 186, 181, 0.5);
+}
+
+/* top face */
+#cube .one {
+  -webkit-transform: rotateX(90deg) translateZ(200px);
+}
+
+/* front face */
+#cube .two {
+  -webkit-transform: translateZ(200px);
+}
+
+/* right side */
+#cube .three {
+  -webkit-transform: rotateY(90deg) translateZ(200px);
+}
+
+/* left side */
+#cube .four {
+  -webkit-transform: rotateY(-90deg) translateZ(200px);
+}
+
+/* back face */
+#cube .five {
+  -webkit-transform: translateZ(200px);
+}
+
+/* bottom face*/
+#cube .six {
+  -webkit-transform: rotateX(-90deg) translateZ(200px);
+}
