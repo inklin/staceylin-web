@@ -1,6 +1,7 @@
 body {
   font-family: 'Verdana', 'Times New Roman';
   background-color: #000000;
+  color: #FFFFFF;
 }
 
 .navigation {
@@ -16,7 +17,7 @@ a:link {
 }
 
 #instruction {
-  color: #FFFFFF;
+  font-size: 18px;
 }
 
 #wrapper {
@@ -53,11 +54,19 @@ a:link {
 }
 
 .quote {
-  padding: 50px;
-  color: #FFFFFF;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 25px;
 }
 
+.author {
+  margin: 0;
+  padding-right: 20px;
+  font-size: 20px;
+  text-align: right;
+
+}
 /* top face  */
 #cube .one {
   -webkit-transform: rotateX(90deg) translateZ(200px);
