@@ -1,5 +1,5 @@
 body {
-
+  font-family: 'monospace';
 }
 
 #wrapper {
@@ -12,44 +12,55 @@ body {
   margin: 0 auto;
   height: 500px;
   width: 500px;
+  padding: 20px;
   -webkit-transition: -webkit-transform 2s linear;
   -webkit-transform-style: preserve-3d;
 }
 
 .face {
   position: absolute;
-  height: 450px;
-  width: 450px;
-  padding: 20px;
-  background-color: rgba(10, 186, 181, 0.5);
+  height: 400px;
+  width: 400px;
 }
 
-/* top face */
+.quote {
+  padding: 50px;
+  color: #FFFFFF;
+  font-size: 25px;
+}
+
+/* top face  ok*/
 #cube .one {
   -webkit-transform: rotateX(90deg) translateZ(200px);
+  background-color: #2ecc71;
 }
 
 /* front face */
 #cube .two {
   -webkit-transform: translateZ(200px);
+  background-color: #1abc9c;
 }
 
-/* right side */
+/* right side ok */
 #cube .three {
   -webkit-transform: rotateY(90deg) translateZ(200px);
+  background-color: #3498db;
 }
 
-/* left side */
+/* left side ok */
 #cube .four {
   -webkit-transform: rotateY(-90deg) translateZ(200px);
+  background-color: #9b59b6;
 }
 
 /* back face */
 #cube .five {
-  -webkit-transform: translateZ(200px);
+  -webkit-transform: rotateY(180deg) translateZ(200px);
+  background-color: #e74c3c;
 }
 
-/* bottom face*/
+/* bottom face ok */
 #cube .six {
   -webkit-transform: rotateX(-90deg) translateZ(200px);
+  background-color: #e67e22;
 }
