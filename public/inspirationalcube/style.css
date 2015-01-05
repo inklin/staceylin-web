@@ -1,10 +1,33 @@
 body {
-  font-family: 'monospace';
+  font-family: 'Verdana', 'Times New Roman';
+  background-color: #000000;
+}
+
+.navigation {
+  background-color: #FFFFFF;
+  width: 130px;
+  padding: 10px;
+  text-align: center;
+  word-spacing: 15px;
+}
+
+a:link {
+  color: #2ecc71;
+}
+
+#instruction {
+  color: #FFFFFF;
 }
 
 #wrapper {
   -webkit-perspective: 8000px;
   -webkit-perspective: 50% 200px;
+  -moz-perspective: 8000px;
+  -moz-perspective: 50% 200px;
+  -o-perspective: 8000px;
+  -o-perspective: 50% 200px;
+  perspective: 8000px;
+  perspective: 50% 200px;
 }
 
 #cube {
@@ -15,6 +38,12 @@ body {
   padding: 20px;
   -webkit-transition: -webkit-transform 2s linear;
   -webkit-transform-style: preserve-3d;
+  -moz-transition: -webkit-transform 2s linear;
+  -moz-transform-style: preserve-3d;
+  -o-transition: -webkit-transform 2s linear;
+  -o-transform-style: preserve-3d;
+  transition: -webkit-transform 2s linear;
+  transform-style: preserve-3d;
 }
 
 .face {
@@ -29,38 +58,56 @@ body {
   font-size: 25px;
 }
 
-/* top face  ok*/
+/* top face  */
 #cube .one {
   -webkit-transform: rotateX(90deg) translateZ(200px);
+  -moz-transform: rotateX(90deg) translateZ(200px);
+  -o-transform: rotateX(90deg) translateZ(200px);
+  transform: rotateX(90deg) translateZ(200px);
   background-color: #2ecc71;
 }
 
 /* front face */
 #cube .two {
   -webkit-transform: translateZ(200px);
+  -moz-transform: translateZ(200px);
+  -o-transform: translateZ(200px);
+  transform: translateZ(200px);
   background-color: #1abc9c;
 }
 
-/* right side ok */
+/* right side */
 #cube .three {
   -webkit-transform: rotateY(90deg) translateZ(200px);
+  -moz-transform: rotateY(90deg) translateZ(200px);
+  -o-transform: rotateY(90deg) translateZ(200px);
+  transform: rotateY(90deg) translateZ(200px);
   background-color: #3498db;
 }
 
-/* left side ok */
+/* left side */
 #cube .four {
   -webkit-transform: rotateY(-90deg) translateZ(200px);
+  -moz-transform: rotateY(-90deg) translateZ(200px);
+  -o-transform: rotateY(-90deg) translateZ(200px);
+  transform: rotateY(-90deg) translateZ(200px);
   background-color: #9b59b6;
 }
 
 /* back face */
 #cube .five {
   -webkit-transform: rotateY(180deg) translateZ(200px);
+  -moz-transform: rotateY(180deg) translateZ(200px);
+  -o-transform: rotateY(180deg) translateZ(200px);
+  transform: rotateY(180deg) translateZ(200px);
   background-color: #e74c3c;
 }
 
-/* bottom face ok */
+/* bottom face */
 #cube .six {
   -webkit-transform: rotateX(-90deg) translateZ(200px);
+  -moz-transform: rotateX(-90deg) translateZ(200px);
+  -o-transform: rotateX(-90deg) translateZ(200px);
+  transform: rotateX(-90deg) translateZ(200px);
   background-color: #e67e22;
 }
