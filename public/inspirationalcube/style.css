@@ -16,6 +16,15 @@ a:link {
   color: #2ecc71;
 }
 
+.next {
+  background-color: #1abc9c;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 10px;
+  border: 3px solid #FFFFFF;
+  margin-left: 20px;
+}
+
 #instruction {
   font-size: 18px;
 }
