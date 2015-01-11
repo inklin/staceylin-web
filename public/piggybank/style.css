@@ -1,7 +1,55 @@
 body {
+  font-family: 'Arial';
+  background-color: #FFFF66;
+}
 
+.change {
+  width: 700px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.money {
+  padding: 2px;
+}
+
+.piggy {
+  width: 300px;
+}
+
+.bank {
+  padding-top: 50px;
+  width: 350px;
+  margin: auto;
+}
+
+.information {
+  width: 350px;
+  font-size: 27px;
+  margin: auto;
 }
 
 .savings {
-  width: 100px;
+  color: #FF6666;
+}
+
+.navigation {
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  word-spacing: 10px;
+}
+
+a:link {
+  color: #009999;
+}
+
+a:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+a:visited {
+  color: #FF6666;
 }

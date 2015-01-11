@@ -12,7 +12,7 @@ $(document).ready(function() {
       playSound();
       coinType = ui.draggable.attr("id");
       calculateAmount(coinType);
-      $(".savings").html(totalAmount.toFixed(2));
+      $(".savings").html("$" + totalAmount.toFixed(2));
     }
 
   });
