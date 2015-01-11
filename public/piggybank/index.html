@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="/js/jquery-1.11.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.js"></script>
     <script src="/js/analytics.js"></script>
     <script src="scripts.js"></script>    
   </head>
@@ -18,14 +19,24 @@
     <div class="content">
     
       <div class="change">
-        <img src="toonie.jpg" />
-        <img src="loonie.jpg" />
-        <img src="quarter.jpg" />
-        <img src="nickel.jpg" />
-        <img src="dime.jpg" />
-        <img src="penny.jpg" />
+        <img src="toonie.png" class="money" id="toonie" />
+        <img src="loonie.png" class="money" id="loonie" />
+        <img src="quarter.png" class="money" id="quarter" />
+        <img src="nickel.png" class="money" id="nickel" />
+        <img src="dime.png" class="money" id="dime" />
+        <img src="penny.png" class="money" id="penny" />
       </div>
 
+      <div class="bank">
+        <img src="piggybank.png" class="piggy" />
+      </div>
+
+      <div class="sound">
+      </div>
+
+      <div class="information">
+        <p class="savingsinfo">You have saved $<span class="savings">0.00</span> so far.</p>
+      </div>
     </div>
   </body>
 </html>
