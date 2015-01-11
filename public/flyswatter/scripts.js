@@ -32,7 +32,7 @@ $(document).ready(function() {
     flies.push(fly);
     $("#sandwichcontainer").append(fly);
 
-    fly.click(function() {
+    fly.mousedown(function() {
       if (!gameover){
         swatFly(fly);
       }
