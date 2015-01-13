@@ -1,6 +1,8 @@
 $(document).ready(function() {
   
-  $(".sticky").draggable();
+  $(".sticky").draggable({
+    stack: ".sticky"
+  });
 
 
   

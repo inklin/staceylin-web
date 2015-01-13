@@ -5,7 +5,7 @@ body {
 .sticky {
   width: 200px;
   height: 200px;
-  background-color: #FFFF99;
+  position: absolute;
 }
 
 .pad {
@@ -20,15 +20,50 @@ textarea {
   outline: none;
 }
 
-.sticky {
-  position: absolute;
-}
-
 .sticky-header  {
   height: 15px;
-  background-color: #FFE977;
 }
 
 .sticky-body {
   padding: 15px;
+}
+
+.first {
+  background-color: #FFFF99;
+}
+
+.second {
+  background-color: #FCABAB;
+}
+
+.third {
+  background-color: #CBFCAB;
+}
+
+.fourth {
+  background-color: #ABF9FC;
+}
+
+.fifth {
+  background-color: #FFA2DE;
+}
+
+.one {
+  background-color: #FFD14E;
+}
+
+.two {
+  background-color: #FF6C4E;
+}
+
+.three {
+  background-color: #5CEC65;
+}
+
+.four {
+  background-color: #688FFA;
+}
+
+.five {
+  background-color: #FF61F0;
 }
