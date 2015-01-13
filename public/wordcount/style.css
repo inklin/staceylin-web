@@ -1,3 +1,29 @@
 body {
-  background-color: #FF9933;
+  background-color: #0099FF;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+textarea {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  padding: 20px;
+}
+
+.navigation {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  word-spacing: 10px;
+}
+
+.number {
+  color: #FFFF00;
+}
+
+.image {
+  width: 150px;
+  margin-right: 50px;
 }
