@@ -1,21 +1,28 @@
 body {
-
+  background-color: #FFFDE4;
+  font-family: 'Verdana', 'Arial';
+  font-size: 20px;
+  text-align: center;
 }
 
 .sticky {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-}
-
-.pad {
   width: 300px;
   height: 300px;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 50px;
 }
 
+.navigation {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  word-spacing: 10px;
+}
 textarea {
   resize: none;
   border: none;
+  font-size: 20px;
   background-color: transparent;
   outline: none;
 }
@@ -30,22 +37,27 @@ textarea {
 
 .first {
   background-color: #FFFF99;
+  z-index: 10;
 }
 
 .second {
   background-color: #FCABAB;
+  z-index: 9;
 }
 
 .third {
   background-color: #CBFCAB;
+  z-index: 8;
 }
 
 .fourth {
   background-color: #ABF9FC;
+  z-index: 7;
 }
 
 .fifth {
   background-color: #FFA2DE;
+  z-index: 6;
 }
 
 .one {
