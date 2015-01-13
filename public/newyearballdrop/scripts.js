@@ -3,7 +3,7 @@ $(document).ready(function() {
 /* Variable to update every second */
 var updateRemaining;
 /* Get time for new year's date */
-var newYear = new Date(2015, 0, 1);
+var newYear = new Date(2016, 0, 1);
 
 
 function countDown() {
@@ -39,6 +39,7 @@ function countDown() {
   }
 
 /* Show remaining days on the page */
+  $("#days").html(remainingDay);
   $("#hours").html(remainingHour);
   $("#minutes").html(remainingMinute);
   $("#seconds").html(remainingSecond);
