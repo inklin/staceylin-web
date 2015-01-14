@@ -8,15 +8,6 @@ body {
   width: 250px;
 }
 
-.head {
-  position: absolute;
-  top: 48px;
-  width: 200px;
-  height: 200px;
-  background-color: #FFFFFF;
-  border-radius: 30% 30% 50% 50% / 80% 80% 45% 45%;
-}
-
 .ear {
   position: absolute;
   width: 0;
@@ -30,10 +21,105 @@ body {
   left: 4px;
   transform: rotate(-12deg);
   -webkit-transform: rotate(-12deg);
+  -moz-transform: rotate(-12deg);
+  -o-transform: rotate(-12deg);
 }
 
 #right-ear {
   right: 54px;
   transform: rotate(12deg);
   -webkit-transform: rotate(12deg);
+  -moz-transform: rotate(12deg);
+  -o-transform: rotate(12deg);
+}
+
+.ear-inner {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #000000;
+  z-index: 1;
+}
+
+#left-ear-inner {
+  top: 30px;
+  left: 34px;
+  transform: rotate(-12deg);
+  -webkit-transform: rotate(-12deg);
+  -moz-transform: rotate(-12deg);
+  -o-transform: rotate(-12deg);
+}
+
+#right-ear-inner {
+  top: 30px;
+  right: 82px;
+  transform: rotate(12deg);
+  -webkit-transform: rotate(12deg);
+  -moz-transform: rotate(12deg);
+  -o-transform: rotate(12deg);
+}
+
+.head {
+  position: absolute;
+  top: 48px;
+  width: 200px;
+  height: 200px;
+  background-color: #FFFFFF;
+  border-radius: 30% 30% 50% 50% / 80% 80% 45% 45%;
+  z-index: 1;
+}
+
+.eye {
+  position: absolute;
+  width: 13px;
+  height: 35px;
+  border-radius: 2px;
+  background-color: #000000;
+  top: 40px;
+}
+
+#left-eye {
+  left: 60px;
+}
+
+#right-eye {
+  right: 65px;
+}
+
+#nose {
+  background-color: #000000;
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  border-radius: 15px;
+  left: 78px;
+  top: 100px;
+}
+
+.mouth {
+  position: absolute;
+  background-color: transparent;
+  width: 50px;
+  height: 70px;
+  border-radius: 50%;
+  border-right: 3px solid #000000;
+  top: 90px;
+}
+
+#mouth-left{
+  left: 35px;
+  transform: rotate(70deg);
+  -webkit-transform: rotate(70deg);
+  -moz-transform: rotate(70deg);
+  -o-transform: rotate(70deg); 
+}
+
+#mouth-right {
+  right: 45px;
+  transform: rotate(100deg);
+  -webkit-transform: rotate(100deg);
+  -moz-transform: rotate(100deg);
+  -o-transform: rotate(100deg); 
 }
