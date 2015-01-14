@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Write a Haiku | Stacey Lin</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="/js/jquery-1.11.2.min.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="scripts.js"></script>    
+  </head>
+  <body>
+    <div class="navigation">
+      <a href="/" id="home">Home</a>
+      <a href="http://staceylearnscode.wordpress.com" id="blog">Blog</a>
+    </div>
+    
+    <h1>Write a Haiku </h1>
+    
+    <div class="content">
+      <div class="section writing">
+        <textarea id="user-text" placeholder="A big glaze donut/sugar spice and a lovely/rollercoaster ride" cols="50" rows="10"></textarea>
+        <div class="hyphenate-user-text" class="hidden"></div>
+      </div>
+
+      <div class="section analyze">
+        <div class="section title">Analysis</div>
+        <div class="row"> 
+          <div id="line-0" class="highlighted-line"></div>
+          <div id="syllable-count-0" class="count"></div>
+        </div>
+        <div class="row">
+          <div id="line-1" class="highlighted-line"></div>
+          <div id="syllable-count-1" class="count"></div>
+        </div>
+        <div class="row">
+          <div id="line-2" class="highlighted-line"></div>
+          <div id="syllable-count-2" class="count"></div>
+        </div>
+      </div>
+
+      <div class="section about">
+        <div class="section title">About</div>
+        <p>Use this tool to create haiku poems. Just start typing!</p>
+
+        <p>The rules:</p>
+        <ul>
+          <li>5 syllables for the first line,</li>
+          <li>7 for the second,</li>
+          <li>and 5 for the third.</li>
+      </div> 
+
+    </div>
+  </body>
+</html>
