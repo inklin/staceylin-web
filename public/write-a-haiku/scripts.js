@@ -36,9 +36,15 @@ $(document).ready(function() {
     $("#line-0").html(line0);
     $("#line-1").html(line1);
     $("#line-2").html(line2);
-    $("#syllable-count-0").html(syllableCount[0]);
-    $("#syllable-count-1").html(syllableCount[1]);
-    $("#syllable-count-2").html(syllableCount[2]);
+    if (syllableCount[0] !== 0){
+      $("#syllable-count-0").html(syllableCount[0]);
+    }
+    if (syllableCount[1] !== 0){
+      $("#syllable-count-1").html(syllableCount[1]);
+    }
+    if (syllableCount[2] !== 0){
+      $("#syllable-count-2").html(syllableCount[2]);
+    }
   }
 
   function countSyllablesForWord (aWord){
