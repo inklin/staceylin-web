@@ -1,3 +1,47 @@
 body {
 
+  font-family: 'Futura';
+}
+
+.flower {
+  width: 120px;
+}
+
+.about {
+  border-top: 1px solid #000000;
+  margin-top: 15px;
+  width: 500px;
+  display: none;
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+  color: #A4A4A4;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+textarea {
+  font-size: 20px;
+  padding: 15px;
+}
+
+.analyze {
+  padding-top: 15px;
+  width: 500px;
+  height: 100px;
+}
+
+.highlighted-line {
+  font-size: 22px;
+  width: 400px;
+  float: left;
+}
+
+.count {
+  color: #F5A9A9;
 }

@@ -47,4 +47,8 @@ $(document).ready(function() {
     return aWord.match(/[aeiouy]{1,2}/g).length;
   }
 
+  $(".flower").click(function(){
+    $(".about").toggle();
+  });
+
 });
