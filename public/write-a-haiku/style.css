@@ -1,23 +1,41 @@
 body {
-
   font-family: 'Futura';
+}
+
+h1 {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.content {
+  width: 660px;
+  margin: 0 auto;
 }
 
 .flower {
   width: 120px;
+
+}
+
+.flower-container {
+  text-align: center;
+}
+
+.user-text {
+  width: 800px;
 }
 
 .about {
   border-top: 1px solid #000000;
   margin-top: 15px;
-  width: 500px;
+  width: 660px;
   display: none;
   font-size: 18px;
 }
 
 ul {
   list-style-type: none;
-  color: #A4A4A4;
+  color: #A4A4A4 ;
 }
 
 .title {
@@ -28,6 +46,7 @@ ul {
 textarea {
   font-size: 20px;
   padding: 15px;
+  box-shadow: inset -2px -2px 0 1px #A4A4A4;
 }
 
 .analyze {
@@ -36,12 +55,27 @@ textarea {
   height: 100px;
 }
 
+.row {
+  width: 500px;
+}
+
 .highlighted-line {
   font-size: 22px;
-  width: 400px;
+  width: 480px;
   float: left;
 }
 
 .count {
   color: #F5A9A9;
+  font-size: 22px;
+  width: 20px;
+  float: right;
+}
+
+.navigation {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  word-spacing: 10px;
+  font-size: 18px;
 }
