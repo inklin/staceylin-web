@@ -3,7 +3,16 @@ body {
   font-family: 'Futura';
 }
 
+.navigation {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  word-spacing: 10px;
+  font-size: 20px;
+}
+
 .text-bubble {
+  visibility: hidden;
   position: relative;
   left: 550px;
   width: 240px;
@@ -235,11 +244,23 @@ body {
   right: 80px;
 }
 
+.phone-ringing {
+  -o-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation: shake 2s linear infinite;
+  -moz-animation: shake 2s linear infinite;
+  -o-animation: shake 2s linear infinite;
+  animation: shake 2s linear infinite;
+}
+
 .phone-container {
-  -webkit-animation: shake 2s;
   position: relative;
-  left: 100px;
+  left: 650px;
+  top: 500px;
   width: 60px;
+  cursor: pointer;
 }
 
 .phone-body {
