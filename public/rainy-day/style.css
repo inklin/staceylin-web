@@ -1,5 +1,25 @@
 body {
+ background: #E6E6E6;
+}
 
+#umbrella {
+  position: absolute;
+  width: 280px;
+  height: 230px;
+  z-index: 3;
+}
+
+#cat {
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+}
+
+.stage {
+  position: absolute;
+  background-color: #E6E6E6;
+  width: 250px;
+  height: 800px;
 }
 
 .rain {
@@ -7,7 +27,7 @@ body {
   top: -20px;
   height: 20px;
   width: 20px;
-  background-color: #105570;
+  background-color: #58D3F7;
   border-radius: 50%;
   border-top-right-radius: 0;
 
@@ -21,12 +41,19 @@ body {
 .raining {
   animation: rain 5s infinite ease-in;
   -webkit-animation: rain 5s infinite ease-in;
+  -moz-animation: rain 5s infinite ease-in;
+  -o-animation: rain 5s infinite ease-in;
 }
 
 .rain-container {
   width: 100vw;
   height: 80vh;
-  background-color: gray;
+  background-color: #E6E6E6;
+}
+
+@keyframes rain {
+  0% {top: -20px;}
+  100% {top: 1000px;}
 }
 
 @-webkit-keyframes rain {
@@ -34,7 +61,12 @@ body {
   100% {top: 1000px;}
 }
 
-@keyframes rain {
+@-moz-keyframes rain {
+  0% {top: -20px;}
+  100% {top: 1000px;}
+}
+
+@-o-keyframes rain {
   0% {top: -20px;}
   100% {top: 1000px;}
 }

@@ -26,4 +26,28 @@ $(document).ready(function() {
   makeDrop(150);
   makeRain(150);
 
+  var relMouseX;
+  var relMouseY;
+
+  $(document).mousemove(function(e){
+    var mouseX = e.pageX;
+    var mouseY = e.pageY;
+    console.log(mouseX);
+    relMouseX = mouseX - 125;
+    relMouseY = mouseY - 75;
+  });
+
+  function moveCursor() {
+    $("#umbrella").css("left", relMouseX);
+    $("#umbrella").css("top", relMouseY);
+    $("#cat").css("left", relMouseX + 50);
+    $("#cat").css("top", relMouseY + 150);
+    $(".stage").css("left", relMouseX);
+    $(".stage").css("top", relMouseY + 50);
+  }
+
+  var frameRate = 30;
+  var timeInterval = Math.round (1000 / frameRate);
+  var timer = setInterval(moveCursor, timeInterval);
+
 });
