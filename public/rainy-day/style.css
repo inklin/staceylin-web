@@ -1,0 +1,42 @@
+body {
+
+}
+
+.rain {
+  position: absolute;
+  top: -20px;
+  height: 20px;
+  width: 20px;
+  background-color: #105570;
+  border-radius: 50%;
+  border-top-right-radius: 0;
+
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+}
+
+.raining {
+  animation: rain 5s infinite ease-in;
+  -webkit-animation: rain 5s infinite ease-in;
+}
+
+.rain-container {
+  width: 100vw;
+  height: 80vh;
+  background-color: gray;
+}
+
+@-webkit-keyframes rain {
+  0% {top: -20px;}
+  100% {top: 1000px;}
+}
+
+@keyframes rain {
+  0% {top: -20px;}
+  100% {top: 1000px;}
+}
+
+
