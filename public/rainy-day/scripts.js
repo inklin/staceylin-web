@@ -40,8 +40,8 @@ $(document).ready(function() {
   function moveCursor() {
     $("#umbrella").css("left", relMouseX);
     $("#umbrella").css("top", relMouseY);
-    $("#cat").css("left", relMouseX + 50);
-    $("#cat").css("top", relMouseY + 150);
+    $("#frog").css("left", relMouseX + 10);
+    $("#frog").css("top", relMouseY + 150);
     $(".stage").css("left", relMouseX);
     $(".stage").css("top", relMouseY + 50);
   }
