@@ -43,7 +43,7 @@ $(document).ready(function() {
     $("#frog").css("left", relMouseX + 10);
     $("#frog").css("top", relMouseY + 150);
     $(".stage").css("left", relMouseX);
-    $(".stage").css("top", relMouseY + 50);
+    $(".stage").css("top", relMouseY + 85);
   }
 
   var frameRate = 30;
