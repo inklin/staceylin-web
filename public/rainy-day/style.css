@@ -15,6 +15,7 @@ h1 {
   top: 20px;
   word-spacing: 10px;
   text-decoration: none;
+  z-index: 5;
 }
 
 #umbrella {
