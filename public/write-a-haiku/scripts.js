@@ -38,12 +38,18 @@ $(document).ready(function() {
     $("#line-2").html(line2);
     if (syllableCount[0] !== 0){
       $("#syllable-count-0").html(syllableCount[0]);
+    } else {
+      $("#syllable-count-0").html("");
     }
     if (syllableCount[1] !== 0){
       $("#syllable-count-1").html(syllableCount[1]);
+    } else {
+      $("#syllable-count-1").html("");
     }
     if (syllableCount[2] !== 0){
       $("#syllable-count-2").html(syllableCount[2]);
+    } else {
+      $("#syllable-count-2").html("");
     }
   }
 
