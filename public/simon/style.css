@@ -23,31 +23,43 @@ body {
   height: 200px;
 }
 
+.red {
+  background-color: #CC0000;
+}
+
+.green {
+  background-color: #00CC00;
+}
+
+.blue {
+  background-color: #0000CC;
+}
+
+.yellow {
+  background-color: #CCCC00;
+}
+
 #red {
   top: 0;
   left: 0;
-  background-color: #FF0000;
   border-radius: 100% 0 0 0;
 }
 
 #green {
   top: 0;
   right: 0;
-  background-color: #009900;
   border-radius: 0 100% 0 0;
 }
 
 #blue {
   bottom: 0;
   left: 0;
-  background-color: #0000FF;
   border-radius: 0 0 0 100%;
 }
 
 #yellow {
   bottom: 0;
   right: 0;
-  background-color: #FFFF00;
   border-radius: 0 0 100% 0;
 }
 
@@ -60,6 +72,26 @@ body {
   width: 150px;
   height: 150px;
   z-index: 10;
+}
+
+.red-glow {
+  background-color: #FF0000;
+  box-shadow: 1px 1px 5px 5px #FFFFFF;
+}
+
+.green-glow{
+  background-color: #00FF00;
+  box-shadow: 1px 1px 5px 5px #FFFFFF;
+}
+
+.blue-glow {
+  background-color: #0000FF;
+  box-shadow: 1px 1px 5px 5px #FFFFFF;
+}
+
+.yellow-glow{
+  background-color: #FFFF33;
+  box-shadow: 1px 1px 5px 5px #FFFFFF;
 }
 
 
