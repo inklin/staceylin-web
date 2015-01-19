@@ -53,12 +53,15 @@ a:visited{
   padding: 50px;
   font-size: 35px;
 }
+
 .game-container {
   margin: auto;
   background-color: #000000;
   width: 460px;
   height: 460px;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
 }
 
 .button-container {
@@ -95,24 +98,32 @@ a:visited{
   top: 0;
   left: 0;
   border-radius: 100% 0 0 0;
+  -moz-border-radius: 100% 0 0 0;
+  -webkit-border-radius: 100% 0 0 0;
 }
 
 #green {
   top: 0;
   right: 0;
   border-radius: 0 100% 0 0;
+  -moz-border-radius: 0 100% 0 0;
+  -webkit-border-radius: 0 100% 0 0;
 }
 
 #blue {
   bottom: 0;
   left: 0;
   border-radius: 0 0 0 100%;
+  -moz-border-radius: 0 0 0 100%;
+  -webkit-border-radius: 0 0 0 100%;
 }
 
 #yellow {
   bottom: 0;
   right: 0;
   border-radius: 0 0 100% 0;
+  -moz-border-radius: 0 0 100% 0;
+  -webkit-border-radius: 0 0 100% 0;
 }
 
 #middle {
@@ -121,6 +132,8 @@ a:visited{
   top: 140px;
   background-color: #000000;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -web-border-radius: 50%;
   width: 150px;
   height: 150px;
   z-index: 10;
