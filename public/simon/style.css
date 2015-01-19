@@ -8,6 +8,7 @@ h1 {
   font-size: 35px;
 }
 
+
 .navigation {
   position: absolute;
   left: 20px;
@@ -76,6 +77,8 @@ a:visited{
   position: absolute;
   width: 200px;
   height: 200px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .red {
