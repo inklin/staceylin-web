@@ -5,8 +5,13 @@ body {
 
 .navigation {
   position: absolute;
-  left: 15px;
+  word-spacing: 20px;
+  left: 25px;
   top: 15px;
+}
+
+a:link {
+  color: #FE9A2E;
 }
 
 .calculatorcontainer {
@@ -36,6 +41,7 @@ body {
 .top {
   background-color: #D8D8D8;
 }
+
 .number {
   border: 1px solid #000000;
   width: 100px;
@@ -57,11 +63,23 @@ body {
   width: 202px;
 }
 
+#equal {
+  border-radius: 0 0 20px 0;
+  -moz-border-radius: 0 0 20px 0;
+  -webkit-border-radius: 0 0 20px 0;
+}
+
 #zero {
   width: 202px;
+  border-radius: 0 0 0 20px;
+  -moz-border-radius: 0 0 0 20px;
+  -webkit-border-radius: 0 0 0 20px;
 }
 
 .display {
   width: 408px;
   background-color: #000000;
+  border-radius: 20px 20px 0 0;
+  -moz-border-radius: 20px 20px 0 0;
+  -webkit-border-radius: 20px 20px 0 0;
 }
