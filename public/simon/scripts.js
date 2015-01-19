@@ -4,7 +4,13 @@ $(document).ready(function() {
   var allowUserInput = false;
   var level = 1;
 
+  $("#start").click(function(){
+    $(".start-play").hide();
+    makePattern();
+  });
+
   function makePattern(){
+    $("body").css("background-color", "white");
     var colorIndex = Math.floor(Math.random() * 4);
     var color = colorChoices[colorIndex];
     gamePattern.push(color);
@@ -27,14 +33,15 @@ $(document).ready(function() {
         i = 0;
         allowUserInput = true;
       }
-    }, 800);
+    }, 600);
   }
 
   function lightButton(color) {
     $('#' + color).addClass(color + "-glow");
+    playSound(color);
     setTimeout(function() {
       $('#' + color).removeClass(color + "-glow");
-    }, 600);
+    }, 500);
   }
 
   var userInput = [];
@@ -45,11 +52,12 @@ $(document).ready(function() {
         var color = this.id;
         userInput.push(color);
         lightButton(color);
-
         if (userInput[input] !== gamePattern[input]){
+          $("body").css("background-color", "red");
+          playSound("fail");
           gamePattern = [];
           userInput = [];
-          level = 0;
+          level = 1;
           allowUserInput = false;
           setTimeout(function(){
             $("#level").html("Level " + level);
@@ -72,5 +80,8 @@ $(document).ready(function() {
       }
   });
 
-  makePattern();
+  function playSound(color){
+    $(".sound").html("<audio autoplay><source src='" + color + ".wav' type='audio/wav'></audio>");
+  }
+
 });
