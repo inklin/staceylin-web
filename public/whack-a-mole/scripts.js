@@ -1,11 +1,12 @@
 $(document).ready(function() {
   var hits = 0;
   var level = 1;
-  var totalMoles = 10;
+  var totalMoles = 1000;
   var missedMoles = 0;
   var gameOver;
   var frequency = 1000;
   var moleInterval;
+  var i = -1;
 
   $("#start-button").click(function(){
     $(".start-game").hide();
@@ -14,7 +15,13 @@ $(document).ready(function() {
 
   function animateMole(frequency){
     moleInterval = setInterval(function(){
-      var number = Math.floor(Math.random() * 8 + 1);
+      var number = Math.floor(Math.random() * 9 );
+      while (number === i){
+        number = Math.floor(Math.random() * 9 );
+      }
+      console.log("number is" + number);
+      console.log("i is" + i);
+      i = number;
       popMole(number);
     }, frequency);
   }
@@ -34,7 +41,7 @@ $(document).ready(function() {
   }
 
 
-  $(".mole").click(function(){
+  $(".mole").mousedown(function(){
     var visibility = $(this).is(":visible");
     if (visibility && !gameOver){
       hits ++;
@@ -54,6 +61,19 @@ $(document).ready(function() {
         }, 1000);
       }
     }
+  });
+
+  $("#play-again").click(function(){
+    level = 1;
+    $("#level-count").html(level);
+    $(".level").show();
+    setTimeout(function(){
+      $(".level").hide();
+    }, 1000);
+    missedMoles = 0;
+    hits = 0;
+    frequency = 1000;
+    animateMole(frequency);
   });
 
 });

@@ -29,12 +29,16 @@ body {
 
 .top {
   z-index: 1;
+  -moz-border-radius: 50px 50px 0 0;
+  -webkit-border-radius: 50px 50px 0 0;
   border-radius: 50px 50px 0 0;
 }
 
 .bottom {
   position: relative;
   z-index: 100;
+  -moz-border-radius: 0 0 50px 50px;
+  -webkit-border-radius: 0 0 50px 50px;
   border-radius: 0 0 50px 50px;
   z-index: 2;
 }
@@ -58,14 +62,14 @@ body {
 
 .up {
   visibility: visible;
+  animation: pop 3s;
+  animation-fill-mode: forward;
   -webkit-animation: pop 3s;
   -webkit-animation-fill-mode: forward;
-}
-
-@-webkit-keyframes pop {
-  0% {bottom: 0px;}
-  50% {bottom: 75px;}
-  100% {bottom: 0px;}
+  -moz-animation: pop 3s;
+  -moz-animation-fill-mode: forward;
+  -o-animation: pop 3s;
+  -o-animation-fill-mode: forward;
 }
 
 @keyframes pop {
@@ -74,4 +78,20 @@ body {
   100% {bottom: 0px;}
 }
 
- /* <div class="hole top"></div><div class="hole bottom"></div>*/
+@-moz-keyframes pop {
+  0% {bottom: 0px;}
+  50% {bottom: 75px;}
+  100% {bottom: 0px;}
+}
+
+@-webkit-keyframes pop {
+  0% {bottom: 0px;}
+  50% {bottom: 75px;}
+  100% {bottom: 0px;}
+}
+
+@-o-keyframes pop {
+  0% {bottom: 0px;}
+  50% {bottom: 75px;}
+  100% {bottom: 0px;}
+}
