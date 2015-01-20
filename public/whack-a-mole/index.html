@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>Whack a Mole | Stacey Lin</title>
-
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
     <script src="/js/jquery-1.11.2.min.js"></script>
     <script src="/js/analytics.js"></script>
@@ -16,25 +16,33 @@
     </div>
 
     <div class="content">
-      
+      <h1>Whack a Mole</h1>
+
     <div class="start-game">
       <p>Whack 10 moles at each level.</p>
       <p>If you miss 10 moles in one level, game over.</p>
       <input id="start-button" type="button" value="Play!"></input>
     </div> 
 
-    <div class="level">
+    <div class="score-board">
       <p class="level-line">Level <span id="level-count">1</span></p>
-    </div>
-
-    <div class="scoreboard">
-      <p class="count"><span id="hit-count">0</span> hit</p>
-      <p class="count"><span id="missed-count">0</span> missed</p>
+      <p class="count"><span id="hit-count">0</span> hit <span id="missed-count">0</span> missed</p>
     </div>
 
     <div class="play-again">
-      Game over. 
-      <input id="play-again" type="button" value="Play Again"></input>
+      <div class="play-again-text">
+        <p>Game over.</p>
+        <p class="final-level">Level reached: <span id="level-count-final"></span></p>
+        <input class="play-again-button" type="button" value="Play Again"></input>
+      </div>
+
+      <div class="play-again-background"></div>
+    </div>
+
+    <div class="winner">
+      <p>Congratulations! You are a winner!</p>
+      <img src="trophy.png" />
+      <input class="play-again-button" type="button" value="Play Again"></input>
     </div>
 
     <div class="game-container">
