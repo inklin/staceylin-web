@@ -1,3 +1,28 @@
 body {
 
 }
+
+.field {
+  background-color: #F5DA81;
+  width: 600px;
+  height: 450px;
+}
+
+.hole {
+  width: 150px;
+  height: 100px;
+  margin: 25px;
+  float: left;
+  border-radius: 50%;
+  background-color: #61380B;
+}
+
+.mole {
+  width: 80px;
+  visibility: hidden;
+}
+
+.up {
+  visibility: visible;
+}
+
