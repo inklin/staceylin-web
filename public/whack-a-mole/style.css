@@ -3,26 +3,75 @@ body {
 }
 
 .field {
-  background-color: #F5DA81;
-  width: 600px;
-  height: 450px;
+  margin: auto;
+  width: 500px;
+  height: 510px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #B19776;
+}
+
+.hole-container {
+  padding: 25px;
+  position: relative;
+  width: 110px;
+  height: 120px;
+  float: left;
+
 }
 
 .hole {
-  width: 150px;
-  height: 100px;
-  margin: 25px;
-  float: left;
-  border-radius: 50%;
+  width: 120px;
+  height: 40px;
   background-color: #61380B;
 }
 
+.top {
+  z-index: 1;
+  border-radius: 50px 50px 0 0;
+}
+
+.bottom {
+  position: relative;
+  z-index: 100;
+  border-radius: 0 0 50px 50px;
+  z-index: 2;
+}
+
 .mole {
-  width: 80px;
-  visibility: hidden;
+  padding-left: 5px;
+  position: absolute;
+  bottom: 0px;
+  width: 115px;
+  z-index: 0;
+}
+
+.hider {
+  position: absolute;
+  bottom: 0px;
+  width: 125px;
+  height: 100px;
+  background-color: #B19776;
+  z-index: 1;
 }
 
 .up {
   visibility: visible;
+  -webkit-animation: pop 3s;
+  -webkit-animation-fill-mode: forward;
 }
 
+@-webkit-keyframes pop {
+  0% {bottom: 0px;}
+  50% {bottom: 75px;}
+  100% {bottom: 0px;}
+}
+
+@keyframes pop {
+  0% {bottom: 0px;}
+  50% {bottom: 75px;}
+  100% {bottom: 0px;}
+}
+
+ /* <div class="hole top"></div><div class="hole bottom"></div>*/

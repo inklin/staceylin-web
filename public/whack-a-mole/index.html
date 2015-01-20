@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title></title>
+    <title>Whack a Mole | Stacey Lin</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="/js/jquery-1.11.2.min.js"></script>
@@ -22,21 +22,32 @@
     </div> 
 
     <div class="level">
+      <p class="level-line">Level <span id="level-count">1</span></p>
+    </div>
+
+    <div class="scoreboard">
+      <p class="count"><span id="hit-count">0</span> hit</p>
+      <p class="count"><span id="missed-count">0</span> missed</p>
+    </div>
+
+    <div class="play-again">
+      <input id="play-again" type="button" value="Play Again"></input>
     </div>
 
     <div class="game-container">
       <div class="field">
-        <div class="hole"><img src="mole.png" class="mole" id="mole-0" /></div>
-        <div class="hole"><img src="mole.png" class="mole" id="mole-1" /></div>
-        <div class="hole"><img src="mole.png" class="mole" id="mole-2" /></div>
-        <div class="hole"><img src="mole.png" class="mole" id="mole-3" /></div>
-        <div class="hole"><img src="mole.png" class="mole" id="mole-4" /></div>
-        <div class="hole"><img src="mole.png" class="mole" id="mole-5" /></div>
-        <div class="hole"><img src="mole.png" class="mole" id="mole-6" /></div>
-        <div class="hole"><img src="mole.png" class="mole" id="mole-7" /></div>
-        <div class="hole"><img src="mole.png" class="mole" id="mole-8" /></div>
+        <div class="hole-container"><div class="hole top"></div><div class="hole bottom"></div><img src="mole.png" class="mole" id="mole-0" /><div class="hider"></div></div>
+        <div class="hole-container"><div class="hole top"></div><div class="hole bottom"></div><img src="mole.png" class="mole" id="mole-1" /><div class="hider"></div></div>
+        <div class="hole-container"><div class="hole top"></div><div class="hole bottom"></div><img src="mole.png" class="mole" id="mole-2" /><div class="hider"></div></div>
+        <div class="hole-container"><div class="hole top"></div><div class="hole bottom"></div><img src="mole.png" class="mole" id="mole-3" /><div class="hider"></div></div>
+        <div class="hole-container"><div class="hole top"></div><div class="hole bottom"></div><img src="mole.png" class="mole" id="mole-4" /><div class="hider"></div></div>
+        <div class="hole-container"><div class="hole top"></div><div class="hole bottom"></div><img src="mole.png" class="mole" id="mole-5" /><div class="hider"></div></div>
+        <div class="hole-container"><div class="hole top"></div><div class="hole bottom"></div><img src="mole.png" class="mole" id="mole-6" /><div class="hider"></div></div>
+        <div class="hole-container"><div class="hole top"></div><div class="hole bottom"></div><img src="mole.png" class="mole" id="mole-7" /><div class="hider"></div></div>
+        <div class="hole-container"><div class="hole top"></div><div class="hole bottom"></div><img src="mole.png" class="mole" id="mole-8" /><div class="hider"></div></div>
       </div>
     </div>
+
 
 
     </div>
