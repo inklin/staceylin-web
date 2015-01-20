@@ -34,6 +34,7 @@ $(document).ready(function() {
       }
       if (missedMoles === totalMoles){
         gameOver = true;
+        playSound("gameover");
         $("#level-count-final").html(level);
         $(".play-again").show();
         clearInterval(moleInterval);
@@ -46,6 +47,7 @@ $(document).ready(function() {
     var visibility = $(this).is(":visible");
     if (visibility && !gameOver){
       hits ++;
+      playSound("hit");
       $(this).removeClass("up");
       $("#hit-count").html(hits);
       if (hits === totalMoles){
@@ -54,9 +56,10 @@ $(document).ready(function() {
         missedMoles = 0;
         hits = 0;
         frequency = frequency - 100;
-        if (frequency === 900){
+        if (frequency === 300){
           $(".winner").show();
-        } else {
+          $(".winner").append("<audio autoplay><source src='win.wav' type='audio/wav'></audio>");
+          } else {
           animateMole(frequency);
           $("#level-count").html(level);
         }
@@ -65,6 +68,7 @@ $(document).ready(function() {
   });
 
   $(".play-again-button").click(function(){
+    $(".winner").hide();
     $(".play-again").hide();
     level = 1;
     $("#level-count").html(level);
@@ -79,4 +83,7 @@ $(document).ready(function() {
     }, 1000);
   });
 
+  function playSound(soundName){
+    $(".sound").html("<audio autoplay><source src='" + soundName + ".wav' type='audio/wav'></audio>");
+  }
 });
