@@ -1,5 +1,6 @@
 body {
   background-color: #ecf0f1;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .toy-box {
@@ -11,7 +12,7 @@ body {
 
 .navigation {
   background-color: #bdc3c7;
-  font-size: 20px;
+  font-size: 18px;
   position: absolute;
   top: 0px;
   width: 100%;
