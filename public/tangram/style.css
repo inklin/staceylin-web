@@ -1,0 +1,106 @@
+body {
+
+}
+
+.toy-box {
+  position: relative;
+  border: 1px solid black;
+  height: 400px;
+  width: 400px;
+}
+
+.big-triangle {
+  height: 0px; 
+  width: 0px; 
+  border-top: 0px solid transparent; 
+  border-right: 200px solid transparent; 
+  border-left: 200px solid transparent; 
+}
+
+.first {
+  position: absolute;
+  top: 200px;
+  border-bottom: 200px #3498db solid; 
+}
+
+.second {
+  position: absolute;
+  left: -100px;
+  top: 100px;
+  border-bottom: 200px #2ecc71 solid; 
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.medium-triangle {
+  position: absolute;
+  right: -91px;
+  top: -21px;
+  height: 0px; 
+  width: 0px; 
+  border-top: 0px solid transparent; 
+  border-right: 142px solid transparent; 
+  border-left: 142px solid transparent;
+  border-bottom: 142px #f1c40f solid; 
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.small-triangle {
+  position: absolute;
+  height: 0px; 
+  width: 0px; 
+  border-top: 0px solid transparent; 
+  border-right: 100px solid transparent; 
+  border-left: 100px solid transparent;
+}
+
+.one {
+  position: absolute;
+  right: 50px;
+  top: 150px;
+  border-bottom: 100px #9b59b6 solid; 
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.two {
+  border-bottom: 100px #e67e22 solid; 
+  top: 1px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.square {
+  position: absolute;
+  height: 141px; 
+  width: 141px; 
+  background-color: #e74c3c;
+  left: 130px;
+  top: 30px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.parallello {
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  height: 100px;
+  width: 200px;
+  background-color: #1abc9c;
+  -webkit-transform: rotate(90deg) skew(-45deg) ;
+  -moz-transform:  rotate(90deg) skew(-45deg) ;
+  -o-transform: rotate(90deg) skew(-45deg);
+  transform: rotate(90deg) skew(-45deg);
+}
