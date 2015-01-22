@@ -57,10 +57,10 @@ body {
   opacity: 1;
   background: inherit;
 
-  -webkit-animation: mask 10s steps(1, end) infinite;
-  -moz-animation: mask 10s steps(1, end) infinite;
-  -o-animation: mask 10s steps(1, end) infinite;
-  animation: mask 10s steps(1, end) infinite;
+  -webkit-animation: fill 10s steps(1, end) reverse;
+  -moz-animation: fill 10s steps(1, end) reverse;
+  -o-animation: fill 10s steps(1, end) reverse;
+  animation: fill 10s steps(1, end) reverse;
 }
 
 /* rotate animation */
@@ -106,26 +106,4 @@ body {
 @keyframes fill {
   0% { opacity: 0; }
   50%, 100% { opacity: 1; }
-}
-
-/* Mask animation */
-
-@-webkit-keyframes mask {
-  0% { opacity: 1;}
-  50%, 100% { opacity: 0;}
-}
-
-@-moz-keyframes mask {
-  0% { opacity: 1;}
-  50%, 100% { opacity: 0;}
-}
-
-@-o-keyframes mask {
-  0% { opacity: 1;}
-  50%, 100% { opacity: 0;}
-}
-
-@keyframes mask {
-  0% { opacity: 1;}
-  50%, 100% { opacity: 0;}
 }
