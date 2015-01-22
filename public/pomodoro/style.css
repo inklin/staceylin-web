@@ -1,0 +1,118 @@
+body {
+
+}
+
+.pie-wrapper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background: #FFFFFF;
+}
+
+.pie {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: #0088cc;
+  border: 10px solid rgba(0,0,0,0.4);
+}
+
+.filler {
+  border-radius: 0 150px 150px 0;
+  border-left: none;
+  left: 50%;
+  opacity: 0;
+  z-index: 10;
+  animation: fill 10s steps(1, end) infinite;
+  -webkit-animation: fill 10s steps(1, end) infinite;
+  -moz-animation: fill 10s steps(1, end) infinite;
+  -o-animation: fill 10s steps(1, end) infinite;
+}
+
+.spinner {
+  border-radius: 150px 0 0 150px;
+  z-index: 200;
+  border-right: none;
+  z-index: 20;
+  animation: rotate 10s linear infinite;
+  -webkit-animation: rotate 10s linear infinite;
+  -moz-animation: rotate 10s linear infinite;
+  -o-animation: rotate 10s linear infinite;
+}
+
+.mask {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  z-index: 30;
+  opacity: 1;
+  background: inherit;
+  animation: mask 10s steps(1, end) infinite;
+}
+
+/* rotate animation */
+
+@-webkit-keyframes rotate {
+  0% { transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+  0% { transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@-o-keyframes rotate {
+  0% { transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+
+/* Fill animation */
+
+@-webkit-keyframes fill {
+  0% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+@-moz-keyframes fill {
+  0% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+@-o-keyframes fill {
+  0% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+@keyframes fill {
+  0% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+/* Mask animation */
+
+@-webkit-keyframes mask {
+  0% { opacity: 1;}
+  50%, 100% { opacity: 0;}
+}
+
+@-moz-keyframes mask {
+  0% { opacity: 1;}
+  50%, 100% { opacity: 0;}
+}
+
+@-o-keyframes mask {
+  0% { opacity: 1;}
+  50%, 100% { opacity: 0;}
+}
+
+@keyframes mask {
+  0% { opacity: 1;}
+  50%, 100% { opacity: 0;}
+}
