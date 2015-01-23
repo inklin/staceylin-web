@@ -5,6 +5,8 @@ body {
 .wrapper {
   width: 250px;
   height: 250px;
+  border-radius: 50%;
+  border: 1px solid #000000;
   margin: 0 auto;
   position: relative;
   background: #FFFFFF;
@@ -27,11 +29,13 @@ body {
   border-radius: 100% 0 0 100% / 50% 0 0 50%;
   z-index: 200;
   border-right: none;
+}
 
-  animation: rotate 10s linear infinite;
-  -webkit-animation: rotate 10s linear infinite;
-  -moz-animation: rotate 10s linear infinite;
-  -o-animation: rotate 10s linear infinite;
+.spinner-animate {
+  animation: rotate 1500s linear infinite;
+  -webkit-animation: rotate 1500s linear infinite;
+  -moz-animation: rotate 1500s linear infinite;
+  -o-animation: rotate 1500s linear infinite;
 }
 
 .filler {
@@ -40,11 +44,13 @@ body {
   left: 50%;
   opacity: 0;
   z-index: 100;
+}
 
-  animation: fill 10s steps(1, end) infinite;
-  -webkit-animation: fill 10s steps(1, end) infinite;
-  -moz-animation: fill 10s steps(1, end) infinite;
-  -o-animation: fill 10s steps(1, end) infinite;
+.filler-animate {
+  animation: fill 1500s steps(1, end) infinite;
+  -webkit-animation: fill 1500s steps(1, end) infinite;
+  -moz-animation: fill 1500s steps(1, end) infinite;
+  -o-animation: fill 1500s steps(1, end) infinite;
 }
 
 .mask {
@@ -56,11 +62,13 @@ body {
   z-index: 300;
   opacity: 1;
   background: inherit;
+}
 
-  -webkit-animation: fill 10s steps(1, end) reverse;
-  -moz-animation: fill 10s steps(1, end) reverse;
-  -o-animation: fill 10s steps(1, end) reverse;
-  animation: fill 10s steps(1, end) reverse;
+.mask-animate {
+  -webkit-animation: fill 1500s steps(1, end) reverse infinite;
+  -moz-animation: fill 1500s steps(1, end) reverse infinite;
+  -o-animation: fill 1500s steps(1, end) reverse infinite;
+  animation: fill 1500s steps(1, end) reverse infinite;
 }
 
 /* rotate animation */
@@ -86,7 +94,7 @@ body {
 }
 
 
-/* Fill animation */
+/* fill animation */
 
 @-webkit-keyframes fill {
   0% { opacity: 0; }
