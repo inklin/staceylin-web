@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+    background: linear-gradient(bottom, #071418, #0A2229) fixed no-repeat;
+    background: -webkit-linear-gradient(bottom, #071418, #0A2229) fixed no-repeat;
+}
+
+li {
+    list-style: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #E3F6CE;
+    box-shadow: 0 0 7px #9AFE2E, 0 0 10px #21610B;
+    position: absolute;
+    -webkit-animation: horizontal 25s linear infinite,
+                       vertical 10s infinite;
+    -webkit-animation-fill-mode: backwards;
+}
+
+li:nth-child(2) {
+    -webkit-animation-delay: 4s;
+}
+
+@-webkit-keyframes horizontal {
+    0% { left: 10% }
+    10% { left: 80% }
+    40% { left: 30%}
+    55% { left: 45% }
+    70% { left: 70% }
+    85% { left: 50% }
+    100% { left: 10% }
+}
+
+@-webkit-keyframes vertical {
+    0%, 100% { top: 10%; width: 13px; height: 13px }
+    40% { top: 80%; width: 5px; height: 5px }
+    60% { top: 95%; width: 10px; height: 10px }
+    75% { top: 80%; width: 13px; height: 13px }
+}
+
