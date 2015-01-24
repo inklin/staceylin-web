@@ -5,7 +5,7 @@ $(document).ready(function() {
   var pomoCount = 0;
 
   $("#pomo").click(function(){
-    startTimer(1);
+    startTimer(25);
   });
 
   function startTimer(limit){
