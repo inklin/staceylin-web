@@ -3,7 +3,6 @@ body {
   background-color: #D1E0E0;
   color: #1F2E2E;
   text-align: center;
-  text-decoration: none;
 }
 
 .navigation {
@@ -17,6 +16,18 @@ body {
   width: 100%;
   word-spacing: 30px;
   z-index: 50;
+}
+
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+
+a:link {
+  color: #FF5C33;
+}
+
+a:visited {
+  color: #1F2E2E;
 }
 
 .choice-container {
