@@ -1,27 +1,16 @@
 $(document).ready(function() {
-  var pomoStarted = false;
-  var breakStarted = false;
-
-  $("#pomo").click(function(){
-    if (!breakStarted) {
-      pomoStarted = true;
-      startTimer(25);
-      breakStarted = false;
-    }
-  });
-
-  $("#break").click(function (){
-    if (!pomoStarted){
-      startTimer(5);
-      breakStarted = true;
-      pomoStarted = false;
-    }
-  });
 
   var minutes = 0;
   var seconds = 0;
+  var pomoCount = 0;
+
+  $("#pomo").click(function(){
+    startTimer(1);
+  });
 
   function startTimer(limit){
+    $("#pomo").hide();
+
     $(".time").show();
     var displayMinutes;
     var displaySeconds;
@@ -34,6 +23,8 @@ $(document).ready(function() {
       $(".spinner").removeClass("spinner-animate");
       $(".filler").removeClass("filler-animate");
       $(".mask").removeClass("mask-animate");
+
+      $("#pomo").show();
     }, limit * 60 * 1000);
 
     var pomoInterval = setInterval(function(){
@@ -58,7 +49,12 @@ $(document).ready(function() {
       $("#minutes").html(displayMinutes);
       if (minutes === limit){
         clearInterval(pomoInterval);
+        minutes = 0;
+        seconds = 0;
+        pomoCount = pomoCount + 1;
+        $("#pomo-count").html(pomoCount);
         }
+
     }, 1000);
 
   }

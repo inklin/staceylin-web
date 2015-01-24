@@ -1,5 +1,49 @@
 body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #D1E0E0;
+  color: #1F2E2E;
+  text-align: center;
+  text-decoration: none;
+}
 
+.navigation {
+  position: absolute;
+  bottom: 0;
+  background-color: #94B8B8;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  height: 25px;
+  width: 100%;
+  word-spacing: 30px;
+  z-index: 50;
+}
+
+.choice-container {
+  padding-top: 20px;
+}
+
+#pomo {
+  margin-top: 15px;
+  width: 100px;
+  height: 40px; 
+  border: 1px solid #FFFFEB;
+  background-color: #FF5C33;
+  color: #FFFFEB;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.pomo-counter {
+  z-index: 40;
+  height: 50px;
+  color: #000000;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 37px;
+  padding-top: 20px;
 }
 
 .wrapper {
@@ -7,12 +51,20 @@ body {
   height: 250px;
   border-radius: 50%;
   margin: 0 auto;
+  top: 0px;
   position: relative;
-  background: #FFFFFF;
+  background: #D1E0E0;
 }
 
 .time {
+  position: absolute;
   z-index: 500;
+  width: 200px;
+  height: 50px;
+  left: 30px;
+  top: 100px;
+  font-size: 40px;
+  background: transparent;
   display: none;
 }
 
@@ -20,8 +72,8 @@ body {
   width: 50%;
   height: 100%;
   position: absolute;
-  background: #0088cc;
-  border: 10px solid rgba(0,0,0,0.4);
+  background: #FF6666;
+  border: 10px solid #99CC00;
 
   -webkit-transform-origin: 100% 50%;
   -o-transform-origin: 100% 50%;
@@ -31,15 +83,22 @@ body {
 .spinner {
   margin-left: -10px;
   border-radius: 100% 0 0 100% / 50% 0 0 50%;
-  z-index: 200;
+  z-index: 20;
   border-right: none;
 }
 
 .spinner-animate {
-  animation: rotate 1500s linear infinite;
-  -webkit-animation: rotate 1500s linear infinite;
-  -moz-animation: rotate 1500s linear infinite;
-  -o-animation: rotate 1500s linear infinite;
+  animation: rotate 1500s linear;
+  -webkit-animation: rotate 1500s linear;
+  -moz-animation: rotate 1500s linear;
+  -o-animation: rotate 1500s linear;
+}
+
+.spinner-animate {
+  animation: rotate 1500s linear;
+  -webkit-animation: rotate 1500s linear;
+  -moz-animation: rotate 1500s linear;
+  -o-animation: rotate 1500s linear;
 }
 
 .filler {
@@ -47,32 +106,32 @@ body {
   border-left: none;
   left: 50%;
   opacity: 0;
-  z-index: 100;
+  z-index: 10;
 }
 
 .filler-animate {
-  animation: fill 1500s steps(1, end) infinite;
-  -webkit-animation: fill 1500s steps(1, end) infinite;
-  -moz-animation: fill 1500s steps(1, end) infinite;
-  -o-animation: fill 1500s steps(1, end) infinite;
+  animation: fill 1500s steps(1, end);
+  -webkit-animation: fill 1500s steps(1, end);
+  -moz-animation: fill 1500s steps(1, end);
+  -o-animation: fill 1500s steps(1, end);
 }
 
 .mask {
   width: 55%;
   height: 110%;
   margin-top: -3px;
-  margin-left: -13px;
+  margin-left: -12px;
   position: absolute;
-  z-index: 300;
+  z-index: 30;
   opacity: 1;
   background: inherit;
 }
 
 .mask-animate {
-  -webkit-animation: fill 1500s steps(1, end) reverse infinite;
-  -moz-animation: fill 1500s steps(1, end) reverse infinite;
-  -o-animation: fill 1500s steps(1, end) reverse infinite;
-  animation: fill 1500s steps(1, end) reverse infinite;
+  -webkit-animation: fill 1500s steps(1, end) reverse;
+  -moz-animation: fill 1500s steps(1, end) reverse;
+  -o-animation: fill 1500s steps(1, end) reverse;
+  animation: fill 1500s steps(1, end) reverse;
 }
 
 /* rotate animation */
