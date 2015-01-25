@@ -1,28 +1,125 @@
 html {
-    height: 100%;
+    font-family: 'Lobster', cursive;
+    background-color: #071418;
     background: linear-gradient(bottom, #071418, #0A2229) fixed no-repeat;
-    background: -webkit-linear-gradient(bottom, #071418, #0A2229) fixed no-repeat;
+    background: -webkit-linear-gradient(bottom, #071418 60%, #0B243B) fixed no-repeat;
+    background: -moz-linear-gradient(bottom, #071418, #0A2229) fixed no-repeat;
+    background: -o-linear-gradient(bottom, #071418, #0A2229) fixed no-repeat;
+}
+
+.navigation {
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    word-spacing: 15px;
+    font-size: 20px;
+}
+
+a:link {
+    color: #D8D8D8;
+}
+
+a:visited {
+    color: #ACFA58;
+}
+
+a:hover {
+    color: #6E6E6E;
+}
+
+.content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+li.fireflies {
+    list-style: none;
 }
 
 li {
     list-style: none;
     width: 13px;
     height: 13px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
     border-radius: 50%;
+
     background-color: #E3F6CE;
     box-shadow: 0 0 7px #9AFE2E, 0 0 10px #21610B;
     position: absolute;
-    -webkit-animation: horizontal 25s linear infinite,
-                       vertical 10s infinite;
-    -webkit-animation-fill-mode: backwards;
+
+    -webkit-animation:  horizontal 25s infinite cubic-bezier(.39,.0,.63,1),
+                        vertical 10s infinite cubic-bezier(.39,.0,.63,1);
+    -moz-animation:     horizontal 25s infinite cubic-bezier(.39,.0,.63,1),
+                        vertical 10s infinite cubic-bezier(.39,.0,.63,1);
+    -o-animation:       horizontal 25s infinite cubic-bezier(.39,.0,.63,1),
+                        vertical 10s infinite cubic-bezier(.39,.0,.63,1);
+    animation:          horizontal 25s infinite cubic-bezier(.39,.0,.63,1),
+                        vertical 10s infinite cubic-bezier(.39,.0,.63,1);
 }
 
 li:nth-child(2) {
-    -webkit-animation-delay: 4s;
+    -webkit-animation-delay: 3s;
+    -webkit-animation-duration: 17s, 9s;
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-delay: 3s;
+    -moz-animation-duration: 17s, 9s;
+    -moz-animation-fill-mode: backwards, backwards;
+    -o-animation-delay: 3s;
+    -o-animation-duration: 17s, 9s;
+    -o-animation-fill-mode: backwards, backwards;
+    animation-delay: 3s;
+    animation-duration: 17s, 9s;
+    animation-fill-mode: backwards, backwards;
+}
+
+li:nth-child(3) {
+    -webkit-animation-delay: 1.5s;
+    -webkit-animation-duration: 15s, 8s;
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-delay: 1.5s;
+    -moz-animation-duration: 15s, 8s;
+    -moz-animation-fill-mode: backwards, backwards;
+    -o-animation-delay: 1.5s;
+    -o-animation-duration: 15s, 8s;
+    -o-animation-fill-mode: backwards, backwards;
+    animation-delay: 1.5s;
+    animation-duration: 15s, 8s;
+    animation-fill-mode: backwards, backwards;
+}
+
+li:nth-child(4) {
+    -webkit-animation-delay: 5.5s;
+    -webkit-animation-duration: 20s, 15s;
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-delay: 5.5s;
+    -moz-animation-duration: 20s, 15s;
+    -moz-animation-fill-mode: backwards, backwards;
+    -o-animation-delay: 5.5s;
+    -o-animation-duration: 20s, 15s;
+    -o-animation-fill-mode: backwards, backwards;
+    animation-delay: 5.5s;
+    animation-duration: 20s, 15s;
+    animation-fill-mode: backwards, backwards;
+}
+
+li:nth-child(5) {
+    -webkit-animation-fill-mode: backwards, backwards;
+    -webkit-animation-duration: 10s, 12s;
+    -moz-animation-fill-mode: backwards, backwards;
+    -moz-animation-duration: 10s, 12s;
+    -o-animation-fill-mode: backwards, backwards;
+    -o-animation-duration: 10s, 12s;
+    animation-fill-mode: backwards, backwards;
+    animation-duration: 10s, 12s;
 }
 
 @-webkit-keyframes horizontal {
     0% { left: 10% }
+    20% { left: 55%}
     10% { left: 80% }
     40% { left: 30%}
     55% { left: 45% }
@@ -33,8 +130,66 @@ li:nth-child(2) {
 
 @-webkit-keyframes vertical {
     0%, 100% { top: 10%; width: 13px; height: 13px }
-    40% { top: 80%; width: 5px; height: 5px }
-    60% { top: 95%; width: 10px; height: 10px }
-    75% { top: 80%; width: 13px; height: 13px }
+    30% { top: 35%; width: 12px; height: 12px }
+    40% { top: 60%; width: 5px; height: 5px }
+    60% { top: 70%; width: 10px; height: 10px }
+    75% { top: 55%; width: 13px; height: 13px }
+}
+
+@-moz-keyframes horizontal {
+    0% { left: 10% }
+    20% { left: 55%}
+    10% { left: 80% }
+    40% { left: 30%}
+    55% { left: 45% }
+    70% { left: 70% }
+    85% { left: 50% }
+    100% { left: 10% }
+}
+
+@-moz-keyframes vertical {
+    0%, 100% { top: 10%; width: 13px; height: 13px }
+    30% { top: 35%; width: 12px; height: 12px }
+    40% { top: 60%; width: 5px; height: 5px }
+    60% { top: 70%; width: 10px; height: 10px }
+    75% { top: 55%; width: 13px; height: 13px }
+}
+
+@-o-keyframes horizontal {
+    0% { left: 10% }
+    20% { left: 55%}
+    10% { left: 80% }
+    40% { left: 30%}
+    55% { left: 45% }
+    70% { left: 70% }
+    85% { left: 50% }
+    100% { left: 10% }
+}
+
+@-o-keyframes vertical {
+    0%, 100% { top: 10%; width: 13px; height: 13px }
+    30% { top: 35%; width: 12px; height: 12px }
+    40% { top: 60%; width: 5px; height: 5px }
+    60% { top: 70%; width: 10px; height: 10px }
+    75% { top: 55%; width: 13px; height: 13px }
+}
+
+@keyframes horizontal {
+    0% { left: 10% }
+    20% { left: 55%}
+    10% { left: 80% }
+    40% { left: 30%}
+    55% { left: 45% }
+    70% { left: 70% }
+    85% { left: 50% }
+    100% { left: 10% }
+}
+
+@keyframes vertical {
+    0%, 100% { top: 10%; width: 13px; height: 13px }
+    30% { top: 35%; width: 12px; height: 12px }
+    40% { top: 60%; width: 5px; height: 5px }
+    60% { top: 70%; width: 10px; height: 10px }
+    75% { top: 55%; width: 13px; height: 13px }
 }
 
