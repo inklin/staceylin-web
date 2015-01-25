@@ -1,0 +1,96 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+    min-height: 100%;
+    box-shadow: 0 0 50px #000000;
+}
+
+h1, h2, h3 {
+    font-family: "Courgette";
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0 0 70px 0;
+}
+
+h3 {
+    color: #C5E74B;
+    font-size: 25px;
+}
+
+header {
+    height: 300px;
+    color: #FFFFFF;
+    text-align: right;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #000000;
+    background-image: url(images/turtle_bath.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+section {
+    background: #1E4E03;
+    color: #FFFFFF;
+    padding: 20px 50px;
+    overflow: auto;
+}
+
+footer {
+    color: #A3B65E;
+    background-color: #133002;
+    padding: 50px;
+    text-align: center;
+}
+
+img.brush {
+    float: right;
+    margin-left: 50px;
+    height: 200px;
+    box-shadow: 0 0 25px #000000;
+}
+
+a.action {
+    border: 1px solid #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+}
+
+#icons {
+    background: #587E44;
+    color: #DFFFBB;
+}
+
+#icons .icon {
+    float: left;
+    text-align: center;
+    width: 230px;
+}
+
+#icons .icon img {
+    width: 100px;
+}
