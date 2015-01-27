@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  var canvas = document.getElementByID('canvas');
-  var context = canvas.getContext('2d');
+  var canvas = $("#canvas")[0];
+  var context = canvas.getContext("2d");
 
   /* An empty array which will contain all triangles */
   var trgs = [];
@@ -9,7 +9,7 @@ $(document).ready(function() {
   var dim = 500;
 
   var trg = {
-    c: "black",
+    c: "#000000",
     /* left vertex of the triangle */
     ly: canvas.height,
     lx: 0,
@@ -23,7 +23,13 @@ $(document).ready(function() {
     di: dim,
   };
 
-  trgs.push(triangle);
+  trgs.push(trg);
+
+  iterate_fractal();
+  iterate_fractal();
+  iterate_fractal();
+  iterate_fractal();
+  iterate_fractal();
 
   function iterate_fractal(){
     /* clear the screen for each iteration */
@@ -33,20 +39,19 @@ $(document).ready(function() {
     /* iterate through all the triangles to find the black ones */
     for (var i in trgs){
       /* check the color property of the single triangle */
-      if (trgs[i].c === "black"){
-
+      if (trgs[i].c === "#000000"){
         /* create the middle white triangle */
         var trgWhite = {
-          c: "white",
+          c: "#FFFFFF",
           /* calculate the mid points of the sides of the triangle */
           ly: (trgs[i].ly + trgs[i].ty) /2,
           lx: (trgs[i].lx + trgs[i].tx) /2,
-          ry: (trg[i].ry + trgs[i].ty) /2,
-          rx: (trg[i].rx + trgs[i].tx) /2,
+          ry: (trgs[i].ry + trgs[i].ty) /2,
+          rx: (trgs[i].rx + trgs[i].tx) /2,
           /* the top vertex y coordinate plus the height of the big triangle */
-          ty: trigs[i].ty + (Math.sqrt(3) * trigs[i].dim)/2,
+          ty: trgs[i].ty + (Math.sqrt(3) * trgs[i].di)/2,
           /* the top x vertex is the same as the big triangle */
-          tx: trigs[i].tx,
+          tx: trgs[i].tx,
           /* the dimension is half the size of the triangle it is inside */
           di: trgs[i].di/2,
         };
@@ -55,10 +60,10 @@ $(document).ready(function() {
 
         /* create the top black triangle */
         var trgTop = {
-          c: "black",
+          c: "#000000",
           /* The left vertex is the same as the left vertex of the white triangle */
           ly: (trgs[i].ly + trgs[i].ty) /2,
-          lx: (trgs[i].lx + trg[si].tx) /2,
+          lx: (trgs[i].lx + trgs[i].tx) /2,
           /* The right vertex is the same as the right vertex of the white triangle */
           ry: (trgs[i].ry + trgs[i].ty) /2,
           rx: (trgs[i].rx + trgs[i].tx) /2,
@@ -74,16 +79,16 @@ $(document).ready(function() {
         /* create the bottom left black triangle */
 
         var trgLeft = {
-          c: "black",
+          c: "#000000",
           /* The left vertex is the same as the left vertex of the large triangle */
           ly: trgs[i].ly,
           lx: trgs[i].lx,
-          /* The right vertex is the same as the "top" vertex of the white triangle */
-          ry: trigs[i].ty + (Math.sqrt(3) * trigs[i].dim)/2,
-          rx: trigs[i].tx,
+          /* Create the right vertex */
+          ry: (trgs[i].ry + trgs[i].ly)/2,
+          rx: (trgs[i].rx + trgs[i].lx)/2,
           /* The top vertex is the same as the left vertex of the white triangle */
           ty: (trgs[i].ly + trgs[i].ty) /2,
-          tx: (trg[i].rx + trgs[i].tx) /2,
+          tx: (trgs[i].lx + trgs[i].tx) /2,
           di: trgs[i].di/2,
         };
 
@@ -91,10 +96,10 @@ $(document).ready(function() {
 
         /* create the bottom right black triangle */
         var trgRight = {
-          c: "black",
+          c: "#000000",
           /* The left vertex is the same as the top vertex of the white triangle */
-          ly: trigs[i].ty + (Math.sqrt(3) * trigs[i].dim)/2,
-          lx: trigs[i].tx,
+          ly: (trgs[i].ly + trgs[i].ry)/2,
+          lx: (trgs[i].lx + trgs[i].rx)/2,
           /* The right vertex is the same as the right vertex of the large triangle */
           ry: trgs[i].ry,
           rx: trgs[i].rx,
@@ -106,23 +111,23 @@ $(document).ready(function() {
 
         trgs.push(trgRight);
       }
-
-    drawTrg(trgs[i]);
+    }
+    for (i in trgs){
+      drawTrg(trgs[i]);
     }
   }
 
   function drawTrg(t){
-    ctx.beginPath();
-    ctx.moveTo(t.lx, t.ly);
-    ctx.lineTo(t.rx, t.ry);
-    ctx.lineTo(t.tx, t.ty);
-    ctx.lineTo(t.lx, t.ly);
+    context.beginPath();
+    context.moveTo(t.lx, t.ly);
+    context.lineTo(t.rx, t.ry);
+    context.lineTo(t.tx, t.ty);
+    context.lineTo(t.lx, t.ly);
 
-    ctx.fillStyle = t.c;
-    ctx.fill();
-    ctx.closePath();
+    context.fillStyle = t.c;
+    context.fill();
+    context.closePath();
 
   }
 
-iterate_fractal();
 });
