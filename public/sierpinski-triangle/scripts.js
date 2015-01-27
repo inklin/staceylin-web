@@ -112,11 +112,14 @@ $(document).ready(function() {
         trgs.push(trgRight);
       }
     }
+
+    /* Draw all the triangles in the array */
     for (i in trgs){
       drawTrg(trgs[i]);
     }
   }
 
+  /* Create a function to draw one triangle */
   function drawTrg(t){
     context.beginPath();
     context.moveTo(t.lx, t.ly);

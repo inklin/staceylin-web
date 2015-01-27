@@ -1,3 +1,30 @@
 body {
+  background-color: #3366CC;
+  font-family: 'Poiret One', cursive;
+}
 
+#canvas {
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.navigation {
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  word-spacing: 10px;
+}
+
+a:link {
+  text-decoration: none;
+  color: #CCFFFF;
+}
+
+a:hover {
+  color: #000000;
+}
+
+a:visited {
+  color: #9999FF;
 }
