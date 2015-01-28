@@ -18,30 +18,36 @@
     <div class="intro">
       <h2>Jaws</h2>
       <p>Enter from the left and make it to the right side.</p>
-      <p id="start-game" class="button">Game On!</p>
+    </div>
+
+    <div class="options">
+      <input class="option" id="easy" value="Easy" type="button"></input>
+      <input class="option" id="medium" value="Medium" type="button"></input>
+      <input class="option" id="hard" value="Hard" type="button"></input>
     </div>
 
     <div class="game-container">
       <div class="start"></div>
-      <div class="top"></div>
+      <div class="top bar"></div>
       <div class="path">
-        <li class="level-1"></li>
-        <li class="level-1"></li>
-        <li class="level-1"></li>
-        <li class="level-1"></li>
-        <li class="level-1"></li>
-        <li class="level-1"></li>
-        <li class="level-1"></li>
-        <li class="level-1"></li>
+        <li class="teeth upper"></li>
+        <li class="teeth lower"></li>
+        <li class="teeth upper"></li>
+        <li class="teeth lower"></li>
+        <li class="teeth upper"></li>
+        <li class="teeth lower"></li>
+        <li class="teeth upper"></li>
+        <li class="teeth lower"></li>
       </div>
       <div class="end"></div>
 
-      <div class="bottom"></div>
+      <div class="bottom bar"></div>
 
       <div class="fail">
         <h1>Fail!</h1>
-        <p id="encouragement">It's okay.<p>
+        <input id="try-again" type="button" value="Try Again"></input>
       </div>
+
       <div class="win">
         <h1>WIN!</h1>
         <p id="winner">You're awesome!</p>
