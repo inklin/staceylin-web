@@ -169,30 +169,30 @@ h1 {
 
 .easy-upper {
   -webkit-animation: upper 1.5s infinite;
-  -moz-animation: upper 1s infinite;
-  -o-animation: upper 1s infinite;
-  animation: upper 1s infinite;
+  -moz-animation: upper 1.5s infinite;
+  -o-animation: upper 1.5s infinite;
+  animation: upper 1.5s infinite;
 }
 
 .easy-lower {
   -webkit-animation: lower 1.5s infinite;
-  -moz-animation: lower 1s infinite;
-  -o-animation: lower 1s infinite;
-  animation: lower 1s infinite;
+  -moz-animation: lower 1.5s infinite;
+  -o-animation: lower 1.5s infinite;
+  animation: lower 1.5s infinite;
 }
 
 .medium-upper {
-  -webkit-animation: upper 0.7s infinite;
-  -moz-animation: upper 0.5s infinite;
-  -o-animation: upper 0.5s infinite;
-  animation: upper 0.5s infinite;
+  -webkit-animation: upper 0.8s infinite;
+  -moz-animation: upper 0.8s infinite;
+  -o-animation: upper 0.8s infinite;
+  animation: upper 0.8s infinite;
 }
 
 .medium-lower {
-  -webkit-animation: lower 0.7s infinite;
-  -moz-animation: lower 0.5s infinite;
-  -o-animation: lower 0.5s infinite;
-  animation: lower 0.5s infinite;
+  -webkit-animation: lower 0.8s infinite;
+  -moz-animation: lower 0.8s infinite;
+  -o-animation: lower 0.8s infinite;
+  animation: lower 0.8s infinite;
 }
 
 .hard-upper {
