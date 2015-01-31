@@ -1,7 +1,26 @@
 body {
-  background: #FFFFFF;
+ background-color:  #FFFFC2;
+ font-family: 'Futura', sans-serif;
 }
 
 #canvas {
-  background-color: #FF0000;
+  background-color:  #FFFFC2;
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.navigation {
+  font-size: 20px;
+  word-spacing: 10px;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+}
+
+a:link {
+  color: #000066;
+}
+
+a:visited {
+  color: #003300;
 }
