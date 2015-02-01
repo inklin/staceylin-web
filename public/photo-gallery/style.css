@@ -1,0 +1,68 @@
+body {
+  background: lightgrey;
+}
+
+.photos {
+  width: 60%;
+  border: 1px solid #000000;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.captioned-image {
+  text-align: justify;
+  display: inline-block;
+  padding: 10px;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+/* li for showing the photo thumbnail */
+.thumbnail {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: block;
+  list-style-type: none;
+}
+
+/* Fix photo to the square size */
+.photo {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+/* fix landscape images to the square size */
+.landscape {
+  max-width: none;
+  max-height: 100%;
+}
+
+/* image titles */
+.imageTitle {
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: table;
+  opacity: 0;
+}
+
+/* image title text */
+.imageTitle h5 {
+  color: #FFFFFF;
+  font-size: 15px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  /* vertical center align */
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* hover states */ 
+.captioned-image:hover .imageTitle {
+  opacity: 1;
+}
