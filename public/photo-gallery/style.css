@@ -1,12 +1,36 @@
 body {
-  background: green;
+  background: #E3CEF6;
   font-family: 'arial', 'verdana', 'tahoma';
 }
 
+.navigation {
+  font-size: 18px;
+  left: 30px;
+  top: 20px;
+  position: absolute;
+  word-spacing: 20px;
+  text-transform: uppercase;
+}
+
+a:link {
+  text-decoration: none;
+  color: #240B3B;
+}
+
+a:hover {
+  color: #81DAF5;
+  text-transform: lowercase;
+}
+
+a:visited {
+  color: #585858;
+}
+
+
 .photos {
   width: 60%;
-  border: 1px solid #000000;
   margin: 0 auto;
+  padding-top: 50px;
   text-align: justify;
 }
 
@@ -133,6 +157,11 @@ body {
 .lb_previous {
   left: 0;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lb_previous:hover, .lb_next:hover{
+  background: #FFFFFF;
+  color: #000000;
 }
 
 .lb_next {
