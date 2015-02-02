@@ -2,21 +2,11 @@ $(document).ready(function() {
 
   /* prevent multiple image displays */
   var lb_loading = false;
-  var photos = ["flowers", "flowers2", "fried-sushi", "kimono", "night-restaurant", "night", "papritot", "ramen", "sakura", "sakurajima", "shop", "sushi"];
-  var names = ["spring", "cheerful", "fusion", "tradition", "come in", "awake", "papritot", "ramen", "cherry blossom", "dormant", "sweets", "indulgence"];
   var item, img, title, large_img, imgtag;
   var cw, ch, hpadding, vpadding;
   var canvasLeft, canvasTop;
   var doc = $(document);
 
-  function addPhotos(){
-    var photoNumber = 12;
-    for (var i = 0; i < photoNumber; i++) {
-      $(".photos").append("<div class='captioned-image'><li class='thumbnail'><img src='images/" + photos[i] + ".jpg' class='photo' /></li><div class='imageTitle'><h5 class='title'>" + names[i] + "</h5></div></div>");
-    }
-  }
-
-  addPhotos();
 
   function checkOrientation(){
     $(".photo").each(function() {
@@ -26,7 +16,7 @@ $(document).ready(function() {
     });
   }
 
-  setTimeout(checkOrientation, 100);
+  checkOrientation();
 
   $(".captioned-image").click(function(){
     if (lb_loading){
