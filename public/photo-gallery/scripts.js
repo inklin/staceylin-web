@@ -39,8 +39,6 @@ $(document).ready(function() {
     title = item.find(".title").html();
 
     /* Remove active class from previously clicked captioned image */
-    console.log("clicked");
-    console.log($(".captioned-image.active"));
     $(".captioned-image.active").removeClass("active");
     item.addClass("active");
 
@@ -80,9 +78,7 @@ $(document).ready(function() {
       $(".lb_backdrop, .lb_canvas, .lb_controls").fadeIn("slow");
     }
 
-    /* Show Loading image until the image loads and make the last image transluscent so that the loader is visible */
-    
-    console.log("loading");
+    /* Show Loading image until the image loads */
     $(".lb_canvas").addClass("loading");
     
 
