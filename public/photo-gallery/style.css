@@ -17,11 +17,6 @@ a:link {
   color: #240B3B;
 }
 
-a:hover {
-  color: #81DAF5;
-  text-transform: lowercase;
-}
-
 a:visited {
   color: #585858;
 }
