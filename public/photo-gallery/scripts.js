@@ -16,7 +16,9 @@ $(document).ready(function() {
     });
   }
 
-  setTimeout(checkOrientation, 100);
+  setTimeout(checkOrientation, 200);
+  setTimeout(checkOrientation, 1000);
+  setTimeout(checkOrientation, 5000);
 
   $(".captioned-image").click(function(){
     if (lb_loading){
