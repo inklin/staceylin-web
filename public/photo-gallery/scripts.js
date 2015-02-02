@@ -1,13 +1,18 @@
 $(document).ready(function() {
 
   /* prevent multiple image displays */
-  var loading = false;
+  var lb_loading = false;
   var photos = ["flowers", "flowers2", "fried-sushi", "kimono", "night-restaurant", "night", "papritot", "ramen", "sakura", "sakurajima", "shop", "sushi"];
+  var names = ["spring", "cheerful", "fusion", "tradition", "come in", "awake", "papritot", "ramen", "cherry blossom", "dormant", "sweets", "indulgence"];
+  var item, img, title, large_img, imgtag;
+  var cw, ch, hpadding, vpadding;
+  var canvasLeft, canvasTop;
+  var doc = $(document);
 
   function addPhotos(){
     var photoNumber = 12;
     for (var i = 0; i < photoNumber; i++) {
-      $(".photos").append("<div class='captioned-image'><li class='thumbnail'><img src='images/" + photos[i] + ".jpg' class='photo' /></li><div class='imageTitle'><h5 class='title'>" + photos[i] + "</h5></div></div>");
+      $(".photos").append("<div class='captioned-image'><li class='thumbnail'><img src='images/" + photos[i] + ".jpg' class='photo' /></li><div class='imageTitle'><h5 class='title'>" + names[i] + "</h5></div></div>");
     }
   }
 
@@ -21,58 +26,88 @@ $(document).ready(function() {
     });
   }
 
-  setTimeout(checkOrientation, 200);
+  setTimeout(checkOrientation, 100);
 
-  $(".photos li").click(function(){
-    if (loading){
+  $(".captioned-image").click(function(){
+    if (lb_loading){
       return false;
     }
-    loading = true;
+    lb_loading = true;
 
-    var item = $(this);
-    var img = item.find("img");
-    var title = item.find(".title").html();
+    item = $(this);
+    img = item.find("img");
+    title = item.find(".title").html();
 
-    /* Large image */
-    var large_img = new Image();
-    large_img.src = img.attr("src");
-
-    /* Remove active class from previously clicked photo */
-    $(".photos li.active").removeClass("active");
-
-    /* Mark the clicked photo as active */
+    /* Remove active class from previously clicked captioned image */
+    console.log("clicked");
+    console.log($(".captioned-image.active"));
+    $(".captioned-image.active").removeClass("active");
     item.addClass("active");
 
-    /* Add control bar */
-    if($(".backdrop").length < 1){
-      var backdrop = "<div class='backdrop'></div>";
-      var canvas = "<div class='canvas'></div>";
-      var previous = "<span class='previous'><</span>";
-      var imgTitle = "<span class='title'>Sample</span>";
-      var next = "<span class='next'>></span>";
+    /* Large image */
+    large_img = new Image();
+    large_img.src = img.attr("src");
 
-      var controls = "<div class='controls'>" + previous + imgtitle + next + "</div>";
-      var total_html = backdrop + canvas + controls;
+    /* Add control bar */
+    if($(".lb_backdrop").length < 1){
+      console.log('create backdrop');
+      var lb_backdrop = "<div class='lb_backdrop'></div>";
+      var lb_canvas = "<div class='lb_canvas'></div>";
+      var lb_previous = "<span class='lb_previous'><</span>";
+      var lb_title = "<span class='lb_title'>Sample</span>";
+      var lb_next = "<span class='lb_next'>></span>";
+
+      var lb_controls = "<div class='lb_controls'>" + lb_previous + lb_title + lb_next + "</div>";
+      var total_html = lb_backdrop + lb_canvas + lb_controls;
 
       $("body").append(total_html);
+
+  /* Click based navigation */
+  $(".lb_previous").click(function(){
+    navigate(-1);
+  });
+  $(".lb_next").click(function(){
+    navigate(1);
+  });
+  $(".lb_backdrop").click(function(){
+    navigate(0);
+  });
+
+    }
+
+    /* Fade in gallery elements if they are hidden due to a previous exit */
+    if ($(".lb_backdrop:visible").length === 0){
+      $(".lb_backdrop, .lb_canvas, .lb_controls").fadeIn("slow");
     }
 
     /* Show Loading image until the image loads and make the last image transluscent so that the loader is visible */
-    if (!large_img.complete){
-      $(".canvas").addClass("loading").children().css("opacity", "0.5");
+    
+    console.log("loading");
+    $(".lb_canvas").addClass("loading");
+    
+
+    /* Disable left and right controls on the first and last items */
+    if (item.prev().length === 0){
+      $(".lb_previous").addClass("inactive");
+    } else {
+      $(".lb_previous").removeClass("inactive");
     }
 
-
+    if (item.next().length === 0){
+      $(".lb_next").addClass("inactive");
+    } else {
+      $(".lb_next").removeClass("inactive");
+    }
 
     /* Center the canvas */
-    var cw = $(".canvas").outerWidth();
-    var ch = $(".canvas").outerHeight();
+    cw = $(".lb_canvas").outerWidth();
+    ch = $(".lb_canvas").outerHeight();
 
     /* Find top and left coordinates */
-    var canvasLeft = ($(window).width() - cw)/2;
-    var canvasTop = ($(window).height() - ch)/2;
+    canvasLeft = ($(window).width() - cw)/2;
+    canvasTop = ($(window).height() - ch)/2;
 
-    $(".canvas").css({top: canvasTop, left: canvasLeft});
+    $(".lb_canvas").css({top: canvasTop, left: canvasLeft});
 
     /* Insert the large image into the canvas once loaded */
     $(large_img).load(function(){
@@ -81,45 +116,75 @@ $(document).ready(function() {
       ch = large_img.height;
 
       /* Add padding to fit the image to get the total dimensions */
-      var hpadding = parseInt($(".canvas").css("paddingLeft"), 10) + parseInt($(".canvas").css("paddingRight"), 10);
-      var vpadding = parseInt($(".canvas").css("paddingTop"), 10) + parseInt($(".canvas").css("paddingBottom"), 10);
+      hpadding = parseInt($(".lb_canvas").css("paddingLeft"), 10) + parseInt($(".lb_canvas").css("paddingRight"), 10);
+      vpadding = parseInt($(".lb_canvas").css("paddingTop"), 10) + parseInt($(".lb_canvas").css("paddingBottom"), 10);
 
       /* calculate new center of canvas */
       canvasLeft = ($(window).width() - cw - hpadding)/2;
       canvasTop = ($(window).height() - ch - vpadding)/2;
 
       /* Animate the canvas to new dimensions and position */
-      $(".canvas").html("").animate({width: cw, height: ch, top: canvasTop, left: canvasLeft}, 500, function(){
+      $(".lb_canvas").html("").animate({width: cw, height: ch, top: canvasTop, left: canvasLeft}, 500, function(){
 
           /* Insert the image */
-          var imgtag = "<img src='" + large_img.src + "' style='opacity: 0;' />";
-          $(".canvas").html(imgtag);
-          $(".canvas img").fadeTo("slow", 1);
+          imgtag = "<img src='" + large_img.src + "' style='opacity: 0;' />";
+          $(".lb_canvas").html(imgtag);
+          $(".lb_canvas img").fadeTo("fast", 1);
 
           /* Display the image title */
-          $(".canvas .title").html(title);
-          loading = false;
+          $(".lb_title").html(title);
+          
+          lb_loading = false;
+          $(".lb_canvas").removeClass("loading");
       });
 
     });
 
   });
 
+  /* Click based navigation */
+  $(".lb_previous").click(function(){
+    navigate(-1);
+  });
+  $(".lb_next").click(function(){
+    navigate(1);
+  });
+  $(".lb_backdrop").click(function(){
+    navigate(0);
+  });
+
+  /* Keyboard based navigation */
+  doc.keyup(function(e){
+    if ($(".lb_backdrop:visible").length === 1){
+      /* left */
+      if (e.keyCode === "37"){
+        navigate(-1);
+      /* right */
+      } else if (e.keyCode === "39"){
+        navigate(1);
+      } else if (e.keyCode ==="27"){
+        navigate(0);
+      }
+    }
+  });
+
   /* Navigation function */
   function navigate(direction){
     /* left */
     if (direction === -1){
-      $(".photos li.active").prev().trigger("click");
+      $(".captioned-image.active").prev(".captioned-image").trigger("click");
     /* right */
     } else if (direction === 1){
-      $(".photos li.active").next().trigger("click");
+      $(".captioned-image.active").next(".captioned-image").trigger("click");
     /* exit */
     } else if (direction === 0){
-      $("photos li.active").removeClass("active");
+      $(".captioned-image .active").removeClass("active");
+      $(".lb_canvas").removeClass("loading");
       /* fade out the gallery elements */
-      $(".backdrop, .canvas, .controls").fadeOut("slow", function(){
-        $(".canvas, .title").html("");
+      $(".lb_backdrop, .lb_canvas, .lb_controls").fadeOut("slow", function(){
+        $(".lb_canvas, .lb_title").html("");
       });
+      lb_loading = false;
     }
   }
 
