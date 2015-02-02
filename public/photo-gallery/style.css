@@ -49,6 +49,8 @@ body {
   left: 10px;
   display: table;
   opacity: 0;
+  -webkit-opacity: 0;
+  filter: alpha(opacity=0); /* internet explorer */
 }
 
 /* image title text */
@@ -64,5 +66,76 @@ body {
 
 /* hover states */ 
 .captioned-image:hover .imageTitle {
+  cursor: pointer;
+  -webkit-opacity: 0;
   opacity: 1;
+  filter: alpha(opacity=100); /* internet explorer */
+}
+
+/* Gallery element style */
+.backdrop {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+/* Canvas contains the larger image */
+.canvas {
+  background: #FFFFFF;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  box-shadow: 0 0 20px 5px #000000;
+  padding: 10px;
+}
+
+/* Loading GIF */
+.canvas.loading {
+  background: #FFFFFF url("images/loading.gif") center center no-repeat;
+}
+
+/* Gallery controls */
+.controls {
+  width: 400px;
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  bottom: 10px;
+  color: #FFFFFF;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.controls span {
+  line-height: 30px;
+  height: 30px;
+}
+
+.previous, .next {
+  position: absolute;
+  top: 0;
+  padding: 5px 10px;
+  font-size: 30px;
+  background: #000000;
+}
+
+.previous {
+  left: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.next {
+  right: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 5px 0;
+  font-weight: bold;
 }
