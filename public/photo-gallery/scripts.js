@@ -50,16 +50,16 @@ $(document).ready(function() {
 
       $("body").append(total_html);
 
-  /* Click based navigation */
-  $(".lb_previous").click(function(){
-    navigate(-1);
-  });
-  $(".lb_next").click(function(){
-    navigate(1);
-  });
-  $(".lb_backdrop").click(function(){
-    navigate(0);
-  });
+    /* Click based navigation */
+    $(".lb_previous").click(function(){
+      navigate(-1);
+    });
+    $(".lb_next").click(function(){
+      navigate(1);
+    });
+    $(".lb_backdrop").click(function(){
+      navigate(0);
+    });
 
     }
 
@@ -126,17 +126,6 @@ $(document).ready(function() {
 
     });
 
-  });
-
-  /* Click based navigation */
-  $(".lb_previous").click(function(){
-    navigate(-1);
-  });
-  $(".lb_next").click(function(){
-    navigate(1);
-  });
-  $(".lb_backdrop").click(function(){
-    navigate(0);
   });
 
   /* Keyboard based navigation */
