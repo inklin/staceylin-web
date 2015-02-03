@@ -3,8 +3,32 @@ body {
 }
 
 .follower {
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 400px;
   background-color: #FF0000;
   position: absolute;
+}
+
+.face1 {
+  background-color: #FFFF00;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 3;
+}
+
+.face2 {
+  background-color: #00FF00;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  z-index: 2;
+}
+
+.face3 {
+  background-color: #0000FF;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
 }
