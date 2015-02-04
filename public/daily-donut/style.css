@@ -1,0 +1,28 @@
+body {
+  background-color: #000000;
+  font-family: 'Arial', sans-serif;
+}
+
+#piechart {
+  padding-top: 10px;
+  width: 610px;
+  height: 510px;
+  margin: 0 auto;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 20px;
+  font-size: 13px;
+  word-spacing: 20px;
+}
+
+a:link {
+  color: #F6E3CE;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:visited{
+  color: #2E64FE;
+}
