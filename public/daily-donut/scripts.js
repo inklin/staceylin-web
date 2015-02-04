@@ -27,13 +27,14 @@
 
     // Set chart options 
     var options = {'title':'A Day in the life of Stacey',
-                    'width': 600,
-                    'height': 500,
-                    'chartArea': {'width': '90%', 'height': '70%'},
-                    'legend': {position: 'left', textStyle:{color: '#FFFFFF', fontSize: 13}},
+                    'width': 640,
+                    'height': 540,
+                    'chartArea': {'width': '100%', 'height': '80%'},
+                    'tooltip.text': 'value',
+                    'legend': {position: 'left', textStyle:{color: '#FFFFFF', fontSize: 18}},
                     'backgroundColor':'#000000',
                     'pieHole': 0.3,
-                    'titleTextStyle':{ color: "#FFFFFF", fontName: "Arial", fontSize: 23, bold: true, italic: false}};
+                    'titleTextStyle':{ color: "#FFFFFF", fontName: "Arial", fontSize: 35, bold: true, italic: false}};
 
     // Draw the chart and pass in parameters 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));

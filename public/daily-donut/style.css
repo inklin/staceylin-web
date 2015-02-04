@@ -4,16 +4,17 @@ body {
 }
 
 #piechart {
-  padding-top: 10px;
-  width: 610px;
-  height: 510px;
+  padding-top: 80px;
+  width: 650px;
+  height: 550px;
   margin: 0 auto;
 }
 
 .navigation {
   position: absolute;
   bottom: 20px;
-  font-size: 13px;
+  left: 20px;
+  font-size: 20px;
   word-spacing: 20px;
 }
 
