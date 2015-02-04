@@ -1,34 +1,62 @@
 body {
-
+  background-color: #F5F6CE;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.follower {
-  width: 300px;
-  height: 400px;
+.navigation {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  word-spacing: 20px;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+a:link{
+  text-decoration: none;
+  color: #08088A;
+}
+
+a:visited{
+  color: #424242;
+}
+
+.square {
+  position: absolute;
+}
+
+.one {
   background-color: #FF0000;
   position: absolute;
-}
-
-.face1 {
-  background-color: #FFFF00;
   width: 100px;
   height: 100px;
-  position: absolute;
+  z-index: 5;
+}
+
+.two {
+  background-color: #0000FF;
+  width: 120px;
+  height: 120px;
+  z-index: 4;
+}
+
+.three {
+  background-color: #FFFF00;
+  width: 140px;
+  height: 140px;
   z-index: 3;
 }
 
-.face2 {
-  background-color: #00FF00;
-  width: 200px;
-  height: 200px;
-  position: absolute;
+.four {
+  background-color: #0000FF;
+  width: 160px;
+  height: 160px;
   z-index: 2;
 }
 
-.face3 {
-  background-color: #0000FF;
-  position: absolute;
-  width: 300px;
-  height: 300px;
+.five {
+  background-color: #FF0000;
+  width: 180px;
+  height: 180px;
   z-index: 1;
 }
