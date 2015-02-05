@@ -5,3 +5,8 @@ body {
 .ui-slider{
   width: 500px;
 }
+
+.swatch {
+  width: 200px;
+  height: 200px;
+}

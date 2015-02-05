@@ -1,18 +1,19 @@
 $(document).ready(function() {
 
-  $("#red, #green, #blue").slider({
+  $('#red, #green, #blue').slider({
     max: 255,
     orientation: 'horizontal',
     value: 40,
+    slide: showColor,
   });
 
   /* set the initial value of the green slider */
-  $("#green").slider({
+  $('#green').slider({
     value: 135,
   });
 
   /* set the initial value of the blue slider */
-  $("#blue").slider({
+  $('#blue').slider({
     value: 80,
   });
 
@@ -29,7 +30,7 @@ $(document).ready(function() {
     $.each(hex, function(index, value){
       /* if the string has a length of 1, add a padding zero */
       if (value.length === 1){
-        hex[index] = "0" + value;
+        hex[index] = '0' + value;
       }
     });
 
@@ -38,5 +39,25 @@ $(document).ready(function() {
     return hex.join('').toUpperCase();
   }
 
+  function showColor(){
+    /* get the values from the 3 color sliders */
+    var red = $('#red').slider('values', 0);
+    var green = $('#green').slider('values', 0);
+    var blue = $('#blue').slider('values', 0);
+
+    /* change the background color of the swatch */
+    var color = '#' + rgbtoHex(red, green, blue);
+    $('.swatch').css('background-color', color);
+
+    /* Show the rgb values separately */
+    $('.redValue').html(red);
+    $('.greenValue').html(green);
+    $('.blueValue').html(blue);
+
+    /* Change the hext number displayed */
+    $('.hexValue').val(color);
+  }
+
+  showColor();
 
 });
