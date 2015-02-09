@@ -14,9 +14,8 @@ $(document).ready(function() {
 
   /* set the initial value of the blue slider */
   $('#blue').slider({
-    value: 80,
+    value: 95,
   });
-
 
   function rgbtoHex(r, g, b){
     /* convert the three numbers to hexadecimal values */
@@ -54,7 +53,7 @@ $(document).ready(function() {
     $('.greenValue').html(green);
     $('.blueValue').html(blue);
 
-    /* Change the hext number displayed */
+    /* Change the hex number displayed */
     $('.hexValue').val(color);
   }
 

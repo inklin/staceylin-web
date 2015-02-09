@@ -1,12 +1,16 @@
 body {
-
+  font-family: 'Arial', 'Verdana', sans serif;
 }
 
 .ui-slider{
-  width: 500px;
+  width: 400px;
 }
 
 .swatch {
   width: 200px;
   height: 200px;
+}
+
+span {
+  font-size: 18px;
 }
