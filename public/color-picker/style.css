@@ -1,16 +1,77 @@
 body {
-  font-family: 'Arial', 'Verdana', sans serif;
+  font-family: 'Arial', 'Verdana';
+}
+
+h1 {
+  margin: 0 auto;
+  width: 200px;
+  margin-top: 50px;
+}
+
+.navigation {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 200px;
+  word-spacing: 15px;
+}
+
+a:link {
+  color: #2E2E2E;
+}
+.container {
+  padding-top: 50px;
+  width: 800px;
+  margin: 0 auto;
 }
 
 .ui-slider{
-  width: 400px;
+  width: 350px;
+  height: 20px;
+  float: left;
+}
+
+.ui-slider .ui-slider-handle {
+  height: 28px;
+  margin-left: -12px;
 }
 
 .swatch {
   width: 200px;
   height: 200px;
+
 }
 
 span {
   font-size: 18px;
+}
+
+.hexValue {
+  font-size: 19px;
+  width: 195px;
+  margin-top: 10px;
+}
+
+.option-container {
+  padding-top: 30px;
+  padding-right: 50px;
+  float: left;
+}
+
+.display-container {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+}
+
+ #red .ui-slider-range { 
+  background: #ef2929; 
+}
+
+ #green .ui-slider-range { 
+  background: #01DF01; 
+}
+
+ #blue .ui-slider-range { 
+  background: #2E2EFE; 
 }

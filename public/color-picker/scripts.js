@@ -2,9 +2,11 @@ $(document).ready(function() {
 
   $('#red, #green, #blue').slider({
     max: 255,
+    min: 0,
+    range: 'min',
     orientation: 'horizontal',
     value: 40,
-    slide: showColor,
+    stop: showColor,
   });
 
   /* set the initial value of the green slider */
