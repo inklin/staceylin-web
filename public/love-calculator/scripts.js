@@ -6,8 +6,8 @@ $(document).ready(function() {
   var love = 0;
 
   function calculateLove(){
-    first = $(".first").val().toLowerCase();
-    second = $(".second").val().toLowerCase();
+    first = $("#field1").val().toLowerCase();
+    second = $("#field2").val().toLowerCase();
 
     var total = (first.length + second.length);
     countLetters(first);
@@ -49,6 +49,8 @@ $(document).ready(function() {
 
 $('.calculate').click(function(){
   calculateLove();
+  love = 0;
+  loveLetters = 0;
 });
 
 });
