@@ -26,7 +26,6 @@ $(document).ready(function() {
     /* move the div to the cursor */
     name = pieces[i];
     width = $("." + name).width() / 2  - 25;
-    console.log("width is " + width + " for " + name);
     height = $("." + name).height() /2 - 25;
     moveDiv(name, speed, width, height);
     /* make the one in front of it a little faster */
