@@ -1,23 +1,21 @@
-* { margin: 0;
-  padding: 0;
-}
+
 
 body {
   text-align: center;
   background: #8A0829;
-  color: #F7F2E0;
+  color: #FFFFFF;
+  font-size: 20px;
 }
 
 h1 {
   display: inline-block;
-  font-size: 23px;
+  font-size: 30px;
   line-height: 28px;
   margin: 50px 0;
-  font-family: 'Arial', 'Verdana';
+  font-family: 'Petit Formal Script', cursive;
   outline: none;
   padding: 14px 30px;
   position: relative;
-  text-transform: uppercase;
   box-shadow: 
     0 0 30px 0 rgba(0, 0, 0, 0.1), 
     0 36px 0 -18px  #8A0829;
@@ -38,25 +36,26 @@ h1:before {
   border-right-color: #8A0829;
 }
 
+/* back of ribbon */
 h1:after {
   content: '';
-  width: 87%;
+  width: 88%;
   height: 0;
   position: absolute;
   top: 100%;
   left: 0;
   z-index: -1;
-  border-top: 18px solid #FA58AC;
+  border-top: 18px solid #DF0174;
   border-left: 18px solid transparent;
   border-right: 18px solid transparent;
 }
 
 h1, h1:before {
-  background: #F5A9E1;
+  background: #F5A9D0;
 }
 
 .inputs {
-  width: 500px;
+  width: 650px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -76,4 +75,5 @@ h1, h1:before {
 
 .inputs label {
   display: block;
+  font-family: 'Give You Glory', cursive;
 }
