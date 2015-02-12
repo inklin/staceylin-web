@@ -1,15 +1,31 @@
 
-
 body {
   text-align: center;
   background: #8A0829;
-  color: #FFFFFF;
+  color:  #E6E6E6;
   font-size: 20px;
+}
+
+.navigation {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-size: 20px;
+  font-family: 'Give You Glory', cursive;
+}
+
+a:link{
+  text-decoration: none;
+  color: #E6E6E6;
+}
+
+a:visited {
+  color:  #808084;
 }
 
 h1 {
   display: inline-block;
-  font-size: 28px;
+  font-size: 27px;
   line-height: 28px;
   margin: 50px 0;
   font-family: 'Petit Formal Script', cursive;
@@ -39,7 +55,7 @@ h1:before {
 /* back of ribbon */
 h1:after {
   content: '';
-  width: 88%;
+  width: 90%;
   height: 0;
   position: absolute;
   top: 100%;
@@ -50,12 +66,14 @@ h1:after {
   border-right: 18px solid transparent;
 }
 
+/* color of the ribbon */
 h1, h1:before {
   background: #F5A9D0;
 }
 
 .inputs {
   width: 650px;
+  padding-top: 50px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -76,4 +94,95 @@ h1, h1:before {
 .inputs label {
   display: block;
   font-family: 'Give You Glory', cursive;
+  color: #01DFD7;
+}
+
+/* style of input fields */
+input {
+  width: 250px;
+  font-size: 18px;
+}
+
+/* Calculate button */
+.calculate {
+  margin-top: 50px;
+  width: 90px;
+  height: 90px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+  font-size: 18px;
+  color:  #E6E6E6;
+  font-family: 'Tahoma';
+  border: 3px solid  #E6E6E6;
+  background-color: #006666;
+}
+
+.calculate:focus {
+  outline: 0;
+}
+
+.pressed {
+  background-color: #003333;
+}
+
+.loveResult {
+  width: 200px;
+  position: relative;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+
+.heart {
+    display: none;
+    position: relative;
+    top: 20px;
+    width: 200px;
+    height: 180px;
+    z-index: -1;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 100px;
+    top: 0;
+    width: 100px;
+    height: 160px;
+    background: #FF6699;
+    -moz-border-radius: 100px 100px 0 0;
+    border-radius: 100px 100px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+.result {
+  font-family: 'Tahoma';
+  font-size: 35px;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  margin: 0 auto;
 }

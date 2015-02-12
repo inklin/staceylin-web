@@ -5,16 +5,28 @@ $(document).ready(function() {
   var loveLetters = 0;
   var love = 0;
 
+  $('.calculate').mousedown(function(){
+    $(this).addClass('pressed');
+  });
+
+  $('.calculate').mouseup(function(){
+    $(this).removeClass('pressed');
+  });
+
   function calculateLove(){
     first = $("#field1").val().toLowerCase();
     second = $("#field2").val().toLowerCase();
 
-    var total = (first.length + second.length);
-    countLetters(first);
-    countLetters(second);
-    love = Math.floor((loveLetters / total ) * 100);
-    console.log(love);
-    $(".result").html(love + '%');
+    if (first.length === 0  || second.length === 0){
+      alert("Oops, looks like you're missing a name!");
+    } else {
+      var total = (first.length + second.length);
+      countLetters(first);
+      countLetters(second);
+      love = Math.floor((loveLetters / total ) * 100);
+      $(".heart").show();
+      $(".result").html(love + '%');
+    }
   }
 
   function countLetters(name){
