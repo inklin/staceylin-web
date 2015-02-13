@@ -1,23 +1,29 @@
 body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+  background-color: #CEE3F6;
 }
 
 .weather {
-  width: 280px;
+  width: 285px;
+  height: 285px;
+  padding-top: 50px;
   margin: 0 auto;
 }
 
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 40px;
+  color: #0B173B;
 }
 
 .display {
   width: 280px;
   height: 230px;
-  background-color: #58ACFA;
+  background-color: #81BEF7;
   text-align: center;
+  -webkit-border-radius: 10px 10px 0 0 ;
+  -moz-border-radius: 10px 10px 0 0 ;
   border-radius: 10px 10px 0 0 ;
   position: relative;
 }
@@ -32,13 +38,19 @@ h1 {
   font-size: 30px;
   bottom: 10px;
   left: 40%;
+  color: #0B173B;
 }
 
 .description {
+  font-size: 25px;
+  color: #6E6E6E;
   width: 280px;
   height: 50px;
+  line-height: 50px;
   padding: 0;
   margin: 0;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
-  background-color: #D8D8D8;
+  background-color: #F2F2F2;
 }
