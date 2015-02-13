@@ -1,3 +1,44 @@
 body {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
 
+.weather {
+  width: 280px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+}
+
+.display {
+  width: 280px;
+  height: 230px;
+  background-color: #58ACFA;
+  text-align: center;
+  border-radius: 10px 10px 0 0 ;
+  position: relative;
+}
+
+.icon {
+  width: 200px;
+  color: #FFFFFF;
+}
+
+.temp {
+  position: absolute;
+  font-size: 30px;
+  bottom: 10px;
+  left: 40%;
+}
+
+.description {
+  width: 280px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 10px 10px;
+  background-color: #D8D8D8;
 }
