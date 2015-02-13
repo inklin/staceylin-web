@@ -4,6 +4,24 @@ body {
   background-color: #CEE3F6;
 }
 
+footer {
+  position: absolute;
+  bottom: 10px;
+  height: 30px;
+  left: 20px;
+  font-size: 16px;
+  word-spacing: 15px;
+}
+
+a:link {
+  text-decoration: none;
+  color: #0B4C5F;
+}
+
+a:visited {
+  color: #0A2229;
+}
+
 .weather {
   width: 285px;
   height: 285px;
@@ -20,7 +38,7 @@ h1 {
 .display {
   width: 280px;
   height: 230px;
-  background-color: #81BEF7;
+  background-color: #58ACFA;
   text-align: center;
   -webkit-border-radius: 10px 10px 0 0 ;
   -moz-border-radius: 10px 10px 0 0 ;
@@ -38,17 +56,18 @@ h1 {
   font-size: 30px;
   bottom: 10px;
   left: 40%;
-  color: #0B173B;
+  color: #F2F2F2;
 }
 
 .description {
   font-size: 25px;
-  color: #6E6E6E;
+  color: #0B173B;
   width: 280px;
   height: 50px;
   line-height: 50px;
   padding: 0;
   margin: 0;
+  font-family: 'Droid Sans', sans-serif;;
   -webkit-border-radius: 0 0 10px 10px;
   -moz-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
