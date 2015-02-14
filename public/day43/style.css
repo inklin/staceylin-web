@@ -37,13 +37,12 @@
   overflow: hidden;
 
   -webkit-transform-origin: top;
-  -webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms;
+  -webkit-transition: -webkit-transform 300ms;
 }
 
 .envelope:hover .top {
-  -webkit-transition: -webkit-transform 300ms 0ms, top 300ms 150ms;
-
-  top: 0;
+  -webkit-transition: -webkit-transform 300ms 0ms, top 400ms 200ms;
+  top: 30px;
 
   -webkit-transform: rotateX(180deg);
 }
