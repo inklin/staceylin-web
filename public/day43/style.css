@@ -1,41 +1,60 @@
-
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -250px;
+    height: 500px;
+    width: 600px;
+    background: rgba(0, 0, 0, 0.1);
+    
+    border-radius: 2px;
+    -ms-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
 
 .envelope {
-  margin-top: 100px;
-  perspective: 1000;
-  position: relative;
+  position: absolute;
   width: 300px;
   height: 200px;
+  left: 50%;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: -150px;
   background-color: #FFFFFF;
   border: 1px solid black;
 }
 
-.envelope:hover .outer {
-  -webkit-transform: rotateX(180deg);
-  -webkit-transform-origin: 100% 60px; /* half of height */
-  top: -120px;
-  z-index: 4;
-}
-
-.envelope:hover .inner {
-    -webkit-transform: rotateX(180deg);
-  -webkit-transform-origin: 100% 60px; /* half of height */
-  top: -120px;
-  z-index: 5;
-}
-
 .top {
-  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 135px;
+  z-index: 30;
+  overflow: hidden;
+
+  -webkit-transform-origin: top;
+  -webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms;
+}
+
+.envelope:hover .top {
+  -webkit-transition: -webkit-transform 300ms 0ms, top 300ms 150ms;
+
+  top: 0;
+
+  -webkit-transform: rotateX(180deg);
 }
 
 .outer {
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 0;
   border-left: 140px solid transparent;
   border-right: 140px solid transparent;
   border-top: 120px solid yellow;
-  z-index: 5;
 }
 
 .inner {
@@ -45,7 +64,6 @@
   border-left: 150px solid transparent;
   border-right: 150px solid transparent;
   border-top: 130px solid blue;
-  z-index: 4;
 }
 
 
@@ -77,8 +95,11 @@
 }
 
 .message {
-  width: 280px;
+  position: absolute;
+  z-index: -1;
+  width: 300px;
   height: 200px;
+  top: 0;
   background-color: purple;
   margin: 0 auto;
 }
