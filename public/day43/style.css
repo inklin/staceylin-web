@@ -1,16 +1,27 @@
-.content {
-  position: relative;
-  width: 450px;
-  height: 350px;
-}
+
 
 .envelope {
-  position: absolute;
-  bottom: 0;
+  margin-top: 100px;
+  perspective: 1000;
+  position: relative;
   width: 300px;
   height: 200px;
   background-color: #FFFFFF;
   border: 1px solid black;
+}
+
+.envelope:hover .outer {
+  -webkit-transform: rotateX(180deg);
+  -webkit-transform-origin: 100% 60px; /* half of height */
+  top: -120px;
+  z-index: 4;
+}
+
+.envelope:hover .inner {
+    -webkit-transform: rotateX(180deg);
+  -webkit-transform-origin: 100% 60px; /* half of height */
+  top: -120px;
+  z-index: 5;
 }
 
 .top {
@@ -20,27 +31,39 @@
 .outer {
   position: absolute;
   top: 0;
+  left: 10px;
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-top: 120px solid yellow;
+  z-index: 5;
+}
+
+.inner {
+  position: absolute;
+  top: 0;
   left: 0;
   border-left: 150px solid transparent;
   border-right: 150px solid transparent;
-  border-top: 120px solid yellow;
+  border-top: 130px solid blue;
+  z-index: 4;
 }
+
 
 .left {
   position: absolute;
-  top: 5px;
+  top: 0;
   left: 0;
   border-left: 145px solid red;
-  border-top: 95px solid transparent;
+  border-top: 100px solid transparent;
   border-bottom: 95px solid transparent;
 }
 
 .right {
   position: absolute;
-  top: 5px;
+  top: 0;
   right: 0;
   border-right: 145px solid red;
-  border-top: 95px solid transparent;
+  border-top: 100px solid transparent;
   border-bottom: 95px solid transparent;
 }
 
@@ -51,4 +74,11 @@
   border-right: 145px solid transparent;
   border-left: 145px solid transparent;
   border-bottom: 95px solid green;
+}
+
+.message {
+  width: 280px;
+  height: 200px;
+  background-color: purple;
+  margin: 0 auto;
 }
