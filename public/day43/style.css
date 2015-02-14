@@ -1,0 +1,54 @@
+.content {
+  position: relative;
+  width: 450px;
+  height: 350px;
+}
+
+.envelope {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  height: 200px;
+  background-color: #FFFFFF;
+  border: 1px solid black;
+}
+
+.top {
+  width: 300px;
+}
+
+.outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 120px solid yellow;
+}
+
+.left {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  border-left: 145px solid red;
+  border-top: 95px solid transparent;
+  border-bottom: 95px solid transparent;
+}
+
+.right {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  border-right: 145px solid red;
+  border-top: 95px solid transparent;
+  border-bottom: 95px solid transparent;
+}
+
+.bottom {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  border-right: 145px solid transparent;
+  border-left: 145px solid transparent;
+  border-bottom: 95px solid green;
+}
