@@ -54,7 +54,7 @@ h1 {
 .temp {
   position: absolute;
   font-size: 30px;
-  bottom: 10px;
+  bottom: 0px;
   left: 40%;
   color: #F2F2F2;
 }

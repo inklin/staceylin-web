@@ -5,16 +5,33 @@ $(document).ready(function() {
   var temp;
   var icon;
 
-  // send Ajax post request to get longitude and latitude
-  $.ajax({
-    url: '//freegeoip.net/json/',
-    type: 'POST',
-    dataType: 'jsonp',
-    success: function(location) {
-      lon = location.longitude;
-      lat = location.latitude;
-    }
-  });
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+  } else {
+    alert("Oops, looks like Geolocation is not supported by your browser!");
+  }
+
+//Get the latitude and the longitude;
+  function successFunction(position) {
+    lat = position.coords.latitude;
+    lon = position.coords.longitude;
+
+    getWeather(function(data){
+      weather = data.weather[0].description;
+      temp = kelvinToCelsius(data.main.temp);
+      icon = data.weather[0].icon;
+      // if icon is for clouds, point to 03 svg 
+      if (icon === '04n' || icon === '04d' || icon === '03n'){
+        icon = '03';
+      }
+      showWeather();
+    });
+  }
+
+  function errorFunction(){
+    alert("Oh no, looks like geocoder failed.");
+  }
 
   // use longitude and latitude to find the weather description, temp, and icon
   function getWeather(callback){
@@ -26,16 +43,6 @@ $(document).ready(function() {
     });
   }
 
-  getWeather(function(data){
-    weather = data.weather[0].description;
-    temp = kelvinToCelsius(data.main.temp);
-    icon = data.weather[0].icon;
-    // if icon is for clouds, point to 03 svg 
-    if (icon === '04n' || icon === '04d' || icon === '03n'){
-      icon = '03';
-    }
-    showWeather();
-  });
 
   // Show weather display on the page
   function showWeather(){
