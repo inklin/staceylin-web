@@ -27,7 +27,7 @@ $(document).ready(function() {
   }
 
   getWeather(function(data){
-    weather = data.weather[0].main;
+    weather = data.weather[0].description;
     temp = kelvinToCelsius(data.main.temp);
     icon = data.weather[0].icon;
     // if icon is for clouds, point to 03 svg 
