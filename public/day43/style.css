@@ -1,18 +1,36 @@
+.navigation {
+  position: absolute;
+  word-spacing: 15px;
+  left: 30px;
+  top: 20px;
+  font-family: 'Arial', 'Verdana', sans serif;
+  font-size: 19px;
+}
+
+a:link {
+  text-decoration: none;
+  color: #FF0000;
+}
+
+a:visited {
+  color: #000000;
+}
+
 .content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -300px;
-    margin-top: -250px;
-    height: 500px;
-    width: 600px;
-    background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -250px;
+  margin-left: -275px;
+  height: 500px;
+  width: 550px;
+  background: rgba(0, 0, 0, 0.1);
     
-    border-radius: 2px;
-    -ms-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
-    -webkit-border-radius: 2px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  z-index: -20;
 }
 
 .envelope {
@@ -37,14 +55,25 @@
   -webkit-transform-origin: top;
   -webkit-transition: -webkit-transform 400ms 200ms, top 200ms 0ms, z-index 400ms 200ms;
 
-}
+  -moz-transform-origin: top;
+  -moz-transition: -moz-transform 400ms 200ms, top 200ms 0ms, z-index 400ms 200ms;
 
+  -o-transform-origin: top;
+  -o-transition: -o-transform 400ms 200ms, top 200ms 0ms, z-index 400ms 200ms;
+
+  transform-origin: top;
+  transition: transform 400ms 200ms, top 200ms 0ms, z-index 400ms 200ms;
+
+}
 
 .envelope:hover .top {
   top: 30px;
   z-index: -5;
 
   -webkit-transition: -webkit-transform 300ms 0ms, top 400ms 200ms;
+  -moz-transition: -webkit-transform 300ms 0ms, top 400ms 200ms;
+  -o-transition: -webkit-transform 300ms 0ms, top 400ms 200ms;
+  transition: -webkit-transform 300ms 0ms, top 400ms 200ms;
 
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
@@ -80,9 +109,12 @@
   transition: bottom 400ms 200ms;
 }
 
+.outer, .inner, .left, .bottom, .right, .card {
+  position: absolute;
+}
+
 
 .outer {
-  position: absolute;
   top: 0;
   left: 10px;
   border-left: 140px solid transparent;
@@ -97,17 +129,15 @@
 }
 
 .inner {
-  position: absolute;
   top: 0;
   left: 0;
   border-left: 150px solid transparent;
   border-right: 150px solid transparent;
-  border-top: 140px solid #FFFFFF;
+  border-top: 140px solid #FF0000;
   z-index: 4;
 }
 
 .left {
-  position: absolute;
   top: 0;
   left: 0;
   border-left: 145px solid #000000;
@@ -122,7 +152,6 @@
 }
 
 .right {
-  position: absolute;
   top: 0;
   right: 0;
   border-right: 145px solid #000000;
@@ -137,7 +166,6 @@
 }
 
 .bottom {
-  position: absolute;
   left: 5px;
   bottom: 0;
   border-right: 145px solid transparent;
@@ -152,29 +180,67 @@
 }
 
 .envelope:hover .card {
-    margin-top: -60px;
-    transition: margin-top 300ms 150ms;
-    -ms-transition: margin-top 300ms 150ms;
-    -moz-transition: margin-top 300ms 150ms;
-    -o-transition: margin-top 300ms 150ms;
-    -webkit-transition: margin-top 300ms 150ms;
+  margin-top: -60px;
+  -moz-transition: margin-top 300ms 150ms;
+  -o-transition: margin-top 300ms 150ms;
+  -webkit-transition: margin-top 300ms 150ms;
+  transition: margin-top 300ms 150ms;
 }
 
 .card {
-  position: absolute;
   width: 300px;
   height: 200px;
   top: 0;
-  background-color: red;
+  background-color: #FF0000;
   z-index: -1;
 
-    transition: margin-top 200ms;
-    -ms-transition: margin-top 200ms 0ms;
-    -moz-transition: margin-top 200ms 0ms;
-    -o-transition: margin-top 200ms 0ms;
-    -webkit-transition: margin-top 150ms 0ms;
+  -moz-transition: margin-top 200ms 0ms;
+  -o-transition: margin-top 200ms 0ms;
+  -webkit-transition: margin-top 150ms 0ms;
+  transition: margin-top 200ms;
 }
 
 .heart {
-  
+  position: relative;
+  top: 80px;
+  left: 125px;
+  width: 50px;
+  height: 45px;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+    left: 25px;
+    top: 0;
+    width: 25px;
+    height: 40px;
+    background: #FFFFFF;
+    -moz-border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
 }
