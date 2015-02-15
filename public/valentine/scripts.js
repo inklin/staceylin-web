@@ -1,9 +1,14 @@
 $(document).ready(function() {
-  $('.envelope').on('mouseover', function(){
-    $('.top, .left, .right, .bottom, .card').addClass('hover');
+var clicked = false;
+
+  $('.envelope').click( function(){
+    if (clicked === false){
+      $('.top, .left, .right, .bottom, .card').addClass('hover');
+      clicked = true;
+    } else {
+      $('.top, .left, .right, .bottom, .card').removeClass('hover');
+     clicked = false;
+    }
   });
 
-  $('.envelope').on('mouseout', function(){
-   $('.top, .left, .right, .bottom, .card').removeClass('hover');
-  });
 });
