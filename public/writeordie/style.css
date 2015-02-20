@@ -9,3 +9,9 @@ body {
 .slider {
   margin: 10px;
 }
+
+.slider label {
+  position: absolute;
+  margin-left: -10px;
+  margin-top: 15px;
+}
