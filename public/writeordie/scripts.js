@@ -1,6 +1,10 @@
 $(document).ready(function() {
   
-  var value;
+  var timeLimit;
+
+// Get the options that the user set
+  timeLimit = 10;
+  console.log(timeLimit);
 
 // Create slider for grace period
   $(".slider").slider({
@@ -13,12 +17,13 @@ $(document).ready(function() {
   });
 
   function showValue(){
-    value = $(".slider").slider("value");
-    $(".grace").html(value + " seconds");
+    timeLimit = $(".slider").slider("value");
+    $(".grace").html(timeLimit + " seconds");
+    console.log(timeLimit);
   }
 
   function checkTyping(){
-    
+
   }
 
 });
