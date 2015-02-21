@@ -5,6 +5,7 @@ $(document).ready(function() {
   var time = 10;
   var started = false;
   var finished = false;
+  var gracePeriod;
 
 // Create slider for grace period
   $(".slider").slider({
@@ -53,8 +54,11 @@ $(document).ready(function() {
     // TESTING - NEED TO CORRELATE THIS TO THE TIME LIMIT
     var totalTime = 0.5 * 60;
 
-    // Show the countdown as a clock
-    var countdown = setInterval(function(){
+    var remainingMin;
+    var remainingSec;
+
+
+    var updateClock = function() {
       remainingMin = Math.floor(totalTime/60);
       remainingSec = totalTime % 60;
       totalTime = totalTime - 1;
@@ -69,8 +73,13 @@ $(document).ready(function() {
 
       $('.minutes').html(remainingMin);
       $('.seconds').html(remainingSec);
+    };
 
-    }, 1000);
+    // Start clock
+    updateClock();
+
+    // Update every second
+    var countdown = setInterval(updateClock, 1000);
 
     // Stop countdown after set number of minutes
     setTimeout(function(){
@@ -82,15 +91,13 @@ $(document).ready(function() {
     
   }
 
-  var gracePeriod;
-
-  // Start countdown and checking for typing once users starts typing
+  // Start counting down and checking for typing once users starts typing
   $('textarea').keyup(function(){
      if (finished){
       return;
      }
 
-    // start the clock for the total time
+    // start the countdown
     // start the time out for the grace period
     if (!started){
       started = true;
@@ -102,9 +109,10 @@ $(document).ready(function() {
     } else {
     // Clear and start a new timeout every time the user types
       clearTimeout(gracePeriod);
-
+      $('.text').css({'background-color':'white'});
+      
       gracePeriod = setTimeout(function(){
-        $('.textarea').css({'color':'green'});
+        $('.text').css({'background-color':'green'});
         console.log('time is up for grace period!');
       }, grace * 1000);
     }
