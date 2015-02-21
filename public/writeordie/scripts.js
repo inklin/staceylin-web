@@ -1,57 +1,44 @@
 $(document).ready(function() {
-  
-  var timeLimit;
 
-// Get the options that the user set
-  timeLimit = 10;
-  console.log(timeLimit);
+  // Set initial values for time and grace period
+  var grace = 5;
+  var time = 10;
 
 // Create slider for grace period
   $(".slider").slider({
     min: 5,
     step: 5,
     max: 30,
-    value: 10,
-    stop: showValue
+    value: 5,
+    stop: function(){
+      grace = $('.slider').slider('value');
+      console.log(grace);
+    }
   })
 
   // Create labels for the increments on the slider
   .each(function() {
 
-    // Get the options for the slider
     var opt = $(this).data().uiSlider.options;
     
-    // Get the number of possible values by dividing the length by the size of steps (Add one for the end)
-    var vals = (opt.max - opt.min)/opt.step + 1;
-
-    console.log("number of values is " + vals);
-
-    // Get the size of each step
+    // Get the number of possible values
     var step = opt.step;
-    console.log("the size of each step is " + step);
+    var vals = (opt.max - opt.min)/step + 1;
 
-    // Position the labels 
+    // Create and add the labels 
     for (var i = 0; i < vals ; i ++){
 
-      // Create a new element, label it, and position it with percentages
       var el = $('<label>' + ((step * i) + opt.min) + '</label>').css('left', (i/(vals - 1) * 100) + '%');
-      console.log("i divided by vals is " + i/vals);
-
-      // Add the element to the slider
       $('.slider').append(el);
     }
     
   });
 
+  // Change the limit when the uer changes the radio button
+  $('input[name="time"]').click(function(){
+    time = this.value;
+  });
 
-  function showValue(){
-    timeLimit = $(".slider").slider("value");
-    $(".grace").html(timeLimit + " seconds");
-    console.log(timeLimit);
-  }
-
-  function checkTyping(){
-
-  }
+  startTyping();
 
 });
