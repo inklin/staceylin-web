@@ -45,7 +45,6 @@ $(document).ready(function() {
   $('.startbutton').click(function(){
       $('.minutes').html(time);
       $('.intro').hide();
-      // hide the intro page
   });
 
   function countDown(){
@@ -105,7 +104,6 @@ $(document).ready(function() {
     // start the time out for the grace period
     if (!started){
       started = true;
-      console.log('started typing');
       countDown();
       gracePeriod = setTimeout(function(){
         $('.type').css({'background-color':'#FF0000'});
@@ -119,7 +117,6 @@ $(document).ready(function() {
 
       gracePeriod = setTimeout(function(){
         $('.type').css({'background-color':'#FF0000'});
-        console.log('time is up for grace period!');
         $('.sound').html('<audio autoplay><source src="beep.wav" type="audio/wav"></audio>');
       }, grace * 1000);
     }
