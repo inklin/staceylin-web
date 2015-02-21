@@ -43,9 +43,8 @@ $(document).ready(function() {
 
   $('.startbutton').click(function(){
       $('.minutes').html(time);
-
+      $('.intro').hide();
       // hide the intro page
-      // show the typing page
   });
 
   function countDown(){
@@ -86,10 +85,14 @@ $(document).ready(function() {
       clearInterval(countdown);
       clearTimeout(gracePeriod);
       $('.remainTime').html('Congrats! You made it!');
+      $('.type').css({'background-color':'green'});
+      $('.sound').html('');
       finished = true;
     }, totalTime * 1000);
     
   }
+
+  var clip = $('#beep');
 
   // Start counting down and checking for typing once users starts typing
   $('textarea').keyup(function(){
@@ -104,16 +107,19 @@ $(document).ready(function() {
       console.log('started typing');
       countDown();
       gracePeriod = setTimeout(function(){
-        console.log('time is up for grace period!');
+        $('.type').css({'background-color':'red'});
+        $('.sound').html('<audio autoplay><source src="beep.wav" type="audio/wav"></audio>');
       }, grace * 1000);
     } else {
     // Clear and start a new timeout every time the user types
       clearTimeout(gracePeriod);
-      $('.text').css({'background-color':'white'});
-      
+      $('.type').css({'background-color':'green'});
+      $('.sound').html('');
+
       gracePeriod = setTimeout(function(){
-        $('.text').css({'background-color':'green'});
+        $('.type').css({'background-color':'red'});
         console.log('time is up for grace period!');
+        $('.sound').html('<audio autoplay><source src="beep.wav" type="audio/wav"></audio>');
       }, grace * 1000);
     }
 

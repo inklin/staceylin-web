@@ -2,13 +2,21 @@ body {
 
 }
 
+body
+.navigation {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
 .ui-slider {
   width: 300px;
+  margin-left: 150;
 }
 
 .slider {
-  margin: 25px;
-
+  margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .slider label {
@@ -19,12 +27,23 @@ body {
   text-align: center;
 }
 
-.intro {
-  background-color: blue;
+label {
+  color: #FFFFFF;
+}
 
+.intro {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  margin-right: 0;
 }
 
 .type {
-  background-color: red;
-
+  background-color: green;
 }
