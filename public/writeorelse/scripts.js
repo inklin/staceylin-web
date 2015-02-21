@@ -50,8 +50,7 @@ $(document).ready(function() {
   function countDown(){
 
     // get total time in seconds;
-    // TESTING - NEED TO CORRELATE THIS TO THE TIME LIMIT
-    var totalTime = 0.5 * 60;
+    var totalTime = time * 60;
 
     var remainingMin;
     var remainingSec;
