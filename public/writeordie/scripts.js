@@ -39,6 +39,42 @@ $(document).ready(function() {
     time = this.value;
   });
 
-  startTyping();
+  $('.startbutton').click(function(){
+      $('.minutes').html(time);
+
+    // get total time in seconds;
+    // TESTING
+    var totalTime = 1 * 60;
+
+    // Show the countdown as a clock
+    var countdown = setInterval(function(){
+      remainingMin = Math.floor(totalTime/60);
+      remainingSec = totalTime % 60;
+      totalTime = totalTime - 1;
+
+      if (remainingSec < 10){
+        remainingSec = "0" + remainingSec;
+      }
+
+      if (remainingMin < 10){
+        remainingMin = "0" + remainingMin;
+      }
+
+      $('.minutes').html(remainingMin);
+      $('.seconds').html(remainingSec);
+
+    }, 1000);
+
+    // Stop countdown after set number of minutes
+    setTimeout(function(){
+      clearInterval(countdown);
+      $('.remainTime').html('Congrats! You made it!');
+    }, totalTime * 1000);
+    
+  });
+
+  function checkTyping(){
+
+  }
 
 });

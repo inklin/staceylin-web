@@ -18,22 +18,28 @@
     </div>
 
     <div class="content">
-      <h1>Write or Die</h1>
 
-      <p class="option">Grace period</p>
-      <div class="slider"></div>
+      <div class="intro">
+        <h1>Write or Die</h1>
+
+        <p class="option">Grace period</p>
+        <div class="slider"></div>
 
 
-      <p class="option">Time limit</p>
-      <form id="time">
-        <input type="radio" name="time" value="10" checked>10 minutes</input>
-        <input type="radio" name="time" value="20">20 minutes</input>
-        <input type="radio" name="time" value="30">30 minutes</input>
-      </form>
+        <p class="option">Time limit</p>
+        <form id="time">
+          <input type="radio" name="time" value="10" checked>10 minutes</input>
+          <input type="radio" name="time" value="20">20 minutes</input>
+          <input type="radio" name="time" value="30">30 minutes</input>
+        </form>
 
-      <input type="button" value="Start"></input>
-      
-      <textarea class="text" rows="10" col="70" placeholder="Your words here"></textarea>
+        <input type="button" value="Start" class="startbutton"></input>
+      </div>
+
+      <div class="type">
+        <p class='remainTime'><span class='minutes'></span>:<span class='seconds'>00</span><p>
+        <textarea class="text" rows="10" col="70" placeholder="Your words here"></textarea>
+      </div>
 
     </div>
   </body>
