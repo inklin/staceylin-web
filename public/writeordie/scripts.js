@@ -3,6 +3,8 @@ $(document).ready(function() {
   // Set initial values for time and grace period
   var grace = 5;
   var time = 10;
+  var started = false;
+  var finished = false;
 
 // Create slider for grace period
   $(".slider").slider({
@@ -12,7 +14,6 @@ $(document).ready(function() {
     value: 5,
     stop: function(){
       grace = $('.slider').slider('value');
-      console.log(grace);
     }
   })
 
@@ -34,7 +35,7 @@ $(document).ready(function() {
     
   });
 
-  // Change the limit when the uer changes the radio button
+  // Change the time limit when the user changes the radio button
   $('input[name="time"]').click(function(){
     time = this.value;
   });
@@ -42,9 +43,15 @@ $(document).ready(function() {
   $('.startbutton').click(function(){
       $('.minutes').html(time);
 
+      // hide the intro page
+      // show the typing page
+  });
+
+  function countDown(){
+
     // get total time in seconds;
-    // TESTING
-    var totalTime = 1 * 60;
+    // TESTING - NEED TO CORRELATE THIS TO THE TIME LIMIT
+    var totalTime = 0.5 * 60;
 
     // Show the countdown as a clock
     var countdown = setInterval(function(){
@@ -68,13 +75,40 @@ $(document).ready(function() {
     // Stop countdown after set number of minutes
     setTimeout(function(){
       clearInterval(countdown);
+      clearTimeout(gracePeriod);
       $('.remainTime').html('Congrats! You made it!');
+      finished = true;
     }, totalTime * 1000);
     
-  });
-
-  function checkTyping(){
-
   }
+
+  var gracePeriod;
+
+  // Start countdown and checking for typing once users starts typing
+  $('textarea').keyup(function(){
+     if (finished){
+      return;
+     }
+
+    // start the clock for the total time
+    // start the time out for the grace period
+    if (!started){
+      started = true;
+      console.log('started typing');
+      countDown();
+      gracePeriod = setTimeout(function(){
+        console.log('time is up for grace period!');
+      }, grace * 1000);
+    } else {
+    // Clear and start a new timeout every time the user types
+      clearTimeout(gracePeriod);
+
+      gracePeriod = setTimeout(function(){
+        $('.textarea').css({'color':'green'});
+        console.log('time is up for grace period!');
+      }, grace * 1000);
+    }
+
+  });
 
 });
