@@ -92,8 +92,14 @@ h1 {
 
 .type {
   background-color: #C8C8C8;
+  width: 100%;
+  height: 100%;
   padding-top: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
   text-align: center;
+  z-index: 10;
 }
 
 /* styles for typing page */
