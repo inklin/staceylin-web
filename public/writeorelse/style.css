@@ -1,5 +1,5 @@
 body {
-  background-color: green;
+  background-color: #C8C8C8;
   font-family: 'Source Code Pro', 'Verdana',  'Open Sans';
   font-size: 18px;
 }
@@ -7,13 +7,18 @@ body {
 
 .navigation {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
+  word-spacing: 15px;
   z-index: 25;
 }
 
 a:link {
-  color: pink;
+  color: #FFFF66;
+}
+
+a:visited{
+  color: #94FFFF;
 }
 
 /* styles for intro page */
@@ -86,14 +91,19 @@ h1 {
 }
 
 .type {
-  background-color: green;
+  background-color: #C8C8C8;
+  padding-top: 50px;
   text-align: center;
 }
 
 /* styles for typing page */
 
 .text {
-
+  margin-top: 30px;
+  width: 500px;
+  height: 500px;
+  overflow: scroll;
+  font-size: 18px;
 }
 
 

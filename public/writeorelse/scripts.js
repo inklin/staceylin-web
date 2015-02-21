@@ -85,8 +85,8 @@ $(document).ready(function() {
     setTimeout(function(){
       clearInterval(countdown);
       clearTimeout(gracePeriod);
-      $('.remainTime').html('Congrats! You made it!');
-      $('.type').css({'background-color':'green'});
+      $('.remainTime').html('YOU MADE IT! Remember to copy and save your writing');
+      $('.type').css({'background-color':'#C8C8C8'});
       $('.sound').html('');
       finished = true;
     }, totalTime * 1000);
@@ -108,17 +108,17 @@ $(document).ready(function() {
       console.log('started typing');
       countDown();
       gracePeriod = setTimeout(function(){
-        $('.type').css({'background-color':'red'});
+        $('.type').css({'background-color':'#FF0000'});
         $('.sound').html('<audio autoplay><source src="beep.wav" type="audio/wav"></audio>');
       }, grace * 1000);
     } else {
     // Clear and start a new timeout every time the user types
       clearTimeout(gracePeriod);
-      $('.type').css({'background-color':'green'});
+      $('.type').css({'background-color':'#C8C8C8'});
       $('.sound').html('');
 
       gracePeriod = setTimeout(function(){
-        $('.type').css({'background-color':'red'});
+        $('.type').css({'background-color':'#FF0000'});
         console.log('time is up for grace period!');
         $('.sound').html('<audio autoplay><source src="beep.wav" type="audio/wav"></audio>');
       }, grace * 1000);
