@@ -12,7 +12,7 @@ $(document).ready(function() {
     min: 5,
     step: 5,
     max: 30,
-    value: 5,
+    value: 15,
     range: 'min',
     stop: function(){
       grace = $('.slider').slider('value');

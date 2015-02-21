@@ -1,13 +1,22 @@
 body {
   background-color: green;
+  font-family: 'Source Code Pro', 'Verdana',  'Open Sans';
+  font-size: 18px;
 }
 
-body
+
 .navigation {
   position: absolute;
   top: 10px;
   left: 10px;
+  z-index: 25;
 }
+
+a:link {
+  color: pink;
+}
+
+/* styles for intro page */
 
 .ui-slider {
   width: 300px;
@@ -16,7 +25,8 @@ body
 
 .slider {
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .slider label {
@@ -45,6 +55,46 @@ body
   margin-right: 0;
 }
 
+h1 {
+  padding: 50px;
+}
+
+.option {
+  color: #FF0000;
+  font-size: 24px;
+  font-family: 'VT323';
+}
+
+#time {
+  padding: 0;
+}
+
+.startbutton {
+  background-color: #0000FF;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  font-family: 'VT323';
+  font-size: 23px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 0;
+  margin: 40px;
+}
+
 .type {
   background-color: green;
+  text-align: center;
 }
+
+/* styles for typing page */
+
+.text {
+
+}
+
+
+
