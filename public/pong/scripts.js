@@ -1,66 +1,94 @@
 $(document).ready(function() {
   
+  var w = 650;
+  var h = 500;
+  var canvas, ctx, keystate;
+  var player, ai, ball;
 
-   var canvas = document.getElementById('canvas'),
-      ctx = canvas.getContext('2d'),
-      h = 500,
-      w = 650,
+  player = {
+    x: null,
+    y: null,
+    width: 20,
+    height: 100,
 
-      // Create the ball object
-      ball = {};
+    update: function(){
 
-      canvas.height = h;
-      canvas.width = w;
+    },
 
-      // Draw the background
-      ctx.fillStyle = "#000000";
-      ctx.fillRect(0, 0, 650, 500);
+    draw: function(){
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+  };
 
-      // Draw the middle dotted line
-      ctx.fillStyle = "#FFFFFF";
-      var y = 5;
+  ai = {
+    x: null,
+    y: null,
+    width: 20,
+    height: 100,
 
-      for (var i = 0; i < 30; i ++){
-        ctx.fillRect(323, y, 3, 10);
-        y = y + 20;
-      }
+    update: function(){
 
-      ball = {
-        x: getRandom(200, 400),
-        y: getRandom(50, 600),
-        mx: 5,
-        my: 5,
-        side: 10,
+    },
+    draw: function(){
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+  };
 
-        draw: function (){
-          ctx.fillStyle = "#FF0000";
-          ctx.fillRect(this.x, this.y, 15, 15);
-        },
+  ball = {
+    x: null,
+    y: null,
+    length: 20,
 
-        move: function(){
-          // if it goes too low or too high, change direction of the y
-          if (this.y > h - this.side){
-            this.y = h - this.side;
-            this.my *= - 1;
-          } else if (this.y < this.side){
-            this.y = this.side;
-            this.my *= - 1;
-          }
+    update: function(){
 
-          this.x += this.mx;
-          this.y += this.my;
-        }
-
-      };
-
-      ball.draw();
-      ball.move();
-
-      // Create a fuction for random integers, min and max inclusive
-      function getRandom(min, max){
-        return Math.floor(Math.random() * (max - min + 1) + min);
-      }
+    },
+    draw: function(){
+      ctx.fillRect(this.x, this.y, this.length, this.length);
+    }
+  };
 
 
+  function main(){
+    canvas = document.getElementById('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    ctx = canvas.getContext('2d');
+
+    init();
+
+    var loop = function (){
+      update();
+      draw();
+      window.requestAnimationFrame(loop, canvas);
+    };
+    window.requestAnimationFrame(loop, canvas);
+  }
+
+  function init(){
+    player.x = player.width;
+    player.y = (h - player.height)/2;
+
+    ai.x = w - (player.width + ai.width);
+    ai.y = (h - ai.height)/2;
+
+    ball.x = (w - ball.length)/2;
+    ball.y = (h - ball.length)/2;
+  }
+
+  function update(){
+    player.update();
+    ai.update();
+    ball.update();
+
+  }
+
+  function draw(){
+    player.draw();
+    ai.draw();
+    ball.draw();
+
+  }
+
+  main();
 
 });
