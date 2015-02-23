@@ -44,9 +44,12 @@ $(document).ready(function() {
     x: null,
     y: null,
     length: 20,
+    velocity: null,
+    speed: 5,
 
     update: function(){
-
+      this.x = this.x + ball.velocity.x;
+      this.y = this.y + ball.velocity.y;
     },
     draw: function(){
       ctx.fillRect(this.x, this.y, this.length, this.length);
@@ -92,6 +95,11 @@ $(document).ready(function() {
 
     ball.x = (w - ball.length)/2;
     ball.y = (h - ball.length)/2;
+
+    ball.velocity = {
+      x: 0,
+      y: ball.speed,
+    };
   }
 
   function update(){
