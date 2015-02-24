@@ -1,6 +1,8 @@
 body {
   background-color: #E8E8E8;
   font-family: 'Verdana', 'sans serif';
+  text-align: center;
+  font-size: 18px;
 }
 
 .navigation {
@@ -19,6 +21,10 @@ a:link {
 a:visited{
   text-decoration: underline;
   color: #383838;
+}
+
+h1 {
+  padding-top: 30px;
 }
 
 canvas {
