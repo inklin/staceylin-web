@@ -6,6 +6,27 @@ $(document).ready(function() {
   var player, ai, ball;
   var UpKey = 38, DownKey= 40;
   var pi = Math.PI;
+  var score;
+
+  score = {
+    ai: 0,
+    player: 0,
+
+    update: function(){
+      if (0 - ball.length + ball.speed > ball.x){
+        this.ai += 1;
+      }
+      if (ball.x > w - ball.speed){
+        this.player += 1;
+      }
+    },
+
+    draw: function(){
+      ctx.font = '25px Verdana';
+      ctx.fillText(this.player, w * 0.25, 50);
+      ctx.fillText(this.ai, w * 0.75, 50);
+    }
+  };
 
   player = {
     x: null,
@@ -35,7 +56,7 @@ $(document).ready(function() {
 
     update: function(){
       var destination = ball.y - (this.height - ball.length) * 0.5;
-      this.y += (destination - this.y) * 0.05;
+      this.y += (destination - this.y) * 0.08;
     },
     draw: function(){
       ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -75,7 +96,7 @@ $(document).ready(function() {
         // or put the x coordinate to the left of the ai paddle
         this.x = paddle === player ? player.x + player.width : ai.x - this.length;
 
-        // Y coordinates: alculate where the ball hits the paddle compared to the length of the paddle
+        // Y coordinates: calculate where the ball hits the paddle compared to the length of the paddle
         var n = (this.y + this.length - paddle.y)/(paddle.height + this.length);
         var phi = 0.25 * pi * (2 * n - 1); // Pi / 4 = 45 degrees
 
@@ -90,7 +111,7 @@ $(document).ready(function() {
 
       // if the ball goes off the left or right side
       // restart the ball in the original starting position
-      if (0 > this.x + this.length || this.x > w){
+      if (0 - ball.length > this.x || this.x > w){
         ball.x = (w - ball.length)/2;
         ball.y = (h - ball.length)/2;
 
@@ -99,6 +120,7 @@ $(document).ready(function() {
         y: 0,
         };
       }
+
     },
     draw: function(){
       ctx.fillRect(this.x, this.y, this.length, this.length);
@@ -155,9 +177,11 @@ $(document).ready(function() {
       x: ball.speed,
       y: 0,
     };
+
   }
 
   function update(){
+    score.update();
     player.update();
     ai.update();
     ball.update();
@@ -170,6 +194,7 @@ $(document).ready(function() {
     ctx.save();
 
     ctx.fillStyle = '#FFFFFF';
+    score.draw();
     player.draw();
     ai.draw();
     ball.draw();
