@@ -34,7 +34,8 @@ $(document).ready(function() {
     height: 100,
 
     update: function(){
-
+      var destination = ball.y - (this.height - ball.length) * 0.5;
+      this.y += (destination - this.y) * 0.05;
     },
     draw: function(){
       ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -69,15 +70,34 @@ $(document).ready(function() {
       // else check against the ai paddle (ball going to the right)
       var paddle = this.velocity.x < 0 ? player : ai;
       if (AABBIntersect(paddle.x, paddle.y, paddle.width, paddle.height, this.x, this.y, this.length, this.length)){
-        // calculate where the ball hits the paddle compared to the length of the paddle
+        
+        // put the x coordinate to the right of the player paddle 
+        // or put the x coordinate to the left of the ai paddle
+        this.x = paddle === player ? player.x + player.width : ai.x - this.length;
+
+        // Y coordinates: alculate where the ball hits the paddle compared to the length of the paddle
         var n = (this.y + this.length - paddle.y)/(paddle.height + this.length);
         var phi = 0.25 * pi * (2 * n - 1); // Pi / 4 = 45 degrees
+
+        var hit = Math.abs(phi) > 0.2 * pi ? 1.5 : 1;
 
         // check if the paddle is the player's or ai
         // if the ball hits the player paddle, velocity is positive and ball goes to the right
         // if the ball hits the ai paddle, velocity is negative and the ball goes to the left
-        this.velocity.x =  (paddle === player ? 1 : -1) * this.speed * Math.cos(phi);
-        this.velocity.y = this.speed * Math.sin(phi);
+        this.velocity.x = hit * (paddle === player ? 1 : -1) * this.speed * Math.cos(phi);
+        this.velocity.y = hit * this.speed * Math.sin(phi);
+      }
+
+      // if the ball goes off the left or right side
+      // restart the ball in the original starting position
+      if (0 > this.x + this.length || this.x > w){
+        ball.x = (w - ball.length)/2;
+        ball.y = (h - ball.length)/2;
+
+        ball.velocity = {
+        x: (paddle === player ? 1 : -1) * ball.speed,
+        y: 0,
+        };
       }
     },
     draw: function(){
@@ -102,7 +122,7 @@ $(document).ready(function() {
     });
 
     $('canvas').on('mousemove', function(e){
-      player.y = e.pageY - 50;
+      player.y = e.pageY - 100;
     });
 
     init();
