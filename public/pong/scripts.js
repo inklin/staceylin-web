@@ -123,6 +123,12 @@ $(document).ready(function() {
 
     $('canvas').on('mousemove', function(e){
       player.y = e.pageY - 100;
+      if (player.y < 0){
+        player.y = 0;
+      } else if (player.y > h - player.height){
+        player.y = h - player.height;
+      }
+
     });
 
     init();
