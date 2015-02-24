@@ -62,7 +62,7 @@ $(document).ready(function() {
 
     update: function(){
       var destination = ball.y - (this.height - ball.length) * 0.5;
-      this.y += (destination - this.y) * 0.08;
+      this.y += (destination - this.y) * 0.05;
     },
     draw: function(){
       ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -74,7 +74,7 @@ $(document).ready(function() {
     y: null,
     length: 20,
     velocity: null,
-    speed: 5,
+    speed: 6,
 
     update: function(){
       this.x = this.x + ball.velocity.x;
