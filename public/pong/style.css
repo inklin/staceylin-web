@@ -24,11 +24,11 @@ a:visited{
 }
 
 h1 {
-  padding-top: 30px;
+  padding: 30px;
 }
 
 canvas {
-  position: absolute;
+  position: relative;
   margin: auto;
   top: 0;
   bottom: 0;

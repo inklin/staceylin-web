@@ -37,9 +37,15 @@ $(document).ready(function() {
     update: function(){
       if ( keystate[UpKey] ) {
         this.y -= 5;
+        if (this.y <= 0){
+          this.y = 0;
+        }
       }
       if ( keystate[DownKey] ){
         this.y += 5;
+        if (this.y >= h - this.height){
+          this.y = h - this.height;
+        }
       }
     },
 
@@ -141,16 +147,6 @@ $(document).ready(function() {
 
     $(document).keyup(function(e){
       delete keystate[e.keyCode];
-    });
-
-    $('canvas').on('mousemove', function(e){
-      player.y = e.pageY - 100;
-      if (player.y < 0){
-        player.y = 0;
-      } else if (player.y > h - player.height){
-        player.y = h - player.height;
-      }
-
     });
 
     init();
