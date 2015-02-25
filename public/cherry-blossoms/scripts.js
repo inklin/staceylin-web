@@ -8,8 +8,7 @@ $(document).ready(function() {
       canvas.width = w;
       canvas.height = h;
 
-  var length, divergence, reduction;
-  var line_width = 10;
+  var divergence, reduction;
   divergence = 10;
   reduction = 0.8;
 
@@ -22,10 +21,10 @@ $(document).ready(function() {
     ctx.fillStyle = "#CBFEFC";
     ctx.fillRect(0, 0, w, h);
 
-    drawBranch(start, 100, 3);
+    drawBranch(start, 100, 10, 3);
   }
 
-  function drawBranch(point, length, depth){
+  function drawBranch(point, length, line_width, depth){
     var newpoint1 = getEnd(point.x, point.y, point.angle + divergence, length);
     var newpoint2 = getEnd(point.x, point.y, point.angle - divergence, length);
 
@@ -46,8 +45,8 @@ $(document).ready(function() {
 
     if (depth > 0){
       depth--;
-      drawBranch(newpoint1, length, depth);
-      drawBranch(newpoint2, length, depth);
+      drawBranch(newpoint1, length, line_width, depth);
+      drawBranch(newpoint2, length, line_width, depth);
     }
   }
 
