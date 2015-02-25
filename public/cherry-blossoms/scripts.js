@@ -8,31 +8,55 @@ $(document).ready(function() {
       canvas.width = w;
       canvas.height = h;
 
-  var length, divergence, reduction, line_width, start_points = [];
+  var length, divergence, reduction;
+  var line_width = 10;
+  divergence = 10;
+  reduction = 0.8;
+
+  var start = {x: w/2, y: 50, angle: 90};
 
   init();
 
   function init(){
-    // background of the canvas
+    // Draw the background of the canvas
     ctx.fillStyle = "#CBFEFC";
     ctx.fillRect(0, 0, w, h);
 
-    // draw the trunk of the tree
-    length = 100;
-    divergence = 45;
-    reduction = 0.75;
-    line_width = 10;
+    drawBranch(start, 100, 3);
+  }
 
-    var trunk = {x: w/2, y: length + 50, angle: 90};
-    start_points.push(trunk);
+  function drawBranch(point, length, depth){
+    var newpoint1 = getEnd(point.x, point.y, point.angle + divergence, length);
+    var newpoint2 = getEnd(point.x, point.y, point.angle - divergence, length);
 
     ctx.beginPath();
-    ctx.moveTo(trunk.x, h - 50);
-    // move the line upwards by deducting the height of the trunk
-    ctx.lineTo(trunk.x, h - trunk.y);
+    ctx.moveTo(point.x, h - point.y);
+    ctx.lineTo(newpoint1.x, h - newpoint1.y);
+    ctx.moveTo(point.x, h - point.y);
+    ctx.lineTo(newpoint2.x, h - newpoint2.y);
     ctx.strokeStyle = "#703434";
     ctx.lineWidth = line_width;
     ctx.stroke();
+
+    newpoint1.angle = point.angle + divergence;
+    newpoint2.angle = point.angle - divergence;
+
+    line_width = line_width * 0.9;
+    length = length * reduction;
+
+    if (depth > 0){
+      depth--;
+      drawBranch(newpoint1, length, depth);
+      drawBranch(newpoint2, length, depth);
+    }
+  }
+
+
+  function getEnd(x, y, a, length){
+    var epx = x + length * Math.cos(a * pi/180);
+    var epy = y + length * Math.sin(a * pi/180);
+    return {x: epx, y: epy};
   }
 
 });
+
