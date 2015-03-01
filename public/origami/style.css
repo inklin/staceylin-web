@@ -1,0 +1,77 @@
+.origami {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000000;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+div > * {
+  position: absolute;
+}
+
+.white {
+  background-color: #F7F2E0;
+}
+
+.lower {
+  top: 100px;
+}
+
+.bottom.left{
+  border-top:  120px solid #FE2EC8;
+  border-left: 20px solid transparent;
+  height: 0;
+  width: 104px;
+}
+
+.bottom.right{
+  border-top:  120px solid #FE2EC8;
+  border-right: 20px solid transparent;
+  height: 0;
+  width: 100px;
+  left: 104px;
+}
+
+.triangle.pink {
+  width: 0;
+  height: 0;
+  border-left: 28px solid transparent;
+  border-right: 28px solid transparent;
+  border-bottom: 30px solid #FF0000;
+  z-index: 5;
+}
+
+.triangle.one {
+  left: 28px;
+}
+
+.triangle.two{
+  left: 84px;
+}
+
+.triangle.three{
+  left: 140px;
+}
+
+.triangle.white {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-left: 28px solid transparent;
+  border-right: 28px solid transparent;
+  border-top: 30px solid #FFFF00;
+  z-index: 10;
+}
+
+.triangle.second {
+  left: 56px;
+}
+
+.triangle.third {
+  left: 112px;
+}
+
+.triangle.fourth {
+  left: 168px;
+}
