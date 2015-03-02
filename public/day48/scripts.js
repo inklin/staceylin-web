@@ -29,4 +29,8 @@ document.onkeydown = function (e) {
   $(".card").css("transform", "rotateX(" + xAngle + "deg) rotateY(" + yAngle + "deg)");
 };
 
+  $('body').click(function(){
+    $('.back').addClass('back-fall');
+  });
+
 });

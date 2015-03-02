@@ -12,12 +12,11 @@ body {
 }
 
 .card {
-  padding: 10px;
   position: relative;
   top: 100px;
   margin: 0 auto;
-  width: 650px;
-  height: 450px;
+  width: 600px;
+  height: 400px;
   -webkit-transition: -webkit-transform 2s linear;
   -webkit-transform-style: preserve-3d;
   -moz-transition: -webkit-transform 2s linear;
@@ -36,25 +35,40 @@ body {
 
 .paper.bottom {
   background-color: #0000FF;
-  -webkit-transform: rotateX(-90deg) translateZ(200px);
-  transform: rotateX(-90deg) translateZ(200px);
+  -webkit-transform: translateZ(200px) rotateX(-90deg) ;
+  transform: translateY(200px) translateZ(200px) rotateX(-90deg) ;
 }
 
 .paper.back {
+  padding: 0;
+  margin: 0;
   background-color: #FF0000;
-  transform: translateZ(-200px);
+}
+
+.back-fall {
+  -webkit-animation: back-fall 4s linear;
+}
+
+@-webkit-keyframes back-fall {
+  from {
+   transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-90deg);
+    transform-origin: ;
+  }
 }
 
 #emperor {
   width: 200px;
   height: 300px;
-  transform: translateZ(-95px) translateY(-150px) translateX(50px);
+  transform: translateZ(101px) translateY(-150px) translateX(70px);
 }
 
 #empress {
   width: 200px;
   height: 300px;
-  transform: translateZ(-95px) translateY(-150px) translateX(150px);
+  transform: translateZ(101px) translateY(-150px) translateX(130px);
 }
 
 .step {
@@ -64,10 +78,10 @@ body {
 
 .step.front {
   background-color: #00FFF0;
-  -webkit-transform: translateY(200px) translateZ(-100px);
+  transform: translateZ(100px) translateY(200px);
 }
 
 .step.top {
   background-color: #0FFF00;
-  -webkit-transform: translateZ(-150px) translateY(250px) rotateX(-90deg);
+  transform: translateZ(50px) translateY(250px) rotateX(-90deg);
 }
