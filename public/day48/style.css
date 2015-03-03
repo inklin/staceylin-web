@@ -1,5 +1,50 @@
 body {
   background-color: #A3A3C2;
+  font-family: 'Arial', 'sans serif';
+  text-align: center;
+  font-size: 18px;
+  color: #383838;
+}
+
+.navigation {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  word-spacing: 40px;
+  font-size: 18px;
+}
+
+a:link {
+  color: #383838;
+}
+
+a:visited {
+  color: #181818;
+}
+
+h1 {
+  padding: 20px;
+}
+
+.nav {
+  border-radius: 25px;
+  border: 2px solid #383838;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  font-size: 18px;
+  background-color: #FFFFFF;
+  color: #383838;
+  cursor: pointer;
+}
+
+.nav:focus {
+  outline: none;
+}
+
+.nav:hover {
+  background-color: #383838;
+  color: #FFFFFF;
 }
 
 .wrapper {
@@ -13,7 +58,7 @@ body {
 
 .card {
   position: relative;
-  top: 100px;
+  top: 20px;
   margin: 0 auto;
   width: 600px;
   height: 400px;
@@ -46,28 +91,27 @@ body {
   padding: 0;
   margin: 0;
   background-color: #FFD700;
-  border-top: 2px solid #000000;
 }
 
 
 #emperor {
   width: 200px;
   height: 300px;
-  -webkit-transform: translateZ(101px) translateY(-150px) translateX(70px);
-  -moz-transform: translateZ(101px) translateY(-150px) translateX(70px);
-  -o-transform: translateZ(101px) translateY(-150px) translateX(70px);
-  -ms-transform: translateZ(101px) translateY(-150px) translateX(70px);
-  transform: translateZ(101px) translateY(-150px) translateX(70px);
+  -webkit-transform: translateZ(101px) translateY(-150px) translateX(-30px);
+  -moz-transform: translateZ(101px) translateY(-150px) translateX(-30px);
+  -o-transform: translateZ(101px) translateY(-150px) translateX(-30px);
+  -ms-transform: translateZ(101px) translateY(-150px) translateX(-30px);
+  transform: translateZ(101px) translateY(-150px) translateX(-30px);
 }
 
 #empress {
   width: 200px;
   height: 300px;
-  -webkit-transform: translateZ(101px) translateY(-150px) translateX(130px);
-  -moz-transform: translateZ(101px) translateY(-150px) translateX(130px);
-  -o-transform: translateZ(101px) translateY(-150px) translateX(130px);
-  -ms-transform: translateZ(101px) translateY(-150px) translateX(130px);
-  transform: translateZ(101px) translateY(-150px) translateX(130px);
+  -webkit-transform: translateZ(101px) translateY(-150px) translateX(40px);
+  -moz-transform: translateZ(101px) translateY(-150px) translateX(40px);
+  -o-transform: translateZ(101px) translateY(-150px) translateX(40px);
+  -ms-transform: translateZ(101px) translateY(-150px) translateX(40px);
+  transform: translateZ(101px) translateY(-150px) translateX(40px);
 }
 
 .step {

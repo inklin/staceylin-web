@@ -27,9 +27,10 @@ $(document).ready(function() {
   $('.nav').click(function(){
     var direction = $(this).val();
 
-    if (direction === "left"){
+    if (direction === "<"){
       yAngle = yAngle - 20;
-    } else {
+    }
+    if (direction === ">"){
       yAngle = yAngle + 20;
     }
 
