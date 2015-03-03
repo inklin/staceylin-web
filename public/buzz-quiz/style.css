@@ -1,0 +1,24 @@
+body {
+
+}
+
+.choices {
+  width: 550px;
+  height: 600px;
+  padding: 50px;
+  border: 1px solid #000000;
+}
+
+.movie {
+  float: left;
+  width: 250px;
+  height: 290px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #FF0000;
+}
+
+.poster {
+  width: 230px;
+  height: 270px;
+}
