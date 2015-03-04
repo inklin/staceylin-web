@@ -57,7 +57,7 @@ $(document).ready(function() {
         break;
     }
       $('.result').show();
-      $('.result').html('<h2>You chose <span class="chosen-title">' + title + '</span></h2><img src="imgs/' + movie + '.gif" class="gif" /><p class="description">'+ result + '</p>');
+      $('.result').html('<h2>You chose <span class="chosen-title">' + title + '</span></h2><img src="imgs/' + movie + '.gif" class="gif" alt="movie gif image" ><p class="description">'+ result + '</p>');
 
   }
 
