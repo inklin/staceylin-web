@@ -12,13 +12,33 @@ body {
 .movie {
   float: left;
   width: 250px;
-  height: 290px;
+  height: 300px;
   text-align: center;
   padding: 5px;
   border: 1px solid #FF0000;
+  cursor: pointer;
+}
+
+.movie:hover{
+  background-color: #FF0000;
+  opacity: 1;
 }
 
 .poster {
   width: 230px;
   height: 270px;
+}
+
+.result {
+  width: 550px;
+  height: 600px;
+}
+
+.chosen {
+  opacity: 1;
+  background-color: #FF00FF;
+}
+
+.notchosen {
+  opacity: 0.5;
 }
