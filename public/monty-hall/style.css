@@ -1,3 +1,13 @@
 body {
 
 }
+
+.door {
+  width: 100px;
+  height: 200px;
+  border: 1px solid #00FF00;
+}
+
+.shown {
+  background-color: #FF0000;
+}

@@ -2,8 +2,8 @@
 
 <html>
   <head>
-    <title></title>
-
+    <title>Monty Hall | Stacey Lin</title>
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="/js/jquery-1.11.2.min.js"></script>
     <script src="/js/analytics.js"></script>
@@ -16,8 +16,23 @@
     </div>
 
     <div class="content">
-      
+      <h1>Monty Hall Problem</h1>
 
-    </div>
+      <div class="modal">
+        Welcome to Monty Hall's game show.
+      </div>
+
+      <div class="doors">
+        <div class="door" id="door-1"></div>
+        <div class="door" id="door-2"></div>
+        <div class="door" id="door-3"></div>
+      </div>
+
+      <div class="info"></div>
+        <p class="choice"></p>
+        <input type="button" class="switch" id="yes" value="yes"></input>
+        <input type="button" class="switch" id="no" value="no"></input>
+      </div>
+
   </body>
 </html>
