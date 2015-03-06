@@ -1,13 +1,71 @@
 body {
-
+  text-align: center;
 }
 
-.door {
-  width: 100px;
+.doors {
+  width: 650px;
   height: 200px;
-  border: 1px solid #00FF00;
+  margin: 0 auto;
+}
+
+div.door {
+  position: relative;
+  float: left;
+  width: 150px;
+  height: 250px;
+  margin: 20px;
+}
+
+div.info {
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+img.pic {
+  width: 150px;
+  height: 250px;
+  z-index: 5;
+}
+
+.prize {
+  width: 150px;
+  position: absolute;
+  top: 100px;
+  left: 5px;
+  z-index: -3;
+}
+
+.switch {
+  display: none;
 }
 
 .shown {
   background-color: #FF0000;
+  width: 150px;
+  height: 250px;
+  -webkit-animation: open 0.75s linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation: open 0.75s linear;
 }
+
+@-webkit-keyframes open {
+  from {-webkit-transform: perspective(1000) rotateY(0deg);
+        -webkit-transform-origin: 0% 0%;
+      }
+  to   {-webkit-transform: perspective(1000) rotateY(-100deg);
+        -webkit-transform-origin: 0% 0%;
+      }
+}
+
+@keyframes open {
+  from {transform: perspective(300) rotateY(0deg);
+        transform-origin: 0% 0%;
+      }
+  to   {transform: perspective(300) rotateY(-100deg);
+      transform-origin: 0% 0%;}
+}
+
+

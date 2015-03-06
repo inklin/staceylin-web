@@ -1,13 +1,5 @@
 $(document).ready(function() {
-  
-// Show three doors
-// Randomly assign one door as the prize
-// Prompt user to pick a door 
-// Get the door that the user selected
-// Show a door that is not a winner
-// Ask user if they want to switch their choice
-// User makes choice
-// Reveal user door and tell them if they won
+
   var prize,
       selected,
       turn = 1;
@@ -28,13 +20,15 @@ function showTurn(){
       $('.choice').html('Pick a door!');
     }
     if (turn === 2){
-      $('.choice').html('You chose door number' + selected.slice(-1) + ' ! Do you want to switch doors?');
+      $('.choice').html('You chose door number ' + selected.slice(-1) + ' ! Do you want to switch doors?');
+      $('.switch').show();
     }
 }
 
 function playGame(){
   prize = 'door-' + randomNum();
   console.log('prize is ' + prize);
+  $('#' + prize).append('<img src="prize.png" class="prize">');
 
   showTurn();
   canSelect = true;
@@ -55,7 +49,7 @@ function showDoor(){
     }
   }
   console.log('door to open is ' + toOpen);
-  $('#' + toOpen).addClass('shown');
+  $('#' + toOpen).find('img.pic').addClass('shown');
 
   showTurn();
 }
@@ -78,13 +72,26 @@ $('#yes').click(function(){
     newDoor = 'door-' + randomNum();
   }
 
-  $('#' + newDoor).addClass('shown');
+  $('#' + newDoor).find('img.pic').addClass('shown');
+
+  if (newDoor === prize){
+    $('.info').html('You won!');
+  } else {
+    $('.info').html('You lost.');
+  }
 
 });
 
 $('#no').click(function(){
-  $('#' + selected).addClass('shown');
+  $('#' + selected).find('img.pic').addClass('shown');
+
+  if (selected === prize){
+    $('.info').html('You won!');
+  } else {
+    $('.info').html('You lost.');
+  }
 });
+
 
 playGame();
 
