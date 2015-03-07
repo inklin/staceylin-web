@@ -1,6 +1,6 @@
 body {
   background-color: #F5F6CE;
-  font-family: 'Verdana', 'sans serif';
+  font-family: Verdana, sans-serif;
 }
 
 .navigation {
@@ -8,13 +8,14 @@ body {
   width: 200px;
   left: 30px;
   bottom: 20px;
-  word-spacing: 20px;
+  word-spacing: 25px;
   text-transform: lowercase;
   font-size: 15px;
 }
 
 a:link {
   color: #088A85;
+  font-weight: bold;
 }
 
 a:visited {
