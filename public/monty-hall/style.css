@@ -40,6 +40,7 @@ div.door {
   width: 150px;
   height: 250px;
   margin: 30px;
+  cursor: pointer;
 }
 
 div.info {

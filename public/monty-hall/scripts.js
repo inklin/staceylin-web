@@ -19,8 +19,7 @@ function showTurn(){
       $('.choice').html('Pick a door!');
     }
     if (turn === 2){
-      $('.choice').html('You chose door number ' + selected.slice(-1) + ' ! Do you want to switch doors?');
-      $('.switch').show();
+      $('.choice').html('You chose door number ' + selected.slice(-1) + ' !');
     }
 }
 
@@ -46,10 +45,13 @@ function showDoor(){
       toOpen = 'door-' + randomNum();
     }
   }
-  console.log('door to open is ' + toOpen);
-  $('#' + toOpen).find('img.pic').addClass('shown');
 
   showTurn();
+  setTimeout(function(){
+    $('#' + toOpen).find('img.pic').addClass('shown');
+    $('.choice').html('Do you want to switch doors?');
+    $('.switch').show();
+  }, 2000);
 }
 
 $('.door').click(function(){
