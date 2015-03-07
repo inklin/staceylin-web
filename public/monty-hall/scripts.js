@@ -77,7 +77,10 @@ $('#yes').click(function(){
   if (newDoor === prize){
     $('.info').html('You won!');
   } else {
-    $('.info').html('You lost.');
+    $('.info').html('Unfortunately you lost. The prize was behind door ' + prize.slice(-1) + ' !');
+    setTimeout(function() {
+      $('#' + prize).find('img.pic').addClass('shown');
+    }, 3000);
   }
 
 });
@@ -88,7 +91,10 @@ $('#no').click(function(){
   if (selected === prize){
     $('.info').html('You won!');
   } else {
-    $('.info').html('You lost.');
+    $('.info').html('Unfortunately you lost. The prize was behind door ' + prize.slice(-1) + ' !');
+    setTimeout(function() {
+      $('#' + prize).find('img.pic').addClass('shown');
+    }, 2000);
   }
 });
 
