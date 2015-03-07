@@ -6,7 +6,6 @@ $(document).ready(function() {
   var toOpen;
   var canSelect = false;
 
-// generates a random number from 1 - 3
 function randomNum(){
   var number = Math.floor(Math.random() * 3 + 1);
   if (number === 0){
@@ -27,7 +26,6 @@ function showTurn(){
 
 function playGame(){
   prize = 'door-' + randomNum();
-  console.log('prize is ' + prize);
   $('#' + prize).append('<img src="prize.png" class="prize">');
 
   showTurn();
@@ -58,7 +56,7 @@ $('.door').click(function(){
   if (canSelect === true){
     canSelect = false;
     selected = this.id;
-    console.log('user selected' + selected);
+    $(this).addClass('selected');
     turn = 2;
 
     showDoor();
@@ -67,6 +65,8 @@ $('.door').click(function(){
 });
 
 $('#yes').click(function(){
+  $('#' + selected).removeClass('selected');
+
   var newDoor = 'door-' + randomNum();
   while (newDoor === toOpen || newDoor == selected){
     newDoor = 'door-' + randomNum();
@@ -86,6 +86,7 @@ $('#yes').click(function(){
 });
 
 $('#no').click(function(){
+  $('#' + selected).removeClass('selected');
   $('#' + selected).find('img.pic').addClass('shown');
 
   if (selected === prize){

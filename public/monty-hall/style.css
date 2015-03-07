@@ -1,10 +1,36 @@
 body {
   text-align: center;
+  font-family: 'Bangers', cursive;
+  font-size: 22px;
+}
+
+.navigation {
+  position: absolute;
+  left: 30px;
+  top: 25px;
+  word-spacing: 30px;
+}
+
+a:link {
+  color: #303030;
+}
+
+a:visited {
+  color: #2F4F4F;
+}
+
+h1 {
+  font-size: 35px;
+  padding: 50px;
+}
+
+.explain {
+  padding: 20px;
 }
 
 .doors {
   width: 650px;
-  height: 200px;
+  height: 300px;
   margin: 0 auto;
 }
 
@@ -13,20 +39,41 @@ div.door {
   float: left;
   width: 150px;
   height: 250px;
-  margin: 20px;
+  margin: 30px;
 }
 
 div.info {
   width: 300px;
   height: 100px;
   text-align: center;
-  margin: 0 auto;
+  margin: 20px auto;
+  font-size: 25px;
+  padding: 30px;
 }
 
 img.pic {
   width: 150px;
   height: 250px;
   z-index: 5;
+}
+
+input.switch {
+  font-family: 'Verdana';
+  background-color: #FF0000;
+  border: 2px solid #000000;
+  font-size: 20px;
+  width: 70px;
+  margin: 20px;
+  height: 40px;
+  cursor: pointer;
+}
+
+input.switch:hover {
+  color: #FFFFFF;
+}
+
+.selected {
+  border: 5px solid #FF0000;
 }
 
 .prize {
