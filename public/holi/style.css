@@ -1,3 +1,20 @@
 body {
+  background-color: #FFFFFF;
+}
 
+.navigation {
+  position: absolute;
+  word-spacing: 35px;
+  width: 200px;
+  bottom: 25px;
+  margin-left: -100px;
+  left: 50%;
+}
+
+a:link {
+  color: #575757;
+}
+
+a:visited {
+  color: #00000C;
 }

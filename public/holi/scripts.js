@@ -6,7 +6,7 @@ $(document).ready(function() {
   var w = $(window).width();
   var h = $(window).height();
   var colors = ['#FF00FF', '#FFFF00', '#00CCFF', '#00CC00', '#6600CC', '#FF6600', '#FF9933', '#00CC99', '#FF1975',
-  '#0000FF'];
+  '#0000FF', '#99FF33', '#E60000'];
   var colorIndex = 0;
   color = colors[colorIndex];
 
@@ -14,21 +14,20 @@ $(document).ready(function() {
   canvas.height = h;
 
   canvas.onmousedown = function(e){
-    var newColor = Math.floor(Math.random() * 10);
+    var newColor = Math.floor(Math.random() * 12);
     while (newColor === colorIndex){
-      newColor = Math.floor(Math.random() * 10);
+      newColor = Math.floor(Math.random() * 12);
     }
     colorIndex = newColor;
     color = colors[colorIndex];
 
-    console.log('mouse pressed');
     for (var i = 0; i < 70; i ++){
       particles.push({
         x: e.pageX,
         y: e.pageY,
         angle: i * 5,
         size: 5 + Math.random() * 2,
-        life: 150 + Math.random() * 40,
+        life: 200 + Math.random() * 50,
       });
     }
   };
