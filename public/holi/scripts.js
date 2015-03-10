@@ -12,8 +12,10 @@ $(document).ready(function() {
 
   canvas.width = w;
   canvas.height = h;
+  var firstclick = false;
 
   canvas.onmousedown = function(e){
+
     var newColor = Math.floor(Math.random() * 12);
     while (newColor === colorIndex){
       newColor = Math.floor(Math.random() * 12);
