@@ -5,7 +5,8 @@ $(document).ready(function() {
   var particles = [];
   var w = $(window).width();
   var h = $(window).height();
-  var colors = ['#FF00FF', '#FFFF00', '#00CCFF', '#00CC00', '#6600CC', '#FF6600', '#FF9933'];
+  var colors = ['#FF00FF', '#FFFF00', '#00CCFF', '#00CC00', '#6600CC', '#FF6600', '#FF9933', '#00CC99', '#FF1975',
+  '#0000FF'];
   var colorIndex = 0;
   color = colors[colorIndex];
 
@@ -13,7 +14,11 @@ $(document).ready(function() {
   canvas.height = h;
 
   canvas.onmousedown = function(e){
-
+    var newColor = Math.floor(Math.random() * 10);
+    while (newColor === colorIndex){
+      newColor = Math.floor(Math.random() * 10);
+    }
+    colorIndex = newColor;
     color = colors[colorIndex];
 
     console.log('mouse pressed');
@@ -23,7 +28,7 @@ $(document).ready(function() {
         y: e.pageY,
         angle: i * 5,
         size: 5 + Math.random() * 2,
-        life: 150 + Math.random() * 100,
+        life: 150 + Math.random() * 40,
       });
     }
   };
@@ -38,10 +43,10 @@ $(document).ready(function() {
 
     for (var i = 0; i < particles.length; i++){
       var p = particles[i];
-      p.x += Math.cos(p.angle) * 4 + Math.random() * 2 - Math.random() * 2;
-      p.y += Math.sin(p.angle) * 4 + Math.random() * 2 - Math.random() * 2;
+      p.x += Math.cos(p.angle) * 5 + Math.random() * 5 - Math.random() * 5;
+      p.y += Math.sin(p.angle) * 5 + Math.random() * 5 - Math.random() * 5;
       p.life -= delta;
-      p.size -= delta/50;
+      p.size -= delta/40;
 
       if (p.size <= 0){
         p.life = 0;
