@@ -1,0 +1,52 @@
+body {
+
+}
+
+div.sun {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  background-color: lightblue;
+}
+
+div.center {
+  position: absolute;
+  left: 50%;
+  margin-left: -80px;
+  top: 50%;
+  margin-top: -80px;
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  background-color: #FFE680;
+  z-index: 5;
+}
+
+div.back.one {
+  width: 146px;
+  height: 146px;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  margin-left: -73px;
+  top: 50%;
+  margin-top: -73px;
+  z-index: 4;
+}
+
+div.back.two {
+  width: 146px;
+  height: 146px;
+  background-color: blue;
+  position: absolute;
+  left: 50%;
+  margin-left: -73px;
+  top: 50%;
+  margin-top: -73px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 3;
+}
