@@ -16,20 +16,13 @@ $(document).ready(function() {
 
   canvas.onmousedown = function(e){
 
-    var newColor = Math.floor(Math.random() * 12);
-    while (newColor === colorIndex){
-      newColor = Math.floor(Math.random() * 12);
-    }
-    colorIndex = newColor;
-    color = colors[colorIndex];
-
     for (var i = 0; i < 70; i ++){
       particles.push({
         x: e.pageX,
         y: e.pageY,
         angle: i * 5,
         size: 5 + Math.random() * 2,
-        life: 200 + Math.random() * 50,
+        life: 200 + Math.random() * 10,
       });
     }
   };
@@ -44,10 +37,10 @@ $(document).ready(function() {
 
     for (var i = 0; i < particles.length; i++){
       var p = particles[i];
-      p.x += Math.cos(p.angle) * 5 + Math.random() * 5 - Math.random() * 5;
-      p.y += Math.sin(p.angle) * 5 + Math.random() * 5 - Math.random() * 5;
+      p.x += Math.cos(p.angle) * 5 + Math.random() * 50 - Math.random() * 50;
+      p.y += Math.sin(p.angle) * 5 + Math.random() * 50 - Math.random() * 50;
       p.life -= delta;
-      p.size -= delta/40;
+      p.size -= delta/30;
 
       if (p.size <= 0){
         p.life = 0;
@@ -61,6 +54,11 @@ $(document).ready(function() {
   }
 
   function draw(){
+
+    newColor = Math.floor(Math.random() * 12);
+    colorIndex = newColor;
+    color = colors[colorIndex];
+
     ctx.fillStyle = color;
     for (var i = 0; i < particles.length; i++){
       if (Math.random() < 0.1){
