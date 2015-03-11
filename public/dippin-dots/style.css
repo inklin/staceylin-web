@@ -1,14 +1,16 @@
 body {
   background-color: #FFFFFF;
+  font-family: Verdana, sans-serif;
 }
 
 .navigation {
   position: absolute;
-  word-spacing: 35px;
+  word-spacing: 40px;
   width: 200px;
-  bottom: 25px;
+  bottom: 50px;
   margin-left: -100px;
   left: 50%;
+  font-size: 15px;
 }
 
 a:link {
@@ -17,4 +19,14 @@ a:link {
 
 a:visited {
   color: #00000C;
+}
+
+p.instruction {
+  position: absolute;
+  width: 200px;
+  font-size: 20px;
+  color: #484848;
+  top: 150px;
+  margin-left: -100px;
+  left: 50%;
 }

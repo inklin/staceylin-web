@@ -15,7 +15,13 @@ $(document).ready(function() {
   var firstclick = false;
 
   canvas.onmousedown = function(e){
-
+    if (firstclick === false){
+      $('.instruction').html('Click again!');
+      setTimeout(function(){
+        $('.instruction').remove();
+      }, 2000);
+      firstclick = true;
+    }
     for (var i = 0; i < 70; i ++){
       particles.push({
         x: e.pageX,
