@@ -1,12 +1,13 @@
 body {
-
+  background-color: #648EF3;
 }
 
 div.sun {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   position: relative;
-  background-color: lightblue;
+  background-color: #648EF3;
+  border: 2px solid red;
 }
 
 div.center {
@@ -18,26 +19,25 @@ div.center {
   width: 160px;
   height: 160px;
   border-radius: 80px;
-  background-color: #FFE680;
+  background-color: #F8E254;
   z-index: 5;
 }
 
 div.back.one {
   width: 146px;
   height: 146px;
-  background-color: red;
   position: absolute;
   left: 50%;
   margin-left: -73px;
   top: 50%;
   margin-top: -73px;
   z-index: 4;
+  background: linear-gradient(to bottom right, #F0CF74, #C89A34, #7C6128);
 }
 
 div.back.two {
   width: 146px;
   height: 146px;
-  background-color: blue;
   position: absolute;
   left: 50%;
   margin-left: -73px;
@@ -49,4 +49,12 @@ div.back.two {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: 3;
+  background: linear-gradient(to right, #DEAB3B, #936E31);
+}
+
+div.cloud {
+  width: 200px;
+  height: 100px;
+
+  background-color: #FFFDFF;
 }
