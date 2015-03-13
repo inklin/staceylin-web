@@ -4,15 +4,20 @@ body {
 
 div.content {
   position: relative;
+  top: 100px;
+  left: 50%;
+  margin-left: -250px;
   width: 500px;
   height: 500px;
+  border: 1px solid green;
 }
 
 div.sun {
   width: 220px;
   height: 220px;
   position: relative;
-  left: 100px;
+  left: 120px;
+  margin-left: -60px;
   background-color: #648EF3;
   border: 2px solid red;
 }
@@ -59,44 +64,81 @@ div.back.two {
   background: linear-gradient(to right, #DEAB3B, #936E31);
 }
 
-div.cloud {
-}
-
 div.cloud.one {
-  width: 200px;
-  height: 100px;
-  background-color: #FFFDFF;
+  width: 120px;
+  height: 40px;
+  background-color: #FFFDF2;
 
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
+  -webkit-border-radius: 40px 40px 5px 5px;
+  border-radius: 40px 40px 40px 40px;
   position: relative;
 
-  margin: 120px auto 20px;
+  margin: 40px auto 20px;
 }
 
-div.cloud:after div.cloud:before {
+div.cloud.one:after, div.cloud.one:before {
   content: "";
   position: absolute;
   background-color: #FFFDFF;
   z-index: -1;
 }
 
-div.cloud:after {
-  width: 100px;
-  height: 100px;
-  top: -50px;
-  left: 50px;
+div.cloud.one:after {
+  width: 55px;
+  height: 55px;
+  top: -35px;
+  left: 15px;
 
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
+  -webkit-border-radius: 27px;
+  border-radius: 27px;
 }
 
-div.cloud:before {
-  width: 180px;
-  height: 180px;
-  top: -90px;
-  right: 50px;
+div.cloud.one:before {
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  right: 20px;
 
-  -webkit-border-radius: 200px;
-  border-radius: 200px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
+
+/* Cloud number 2 */
+div.cloud.two {
+  width: 70px;
+  height: 20px;
+  background-color: #C5D3FD;
+
+  -webkit-border-radius: 30px 30px 5px 5px;
+  border-radius: 35px 35px 35px 35px;
+  position: relative;
+
+  margin: 70px auto;
+}
+
+div.cloud.two:after, div.cloud.two:before {
+  content: "";
+  position: absolute;
+  background-color: #C5D3FD;
+  z-index: -1;
+}
+
+div.cloud.two:after {
+  width: 35px;
+  height: 35px;
+  top: -20px;
+  left: 10px;
+
+  -webkit-border-radius: 17px;
+  border-radius: 17px;
+}
+
+div.cloud.two:before {
+  width: 25px;
+  height: 25px;
+  top: -15px;
+  right: 10px;
+
+  -webkit-border-radius: 17px;
+  border-radius: 17px;
 }
