@@ -2,10 +2,17 @@ body {
   background-color: #648EF3;
 }
 
+div.content {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
 div.sun {
   width: 220px;
   height: 220px;
   position: relative;
+  left: 100px;
   background-color: #648EF3;
   border: 2px solid red;
 }
@@ -53,8 +60,43 @@ div.back.two {
 }
 
 div.cloud {
+}
+
+div.cloud.one {
   width: 200px;
   height: 100px;
-
   background-color: #FFFDFF;
+
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  position: relative;
+
+  margin: 120px auto 20px;
+}
+
+div.cloud:after div.cloud:before {
+  content: "";
+  position: absolute;
+  background-color: #FFFDFF;
+  z-index: -1;
+}
+
+div.cloud:after {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 50px;
+
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+
+div.cloud:before {
+  width: 180px;
+  height: 180px;
+  top: -90px;
+  right: 50px;
+
+  -webkit-border-radius: 200px;
+  border-radius: 200px;
 }
