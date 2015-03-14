@@ -1,15 +1,47 @@
 body {
   background-color: #729FFD;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
-div.content {
+div.navigation {
+  width: 100vw;
+  background-color: #4285F4;
+  height: 40px;
+  padding: 10px;
+}
+
+#menu {
+  width: 25px;
+  margin: 10px;
+}
+
+#blog {
+  font-size: 19px;
+  letter-spacing: 2px;
+  font-weight: 100;
   position: relative;
-  top: 100px;
-  left: 50%;
-  margin-left: -250px;
+  margin-left: 20px;
+  top: -16px;
+}
+
+a:link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FFFFFF;
+}
+
+div.scene {
+  margin: 100px auto;
   width: 500px;
   height: 500px;
-  border: 1px solid green;
+
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 div.sun {
@@ -20,8 +52,14 @@ div.sun {
   margin-top: -110px;
   left: 50%;
   margin-left: -110px;
-  border: 2px solid red;
-  z-index: -1;
+  z-index: 3;
+
+  transition: 5s ease;
+}
+
+@-webkit-keyframes rotate {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
 }
 
 div.center {
@@ -33,7 +71,7 @@ div.center {
   width: 160px;
   height: 160px;
   border-radius: 80px;
-  background-color: #F8E254;
+  background-color: #FBE472;
   z-index: 5;
 }
 
@@ -46,10 +84,10 @@ div.back1 {
   top: 50%;
   margin-top: -73px;
   z-index: 4;
-  background: #D5A100;
-  background: -webkit-linear-gradient(to bottom right, #F6DA70, #D5A100, #644C19);
-  background: -moz-linear-gradient(to bottom right, #F6DA70, #D5A100, #644C19);
-  background: linear-gradient(to bottom right, #F6DA70, #D5A100, #644C19);
+  background: #FAE19E;
+  background: -webkit-linear-gradient(to bottom right, #FAE19E, #D5A100, #644C19);
+  background: -moz-linear-gradient(to bottom right, #FAE19E, #D5A100, #644C19);
+  background: linear-gradient(to bottom right, #FAE19E, #D5A100, #644C19);
 }
 
 div.back2 {
@@ -66,10 +104,10 @@ div.back2 {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: 3;
-  background: #DDA200;
-  background: -webkit-linear-gradient(to right, #DDA200, #8E6A3D);
-  background: -moz-linear-gradient(to right, #DDA200, #8E6A3D);
-  background: linear-gradient(to right, #DDA200, #8E6A3D);
+  background: #EAB351;
+  background: -webkit-linear-gradient(to right, #EAB351, #8E6A3D);
+  background: -moz-linear-gradient(to right, #EAB351, #8E6A3D);
+  background: linear-gradient(to right, #EAB351, #8E6A3D);
 }
 
 div.one {
@@ -205,3 +243,4 @@ div.three:before {
   -moz-border-radius: 17px;
   border-radius: 17px;
 }
+
