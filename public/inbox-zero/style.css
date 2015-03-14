@@ -6,7 +6,7 @@ body {
 div.navigation {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   background-color: #4285F4;
   height: 40px;
   padding: 10px;
