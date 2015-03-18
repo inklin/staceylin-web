@@ -8,7 +8,12 @@ $(document).ready(function() {
   // Change the current player
 
   $(".box").click(function(){
-    $(this).find("span").text(currentPlayer);
+    var value = $(this).find("span").text();
+    if (value === ""){
+      $(this).find("span").text(currentPlayer);
+    } else {
+      return;
+    }
 
     if (currentPlayer === "X"){
       currentPlayer = "O";
