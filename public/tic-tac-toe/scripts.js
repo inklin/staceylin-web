@@ -4,7 +4,8 @@ $(document).ready(function() {
   var currentPlayer = "X";
   var moves = 0;
   var gameOver = false;
-  
+  var board ;
+
   $(".result").hide();
 
   $("#replay").click(function(){
@@ -25,6 +26,7 @@ $(document).ready(function() {
     }
 
     checkWin(currentPlayer);
+    checkTie();
 
     if (currentPlayer === "X"){
       currentPlayer = "O";
@@ -34,18 +36,14 @@ $(document).ready(function() {
   });
 
   function checkWin(player) {
-
-   var board = [
+    board = [
       ['', '', ''],
       ['', '', ''],
       ['', '', '']
     ];
 
-    var i, j;
-
-    // 
-    for (i = 0; i < 3; i++) {
-      for (j = 0; j < 3; j++) {
+    for (var i = 0; i < 3; i++) {
+      for (var j = 0; j < 3; j++) {
         var playerText = $("#box-" + i + "-" + j).find("span").text();
         if (playerText.length) {
           board[i][j] = playerText;
@@ -71,6 +69,20 @@ $(document).ready(function() {
       $(".winner").html(currentPlayer + " is the winner!");// show winner! no more games;
       gameOver = true;
     }
+
+  }
+
+  function checkTie(){
+    for (var i = 0; i < 3; i++) {
+      for (var j = 0; j < 3; j++) {
+        if (board[i][j] === ""){
+          return;
+        }
+      }
+    }
+
+    $(".result").show();
+    $(".winner").html("It's a tie!");
 
   }
 
