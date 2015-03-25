@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     var value = $(this).find("span").text();
     if (value === ""){
-      $(this).find("span").text(currentPlayer);
+      $(this).find("span").text(currentPlayer).addClass("player-" + currentPlayer);
       moves = moves + 1;
     } else {
       return;
@@ -87,7 +87,7 @@ $(document).ready(function() {
   }
 
   function playAgain(){
-    $(".box").find("span").text("");
+    $(".box").find("span").text("").removeClass("player-X player-O");
     $(".result").hide();
     gameOver = false;
   }
