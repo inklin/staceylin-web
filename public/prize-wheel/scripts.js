@@ -20,28 +20,30 @@ function drawWheel(){
   canvas.width = width;
 
   if (canvas.getContext) {
-    console.log("canvas ok");
-    var wheelRadius = 200;
     ctx = canvas.getContext("2d");
 
     ctx.clearRect(0, 0, width, height);
     ctx.strokeStyle = "#000000";
     ctx.lineWidth = 2;
 
+    ctx.font = "bold 12px Helvetica, Arial";
+
     for (var i = 0; i < 12; i++){
       var angle = startAngle + i * arc;
+      var textRadius = 150;
+      // Draw the individual pie section 
       ctx.fillStyle = colors[i];
-
       ctx.beginPath();
-      ctx.arc(width/2, height/2, wheelRadius, angle, angle + arc, false);
-      ctx.endPath();
-      ctx.stroke();
+      ctx.arc(width/2, height/2, width/2, angle, angle + arc);
+      ctx.lineTo(width/2, height/2);
+      ctx.closePath();
       ctx.fill();
+      ctx.save();
+
     }
   }
+}
 
 drawWheel();
-
-}
 
 });
