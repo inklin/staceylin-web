@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var ctx;
   var startAngle = 0;
-
+  var clicks = 0;
   // 6 pieces on each side
   var arc = Math.PI / 6;
 
@@ -24,7 +24,7 @@ $(document).ready(function() {
   function drawWheel(){
     var canvas = document.getElementById("canvas");
     canvas.height = 550;
-    canvas.width = 550;
+    canvas.width = 520;
 
     if (canvas.getContext) {
       ctx = canvas.getContext("2d");
@@ -47,13 +47,6 @@ $(document).ready(function() {
         ctx.fill();
         ctx.save();
 
-        // Draw the middle circle
-        ctx.fillStyle = "#000000";
-        ctx.beginPath();
-        ctx.arc(width/2, height/2, 20, 0, Math.PI * 2);
-        ctx.closePath();
-        ctx.fill();
-
         // Fill the text of the pie section
         ctx.fillStyle = "#000000";
         ctx.translate(width/2 + Math.cos(angle + arc/2) * textRadius,
@@ -61,20 +54,21 @@ $(document).ready(function() {
         ctx.rotate(angle + arc/2);
         var text = food[i];
         ctx.fillText(text, -ctx.measureText(text).width/2, 0);
+
         ctx.restore();
       }
 
       // Draw the arrow
       ctx.fillStyle = "#000000";
       ctx.beginPath();
-      ctx.moveTo(width + 10, height/2 - 20);
+      ctx.moveTo(width + 5, height/2 - 20);
       ctx.lineTo(width - 20, height/2);
-      ctx.lineTo(width + 10, height/2 + 20);
+      ctx.lineTo(width + 5, height/2 + 20);
+      ctx.lineTo(width + 5, height/2 + 10);
       ctx.lineTo(width + 10, height/2 + 10);
-      ctx.lineTo(width + 20, height/2 + 10);
-      ctx.lineTo(width + 20, height/2 - 10);
       ctx.lineTo(width + 10, height/2 - 10);
-      ctx.lineTo(width + 10, height/2 - 20);
+      ctx.lineTo(width + 5, height/2 - 10);
+      ctx.lineTo(width + 5, height/2 - 20);
 
       ctx.fill();
     }
@@ -109,19 +103,28 @@ $(document).ready(function() {
 
   function stopRotate(){
     clearTimeout(spinTimeout);
+
     // convert angle and arc to degrees
     var angleD = startAngle * 180 / Math.PI;
     var arcD = arc * 180/Math.PI;
+    // get the index of the final item and display the result
     var index = Math.floor((360 - angleD % 360)/ arcD);
-    var text = "Time for " + food[index].toUpperCase() + "!";
+    var text = food[index].toUpperCase() + " time!";
+    ctx.fillStyle = "#000000";
     ctx.font = "25px Helvetica, Arial";
     ctx.fillText(text, width/2 - ctx.measureText(text).width/2, height + 40);
     ctx.restore();
   }
 
   drawWheel();
+
   $("#canvas").click(function(){
     spin();
+    clicks = clicks + 1;
+
+    if (clicks > 2){
+      $(".instruction").fadeTo(300, 0);
+    }
   });
 
 });

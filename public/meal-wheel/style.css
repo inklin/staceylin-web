@@ -1,3 +1,32 @@
 body {
+  text-align: center;
+  font-family: Helvetica, Arial;
 }
 
+canvas {
+  display: block;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.instruction {
+  font-size: 20px;
+  padding-top: 50px;
+}
+
+.navigation {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  font-size: 16px;
+  word-spacing: 20px;
+}
+
+a:link {
+  color: #7f8c8d;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #34495e;
+}
