@@ -2,10 +2,10 @@ $(document).ready(function() {
   var ctx;
   var startAngle = 0;
   var clicks = 0;
-  // 6 pieces on each side
+  // 6 pieces on each half, 12 pieces total. 
   var arc = Math.PI / 6;
 
-  // Prize wheel slice colors
+  // Meal wheel slice colors and food items
   var colors = ["#B8D430", "#3AB745", "#029990", "#3501CB",
                    "#2E2C75", "#673A7E", "#CC0071", "#F80120",
                    "#F35B20", "#FB9A00", "#FFCC00", "#FEF200"];
@@ -38,7 +38,7 @@ $(document).ready(function() {
       for (var i = 0; i < 12; i++){
         var angle = startAngle + i * arc;
         var textRadius = 150;
-        // Draw the individual pie section 
+        // Draw the individual pie section
         ctx.fillStyle = colors[i];
         ctx.beginPath();
         ctx.arc(width/2, height/2, width/2, angle, angle + arc);
@@ -91,6 +91,7 @@ $(document).ready(function() {
       return;
     }
 
+    // Get a random spin angle, convert to radians, and add it to the start angle
     var spinAngle = Math.random() * 10 + 10;
     startAngle = startAngle + (spinAngle * Math.PI / 180);
     drawWheel();
@@ -104,14 +105,15 @@ $(document).ready(function() {
   function stopRotate(){
     clearTimeout(spinTimeout);
 
-    // convert angle and arc to degrees
-    var angleD = startAngle * 180 / Math.PI;
-    var arcD = arc * 180/Math.PI;
-    // get the index of the final item and display the result
-    var index = Math.floor((360 - angleD % 360)/ arcD);
+    // divide the ending start angle by the angle per wheel section
+    // get the remainder from 12 to ignore any full rotations
+    // subtract from last index to get where the stationary arrow is pointing to
+    var index = 11 - Math.floor((startAngle / arc) % 12);
     var text = food[index].toUpperCase() + " time!";
     ctx.fillStyle = "#000000";
     ctx.font = "25px Helvetica, Arial";
+
+    // Write the final result under the wheel and center it
     ctx.fillText(text, width/2 - ctx.measureText(text).width/2, height + 40);
     ctx.restore();
   }
