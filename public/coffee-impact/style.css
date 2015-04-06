@@ -26,23 +26,38 @@ a:visited {
 }
 
 .coffee-header {
-  font: bold 80px Open Sans, Impact;
+  font: bold 90px Open Sans, Impact;
   background-image: -webkit-linear-gradient(#40280F 50%, #FFFFFF 50%);
+  background-image: linear-gradient(#40280F 50%, #FFFFFF 50%);
   background-repeat: no;
   background-position: 0 0;
   background-size: 100% 200%;
   -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .coffee-drain {
   -webkit-animation-fill-mode: forwards;
   -webkit-animation: drain 3s ease-out;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation: drain 3s ease-out;
+  -o-animation-fill-mode: forwards;
+  -o-animation: drain 3s ease-out;
   animation: drain 3s ease-out;
   animation-fill-mode: ease-out;
 }
 
 @-webkit-keyframes drain {
+  100% {background-position: 0 100px;}
+}
+
+@-moz-keyframes drain {
+  100% {background-position: 0 100px;}
+}
+
+@-o-keyframes drain {
   100% {background-position: 0 100px;}
 }
 
@@ -56,8 +71,8 @@ a:visited {
 
 .question {
   font-family: 'Grand Hotel', cursive;
-  font-size: 35px;
-  padding: 20px;
+  font-size: 38px;
+  padding: 25px;
 }
 
 #cost {
