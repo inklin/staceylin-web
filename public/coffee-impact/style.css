@@ -2,15 +2,15 @@ body {
   background-color: #E3DBD3;
   text-align: center;
   font-family: Tahoma, Arial;
-  font-size: 12px;
+  font-size: 20px;
 }
 
 .navigation {
-  font-size: 10px;
   position: absolute;
+  font-size: 18px;
   left: 25px;
   top: 15px;
-  word-spacing: 20px;
+  word-spacing: 25px;
 }
 
 a:link {
@@ -22,11 +22,11 @@ a:visited {
 }
 
 .content {
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 .coffee-header {
-  font: bold 50px Open Sans, Impact;
+  font: bold 80px Open Sans, Impact;
   background-image: -webkit-linear-gradient(#40280F 50%, #FFFFFF 50%);
   background-repeat: no;
   background-position: 0 0;
@@ -43,11 +43,11 @@ a:visited {
 }
 
 @-webkit-keyframes drain {
-  100% {background-position: 0 50px;}
+  100% {background-position: 0 100px;}
 }
 
 @keyframes drain {
-  100% {background-position: 0 50px;}
+  100% {background-position: 0 100px;}
 }
 
 .missing-input {
@@ -56,21 +56,23 @@ a:visited {
 
 .question {
   font-family: 'Grand Hotel', cursive;
-  font-size: 23px;
-  padding: 15px;
+  font-size: 35px;
+  padding: 20px;
 }
 
-.input {
-  padding: 10px;
+#cost {
+  width: 200px;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 /* Calculate button */
 #calculate {
   color: #E3DBD3;
-  width: 75px;
+  width: 150px;
   padding: 5px;
   font-family: Arial;
-  font-size: 10px;
+  font-size: 18px;
   letter-spacing: 1px;
   border-radius: 5px;
   background-color: #094EED;
@@ -84,17 +86,17 @@ a:visited {
   display: none;
   margin: 20px auto;
   background-color: #FFFFFF;
-  width: 250px;
-  height: 150px;
+  width: 350px;
+  height: 300px;
   color: #40280F;
 }
 
 .yearly-costs {
-  padding: 5px;
+  padding: 15px;
 }
 
 .impact-cost {
   color: #000000;
-  font: bold 16px Open Sans, Impact;
+  font: bold 26px Open Sans, Impact;
 }
 
