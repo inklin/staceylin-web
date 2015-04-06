@@ -1,3 +1,100 @@
 body {
-
+  background-color: #E3DBD3;
+  text-align: center;
+  font-family: Tahoma, Arial;
+  font-size: 12px;
 }
+
+.navigation {
+  font-size: 10px;
+  position: absolute;
+  left: 25px;
+  top: 15px;
+  word-spacing: 20px;
+}
+
+a:link {
+  color: #003FD1;
+}
+
+a:visited {
+  color: #40280F;
+}
+
+.content {
+  padding-top: 20px;
+}
+
+.coffee-header {
+  font: bold 50px Open Sans, Impact;
+  background-image: -webkit-linear-gradient(#40280F 50%, #FFFFFF 50%);
+  background-repeat: no;
+  background-position: 0 0;
+  background-size: 100% 200%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.coffee-drain {
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation: drain 3s ease-out;
+  animation: drain 3s ease-out;
+  animation-fill-mode: ease-out;
+}
+
+@-webkit-keyframes drain {
+  100% {background-position: 0 50px;}
+}
+
+@keyframes drain {
+  100% {background-position: 0 50px;}
+}
+
+.missing-input {
+  border: 1px solid #FF0000;
+}
+
+.question {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 23px;
+  padding: 15px;
+}
+
+.input {
+  padding: 10px;
+}
+
+/* Calculate button */
+#calculate {
+  color: #E3DBD3;
+  width: 75px;
+  padding: 5px;
+  font-family: Arial;
+  font-size: 10px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background-color: #094EED;
+}
+
+#calculate:hover {
+  background-color: #003FD1;
+}
+
+.result {
+  display: none;
+  margin: 20px auto;
+  background-color: #FFFFFF;
+  width: 250px;
+  height: 150px;
+  color: #40280F;
+}
+
+.yearly-costs {
+  padding: 5px;
+}
+
+.impact-cost {
+  color: #000000;
+  font: bold 16px Open Sans, Impact;
+}
+

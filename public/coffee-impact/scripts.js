@@ -8,9 +8,24 @@ $(document).ready(function() {
   });
 
   function getImpact(){
+    var price = $("#cost").val();
+
+    if (price === ""){
+      $("#cost").addClass("missing-input");
+      return;
+    } else {
+      $("#cost").removeClass("missing-input");
+    }
+
+    $(".coffee-header").addClass("coffee-drain");
+    $("#calculate").val("Calculating");
     
-    var yearlyCost = yearlyImpact();
-    calcYears(yearlyCost);
+    setTimeout(function(){
+      $("#calculate").val("Calculate");
+      $(".coffee-header").removeClass("coffee-drain");
+      var yearlyCost = yearlyImpact();
+      calcYears(yearlyCost);
+    }, 3100);
 
   }
 
@@ -41,8 +56,11 @@ $(document).ready(function() {
   }
 
   function calcYears(costPerYear){
+    $(".result").show();
+    $(".result").html("");
+
     for (var i = 1; i <= 5; i++){
-      $(".result").append(i + " year cost: $" + (costPerYear * i).toFixed(2) + "<br>");
+      $(".result").append("<p class='yearly-costs'>" + i + " year <span class='impact-cost'> $" + (costPerYear * i).toFixed(2) + "</span></p>");
     }
 
   }
