@@ -136,8 +136,13 @@ h2 {
   color: #FFFFFF;
 }
 
+.join p {
+  color: #9C9C9C;
+}
+
 .bottom {
   height: 380px;
+  margin-bottom: 75px;
 }
 
 .image {
@@ -151,5 +156,12 @@ h2 {
 /* Footer */
 
 .footer {
-  height: 180px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  height: 170px;
+  padding-top: 70px;
+}
+
+/* Share Trippeo */
+.share {
+  color: #969696;
 }
