@@ -2,6 +2,21 @@ body {
   font-family: Arial;
 }
 
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Headers */
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
 /* Top navigation bar */
 .header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -51,24 +66,32 @@ body {
 }
 
 .cool-guy {
+  color: #FFFFFF;
   height: 520px;
   background-color: blue;
 }
 
 .yellow-triangle {
+  color: #FFFFFF;
   height: 500px;
+  padding-left: 60px;
+  padding-right: 60px;
   background-color: #0C7BF8;
 }
 
 .yellow-box {
   height: 500px;
+  padding-left: 60px;
+  padding-right: 60px;
   background-color: #FFE400;
 }
 
+/* Subscribe Box */
+
 .subscribe {
-  text-align: center;
   height: 290px;
   background-color: #EDEDED;
+  padding-left: 50px;
   margin-bottom: 20px;
 }
 
@@ -76,17 +99,20 @@ body {
   display: block;
   width: 290px;
   height: 50px;
-  margin: 0 auto;
 }
 
 .subscribe-btn {
   display: block;
-  margin-left: 50px;
 }
 
+/* Join Box */
 .join {
   height: 190px;
   background-color: #363636;
+}
+
+.join h2 {
+  color: #FFFFFF;
 }
 
 .bottom {
