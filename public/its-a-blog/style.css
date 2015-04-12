@@ -6,6 +6,11 @@ body {
   height: 120px;
 }
 
+.nav-items li {
+  list-style: none;
+  display: inline-block;
+}
+
 .cool-guy {
   height: 520px;
   background-color: blue;
