@@ -1,23 +1,58 @@
 body {
-  
+  font-family: Arial;
+}
+
+/* Top navigation bar */
+.header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .navigation {
   height: 120px;
+  padding-top: 40px;
 }
 
+/* Navigation items */
+.nav-items {
+  padding-top: 20px;
+}
 .nav-items li {
+  height: 60px;
   list-style: none;
   display: inline-block;
+  margin-right: 25px;
+  color: #707070;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav-items li.active {
+  color: #000000;
+  border-bottom: 4px solid #0C7BF8;
+}
+
+/* Search bar */
+.search {
+  width: 100px;
+  height: 40px;
+  font-size: 12px;
+  float: right;
+  clear: both;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+/* Content */
+.content {
+  padding-top: 80px;
 }
 
 .cool-guy {
   height: 520px;
   background-color: blue;
-}
-
-.footer {
-  height: 180px;
 }
 
 .yellow-triangle {
@@ -31,9 +66,22 @@ body {
 }
 
 .subscribe {
+  text-align: center;
   height: 290px;
   background-color: #EDEDED;
   margin-bottom: 20px;
+}
+
+.subscribe-input {
+  display: block;
+  width: 290px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.subscribe-btn {
+  display: block;
+  margin-left: 50px;
 }
 
 .join {
@@ -51,4 +99,10 @@ body {
 
 .box {
   margin-bottom: 24px;
+}
+
+/* Footer */
+
+.footer {
+  height: 180px;
 }
