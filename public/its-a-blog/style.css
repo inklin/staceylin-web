@@ -31,6 +31,7 @@ h2 {
 .nav-items {
   padding-top: 20px;
 }
+
 .nav-items li {
   height: 60px;
   list-style: none;
@@ -70,6 +71,8 @@ h2 {
   height: 520px;
   padding-top: 365px;
   padding-left: 85px;
+  background-image: url("Cool-guy.png");
+  background-size: cover;
 }
 
 /* Center left box */
@@ -178,6 +181,13 @@ h2 {
 
 .left-image {
   margin-right: 10px;
+  background-image: url("Journal.png");
+  background-size: cover;
+}
+
+.right-image {
+  background-image: url("Couple.png");
+  background-size: cover;
 }
 
 .box {
