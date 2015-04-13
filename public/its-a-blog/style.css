@@ -19,7 +19,7 @@ h2 {
 
 /* Top navigation bar */
 .header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .navigation {
@@ -27,12 +27,38 @@ h2 {
   padding-top: 40px;
 }
 
-/* Navigation items */
-.nav-items {
+/* Nav logo */
+.nav-logo {
+  width: 40px;
+  height: 35px;
+}
+
+.main-logo {
+  stroke: #0C7BF8;
+}
+
+/* Nav menu bars */
+.nav-menu {
+  margin-left: 20px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.nav-menu::after {
+  box-shadow: 0 7px #0C7BF8, 0 12px #0C7BF8, 0 17px #0C7BF8;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+}
+
+/* Navigation Content */
+.nav-content {
   padding-top: 20px;
 }
 
-.nav-items li {
+.nav-content li {
   height: 60px;
   list-style: none;
   display: inline-block;
@@ -42,7 +68,7 @@ h2 {
   -webkit-font-smoothing: antialiased;
 }
 
-.nav-items li.active {
+.nav-content li.active {
   color: #000000;
   border-bottom: 4px solid #0C7BF8;
 }
@@ -54,11 +80,11 @@ h2 {
   font-size: 12px;
   float: right;
   clear: both;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
 }
 
 /* Content */
@@ -105,7 +131,7 @@ h2 {
   padding-top: 315px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color: #FFE400;
+  background-color: #FFE34D;
 }
 
 /* Center right - Subscribe Box */
