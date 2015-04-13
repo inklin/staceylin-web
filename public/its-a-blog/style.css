@@ -176,6 +176,17 @@ h2 {
 }
 
 /* Center right - Join Box */
+.join-logo {
+  float: left;
+  margin-right: 20px;
+  width: 55px;
+  height: 55px;
+}
+
+.join-trp {
+  stroke: #626262;
+}
+
 .join {
   height: 190px;
   background-color: #363636;
@@ -186,10 +197,12 @@ h2 {
 
 .join h2 {
   color: #FFFFFF;
+  display: inline-block;
 }
 
 .join p {
   color: #9C9C9C;
+  display: inline-block;
 }
 
 /* Bottom two images */
