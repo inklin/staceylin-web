@@ -1,15 +1,13 @@
 body {
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
 }
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.date {
-  padding-top: 10px;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Headers */
@@ -19,6 +17,7 @@ h1 {
 
 h2 {
   font-size: 28px;
+  padding: 0 0 5px;
 }
 
 /* Top navigation bar */
@@ -35,6 +34,7 @@ h2 {
 .nav-logo {
   width: 40px;
   height: 35px;
+  margin-left: -60px;
 }
 
 .main-logo {
@@ -69,10 +69,10 @@ h2 {
   margin-right: 25px;
   color: #707070;
   font-size: 18px;
-  -webkit-font-smoothing: antialiased;
 }
 
-.nav-content li.active {
+.nav-content li:hover {
+  cursor: pointer;
   color: #000000;
   border-bottom: 4px solid #0C7BF8;
 }
@@ -106,6 +106,10 @@ h2 {
 }
 
 /* Center left box */
+.description {
+  line-height: 120%;
+}
+
 .triangle-shape {
   display: block;
   width: 0;
@@ -159,7 +163,7 @@ h2 {
 }
 
 .subscribe p {
-  padding: 20px 0;
+  padding: 15px 0;
   color: #ADADAD;
 }
 
@@ -249,7 +253,7 @@ h2 {
 
 .footer {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  height: 170px;
+  height: 150px;
   padding-top: 70px;
 }
 
@@ -278,6 +282,6 @@ h2 {
   float: right;
   display: inline-block;
   height: 20px;
-  margin-top: -5px;
+  margin-top: -2px;
   margin-left: 15px;
 }
