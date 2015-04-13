@@ -72,29 +72,46 @@ h2 {
   padding-left: 85px;
 }
 
-.yellow-triangle {
+/* Center left box */
+.triangle-shape {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 105px solid transparent;
+  border-right: 105px solid transparent;
+  border-bottom: 180px solid #FFE400;
+  margin: 0 auto;
+  margin-bottom: 65px;
+}
+
+.blue-box {
   color: #FFFFFF;
   height: 500px;
   padding-left: 60px;
   padding-right: 60px;
-  padding-top: 315px;
+  padding-top: 75px;
+  margin-right: 5px;
   background-color: #0C7BF8;
 }
 
+/* Center middle box */
 .yellow-box {
   height: 500px;
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 315px;
+  margin-left: 5px;
+  margin-right: 5px;
   background-color: #FFE400;
 }
 
-/* Subscribe Box */
+/* Center right - Subscribe Box */
 .subscribe {
   height: 290px;
   background-color: #EDEDED;
   padding-left: 50px;
   padding-top: 50px;
+  margin-left: 5px;
   margin-bottom: 20px;
 }
 
@@ -129,10 +146,13 @@ h2 {
   border-radius: 25px;
 }
 
-/* Join Box */
+/* Center right - Join Box */
 .join {
   height: 190px;
   background-color: #363636;
+  padding-top: 70px;
+  padding-left: 50px;
+  margin-left: 5px;
 }
 
 .join h2 {
@@ -154,6 +174,10 @@ h2 {
 .image {
   background-color: #131216;
   color: #FFFFFF;;
+}
+
+.left-image {
+  margin-right: 10px;
 }
 
 .box {
