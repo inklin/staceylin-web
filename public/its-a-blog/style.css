@@ -8,6 +8,10 @@ body {
   box-sizing: border-box;
 }
 
+.date {
+  padding-top: 10px;
+}
+
 /* Headers */
 h1 {
   font-size: 45px;
@@ -108,7 +112,7 @@ h2 {
   height: 0;
   border-left: 105px solid transparent;
   border-right: 105px solid transparent;
-  border-bottom: 180px solid #FFE400;
+  border-bottom: 180px solid #FFE004;
   margin: 0 auto;
   margin-bottom: 65px;
 }
@@ -128,10 +132,16 @@ h2 {
   height: 500px;
   padding-left: 60px;
   padding-right: 60px;
-  padding-top: 315px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color: #FFE34D;
+  padding-top: 75px;
+  background-color: #FFE004;
+}
+
+.yellow-box img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 42px;
 }
 
 /* Center right - Subscribe Box */
