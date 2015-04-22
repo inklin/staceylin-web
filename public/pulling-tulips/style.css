@@ -1,0 +1,41 @@
+body {
+
+}
+
+.petal-container {
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+
+.petal {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 0 50px 50px 50px;
+}
+
+.color-1 {
+  background-color: red;
+}
+
+.color-2 {
+  background-color: yellow;
+}
+
+.color-3 {
+  background-color: blue;
+}
+
+.one {
+  -webkit-transform: rotate(10deg);
+}
+
+/* middle petal */
+.two {
+  -webkit-transform: rotate(45deg);
+}
+
+.three {
+  -webkit-transform: rotate(80deg);
+}

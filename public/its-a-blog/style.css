@@ -1,6 +1,5 @@
 body {
   font-family: 'Roboto', sans-serif;
-  font-weight: lighter;
 }
 
 *, *:after, *:before {
@@ -22,6 +21,7 @@ h2 {
 
 /* Top navigation bar */
 .header {
+  font-weight: lighter;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -93,6 +93,7 @@ h2 {
 
 /* Content */
 .content {
+  font-weight: lighter;
   padding-top: 80px;
 }
 
@@ -258,7 +259,8 @@ h2 {
 }
 
 .security-container {
-  font-size: 15px;
+  font-weight: normal;
+  font-size: 14px;
   height: 15px;
 }
 
@@ -268,7 +270,7 @@ h2 {
 
 /* Share Trippeo */
 .share {
-  font-size: 15px;
+  font-size: 14px;
   text-align: right;
   color: #969696;
   height: 15px;
@@ -282,6 +284,6 @@ h2 {
   float: right;
   display: inline-block;
   height: 20px;
-  margin-top: -2px;
+  margin-top: -3px;
   margin-left: 15px;
 }
