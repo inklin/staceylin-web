@@ -1,30 +1,33 @@
 $(document).ready(function() {
 
   var menuOpen = false;
-  var effect;
 
   $(".effect-btn").click(function(){
-    effect = this.id;
-
+    var effect = this.id;
+    console.log(effect);
     if (!menuOpen){
       openMenu(effect);
+      console.log("menu not open, open menu");
     } else {
       closeMenu(effect);
+      console.log("menu open, close menu");
     }
   });
 
   function openMenu(effect){
-
     $(".menu-wrapper").addClass(effect);
     setTimeout(function(){
       $(".menu-wrapper").addClass("menu-open");
       menuOpen = true;
-    }, 10);
+    }, 100);
   }
 
   function closeMenu(effect){
     menuOpen = false;
-    $(".menu-wrapper").removeClass(effect).removeClass("menu-open");
+    $(".menu-wrapper").removeClass("menu-open");
+    setTimeout(function(){
+      $(".menu-wrapper").removeClass(effect);
+    }, 10);
   }
 
 });

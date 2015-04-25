@@ -30,6 +30,9 @@ body {
   background-color: #CE6C2A;
   text-align: center;
   visibility: hidden;
+
+  transition-property: all;
+  transition-duration: 0.5s;
 }
 
 .menu-wrapper ul li a {
@@ -49,7 +52,7 @@ body {
 
 /* Effect 1: Slide from left */
 .effect-1 {
-  visibility: visible;
+  visibility: hidden;
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
@@ -60,7 +63,7 @@ body {
   transform: translate3d(0, 0, 0);
 
   transition-property: all;
-  transition-duration: 2s;
+  transition-duration: 0.5s;
 }
 
 /* Effect 2: Slide down */ 
@@ -74,7 +77,4 @@ body {
   visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-
-  transition-property: all;
-  transition-duration: 2s;
 }

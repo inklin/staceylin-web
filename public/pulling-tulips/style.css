@@ -2,9 +2,15 @@ body {
 
 }
 
+.flower-container {
+  display: inline-block;
+  width: 120px;
+  height: 500px;
+}
+
 .petal-container {
   width: 120px;
-  height: 120px;
+  height: 100px;
   position: relative;
 }
 
@@ -27,15 +33,30 @@ body {
   background-color: blue;
 }
 
-.one {
+/* left petal */
+.left-petal {
+  -ms-transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
 }
 
 /* middle petal */
-.two {
-  -webkit-transform: rotate(45deg);
+.middle-petal {
+  -ms-transform: rotate(80deg);
+  -webkit-transform: rotate(80deg);
+  transform: rotate(80deg);
 }
 
-.three {
-  -webkit-transform: rotate(80deg);
+/* right petal */
+.right-petal {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.stem {
+  background-color: green;
+  margin-left: 45px;
+  width: 10px;
+  height: 150px;
 }
