@@ -1,0 +1,80 @@
+body {
+  font-family: 'Arial';
+}
+
+/* Top Navigation Bar */
+.navigation {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 30px;
+  line-height: 30px;
+  background-color: #474742;
+  text-align: right;
+}
+
+.navigation a {
+  color: #436CC4;
+  font-size: 15px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+/* Menu */
+.menu-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100vh;
+  background-color: #CE6C2A;
+  text-align: center;
+  visibility: hidden;
+}
+
+.menu-wrapper ul li a {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Content area */
+.content {
+  width: 100vw;
+  text-align: center;
+  height: 500px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+/* Effect 1: Slide from left */
+.effect-1 {
+  visibility: visible;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+.menu-open.effect-1 {
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  transition-property: all;
+  transition-duration: 2s;
+}
+
+/* Effect 2: Slide down */ 
+.effect-2{
+  visibility: visible;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+.menu-open.effect-2 {
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  transition-property: all;
+  transition-duration: 2s;
+}
