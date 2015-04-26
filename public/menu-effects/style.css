@@ -59,6 +59,7 @@ body {
 /* Open Menu */
 .menu-wrapper.menu-open {
   visibility: visible;
+  width: 20%;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
@@ -82,14 +83,8 @@ body {
   transform: translate3d(20%, 0, 0);
 }
 
-/* Effect 3 - shrink and expand */
+/* Effect 3 - rotate in */
 .effect-3 {
-  visibility: hidden;
-  -webkit-transform: ;
-}
-
-/* Effect 4 */
-.effect-4 {
   visibility: hidden;
   -webkit-transform: rotateY(90deg);
   -webkit-transform-origin: top left 0;
@@ -97,7 +92,7 @@ body {
   transform-origin: top left 0;
 }
 
-.content-effect-4 {
+.content-effect-3 {
   -webkit-transform: translate3d(10%, 0, 0);
   transform: translate3d(10%, 0, 0);
 }
