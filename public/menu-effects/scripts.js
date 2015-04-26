@@ -1,33 +1,24 @@
 $(document).ready(function() {
 
-  var menuOpen = false;
+  function init(){
+    for (var i = 1; i < 5; i++){
+      var menu = "<div class='menu-wrapper effect-" + i + "' id='menu-effect" + i + "'><h2>Sidebar Menu</h2><ul><li><a href='#'>About</a></li><li><a href='#'>Blog</a></li><li><a href='#'>FAQ</a></li><li><a href='#'>Contact</a></li></ul></div>";
+      $('body').append(menu);
+    }
+  }
 
-  $(".effect-btn").click(function(){
+  init();
+
+  $('.effect-btn').click(function(){
     var effect = this.id;
-    console.log(effect);
-    if (!menuOpen){
-      openMenu(effect);
-      console.log("menu not open, open menu");
+    var menu = $("." + effect);
+    if (!menu.hasClass("menu-open")){
+      menu.addClass("menu-open");
+      $('.content').addClass("content-" + effect);
     } else {
-      closeMenu(effect);
-      console.log("menu open, close menu");
+      menu.removeClass("menu-open");
+      $('.content').removeClass("content-" + effect);
     }
   });
-
-  function openMenu(effect){
-    $(".menu-wrapper").addClass(effect);
-    setTimeout(function(){
-      $(".menu-wrapper").addClass("menu-open");
-      menuOpen = true;
-    }, 100);
-  }
-
-  function closeMenu(effect){
-    menuOpen = false;
-    $(".menu-wrapper").removeClass("menu-open");
-    setTimeout(function(){
-      $(".menu-wrapper").removeClass(effect);
-    }, 10);
-  }
 
 });

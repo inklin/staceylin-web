@@ -2,12 +2,27 @@ body {
   font-family: 'Arial';
 }
 
-/* Top Navigation Bar */
-.navigation {
+/* Content area */
+.content {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100vw;
+  text-align: center;
+  height: 500px;
+  margin: 0 auto;
+
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+/* Top Navigation Bar */
+.navigation {
   height: 30px;
+  width: 100vw;
   line-height: 30px;
   background-color: #474742;
   text-align: right;
@@ -27,12 +42,12 @@ body {
   left: 0;
   width: 20%;
   height: 100vh;
-  background-color: #CE6C2A;
+  background-color: #0ac2d2;
   text-align: center;
   visibility: hidden;
 
   transition-property: all;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
 }
 
 .menu-wrapper ul li a {
@@ -41,40 +56,48 @@ body {
   text-decoration: none;
 }
 
-/* Content area */
-.content {
-  width: 100vw;
-  text-align: center;
-  height: 500px;
-  margin: 0 auto;
-  padding-top: 100px;
+/* Open Menu */
+.menu-wrapper.menu-open {
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
-/* Effect 1: Slide from left */
+/* Effect 1: Slide from left on top */
 .effect-1 {
   visibility: hidden;
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
 
-.menu-open.effect-1 {
-  visibility: visible;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-
-  transition-property: all;
-  transition-duration: 0.5s;
+/* Effect 2: Slide together from left*/ 
+.effect-2 {
+  visibility: hidden;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
 }
 
-/* Effect 2: Slide down */ 
-.effect-2{
-  visibility: visible;
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
+.content-effect-2 {
+  -webkit-transform: translate3d(20%, 0, 0);
+  transform: translate3d(20%, 0, 0);
 }
 
-.menu-open.effect-2 {
-  visibility: visible;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+/* Effect 3 - shrink and expand */
+.effect-3 {
+  visibility: hidden;
+  -webkit-transform: ;
+}
+
+/* Effect 4 */
+.effect-4 {
+  visibility: hidden;
+  -webkit-transform: rotateY(90deg);
+  -webkit-transform-origin: top left 0;
+  transform: rotateY(90deg);
+  transform-origin: top left 0;
+}
+
+.content-effect-4 {
+  -webkit-transform: translate3d(10%, 0, 0);
+  transform: translate3d(10%, 0, 0);
 }
