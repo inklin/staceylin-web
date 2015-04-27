@@ -1,15 +1,15 @@
 body {
-  font-family: 'Arial';
   background-color: #000000;
+  font-family: 'PT Sans', sans-serif;
 }
 
 /* Content area */
 .content {
-  background-color: #FFFFFF;
+  background-color: #FAFADE;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   text-align: center;
   margin: 0 auto;
@@ -21,17 +21,30 @@ body {
   transition-duration: 1s;
 }
 
+.content h1 {
+  color: #5B27C2;
+  font-size: 45px;
+  padding: 15px;
+}
+
+.content p {
+  color: #8A8787;
+  font-size: 25px;
+  padding-bottom: 100px;
+}
+
 /* Top Navigation Bar */
 .navigation {
   height: 30px;
   width: 100vw;
   line-height: 30px;
-  background-color: #474742;
+  background-color: #FFFFFF;
   text-align: right;
+  margin-bottom: 50px;
 }
 
 .navigation a {
-  color: #436CC4;
+  color: #5B27C2;
   font-size: 15px;
   text-decoration: none;
   margin-right: 20px;
@@ -57,7 +70,7 @@ body {
   left: 0;
   width: 20%;
   height: 100vh;
-  background-color: #0ac2d2;
+  background-color: #5B27C2;
   text-align: center;
   visibility: hidden;
 
@@ -77,17 +90,41 @@ body {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-}
 
 .menu-wrapper ul li a {
-  color: #FFFFFF;
+  color: #FAFADE;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu-wrapper h2 {
+  color: #FAFADE;
+}
+
+.menu-wrapper a:link {
+  text-decoration: none;
+}
+
+.menu-wrapper a:visited {
+  color: #FAFADE;
   text-decoration: none;
 }
 
 /* Effect buttons */
 .effect-btn {
   cursor: pointer;
+  text-transform: uppercase;
+  background-color: #5B27C2;
+  border: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 3px;
+  color: #FAFADE;
+  margin: 2px;
+}
+
+.effect-btn:hover {
+  background-color: #491DA1;
 }
 
 /* Effect 1: Slide from left on top */
