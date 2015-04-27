@@ -1,6 +1,7 @@
 body {
   background-color: #000000;
   font-family: 'PT Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Content area */
