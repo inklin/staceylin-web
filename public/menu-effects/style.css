@@ -130,7 +130,6 @@ body {
 
 .menu-wrapper a:visited {
   color: #FAFADE;
-  text-decoration: none;
 }
 
 /* Effect buttons */
@@ -158,8 +157,9 @@ body {
   transform: translate3d(-100%, 0, 0);
 }
 
-.content-effect-2 {
+.content-effect-2, .content-effect-4, .content-effect-5, .content-effect-7 {
   -webkit-transform: translate3d(18%, 0, 0);
+  -moz-transform: translate3d(18%, 0, 0);
   transform: translate3d(18%, 0, 0);
 }
 
@@ -220,27 +220,29 @@ body {
 .effect-4 {
   visibility: hidden;
   -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
   transform: rotateY(90deg);
   -webkit-transform-origin: top left 0;
+  -moz-transform-origin: top left 0;
   transform-origin: top left 0;
-  perspective: 100;
   -webkit-perspective: 100;
+  -moz-perspective: 100;
+  perspective: 100;
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
 .effect-4.menu-open {
   -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
   transform: rotateY(0deg);
   -webkit-transform-origin: top left 0;
+  -moz-transform-origin: top left 0;
   transform-origin: top left 0;
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-}
-
-.content-effect-4 {
-  -webkit-transform: translate3d(18%, 0, 0);
-  transform: translate3d(18%, 0, 0);
 }
 
 /* Effect 5 - Reveal */ 
@@ -248,15 +250,12 @@ body {
   z-index: -1;
 }
 
-.content-effect-5 {
-  -webkit-transform: translate3d(18%, 0, 0);
-  transform: translate3d(18%, 0, 0);
-}
-
 /* Effect 6 - Scale from corner */
 .effect-6 {
   -webkit-transform: scale(0.01, 0.01);
   -webkit-transform-origin: top left 0;
+  -moz-transform: scale(0.01, 0.01);
+  -moz-transform-origin: top left 0;
   transform: scale(0.01, 0.01);
   transform-origin: top left 0;
 }
@@ -264,18 +263,14 @@ body {
 /* Effect 7 - Scale up from behind */
 .effect-7 {
   -webkit-transform: scale(0.5, 0.5);
-  moz-transform: scale(0.5, 0.5);
+  -moz-transform: scale(0.5, 0.5);
   transform: scale(0.5, 0.5);
   z-index: -10;
 }
 
-.content-effect-7 {
-  -webkit-transform: translate3d(18%, 0, 0);
-  transform: translate3d(18%, 0, 0);
-}
-
 /* Effect 8 - Drop down */
 .effect-8{
+  -moz-transfrom: translate3d(0, -100%, 0);
   -webkit-transform: translate3d(0, -100%, 0);
   transfrom: translate3d(0, -100%, 0);
 }
@@ -291,6 +286,7 @@ body {
 }
 
 .content-effect-9 {
+  -moz-transform: scale(0.9, 0.9);
   -webkit-transform: scale(0.9, 0.9);
   transform: scale(0.9, 0.9);
 }
