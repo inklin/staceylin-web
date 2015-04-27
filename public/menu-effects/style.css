@@ -37,6 +37,19 @@ body {
   margin-right: 20px;
 }
 
+/* Cover */
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  display: none;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
 /* Menu */
 .menu-wrapper {
   position: absolute;
@@ -50,6 +63,11 @@ body {
 
   transition-property: all;
   transition-duration: 1s;
+}
+
+/* Effect buttons */
+.effect-btn {
+  cursor: pointer;
 }
 
 .menu-wrapper ul li a {
@@ -66,7 +84,6 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-/* Cover */
 
 /* Effect 1: Slide from left on top */
 .effect-1 {
@@ -144,9 +161,6 @@ body {
 .effect-5 {
   z-index: -1;
   visibility: visible;
-}
-
-.effect-5.menu-open {
 }
 
 .content-effect-5 {

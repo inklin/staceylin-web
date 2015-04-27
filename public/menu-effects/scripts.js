@@ -12,6 +12,9 @@ $(document).ready(function() {
   function reset(){
     $(".menu-wrapper").removeClass("menu-open");
     $(".content").attr("class", "content");
+    setTimeout(function(){
+      $(".cover").fadeOut("fast");
+    }, 1000);
     menuOpen = false;
   }
 
@@ -23,6 +26,7 @@ $(document).ready(function() {
       var menu = $("." + effect);
       menu.addClass("menu-open");
       $('.content').addClass("content-" + effect);
+      $('.cover').fadeIn("fast");
       menuOpen = true;
     }
   });
