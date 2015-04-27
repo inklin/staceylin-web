@@ -105,6 +105,10 @@ body {
   padding: 20px 0 20px 0;
 }
 
+.menu-wrapper a {
+  color: #FAFADE;
+}
+
 .menu-wrapper ul li:hover {
   background-color: #481F9A;
   cursor: pointer;
@@ -158,8 +162,8 @@ body {
 }
 
 /* Effect 3: Bumper Cars */
-
 .effect-3.menu-open {
+  visibility: visible;
   -moz-animation: bumpity 1s;
   -webkit-animation: bumpity 1s;
   animation: bumpity 1s;
@@ -247,9 +251,23 @@ body {
   transform: translate3d(18%, 0, 0);
 }
 
-/* Effect 6 - Expand */
+/* Effect 6 - Scale from corner */
 .effect-6 {
-  -webkit-transform: scale(0, 0.1);
+  -webkit-transform: scale(0.01, 0.01);
+  -webkit-transform-origin: top left 0;
   transform: scale(0.01, 0.01);
   transform-origin: top left 0;
+}
+
+/* Effect 7 - Scale up */
+.effect-7 {
+  -webkit-transform: scale(0.5, 0.5);
+  moz-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
+  z-index: -10;
+}
+
+.content-effect-7 {
+  -webkit-transform: translate3d(18%, 0, 0);
+  transform: translate3d(18%, 0, 0);
 }
