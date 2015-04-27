@@ -66,6 +66,8 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
+/* Cover */
+
 /* Effect 1: Slide from left on top */
 .effect-1 {
   visibility: hidden;
