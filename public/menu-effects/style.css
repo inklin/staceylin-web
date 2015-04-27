@@ -61,13 +61,22 @@ body {
   text-align: center;
   visibility: hidden;
 
+  -moz-transition-property: all;
+  -moz-transition-duration: 1s;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
   transition-property: all;
   transition-duration: 1s;
 }
 
-/* Effect buttons */
-.effect-btn {
-  cursor: pointer;
+/* Open Menu */
+.menu-wrapper.menu-open {
+  visibility: visible;
+  width: 20%;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
 }
 
 .menu-wrapper ul li a {
@@ -76,24 +85,14 @@ body {
   text-decoration: none;
 }
 
-/* Open Menu */
-.menu-wrapper.menu-open {
-  visibility: visible;
-  width: 20%;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+/* Effect buttons */
+.effect-btn {
+  cursor: pointer;
 }
-
 
 /* Effect 1: Slide from left on top */
-.effect-1 {
-  visibility: hidden;
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-}
-
 /* Effect 2: Slide together from left*/ 
-.effect-2 {
+.effect-1, .effect-2, .effect-3 {
   visibility: hidden;
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
@@ -105,18 +104,26 @@ body {
 }
 
 /* Effect 3: Bumper Cars */
-.effect-3 {
-  visibility: hidden;
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-}
 
 .effect-3.menu-open {
+  -moz-animation: bumpity 1s;
   -webkit-animation: bumpity 1s;
-  -webkit-animation-fill-mode: forward;
+  animation: bumpity 1s;
 }
 
-.content-effect-3 {
+@-moz-keyframes bumpity {
+  0% {
+    -moz-transform: translate3d(-100%, 0, 0);
+    -moz-animation-timing-function: ease-out;
+  }
+  60% {
+    -moz-transform: translate3d(20%, 0, 0);
+    -moz-animation-timing-function: ease-in;
+  }
+  100% {
+    -moz-transform: translate3d(0, 0, 0);
+    -moz-animation-timing-function: ease-out;
+  }
 }
 
 @-webkit-keyframes bumpity {
@@ -134,22 +141,41 @@ body {
   }
 }
 
+@keyframes bumpity {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    animation-timing-function: ease-out;
+  }
+  60% {
+    transform: translate3d(20%, 0, 0);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: ease-out;
+  }
+}
+
 /* Effect 4 - rotate in */
 .effect-4 {
   visibility: hidden;
-  -webkit-transform: rotateY(89deg);
+  -webkit-transform: rotateY(90deg);
+  transform: rotateY(90deg);
   -webkit-transform-origin: top left 0;
+  transform-origin: top left 0;
   perspective: 100;
   -webkit-perspective: 100;
   -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .effect-4.menu-open {
   -webkit-transform: rotateY(0deg);
-  -webkit-transform-origin: top left 0;
   transform: rotateY(0deg);
+  -webkit-transform-origin: top left 0;
   transform-origin: top left 0;
   -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .content-effect-4 {
@@ -160,9 +186,9 @@ body {
 /* Effect 5 - Reveal */ 
 .effect-5 {
   z-index: -1;
-  visibility: visible;
 }
 
 .content-effect-5 {
   -webkit-transform: translate3d(20%, 0, 0);
+  transform: translate3d(20%, 0, 0);
 }
