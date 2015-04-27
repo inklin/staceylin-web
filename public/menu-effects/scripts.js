@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   function init(){
-    for (var i = 1; i < 5; i++){
+    for (var i = 1; i < 6; i++){
       var menu = "<div class='menu-wrapper effect-" + i + "' id='menu-effect" + i + "'><h2>Sidebar Menu</h2><ul><li><a href='#'>About</a></li><li><a href='#'>Blog</a></li><li><a href='#'>FAQ</a></li><li><a href='#'>Contact</a></li></ul></div>";
       $('body').append(menu);
     }
