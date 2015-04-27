@@ -63,13 +63,19 @@ body {
   cursor: default;
 }
 
+.buttons {
+  width: 30%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
 /* Menu */
 .menu-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width: 20%;
-  height: 100vh;
+  width: 18%;
+  height: 100%;
   background-color: #5B27C2;
   text-align: center;
   visibility: hidden;
@@ -85,20 +91,31 @@ body {
 /* Open Menu */
 .menu-wrapper.menu-open {
   visibility: visible;
-  width: 20%;
+  width: 18%;
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-.menu-wrapper ul li a {
+.menu-wrapper ul li {
   color: #FAFADE;
   text-transform: uppercase;
   text-decoration: none;
+  font-size: 20px;
+  padding: 20px 0 20px 0;
+}
+
+.menu-wrapper ul li:hover {
+  background-color: #481F9A;
+  cursor: pointer;
 }
 
 .menu-wrapper h2 {
   color: #FAFADE;
+  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #FAFADE;
 }
 
 .menu-wrapper a:link {
@@ -120,7 +137,7 @@ body {
   padding: 8px 16px;
   border-radius: 3px;
   color: #FAFADE;
-  margin: 2px;
+  margin: 5px;
 }
 
 .effect-btn:hover {
@@ -136,8 +153,8 @@ body {
 }
 
 .content-effect-2 {
-  -webkit-transform: translate3d(20%, 0, 0);
-  transform: translate3d(20%, 0, 0);
+  -webkit-transform: translate3d(18%, 0, 0);
+  transform: translate3d(18%, 0, 0);
 }
 
 /* Effect 3: Bumper Cars */
@@ -153,8 +170,8 @@ body {
     -moz-transform: translate3d(-100%, 0, 0);
     -moz-animation-timing-function: ease-out;
   }
-  60% {
-    -moz-transform: translate3d(20%, 0, 0);
+  50% {
+    -moz-transform: translate3d(18%, 0, 0);
     -moz-animation-timing-function: ease-in;
   }
   100% {
@@ -168,8 +185,8 @@ body {
     -webkit-transform: translate3d(-100%, 0, 0);
     -webkit-animation-timing-function: ease-out;
   }
-  60% {
-    -webkit-transform: translate3d(20%, 0, 0);
+  50% {
+    -webkit-transform: translate3d(18%, 0, 0);
     -webkit-animation-timing-function: ease-in;
   }
   100% {
@@ -183,8 +200,8 @@ body {
     transform: translate3d(-100%, 0, 0);
     animation-timing-function: ease-out;
   }
-  60% {
-    transform: translate3d(20%, 0, 0);
+  50% {
+    transform: translate3d(18%, 0, 0);
     animation-timing-function: ease-in;
   }
   100% {
@@ -216,8 +233,8 @@ body {
 }
 
 .content-effect-4 {
-  -webkit-transform: translate3d(20%, 0, 0);
-  transform: translate3d(20%, 0, 0);
+  -webkit-transform: translate3d(18%, 0, 0);
+  transform: translate3d(18%, 0, 0);
 }
 
 /* Effect 5 - Reveal */ 
@@ -226,6 +243,13 @@ body {
 }
 
 .content-effect-5 {
-  -webkit-transform: translate3d(20%, 0, 0);
-  transform: translate3d(20%, 0, 0);
+  -webkit-transform: translate3d(18%, 0, 0);
+  transform: translate3d(18%, 0, 0);
+}
+
+/* Effect 6 - Expand */
+.effect-6 {
+  -webkit-transform: scale(0, 0.1);
+  transform: scale(0.01, 0.01);
+  transform-origin: top left 0;
 }
