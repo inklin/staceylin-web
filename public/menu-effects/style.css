@@ -31,6 +31,8 @@ body {
   color: #8A8787;
   font-size: 25px;
   padding-bottom: 100px;
+
+  transition-duration: 1s;
 }
 
 /* Top Navigation Bar */
@@ -164,9 +166,9 @@ body {
 /* Effect 3: Bumper Cars */
 .effect-3.menu-open {
   visibility: visible;
-  -moz-animation: bumpity 1s;
-  -webkit-animation: bumpity 1s;
-  animation: bumpity 1s;
+  -moz-animation: bumpity 2s;
+  -webkit-animation: bumpity 2s;
+  animation: bumpity 2s;
 }
 
 @-moz-keyframes bumpity {
@@ -179,7 +181,7 @@ body {
     -moz-animation-timing-function: ease-in;
   }
   100% {
-    -moz-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(-1%, 0, 0);
     -moz-animation-timing-function: ease-out;
   }
 }
@@ -194,8 +196,8 @@ body {
     -webkit-animation-timing-function: ease-in;
   }
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    -webkit-animation-timing-function: ease-out;
+    -webkit-transform: translate3d(-1%, 0, 0);
+    -webkit-animation-timing-function: ease-in;
   }
 }
 
@@ -209,12 +211,12 @@ body {
     animation-timing-function: ease-in;
   }
   100% {
-    transform: translate3d(0, 0, 0);
-    animation-timing-function: ease-out;
+    transform: translate3d(-1%, 0, 0);
+    animation-timing-function: ease-in;
   }
 }
 
-/* Effect 4 - rotate in */
+/* Effect 4 - fold in */
 .effect-4 {
   visibility: hidden;
   -webkit-transform: rotateY(90deg);
@@ -259,7 +261,7 @@ body {
   transform-origin: top left 0;
 }
 
-/* Effect 7 - Scale up */
+/* Effect 7 - Scale up from behind */
 .effect-7 {
   -webkit-transform: scale(0.5, 0.5);
   moz-transform: scale(0.5, 0.5);
@@ -270,4 +272,25 @@ body {
 .content-effect-7 {
   -webkit-transform: translate3d(18%, 0, 0);
   transform: translate3d(18%, 0, 0);
+}
+
+/* Effect 8 - Drop down */
+.effect-8{
+  -webkit-transform: translate3d(0, -100%, 0);
+  transfrom: translate3d(0, -100%, 0);
+}
+
+/* Effect 9 - push back the main content */
+.effect-9 {
+  -webkit-transform: scale(0.5, 0.5);
+  -moz-transform: scale(0.5, 0.5);
+  transform: scale(0.1, 0.1);
+  -webkit-transform-origin: left;
+  -moz-transform-origin: left;
+  transform-origin: left;
+}
+
+.content-effect-9 {
+  -webkit-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
 }
