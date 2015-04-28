@@ -17,9 +17,10 @@ body {
 
 .btn {
   position: relative;
-  color: #FFFFFF;
+  color: black;
   font-size: 18px;
-  border: none;
+  background-color: white;
+  border: 1px solid black;
   padding: 20px;
   width: 180px;
   margin: 10px 20px;
@@ -27,18 +28,23 @@ body {
   overflow: hidden;
   z-index: 1;
 
-  -o-transition: 0.09s ease-in;
-  -moz-transition: 0.09s ease-in;
-  -webkit-transition: 0.09s ease-in;
-  transition: 0.09s ease-in;
+  -o-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
-/* First button fill */
+/* 1: Fade */
 .style1:hover {
+  background-color: blue;
+}
+
+/* 2: Fill from bottom */
+.style2:hover {
   color: blue;
 }
 
-.style1:before {
+.style2:before {
   content: "";
   position: absolute;
   background: #383736;
@@ -47,11 +53,39 @@ body {
   right: 0;
   top: 100%;
   z-index: -1;
-
-  -webkit-transition: top 0.09s ease-in;
-  transition: top 0.09s ease-in;
+  -0-transition: top 0.5s ease-in;
+  -moz-transition: top 0.5s ease-in;
+  -webkit-transition: top 0.5s ease-in;
+  transition: top 0.5s ease-in;
 }
 
-.style1:hover:before{
+.style2:hover:before{
   top: 0;
 }
+
+/* 3: Fill from Top */
+.style3:hover {
+}
+
+.style3:before {
+  content: "";
+  position: absolute;
+  background: #383736;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+    transition-duration: 1s;
+}
+
+.style3:hover:before{
+  -webkit-transform: scaleY(1);
+
+}
+
+
+
