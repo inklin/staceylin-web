@@ -137,7 +137,7 @@ body {
   z-index: -1;
   -webkit-transform: rotate(30deg) scaleY(0);
   transition-property: transform;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 .style5:hover:before {
@@ -147,7 +147,7 @@ body {
 }
 
 /* 6: Spread out from center */
-.style6:before{
+.style6:before {
   content: "";
   position: absolute;
   background-color: #1BC4B6;
@@ -165,3 +165,43 @@ body {
   -webkit-transform: scale(1);
 }
 
+/* 7: Radial out */
+.style7:before {
+  content: "";
+  position: absolute;
+  background-color: #1BC4B6;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+  transition-duration: 1s;
+  transition-property: transform;
+}
+
+.style7:hover:before{
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+/* 8: From the lft */
+.style8:before {
+  content: "";
+  position: absolute;
+  background-color: #1BC4B6;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+    transition-duration: 1s;
+  transition-property: transform;
+}
+
+.style8:hover:before {
+  -webkit-transform: scaleX(1);
+}
