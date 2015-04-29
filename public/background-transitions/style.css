@@ -1,21 +1,54 @@
 body {
   background-color: #FFFFFF;
   font-family: 'Lato', sans-serif;
+  text-align: center;
 }
 
 .navigation {
   text-align: right;
   height: 20px;
-  background-color: #F5AA93;
+  background-color: #cde0df;
+  padding: 5px;
+  word-spacing: 20px;
+  padding-right: 30px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.navigation a:link {
+  color: #7b8f8e;
+  text-decoration: none;
+}
+
+.navigation a:visited {
+  color: #1BC4B6;
+}
+
+.header {
+  padding-top: 80px;
+}
+
+.header h1 {
+  color: #ff8641;
+  font-size: 50px;
+  padding: 20px;
+}
+
+.header p {
+  font-size: 20px;
+  color: #7b8f8e;
+  letter-spacing: 2px;
 }
 
 .btn-wrapper{
-  padding-top: 100px;
-  width: 500px;
+  padding-top: 80px;
+  width: 70%;
   margin: 0 auto;
 }
 
 .btn {
+  display: inline-block;
   text-align: center;
   position: relative;
   color: #1BC4B6;
@@ -136,6 +169,12 @@ body {
   top: 0;
   z-index: -1;
   -webkit-transform: rotate(30deg) scaleY(0);
+  -webkit-transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  -moz-transform: rotate(30deg) scaleY(0);
+  -moz-transition-property: transform;
+  -moz-transition-duration: 0.5s;
+  transform: rotate(30deg) scaleY(0);
   transition-property: transform;
   transition-duration: 0.5s;
 }
@@ -198,10 +237,16 @@ body {
   bottom: 0;
   z-index: -1;
   -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  transform: scaleX(0);
     transition-duration: 1s;
+  transition-property: transform;
+  transition-duration: 1s;
   transition-property: transform;
 }
 
 .style8:hover:before {
   -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  transform: scaleX(1);
 }
