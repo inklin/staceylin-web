@@ -16,6 +16,7 @@ body {
 }
 
 .btn {
+  text-align: center;
   position: relative;
   color: #1BC4B6;
   font-size: 18px;
@@ -80,15 +81,15 @@ body {
   -webkit-transform: scaleY(0);
   -webkit-transform-origin: 0 0;
   -webkit-transition-property: transform;
-  -webkit-transition-duration: 1s;
+  -webkit-transition-duration: 0.5s;
   -moz-transform: scaleY(0);
   -moz-transform-origin: 0 0;
   -moz-transition-property: transform;
-  -moz-transition-duration: 1s;
+  -moz-transition-duration: 0.5s;
   transform: scaleY(0);
   transform-origin: 0 0;
   transition-property: transform;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 .style3:hover:before{
@@ -109,13 +110,13 @@ body {
   z-index: -1;
   -webkit-transform: scaleY(0);
   -webkit-transition-property: transform;
-  -webkit-transition-duration: 1s;
+  -webkit-transition-duration: 0.5s;
   -moz-transform: scaleY(0);
   -moz-transition-property: transform;
-  -moz-transition-duration: 1s;
+  -moz-transition-duration: 0.5s;
   transform: scaleY(0);
   transition-property: transform;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 .style4:hover:before {
@@ -124,6 +125,43 @@ body {
   transform: scaleY(1);
 }
 
+/* 5: Fill slanted from center */
+.style5:before {
+  content: "";
+  position: absolute;
+  background: #1BC4B6;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transform: rotate(30deg) scaleY(0);
+  transition-property: transform;
+  transition-duration: 1s;
+}
 
+.style5:hover:before {
+  -webkit-transform: rotate(30deg) scaleY(1.8);
+  -webkit-transition-property: transform;
 
+}
+
+/* 6: Spread out from center */
+.style6:before{
+  content: "";
+  position: absolute;
+  background-color: #1BC4B6;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transform: scale(0);
+  transition-duration: 1s;
+  transition-property: transform;
+}
+
+.style6:hover:before{
+  -webkit-transform: scale(1);
+}
 
