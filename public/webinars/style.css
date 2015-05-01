@@ -1,0 +1,36 @@
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.layout {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .layout .introduction {
+    margin: 0 0 55px;
+    text-align: center; }
+  .layout .title {
+    float: left;
+    display: inline-block;
+    text-align: right;
+    width: 20%; }
+  .layout .highlighted {
+    width: 875px;
+    height: 300px;
+    margin: 0 auto 0; }
+    .layout .highlighted .nested {
+      width: 80%;
+      height: 100%;
+      display: inline-block;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  .layout .section {
+    width: 875px;
+    height: 310px;
+    margin: 0 auto 0; }
+    .layout .section .nested {
+      display: inline-block;
+      height: 310px;
+      width: 80%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+
+/*# sourceMappingURL=style.css.map */

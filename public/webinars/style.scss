@@ -1,0 +1,58 @@
+body
+{
+  font-family: 'Roboto', sans-serif;
+}
+
+$grey-1: rgba(0, 0, 0, 0.2);
+
+.layout 
+{
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .introduction
+  {
+    margin: 0 0 55px;
+    text-align: center;
+  }
+
+  .title
+  {
+    float: left;
+    display: inline-block;
+    text-align: right;
+    width: 20%;
+  }
+
+  .highlighted
+  {
+    width: 875px;
+    height: 300px;
+    margin: 0 auto 0;
+
+    .nested 
+    {
+      width: 80%;
+      height: 100%;
+      display: inline-block;
+      border-bottom: 1px solid $grey-1;
+    }
+  }
+
+  .section
+  {
+    width: 875px;
+    height: 310px;
+    margin: 0 auto 0;
+
+    .nested
+    {
+      display: inline-block;
+      height: 310px;
+      width: 80%;
+      border-bottom: 1px solid $grey-1;
+    }
+  }
+}
