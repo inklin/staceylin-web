@@ -50,11 +50,17 @@ body {
         border: none;
         padding: 10px 35px;
         position: absolute;
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(255, 255, 255, 0.3);
         color: #FFFFFF;
         left: 30px;
         bottom: 20px;
-        font-size: 15px; }
+        font-size: 15px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -mos-border-radius: 2px;
+        borderradius: 2px; }
+      .section .nested .webinar .webinar-btn:hover {
+        background-color: rgba(255, 255, 255, 0.5); }
 
 .section.featured .webinar {
   background-image: url("feature.png");
@@ -62,7 +68,8 @@ body {
   height: 390px;
   color: #FFFFFF; }
   .section.featured .webinar h2 {
-    padding-top: 280px; }
+    padding-top: 280px;
+    font-size: 24px; }
   .section.featured .webinar .feature-watch {
     position: absolute;
     left: 180px;

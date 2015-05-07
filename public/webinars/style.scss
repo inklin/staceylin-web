@@ -14,6 +14,13 @@ $black: #242424;
 $margin-bottom: 40px;
 $border-padding: 40px;
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -mos-border-radius: $radius;
+          borderradius: $radius;  
+}
+
 .layout 
 {
   width: 100%;
@@ -80,11 +87,18 @@ $border-padding: 40px;
         border: none;
         padding: 10px 35px;
         position: absolute;
-        background-color: rgba(265, 265, 265, 0.4);
+        background-color: rgba(255, 255, 255, 0.3);
         color: #FFFFFF;
         left: 30px;
         bottom: 20px;
         font-size: 15px;
+
+        @include border-radius(2px);
+      }
+
+      .webinar-btn:hover
+      {
+        background-color: rgba(255, 255, 255, 0.5);
       }
 
     }
@@ -104,6 +118,7 @@ $border-padding: 40px;
     h2 
     {
       padding-top: 280px;
+      font-size: 24px;
     }
 
     .feature-watch
