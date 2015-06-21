@@ -29,6 +29,7 @@ $(document).ready(function() {
     var audio = $('#audio-player').bind('play', function(){
       // event listener for media event play
       playing = true;
+      console.log(audio.duration);
     }).bind('pause', function(){
       // event listener for media event pause
       playing = false;
@@ -51,6 +52,9 @@ $(document).ready(function() {
     }).get(0);
 
     var loadSong = function(id){
+      var songTitle = songs[id].title;
+      $('#songInfo').text(songTitle);
+
       audio.src = mediaPath + songs[id].file + extension;
       audio.load();
     };
@@ -78,8 +82,7 @@ $(document).ready(function() {
           audio.play();
         }
       } else {
-        // if loop is not on, just pause the song and reset player
-        playing = false;
+        // if loop is not on, reset player
         audio.pause();
         index = 0;
         loadSong(index);
@@ -104,19 +107,34 @@ $(document).ready(function() {
         }
       } else {
         // if there is no next song and no loop, just reset player
-        playing = false;
         audio.pause();
         index = 0;
         loadSong(index);
       }
     });
 
+    // Play button 
+    $('#play-btn').click(function(){
+      if (!playing){
+        audio.play();
+
+        // Play icon
+        $('.fa-play').removeClass('fa-play').addClass('fa-pause');
+      } else {
+        audio.pause();
+        $('.fa-pause').removeClass('fa-pause').addClass('fa-play');
+      }
+    });
+
+
     // Loop Button Control
     $('#loop-btn').click(function(){
       if (loop){
         loop = false;
+        console.log("loop off");
       } else {
         loop = true;
+        console.log("loop on");
       }
     });
 
@@ -128,6 +146,7 @@ $(document).ready(function() {
     });
 
     createPlaylist();
+    
     // Load the first song to start
     loadSong(index);
   }

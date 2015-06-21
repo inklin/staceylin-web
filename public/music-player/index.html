@@ -4,6 +4,7 @@
   <head>
     <title>Music Player | Stacey Lin</title>
     <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="/js/jquery-1.11.2.min.js"></script>
     <script src="/js/analytics.js"></script>
@@ -17,20 +18,28 @@
 
     <div class="content">
 
-      <div id="currentSong">
-        <span></span>
-      </div>
       <div id="playlist">
+      </div>
+      <div id="custom-player">
+        <div id="timeline">
+          Timeline
+        </div>
+        <div id="songInfo">
+          Current Song
+        </div>
+        <div id="control-section">
+          <button id="preav-btn" class="prev"><i class="fa fa-backward"></i></buttn>
+          <button id="play-btn" class="play"><i class="fa fa-play"></i></button>
+          <button id="next-btn" class="next"><i class="fa fa-forward"></i></button>
+        </div>
+        <button id="loop-btn">
+          <span>Repeat All</span>
+        </button>
       </div>
 
       <audio id="audio-player" controls="controls">
       </audio>
 
-      <div id="controls">
-        <p id="prev-btn">Previous</p>
-        <p id="next-btn">Next</p>
-        <p id="loop-btn">Loop</p>
-      </div>
 
     </div>
   </body>
