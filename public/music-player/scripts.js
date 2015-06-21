@@ -14,7 +14,7 @@ $(document).ready(function() {
       {'number': 3, 'title': 'Song Number Three', 'file': 'Song_3'}
     ];
     var extension = '.mp3';
-    var loop = false;
+    var loop = true;
 
     var trackCount = tracks.length;
 
