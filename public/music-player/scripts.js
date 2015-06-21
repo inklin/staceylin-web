@@ -8,15 +8,23 @@ $(document).ready(function() {
     var index = 0;
     var playing = false;
     var mediaPath = 'song-files/';
-    var tracks = [
+    var songs = [
       {'number': 1, 'title': 'Song Number One', 'file': 'Song_1'},
       {'number': 2, 'title': 'Song Number Two', 'file': 'Song_2'},
       {'number': 3, 'title': 'Song Number Three', 'file': 'Song_3'}
     ];
+
+    var createPlaylist = function(){
+      for (var i = 0; i < songs.length; i++){
+        var song = songs[i];
+        var songInfo = '<li class="listItem"><span class="songNum">' + song.number + '</span><span>' + song.title + '</span><span>';
+        $('#playlist').append(songInfo);
+      }
+    };
+
     var extension = '.mp3';
     var loop = true;
-
-    var trackCount = tracks.length;
+    var songCount = songs.length;
 
     var audio = $('#audio-player').bind('play', function(){
       // event listener for media event play
@@ -27,7 +35,7 @@ $(document).ready(function() {
     }).bind('ended', function(){
       // event listener for media event ended
       // check to see if the finished audio is the last song
-      if ((index + 1) < trackCount){
+      if ((index + 1) < songCount){
         index ++;
         loadSong(index);
         audio.play();
@@ -43,7 +51,7 @@ $(document).ready(function() {
     }).get(0);
 
     var loadSong = function(id){
-      audio.src = mediaPath + tracks[id].file + extension;
+      audio.src = mediaPath + songs[id].file + extension;
       audio.load();
     };
 
@@ -64,13 +72,14 @@ $(document).ready(function() {
         }
       } else if (loop) {
         // if there is no previous song but loop is on, play last song in list
-        index = trackCount - 1;
+        index = songCount - 1;
         loadSong(index);
         if (playing){
           audio.play();
         }
       } else {
         // if loop is not on, just pause the song and reset player
+        playing = false;
         audio.pause();
         index = 0;
         loadSong(index);
@@ -79,7 +88,7 @@ $(document).ready(function() {
 
     // Next Song
     $('#next-btn').click(function(){
-      if ((index + 1) < trackCount){
+      if ((index + 1) < songCount){
         // if there is a next song, play next song
         index ++;
         loadSong(index);
@@ -95,13 +104,30 @@ $(document).ready(function() {
         }
       } else {
         // if there is no next song and no loop, just reset player
+        playing = false;
         audio.pause();
         index = 0;
         loadSong(index);
       }
-
     });
 
+    // Loop Button Control
+    $('#loop-btn').click(function(){
+      if (loop){
+        loop = false;
+      } else {
+        loop = true;
+      }
+    });
+
+    // Change song when title is clicked on
+    $(document).on('click', '.listItem', function(){
+      var songNum = $(this).children('.songNum').text();
+      var songIndex = songNum - 1;
+      playSong(songIndex);
+    });
+
+    createPlaylist();
     // Load the first song to start
     loadSong(index);
   }
