@@ -29,10 +29,12 @@ $(document).ready(function() {
     var audio = $('#audio-player').bind('play', function(){
       // event listener for media event play
       playing = true;
-      console.log(audio.duration);
+      // Play icon
+      $('.fa-play').removeClass('fa-play').addClass('fa-pause');
     }).bind('pause', function(){
       // event listener for media event pause
       playing = false;
+      $('.fa-pause').removeClass('fa-pause').addClass('fa-play');
     }).bind('ended', function(){
       // event listener for media event ended
       // check to see if the finished audio is the last song
@@ -63,6 +65,8 @@ $(document).ready(function() {
       loadSong(id);
       audio.play();
     };
+
+    // Timeline for current song 
 
     // Previous Song
     $('#prev-btn').click(function(){
@@ -117,12 +121,8 @@ $(document).ready(function() {
     $('#play-btn').click(function(){
       if (!playing){
         audio.play();
-
-        // Play icon
-        $('.fa-play').removeClass('fa-play').addClass('fa-pause');
       } else {
         audio.pause();
-        $('.fa-pause').removeClass('fa-pause').addClass('fa-play');
       }
     });
 
@@ -145,8 +145,12 @@ $(document).ready(function() {
       playSong(songIndex);
     });
 
+    // Create custom song timeline 
+    $('#timeline').slider({
+    });
+
     createPlaylist();
-    
+
     // Load the first song to start
     loadSong(index);
   }

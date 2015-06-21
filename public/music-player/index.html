@@ -5,8 +5,10 @@
     <title>Music Player | Stacey Lin</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
     <script src="/js/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script src="/js/analytics.js"></script>
     <script src="scripts.js"></script>    
   </head>
@@ -22,13 +24,14 @@
       </div>
       <div id="custom-player">
         <div id="timeline">
-          Timeline
+          <span id="handle"></span>
         </div>
+        <span id="remainingTime"></span>
         <div id="songInfo">
           Current Song
         </div>
         <div id="control-section">
-          <button id="preav-btn" class="prev"><i class="fa fa-backward"></i></buttn>
+          <button id="prev-btn" class="prev"><i class="fa fa-backward"></i></buttn>
           <button id="play-btn" class="play"><i class="fa fa-play"></i></button>
           <button id="next-btn" class="next"><i class="fa fa-forward"></i></button>
         </div>
