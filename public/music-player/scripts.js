@@ -1,12 +1,8 @@
 $(document).ready(function() {
 
-  // check if the page supports HTML5 audio
-  var testAudio = document.createElement('audio');
-
   // canPlayType returns blank if not supported
   // to convert to Boolean value of False for no support
-  var isSupported = !!testAudio.canPlayType;
-  console.log(isSupported);
+  var isSupported = !!document.createElement('audio').canPlayType;
 
   if (isSupported){
     var index = 0;
@@ -18,6 +14,7 @@ $(document).ready(function() {
       {'number': 3, 'title': 'Song Number Three', 'file': 'Song_3'}
     ];
     var extension = '.mp3';
+    var loop = false;
 
     var trackCount = tracks.length;
 
@@ -29,7 +26,7 @@ $(document).ready(function() {
       playing = false;
     }).bind('ended', function(){
       // event listener for media event ended
-      // check to see if the audio is the last song
+      // check to see if the finished audio is the last song
       if ((index + 1) < trackCount){
         index ++;
         loadSong(index);
@@ -38,6 +35,10 @@ $(document).ready(function() {
         audio.pause();
         index = 0;
         loadSong(index);
+
+        if (loop){
+          audio.play();
+        }
       }
     }).get(0);
 
@@ -50,6 +51,56 @@ $(document).ready(function() {
       loadSong(id);
       audio.play();
     };
+
+    // Previous Song
+    $('#prev-btn').click(function(){
+      // check to see if there is a previous song in the list
+      if ((index - 1) > -1) {
+        // play previous song
+        index --;
+        loadSong(index);
+        if (playing){
+          audio.play();
+        }
+      } else if (loop) {
+        // if there is no previous song but loop is on, play last song in list
+        index = trackCount - 1;
+        loadSong(index);
+        if (playing){
+          audio.play();
+        }
+      } else {
+        // if loop is not on, just pause the song and reset player
+        audio.pause();
+        index = 0;
+        loadSong(index);
+      }
+    });
+
+    // Next Song
+    $('#next-btn').click(function(){
+      if ((index + 1) < trackCount){
+        // if there is a next song, play next song
+        index ++;
+        loadSong(index);
+        if (playing){
+          audio.play();
+        }
+      } else if (loop) {
+        // if there is no next song but loop is on, play the very first song
+        index = 0;
+        loadSong(index);
+        if (playing){
+          audio.play();
+        }
+      } else {
+        // if there is no next song and no loop, just reset player
+        audio.pause();
+        index = 0;
+        loadSong(index);
+      }
+
+    });
 
     // Load the first song to start
     loadSong(index);
