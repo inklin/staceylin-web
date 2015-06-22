@@ -1,3 +1,138 @@
-body {
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+body {
+  background-color: #F7F7F7;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.hidden {
+  display: none;
+}
+.player-container {
+  width: 600px;
+  margin: 100px auto 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+/*-------NAVIGATION BAR-----------*/
+.navigation {
+  position: relative;
+  top: 20px;
+  left: 25px;
+}
+.navigation .fa {
+  font-size: 1.4em;
+  color: #FF1C47;
+  margin: 0 25px 0 0;
+}
+
+/*-------PLAYLIST-----------------*/
+.playlist-container {
+  margin: 0 0 50px 0;
+}
+.listItem {
+  clear: both;
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px 0 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.listItem.highlighted{
+  background-color: #EAEAEA;
+}
+.listItem:hover {
+  background-color: #EAEAEA;
+  cursor: pointer;
+}
+.songNum {
+  display: none;
+}
+.plTitle {
+  text-align: left;
+  display: inline-block;
+  width: 330px;
+  padding: 0 0 0 10px;
+  margin: 0 0 10px 0;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.plArtist{
+  text-align: left;
+  display: inline-block;
+  width: 330px;
+  padding: 0 0 0 10px;
+}
+.plImage {
+  display: inline-block;
+  width: 50px;
+  margin: 0 0 0 5px;
+  float: left;
+}
+
+/*-------INFORMATION-------------*/
+.time-display {
+  color: #020202;
+  margin: 0 15px 0 5px;
+}
+
+.title-display {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin: 15px 0 10px 0;
+}
+/*-------SLIDER STYLES ----------*/
+.ui-slider {
+  width: 380px;
+  display: inline-block;
+  margin: 0 auto;
+  background-image: none;
+  background-color: #EAEAEA;
+  border: none;
+}
+
+.ui-slider .ui-slider-handle {
+  background-image: none;
+  background-color: #FF1C47;
+  width: 5px;
+  top: -.2em;
+  margin-left: 0;
+  border: none;
+}
+
+.ui-corner-flat {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+/*--------------BUTTONS--------------------*/
+.repeat-btn {
+  font-size: 1em;
+  color: #FF2355;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 80px;
+}
+.repeat-btn.on {
+  background-color: #FF1C47;
+  color: #F0EDED;
+  border: none;
+  border-radius: 0.2em;
+}
+.control-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+  padding: 20px 50px;
+}
+.control-btn:hover {
+  cursor: pointer;
+  color: #CECECE;
 }

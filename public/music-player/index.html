@@ -1,5 +1,4 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
   <head>
     <title>Music Player | Stacey Lin</title>
@@ -14,33 +13,31 @@
   </head>
   <body>
     <div class="navigation">
-      <a href="/" id="home">Home</a>
-      <a href="http://staceylearnscode.wordpress.com" id="blog">Blog</a>
+      <a href="/" id="home"><i class="fa fa-chevron-left"></i></a>
+      <a href="http://staceylearnscode.wordpress.com" id="blog"><i class="fa fa-bars"></i></a>
     </div>
 
-    <div class="content">
-
-      <div id="playlist">
+    <div class="player-container">
+      <div id="playlist" class="playlist-container">
       </div>
       <div id="custom-player">
-        <div id="timeline">
-          <span id="handle"></span>
+        <span id="currentTime" class="time-display">00:00</span>
+        <div id="timeline" class="ui-corner-flat">
         </div>
-        <span id="remainingTime"></span>
-        <div id="songInfo">
-          Current Song
-        </div>
+        <span id="remainingTime" class="time-display">00:00</span>
+        <p id="songTitle" class="title-display"></p>
+        <p id="songArtist" class="artist-display"></p>
         <div id="control-section">
-          <button id="prev-btn" class="prev"><i class="fa fa-backward"></i></buttn>
-          <button id="play-btn" class="play"><i class="fa fa-play"></i></button>
-          <button id="next-btn" class="next"><i class="fa fa-forward"></i></button>
+          <button id="prev-btn" class="control-btn"><i class="fa fa-backward"></i></buttn>
+          <button id="play-btn" class="control-btn"><i class="fa fa-play"></i></button>
+          <button id="next-btn" class="control-btn"><i class="fa fa-forward"></i></button>
         </div>
-        <button id="loop-btn">
+        <button id="loop-btn" class="repeat-btn">
           <span>Repeat All</span>
         </button>
       </div>
 
-      <audio id="audio-player" controls="controls">
+      <audio id="audio-player" controls="controls" class="hidden">
       </audio>
 
 
