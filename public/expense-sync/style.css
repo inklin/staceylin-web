@@ -42,12 +42,14 @@ body {
   top: 173px;
   left: 33%;
   -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  transform: scale(0);
+}
+.laptop-container.running .laptop-expense {
   -webkit-animation: appear .5s ease-out .2s;
   -webkit-animation-fill-mode: forwards;
-  -moz-transform: scale(0);
   -moz-animation: appear .5s ease-out .2s;
   -moz-animation-fill-mode: forwards;
-  transform: scale(0);
   animation: appear .5s ease-out .2s;
   animation-fill-mode: forwards;
 }
@@ -57,6 +59,9 @@ body {
   position: absolute;
   top: 173px;
   left: 33%;
+}
+
+.laptop-container.running .laptop-list {
   -webkit-animation: slideDown .6s ease-out;
   -webkit-animation-fill-mode: forwards;
   -moz-animation: slideDown .6s ease-out;
@@ -106,6 +111,9 @@ body {
   top: 90px;
   width: 160px;
   left: 9%;
+}
+
+.phone-container.running .phone-list {
   -webkit-animation: phoneDown .5s ease-out .7s;
   -webkit-animation-fill-mode: forwards;
   -moz-animation: phoneDown .5s ease-out .7s;
@@ -133,12 +141,15 @@ body {
   left: 9%;
   top: 90px;
   -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  transform: scale(0);
+}
+
+.phone-container.running .phone-expense {
   -webkit-animation: phoneAppear .5s ease-out 1s;
   -webkit-animation-fill-mode: forwards;
-  -moz-transform: scale(0);
   -moz-animation: phoneAppear .5s ease-out 1s;
   -moz-animation-fill-mode: forwards;
-  transform: scale(0);
   animation: phoneAppear .5s ease-out 1s;
   animation-fill-mode: forwards;
 }
@@ -154,4 +165,22 @@ body {
 @keyframes phoneAppear {
   0% {opacity: 0; transform: scale(0);}
   100% {opacity: 1; transform: scale(1);}
+}
+
+.btn {
+  display: block;
+  margin: 60px auto 0;
+  font-size: 1em;
+  padding: 10px 35px;
+  border: 1px solid #FFF;
+  background-color: #CCD6E7;
+  color: #4465B3;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+}
+
+.btn:hover {
+  background-color: #AAB5CC;
 }
