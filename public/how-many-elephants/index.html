@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="quizApp">
+  <head>
+    <title>How Many Elephants?</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <!-- Favicon --> 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container" ng-controller="QuizController">
+      <div class="image-container"><div class="image"></div></div>
+      <h1 class="title">How Many Elephants?</h1>
+
+      <div class="intro" ng-show="state == 'start'">
+        <p>This is a triva game about elephants. Click to start the game!</p>
+        <button id="startGame" ng-click="start()" class="btn">Start</button>
+      </div>
+
+      <div ng-show=" state == 'question' || state == 'result'" class="question-container">
+        <h2 id="question" class="question">{{question.text}}</h2>
+        <div class="user-guess">Your answer: {{ elephants }} elephants</div>
+        <div class="slider-container">
+          <span class="range"> {{question.min}} </span>
+          <div slider config="sliderConfig" model="elephants" attempt="attempt" class="slider"></div>
+          <span class="range"> {{ question.max}} </span>
+        </div>
+
+        <div ng-show="state == 'question' ">
+          <button ng-click="checkAnswer()" class="btn">Submit Answer</button>
+        </div>
+        <div ng-show="state == 'result'">
+          <button ng-click="nextQuestion()" class="btn">Next Question</button>
+          <span ng-show="correctAns" class="result">Woohoo! That is correct!</span>
+          <span ng-show="!correctAns" class="result">Nope! That is incorrect. The answer is {{ question.answer }} elephants.</span>
+        </div>
+      </div>
+
+      <div ng-if="quizOver" ng-show="state == 'summary'">
+        <h2>Quiz Over</h2>
+        <button ng-click="reset()" class="btn">Play again</button>
+      </div>
+
+      <div id="quizScore" ng-hide="state == 'start'" class="score">
+        Score: {{ score }}
+      </div> 
+    </div>
+
+  </body>
+</html>
