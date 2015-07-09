@@ -4,6 +4,23 @@ body {
   background-color: #2C2A83;
   color: #FFF;
 }
+
+/*-------------NAVIGATION--------------*/
+.navigation {
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  word-spacing: 20px;
+  text-transform: uppercase;
+}
+
+.navigation a {
+  color: #FFF;
+}
+
+.navigation a:visited {
+  color: #0d0c27;
+}
 .container {
   margin: 30px 0 0 0;
 }
@@ -12,6 +29,7 @@ body {
   width: 18%;
   margin: 0 auto;
 }
+
 .image-container .image {
   position: relative;
   width: 100%;
@@ -102,7 +120,22 @@ body {
 
 /*--------------MOBILE SCREEN SIZE-------*/
 @media (max-width: 800px){
+
+  .image-container {
+    width: 40%;
+  }
+
   .slider {
     width: 60%;
   }
+
+  .navigation {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+  }
 }
+
