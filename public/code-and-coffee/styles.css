@@ -1,0 +1,57 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #636363;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #313131;
+}
+
+h2, h3 {
+  margin: 2rem 0 1.5rem;
+}
+
+a {
+   color: #ed4343;
+}
+
+.remark-slide-content ol li {
+  font-size: 25px;
+  margin: 2.5rem 0 0 0;
+}
+
+.block-img {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.block-img img {
+  width: 45%;
+}
+
+.block-img-wide {
+  margin: 40px 0 0 0;
+}
+.block-img-wide img {
+  width: 90%;
+}
+.block-img-small img {
+  width: 30%;
+}
+
+.inline-img-half {
+  width: 45%;
+  display: inline-block;
+}
+
+.inline-img-half img {
+  width: 100%;
+}
+
+.footnote {
+  font-size: 0.7em;
+}

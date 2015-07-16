@@ -21,14 +21,15 @@ a:link {
 }
 .container {
   padding-top: 50px;
-  width: 800px;
+  width: 400px;
   margin: 0 auto;
 }
 
 .ui-slider{
   width: 350px;
   height: 20px;
-  float: left;
+  display: block;
+  margin: 10px 0;
 }
 
 .ui-slider .ui-slider-handle {
@@ -39,6 +40,8 @@ a:link {
 .swatch {
   width: 200px;
   height: 200px;
+  display: inline-block;
+  margin: 0 auto;
 
 }
 
@@ -55,13 +58,10 @@ span {
 .option-container {
   padding-top: 30px;
   padding-right: 50px;
-  float: left;
 }
 
 .display-container {
-  width: 300px;
-  height: 300px;
-  display: inline-block;
+  text-align: center;
 }
 
  #red .ui-slider-range { 
