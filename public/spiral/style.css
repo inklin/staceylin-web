@@ -5,9 +5,20 @@ body {
 canvas {
   background-color: #000;
 }
+
 .navigation {
   position: absolute;
-  top: 0;
+  top: 35px;
+  left: 40px;
+  z-index: 5;
+  word-spacing: 35px;
+  text-transform: uppercase;
+}
+
+.navigation a {
+  color: #FFA500;
+  text-decoration: none;
+  font-size: 0.9em;
 }
 
 .modal {
@@ -21,5 +32,7 @@ canvas {
   color: #FFF;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  z-index: 4;
+  font-size: 1.1em;
 }
