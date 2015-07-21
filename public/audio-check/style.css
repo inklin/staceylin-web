@@ -2,10 +2,63 @@ body {
 
 }
 
+.content {
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: blue;
+  position: relative;
+}
+/*----------------ROCKET TRAIL---------*/
+.rocket-trail {
+  width: 380px;
+  height: 250px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.trail-block {
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+}
+.trail-block:nth-child(even){
+  margin-top: -20px;
+}
+.rainbow {
+  width: 100%;
+  height: 100%;
+}
+.rainbow li {
+  height: 16.6%;
+  width: 100%;
+}
+.rainbow li:first-child {
+  background-color: #FF0000;
+}
+.rainbow li:nth-child(2) {
+  background-color: #FF9800;
+}
+.rainbow li:nth-child(3) {
+  background-color: #FEFE00;
+}
+.rainbow li:nth-child(4) {
+  background-color: #32FE00;
+}
+.rainbow li:nth-child(5){
+  background-color: #0098FE;
+}
+.rainbow li:nth-child(6) {
+  background-color: #6533FF;
+}
 /*----------------WAGON---------------*/
 .wagon-container {
-  position: relative;
-  width: 600px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 520px;
   height: 220px;
   background-color: gray;
 }
@@ -15,23 +68,25 @@ body {
   height: 80px;
   background-color: #C30D0D;
   position: absolute;
-  left: 150px;
+  left: 140px;
   top: 60px;
   z-index: 4;
 }
 .wagon-container .wagon-top {
   width: 320px;
   height: 20px;
-  left: 140px;
+  left: 130px;
   top: 50px;
   position: relative;
   background-color: #CC0C24;
   z-index: 5;
 }
+
+/*-----------WAGON ADD-ONS-------------*/
 .tape {
   background-color: #7D899C;
   position: absolute;
-  left: 160px;
+  left: 150px;
   top: 50px;
   width: 22px;
   height: 50px;
@@ -44,7 +99,7 @@ body {
   width: 22px;
   height: 50px;
   z-index: 6;
-  left: 210px;
+  left: 200px;
   position: relative;
 }
 .wing {
@@ -54,7 +109,7 @@ body {
   width: 160px;
   height: 0;
   position: absolute;
-  left: 185px;
+  left: 170px;
   top: 90px;
   z-index: 7;
 }
@@ -72,7 +127,7 @@ body {
   height: 15px;
   position: absolute;
   background-color: #4B291B;
-  left: 400px;
+  left: 390px;
   top: 143px;
   z-index: 2;
   border-radius: 0 3px 10px 0;
@@ -115,14 +170,14 @@ body {
 }
 
 .bar.left {
-  left: 180px;
+  left: 170px;
   top: 135px;
   transform: rotate(-50deg);
   z-index: 0;
 }
 
 .bar.right {
-  left: 370px;
+  left: 360px;
   transform: rotate(50deg);
   top: 140px;
 }
@@ -138,11 +193,11 @@ body {
 }
 
 .wheel.left {
-  left: 150px;
+  left: 140px;
 }
 
 .wheel.right {
-  left: 390px;
+  left: 380px;
 }
 
 .wheel > .middle {
@@ -175,7 +230,7 @@ body {
   height: 15px;
   border-radius: 0 10px 10px 0;
   position: absolute;
-  left: 120px;
+  left: 110px;
   top: 75px;
   z-index: 5;
 }
@@ -185,7 +240,7 @@ body {
   width: 115px;
   height: 80px;
   top: 40px;
-  left: 10px;
+  left: 0;
   border-radius: 0 40px 40px 0;
   z-index: 5;
 }
