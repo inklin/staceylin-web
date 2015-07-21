@@ -21,25 +21,24 @@ body {
 }
 
 .tape {
-  background-color: green;
+  background-color: #7D899C;
   position: absolute;
-  left: 165px;
+  left: 160px;
   top: 40px;
   width: 22px;
   height: 50px;
   z-index: 6;
 }
 .tape:before {
-  background-color: green;
+  background-color: #7D899C;
   display: inline-block;
   content: "";
   width: 22px;
   height: 50px;
   z-index: 6;
-  left: 200px;
+  left: 210px;
   position: relative;
 }
-
 .wagon-container .wagon-top {
   width: 320px;
   height: 20px;
@@ -49,11 +48,32 @@ body {
   background-color: #CC0C24;
   z-index: 3;
 }
+.wing {
+  border-bottom: 10px solid #B67D5A;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  width: 160px;
+  height: 0;
+  position: absolute;
+  left: 185px;
+  top: 80px;
+  z-index: 7;
+}
+.wing:before {
+  display: inline-block;
+  width: 160px;
+  top: 10px;
+  height: 10px;
+  background-color: #2b1d0e;
+  content: "";
+  position: absolute;
+}
+
 /* ----------- WHEEL BARS ---------- */
 .bar {
   background-color: #68443B;
   width: 50px;
-  height: 15px;
+  height: 20px;
   position: absolute;
   display: inline-block;
 }
@@ -68,7 +88,7 @@ body {
 .bar.right {
   left: 370px;
   transform: rotate(50deg);
-  top: 125px;
+  top: 130px;
 }
 /* -----------  WHEELS-------------- */
 .wheel {
@@ -77,16 +97,15 @@ body {
   background-color: #181818;
   border-radius: 50%;
   position: absolute;
+  top: 140px;
 }
 
 .wheel.left {
   left: 150px;
-  top: 140px;
 }
 
 .wheel.right {
   left: 390px;
-  top: 140px;
 }
 
 .wheel > .middle {
@@ -158,3 +177,4 @@ body {
   position: relative;
   left: -16px;
 }
+
