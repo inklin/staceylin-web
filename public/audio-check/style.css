@@ -6,8 +6,8 @@ body {
 .wagon-container {
   position: relative;
   width: 600px;
-  height: 300px;
-  background-color: grey;
+  height: 220px;
+  background-color: gray;
 }
 
 .wagon-container .wagon {
@@ -16,15 +16,23 @@ body {
   background-color: #C30D0D;
   position: absolute;
   left: 150px;
-  top: 50px;
-  z-index: 2;
+  top: 60px;
+  z-index: 4;
 }
-
+.wagon-container .wagon-top {
+  width: 320px;
+  height: 20px;
+  left: 140px;
+  top: 50px;
+  position: relative;
+  background-color: #CC0C24;
+  z-index: 5;
+}
 .tape {
   background-color: #7D899C;
   position: absolute;
   left: 160px;
-  top: 40px;
+  top: 50px;
   width: 22px;
   height: 50px;
   z-index: 6;
@@ -39,15 +47,6 @@ body {
   left: 210px;
   position: relative;
 }
-.wagon-container .wagon-top {
-  width: 320px;
-  height: 20px;
-  left: 140px;
-  top: 40px;
-  position: relative;
-  background-color: #CC0C24;
-  z-index: 3;
-}
 .wing {
   border-bottom: 10px solid #B67D5A;
   border-left: 10px solid transparent;
@@ -56,17 +55,53 @@ body {
   height: 0;
   position: absolute;
   left: 185px;
-  top: 80px;
+  top: 90px;
   z-index: 7;
 }
 .wing:before {
   display: inline-block;
   width: 160px;
   top: 10px;
-  height: 10px;
-  background-color: #2b1d0e;
+  height: 8px;
+  background-color: #9e6f42;
   content: "";
   position: absolute;
+}
+.frontbar {
+  width: 110px;
+  height: 15px;
+  position: absolute;
+  background-color: #4B291B;
+  left: 400px;
+  top: 143px;
+  z-index: 2;
+  border-radius: 0 3px 10px 0;
+}
+.frontbar:after {
+  display: inline-block;
+  content: "";
+  width: 100px;
+  height: 15px;
+  position: absolute;
+  left: 40px;
+  top: -50px;
+  background-color: #4B291B;
+  z-index: 2;
+  transform: rotate(75deg);
+  border-radius: 0 2px 0 0;
+}
+.frontbar:before {
+  display: inline-block;
+  content: "";
+  width: 26px;
+  height: 46px;
+  background-color: #4B291B;
+  z-index: 2;
+  position: absolute;
+  top: -135px;
+  left: 58px;
+  transform: rotate(-15deg);
+  border-radius: 2px;
 }
 
 /* ----------- WHEEL BARS ---------- */
@@ -76,11 +111,12 @@ body {
   height: 20px;
   position: absolute;
   display: inline-block;
+  z-index: 3;
 }
 
 .bar.left {
   left: 180px;
-  top: 125px;
+  top: 135px;
   transform: rotate(-50deg);
   z-index: 0;
 }
@@ -88,7 +124,7 @@ body {
 .bar.right {
   left: 370px;
   transform: rotate(50deg);
-  top: 130px;
+  top: 140px;
 }
 /* -----------  WHEELS-------------- */
 .wheel {
@@ -97,7 +133,8 @@ body {
   background-color: #181818;
   border-radius: 50%;
   position: absolute;
-  top: 140px;
+  top: 150px;
+  z-index: 4;
 }
 
 .wheel.left {
@@ -139,7 +176,7 @@ body {
   border-radius: 0 10px 10px 0;
   position: absolute;
   left: 120px;
-  top: 65px;
+  top: 75px;
   z-index: 5;
 }
 .broom {
@@ -147,7 +184,7 @@ body {
   background-color: #D19654;
   width: 115px;
   height: 80px;
-  top: 30px;
+  top: 40px;
   left: 10px;
   border-radius: 0 40px 40px 0;
   z-index: 5;
