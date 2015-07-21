@@ -6,14 +6,58 @@ body {
   width: 900px;
   height: 600px;
   margin: 0 auto;
-  background-color: blue;
+  border: 1px solid blue;
   position: relative;
+}
+/*--------------BING BONG--------------*/
+.bingbong {
+  width: 280px;
+  height: 320px;
+  border: 1px solid green;
+  position: absolute;
+  bottom: 150px;
+  z-index: 10;
+  right: 90px;
+}
+.bingbong .body {
+  width: 200px;
+  height: 280px;
+  background-color: #FFB0CB;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -100px;
+  border-radius: 50% 50% 20px 20px;
+  z-index: 2;
+}
+.bingbong .ear{
+  width: 150px;
+  height: 40px;
+  background-color: #FD87AF;
+  border-radius: 40% 50% 50% 40%;
+  transform: rotate(-45deg);
+  top: 80px;
+  left: -20px;
+  position: absolute;
+  z-index: 1;
+}
+.ear:before {
+  content: "";
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  background-color: #FD87AF;
+  border-radius: 40% 50% 50% 40%;
+  transform: rotate(90deg);
+  top: 125px;
+  left: 120px;
+  position: relative;
+  z-index: 5;
 }
 /*----------------ROCKET TRAIL---------*/
 .rocket-trail {
   width: 380px;
   height: 250px;
-  background-color: black;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -21,11 +65,10 @@ body {
 .trail-block {
   width: 25%;
   height: 100%;
-  display: inline-block;
   float: left;
 }
 .trail-block:nth-child(even){
-  margin-top: -20px;
+  margin-top: -15px;
 }
 .rainbow {
   width: 100%;
@@ -53,6 +96,27 @@ body {
 .rainbow li:nth-child(6) {
   background-color: #6533FF;
 }
+/*---------ROCKET ANIMATIONS----------*/
+
+/*.rocket-trail .trail-block:nth-child(odd){
+  -webkit-animation: updown 0.5s linear infinite;
+}
+
+.rocket-trail .trail-block:nth-child(even){
+  -webkit-animation: downup 0.5s linear infinite;
+}
+
+@-webkit-keyframes updown {
+  0% {  margin-top: 0;}
+  50% { margin-top: -15px;}
+  100% {  margin-top: 0;}
+}
+@-webkit-keyframes downup {
+  0% {  margin-top: -15px;}
+  50% { margin-top: 0;}
+  100% {  margin-top: -15px;}
+}*/
+
 /*----------------WAGON---------------*/
 .wagon-container {
   position: absolute;
@@ -60,7 +124,7 @@ body {
   bottom: 0;
   width: 520px;
   height: 220px;
-  background-color: gray;
+  border: 1px solid red;
 }
 
 .wagon-container .wagon {
