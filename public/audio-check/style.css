@@ -1,0 +1,160 @@
+body {
+
+}
+
+/*----------------WAGON---------------*/
+.wagon-container {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  background-color: grey;
+}
+
+.wagon-container .wagon {
+  width: 300px;
+  height: 80px;
+  background-color: #C30D0D;
+  position: absolute;
+  left: 150px;
+  top: 50px;
+  z-index: 2;
+}
+
+.tape {
+  background-color: green;
+  position: absolute;
+  left: 165px;
+  top: 40px;
+  width: 22px;
+  height: 50px;
+  z-index: 6;
+}
+.tape:before {
+  background-color: green;
+  display: inline-block;
+  content: "";
+  width: 22px;
+  height: 50px;
+  z-index: 6;
+  left: 200px;
+  position: relative;
+}
+
+.wagon-container .wagon-top {
+  width: 320px;
+  height: 20px;
+  left: 140px;
+  top: 40px;
+  position: relative;
+  background-color: #CC0C24;
+  z-index: 3;
+}
+/* ----------- WHEEL BARS ---------- */
+.bar {
+  background-color: #68443B;
+  width: 50px;
+  height: 15px;
+  position: absolute;
+  display: inline-block;
+}
+
+.bar.left {
+  left: 180px;
+  top: 125px;
+  transform: rotate(-50deg);
+  z-index: 0;
+}
+
+.bar.right {
+  left: 370px;
+  transform: rotate(50deg);
+  top: 125px;
+}
+/* -----------  WHEELS-------------- */
+.wheel {
+  width: 60px;
+  height: 60px;
+  background-color: #181818;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.wheel.left {
+  left: 150px;
+  top: 140px;
+}
+
+.wheel.right {
+  left: 390px;
+  top: 140px;
+}
+
+.wheel > .middle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #7C8998;
+  position: relative;
+  left: 50%;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.middle > .center {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #434040;
+  position: relative;
+  left: 50%;
+  margin-left: -10px;
+  top: 25%;
+}
+
+/* ------------- BROOM ----------- */ 
+.broomstick {
+  background-color: #C1956B;
+  width: 300px;
+  height: 15px;
+  border-radius: 0 10px 10px 0;
+  position: absolute;
+  left: 120px;
+  top: 65px;
+  z-index: 5;
+}
+.broom {
+  position: absolute;
+  background-color: #D19654;
+  width: 115px;
+  height: 80px;
+  top: 30px;
+  left: 10px;
+  border-radius: 0 40px 40px 0;
+  z-index: 5;
+}
+.broomstring {
+  width: 5px;
+  height: 80px;
+  background-color: #830300;
+  position: relative;
+  left: 70px;
+}
+.broomstring:after {
+  display: inline-block;
+  content: "";
+  width: 5px;
+  height: 80px;
+  background-color: #830300;
+  position: absolute;
+  left: -25px;
+}
+.broomstring:before {
+  display: inline-block;
+  content: "";
+  width: 5px;
+  height: 80px;
+  background-color: #830300;
+  position: relative;
+  left: -16px;
+}
