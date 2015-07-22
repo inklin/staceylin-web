@@ -12,7 +12,7 @@ body {
 /*--------------BING BONG--------------*/
 .bingbong {
   width: 280px;
-  height: 320px;
+  height: 340px;
   border: 1px solid green;
   position: absolute;
   bottom: 150px;
@@ -21,7 +21,7 @@ body {
 }
 .bingbong .body {
   width: 200px;
-  height: 280px;
+  height: 300px;
   background-color: #FFB0CB;
   position: absolute;
   bottom: 0;
@@ -29,6 +29,7 @@ body {
   margin-left: -100px;
   border-radius: 50% 50% 20px 20px;
   z-index: 2;
+  top: 20px;
 }
 .bingbong .ear{
   width: 150px;
@@ -36,7 +37,7 @@ body {
   background-color: #FD87AF;
   border-radius: 40% 50% 50% 40%;
   transform: rotate(-45deg);
-  top: 80px;
+  top: 60px;
   left: -20px;
   position: absolute;
   z-index: 1;
@@ -49,10 +50,91 @@ body {
   background-color: #FD87AF;
   border-radius: 40% 50% 50% 40%;
   transform: rotate(90deg);
-  top: 125px;
-  left: 120px;
+  top: 120px;
+  left: 115px;
   position: relative;
   z-index: 5;
+}
+
+/*---------------FACE------------------*/
+.bingbong .eye {
+  background-color: #FFF;
+  width: 40px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  left: 90px;
+  top: 60px;
+  z-index: 5;
+  transform: rotate(10deg);
+}
+.eye.right {
+  left: 150px;
+  transform: rotate(-10deg);
+}
+.pupil {
+  background-color: green;
+  width: 25px;
+  height: 30px;
+  border-radius: 50%;
+  transform: rotate(5deg);
+  position: relative;
+  left: 10px;
+  top: 25px;
+}
+.eye.right .pupil {
+  background-color: green;
+  width: 25px;
+  height: 30px;
+  border-radius: 50%;
+  transform: rotate(-15deg);
+  position: relative;
+  left: 5px;
+  top: 25px;
+}
+.nose {
+  background-color: pink;
+  width: 60px;
+  height: 130px;
+  z-index: 6;
+  position: relative;
+  left: 50%;
+  margin-left: -30px;
+  top: 140px;
+  border-radius: 0 0 20px 20px;
+}
+.mouth {
+  height: 30px;
+  width: 100px;
+  position: relative;
+  border-radius: 0 0 50% 50%;
+  border: 10px solid #E1698A;
+  border-top: none;
+  z-index: 5;
+  left: 80px;
+  top: 50px;
+}
+/*--------ACCESSORIES------------------*/
+.jacket {
+  width: 65px;
+  height: 80px;
+  background-color: #5D3F30;
+  position: relative;
+  z-index: 5;
+  border-radius: 0 60% 0 0;
+  left: 40px;
+  top: 70px;
+}
+.jacket:after {
+  content: "";
+  display: inline-block;
+  width: 65px;
+  height: 80px;
+  background-color: #5D3F30;
+  position: relative;
+  z-index: 5;
+  border-radius: 60% 0 0 0;
+  left: 135px;
 }
 /*----------------ROCKET TRAIL---------*/
 .rocket-trail {
@@ -143,7 +225,7 @@ body {
   top: 50px;
   position: relative;
   background-color: #CC0C24;
-  z-index: 5;
+  z-index: 6;
 }
 
 /*-----------WAGON ADD-ONS-------------*/
