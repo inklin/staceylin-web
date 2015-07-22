@@ -136,6 +136,146 @@ body {
   border-radius: 60% 0 0 0;
   left: 135px;
 }
+.arm {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 80px 50px;
+  border-color: transparent transparent #5D3F30 transparent;
+  position: relative;
+  z-index: 5;
+  top: -10px;
+  left: -10px;
+}
+.arm-right {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 80px 0 0 50px;
+  border-color: transparent transparent transparent #5D3F30;
+  position: relative;
+  left: 240px;
+  top: -90px;
+  z-index: 5;
+}
+.bow {
+  width: 20px;
+  height: 20px;
+  background-color: #9A3F76;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -10px;
+  z-index: 5;
+}
+.bow:before {
+  content:"";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 30px;
+  border-color: transparent transparent transparent #9A3F76;
+  position: relative;
+  left: -14px;
+  top: -5px;
+}
+.bow:after{
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 30px 15px 0;
+  border-color: transparent #9A3F76 transparent transparent;
+  position: relative;
+  top: -38px;
+  left: 5px;
+}
+.flower {
+  z-index: 5;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  top: -150px;
+  left: 50px;
+}
+.petal-top {
+  background-color: #F3F129;
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50% 0 50%;
+  z-index: 5;
+}
+.petal-top:before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50% 0 50%;
+  background-color: #70EBC2;
+  transform: rotate(45deg);
+  position: relative;
+  left: 8px;
+  top: -7px;
+}
+.petal-top:after{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50% 0 50%;
+  background-color: #99D295;
+  transform: rotate(90deg);
+  position: relative;
+  left: 22px;
+  top: -23px;
+}
+.petal-bottom {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50% 0 50%;
+  background-color: #EAB8D0;
+  transform: rotate(150deg);
+  position: relative;
+  left: 23px;
+  top: -7px;
+}
+.petal-bottom:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50% 0 50%;
+  background-color: #FF9E68;
+  transform: rotate(70deg);
+  position: relative;
+  left: 16px;
+  top: -2px;
+}
+.petal-bottom:after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50% 0 50%;
+  background-color: #9B2019;
+  transform: rotate(140deg);
+  position: relative;
+  left: 23px;
+  top: -10px;
+}
+.petal-center {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #3A6246;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+}
 /*----------------ROCKET TRAIL---------*/
 .rocket-trail {
   width: 380px;
@@ -179,8 +319,8 @@ body {
   background-color: #6533FF;
 }
 /*---------ROCKET ANIMATIONS----------*/
-
-/*.rocket-trail .trail-block:nth-child(odd){
+/*
+.rocket-trail .trail-block:nth-child(odd){
   -webkit-animation: updown 0.5s linear infinite;
 }
 
@@ -197,7 +337,8 @@ body {
   0% {  margin-top: -15px;}
   50% { margin-top: 0;}
   100% {  margin-top: -15px;}
-}*/
+}
+*/
 
 /*----------------WAGON---------------*/
 .wagon-container {
@@ -236,7 +377,7 @@ body {
   top: 50px;
   width: 22px;
   height: 50px;
-  z-index: 6;
+  z-index: 7;
 }
 .tape:before {
   background-color: #7D899C;
