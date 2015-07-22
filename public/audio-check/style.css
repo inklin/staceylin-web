@@ -6,14 +6,12 @@ body {
   width: 900px;
   height: 600px;
   margin: 0 auto;
-  border: 1px solid blue;
   position: relative;
 }
 /*--------------BING BONG--------------*/
 .bingbong {
   width: 280px;
   height: 340px;
-  border: 1px solid green;
   position: absolute;
   bottom: 150px;
   z-index: 10;
@@ -21,7 +19,7 @@ body {
 }
 .bingbong .body {
   width: 200px;
-  height: 300px;
+  height: 250px;
   background-color: #FFB0CB;
   position: absolute;
   bottom: 0;
@@ -29,7 +27,7 @@ body {
   margin-left: -100px;
   border-radius: 50% 50% 20px 20px;
   z-index: 2;
-  top: 20px;
+  top: 70px;
 }
 .bingbong .ear{
   width: 150px;
@@ -37,7 +35,7 @@ body {
   background-color: #FD87AF;
   border-radius: 40% 50% 50% 40%;
   transform: rotate(-45deg);
-  top: 60px;
+  top: 120px;
   left: -20px;
   position: absolute;
   z-index: 1;
@@ -64,7 +62,7 @@ body {
   border-radius: 50%;
   position: absolute;
   left: 90px;
-  top: 60px;
+  top: 100px;
   z-index: 5;
   transform: rotate(10deg);
 }
@@ -93,15 +91,17 @@ body {
   top: 25px;
 }
 .nose {
-  background-color: pink;
+  background-color: #FFB0CB;
   width: 60px;
-  height: 130px;
+  height: 110px;
   z-index: 6;
   position: relative;
   left: 50%;
   margin-left: -30px;
-  top: 140px;
+  top: 170px;
   border-radius: 0 0 20px 20px;
+  border: 2px solid #AE4677;
+  border-top: none;
 }
 .mouth {
   height: 30px;
@@ -112,24 +112,24 @@ body {
   border-top: none;
   z-index: 5;
   left: 80px;
-  top: 50px;
+  top: 80px;
 }
 /*--------ACCESSORIES------------------*/
 .jacket {
   width: 65px;
-  height: 80px;
+  height: 78px;
   background-color: #5D3F30;
   position: relative;
   z-index: 5;
   border-radius: 0 60% 0 0;
   left: 40px;
-  top: 70px;
+  top: 90px;
 }
 .jacket:after {
   content: "";
   display: inline-block;
   width: 65px;
-  height: 80px;
+  height: 78px;
   background-color: #5D3F30;
   position: relative;
   z-index: 5;
@@ -140,22 +140,22 @@ body {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 0 80px 50px;
-  border-color: transparent transparent #5D3F30 transparent;
+  border-width: 0 0 78px 50px;
+  border-color: transparent transparent #4c3427 transparent;
   position: relative;
   z-index: 5;
-  top: -10px;
+  top: 12px;
   left: -10px;
 }
 .arm-right {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 80px 0 0 50px;
-  border-color: transparent transparent transparent #5D3F30;
+  border-width: 78px 0 0 50px;
+  border-color: transparent transparent transparent #4c3427;
   position: relative;
   left: 240px;
-  top: -90px;
+  top: -66px;
   z-index: 5;
 }
 .bow {
@@ -163,7 +163,7 @@ body {
   height: 20px;
   background-color: #9A3F76;
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   left: 50%;
   margin-left: -10px;
   z-index: 5;
@@ -197,7 +197,7 @@ body {
   position: relative;
   width: 50px;
   height: 50px;
-  top: -150px;
+  top: -120px;
   left: 50px;
 }
 .petal-top {
@@ -347,7 +347,6 @@ body {
   bottom: 0;
   width: 520px;
   height: 220px;
-  border: 1px solid red;
 }
 
 .wagon-container .wagon {
@@ -366,7 +365,7 @@ body {
   top: 50px;
   position: relative;
   background-color: #CC0C24;
-  z-index: 6;
+  z-index: 7;
 }
 
 /*-----------WAGON ADD-ONS-------------*/
@@ -377,7 +376,7 @@ body {
   top: 50px;
   width: 22px;
   height: 50px;
-  z-index: 7;
+  z-index: 8;
 }
 .tape:before {
   background-color: #7D899C;
