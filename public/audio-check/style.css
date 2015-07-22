@@ -1,21 +1,77 @@
 body {
-
+  background-color: #080F3E;
+}
+/*--------CONTROLS----------------------*/
+.navigation {
+  font-size: 1.2em;
+  color: #6533FF;
+  word-spacing: 35px;
+  padding: 30px 0 0 50px;
+  text-transform: uppercase;
+}
+.navigation a {
+  color: #6533FF;
+  text-decoration: none;
+}
+.navigation a:visited {
+  color: #9A3F76;
+}
+.modal {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #000;
+}
+.control {
+  text-align: center;
+  margin: 60px 0 20px 0;
 }
 
+.control .btn {
+  padding: 15px 35px;
+  text-transform: uppercase;
+  background-color: #080F3E;
+  font-size: 1.2em;
+  border: 2px solid #FFF;
+  color: #FFF;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.control .btn:hover {
+  color: #6533FF;
+}
+/*----------CHARACTER-----------------*/
 .content {
   width: 900px;
-  height: 600px;
+  height: 500px;
   margin: 0 auto;
   position: relative;
+}
+.character {
+  width: 550px;
+  height: 500px;
+  position: relative;
+  left: 38%;
+  top: 30px;
+}
+.character.animate {
+  -webkit-animation: forward 0.5s linear infinite;
+  -moz-animation: forward 0.5s linear infinite;
+  -0-animation: forward 0.5s linear infinite;
+  animation: forward 0.5s linear infinite;
 }
 /*--------------BING BONG--------------*/
 .bingbong {
   width: 280px;
   height: 340px;
   position: absolute;
-  bottom: 150px;
+  left: 150px;
+  top: -20px;
   z-index: 10;
-  right: 90px;
 }
 .bingbong .body {
   width: 200px;
@@ -25,6 +81,8 @@ body {
   bottom: 0;
   left: 50%;
   margin-left: -100px;
+  -webkit-border-radius: 50% 50% 20px 20px;
+  -moz-border-radius: 50% 50% 20px 20px;
   border-radius: 50% 50% 20px 20px;
   z-index: 2;
   top: 70px;
@@ -33,7 +91,11 @@ body {
   width: 150px;
   height: 40px;
   background-color: #FD87AF;
+  -webkit-border-radius: 40% 50% 50% 40%;
+  -moz-border-radius: 40% 50% 50% 40%;
   border-radius: 40% 50% 50% 40%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);
   top: 120px;
   left: -20px;
@@ -46,6 +108,10 @@ body {
   width: 150px;
   height: 40px;
   background-color: #FD87AF;
+  -webkit-border-radius: 40% 50% 50% 40%;
+  -webkit-transform: rotate(90deg);
+  -moz-border-radius: 40% 50% 50% 40%;
+  -moz-transform: rotate(90deg);
   border-radius: 40% 50% 50% 40%;
   transform: rotate(90deg);
   top: 120px;
@@ -59,21 +125,31 @@ body {
   background-color: #FFF;
   width: 40px;
   height: 60px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   position: absolute;
   left: 90px;
   top: 100px;
   z-index: 5;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
   transform: rotate(10deg);
 }
 .eye.right {
   left: 150px;
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
 .pupil {
   background-color: green;
   width: 25px;
   height: 30px;
+  -webkit-border-radius: 50%;
+  -webkit-transform: rotate(5deg);
+  -moz-border-radius: 50%;
+  -moz-transform: rotate(5deg);
   border-radius: 50%;
   transform: rotate(5deg);
   position: relative;
@@ -84,6 +160,10 @@ body {
   background-color: green;
   width: 25px;
   height: 30px;
+  -webkit-border-radius: 50%;
+  -webkit-transform: rotate(-15deg);
+  -moz-border-radius: 50%;
+  -moz-transform: rotate(-15deg);
   border-radius: 50%;
   transform: rotate(-15deg);
   position: relative;
@@ -99,6 +179,8 @@ body {
   left: 50%;
   margin-left: -30px;
   top: 170px;
+  -webkit-border-radius: 0 0 20px 20px;
+  -moz-border-radius: 0 0 20px 20px;
   border-radius: 0 0 20px 20px;
   border: 2px solid #AE4677;
   border-top: none;
@@ -107,6 +189,8 @@ body {
   height: 30px;
   width: 100px;
   position: relative;
+  -webkit-border-radius: 0 0 50% 50%;
+  -moz-border-radius: 0 0 50% 50%;
   border-radius: 0 0 50% 50%;
   border: 10px solid #E1698A;
   border-top: none;
@@ -121,6 +205,8 @@ body {
   background-color: #5D3F30;
   position: relative;
   z-index: 5;
+  -webkit-border-radius: 0 60% 0 0;
+  -moz-border-radius: 0 60% 0 0;
   border-radius: 0 60% 0 0;
   left: 40px;
   top: 90px;
@@ -133,6 +219,8 @@ body {
   background-color: #5D3F30;
   position: relative;
   z-index: 5;
+  -webkit-border-radius: 60% 0 0 0;
+  -moz-border-radius: 60% 0 0 0;
   border-radius: 60% 0 0 0;
   left: 135px;
 }
@@ -204,6 +292,8 @@ body {
   background-color: #F3F129;
   width: 20px;
   height: 20px;
+  -webkit-border-radius: 50% 50% 0 50%;
+  -moz-border-radius: 50% 50% 0 50%;
   border-radius: 50% 50% 0 50%;
   z-index: 5;
 }
@@ -212,9 +302,13 @@ body {
   display: inline-block;
   width: 20px;
   height: 20px;
+  -webkit-border-radius: 50% 50% 0 50%;
+  -webkit-transform: rotate(45deg);
+  -moz-border-radius: 50% 50% 0 50%;
+  -moz-transform: rotate(45deg);
   border-radius: 50% 50% 0 50%;
-  background-color: #70EBC2;
   transform: rotate(45deg);
+  background-color: #70EBC2;
   position: relative;
   left: 8px;
   top: -7px;
@@ -224,8 +318,12 @@ body {
   display: inline-block;
   width: 20px;
   height: 20px;
-  border-radius: 50% 50% 0 50%;
   background-color: #99D295;
+  -webkit-border-radius: 50% 50% 0 50%;
+  -webkit-transform: rotate(90deg);
+  -moz-border-radius: 50% 50% 0 50%;
+  -moz-transform: rotate(90deg);
+  border-radius: 50% 50% 0 50%;
   transform: rotate(90deg);
   position: relative;
   left: 22px;
@@ -236,8 +334,12 @@ body {
   display: inline-block;
   width: 20px;
   height: 20px;
-  border-radius: 50% 50% 0 50%;
   background-color: #EAB8D0;
+  -webkit-border-radius: 50% 50% 0 50%;
+  -webkit-transform: rotate(150deg);
+  -moz-border-radius: 50% 50% 0 50%;
+  -moz-transform: rotate(150deg);
+  border-radius: 50% 50% 0 50%;
   transform: rotate(150deg);
   position: relative;
   left: 23px;
@@ -248,8 +350,12 @@ body {
   display: inline-block;
   width: 20px;
   height: 20px;
-  border-radius: 50% 50% 0 50%;
   background-color: #FF9E68;
+  -webkit-border-radius: 50% 50% 0 50%;
+  -webkit-transform: rotate(70deg);
+  -moz-border-radius: 50% 50% 0 50%;
+  -moz-transform: rotate(70deg);
+  border-radius: 50% 50% 0 50%;
   transform: rotate(70deg);
   position: relative;
   left: 16px;
@@ -260,8 +366,12 @@ body {
   display: inline-block;
   width: 20px;
   height: 20px;
-  border-radius: 50% 50% 0 50%;
   background-color: #9B2019;
+  -webkit-border-radius: 50% 50% 0 50%;
+  -moz-transform: rotate(140deg);
+  -webkit-border-radius: 50% 50% 0 50%;
+  -moz-transform: rotate(140deg);
+  border-radius: 50% 50% 0 50%;
   transform: rotate(140deg);
   position: relative;
   left: 23px;
@@ -270,6 +380,8 @@ body {
 .petal-center {
   width: 15px;
   height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   background-color: #3A6246;
   position: absolute;
@@ -279,9 +391,9 @@ body {
 /*----------------ROCKET TRAIL---------*/
 .rocket-trail {
   width: 380px;
-  height: 250px;
+  height: 200px;
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   left: 0;
 }
 .trail-block {
@@ -319,13 +431,19 @@ body {
   background-color: #6533FF;
 }
 /*---------ROCKET ANIMATIONS----------*/
-/*
-.rocket-trail .trail-block:nth-child(odd){
-  -webkit-animation: updown 0.5s linear infinite;
+
+.rocket-trail.animate .trail-block:nth-child(odd){
+  -webkit-animation: updown 0.25s linear infinite;
+  -moz-animation: updown 0.25s linear infinite;
+  -0-animation: updown 0.25s linear infinite;
+  animation: updown 0.25s linear infinite;
 }
 
-.rocket-trail .trail-block:nth-child(even){
-  -webkit-animation: downup 0.5s linear infinite;
+.rocket-trail.animate .trail-block:nth-child(even){
+  -webkit-animation: downup 0.25s linear infinite;
+  -moz-animation: downup 0.25s linear infinite;
+  -0-animation: downup 0.25s linear infinite;
+  animation: downup 0.25s linear infinite;
 }
 
 @-webkit-keyframes updown {
@@ -338,13 +456,43 @@ body {
   50% { margin-top: 0;}
   100% {  margin-top: -15px;}
 }
-*/
+@-moz-keyframes updown {
+  0% {  margin-top: 0;}
+  50% { margin-top: -15px;}
+  100% {  margin-top: 0;}
+}
+@-moz-keyframes downup {
+  0% {  margin-top: -15px;}
+  50% { margin-top: 0;}
+  100% {  margin-top: -15px;}
+}
+@-o-keyframes updown {
+  0% {  margin-top: 0;}
+  50% { margin-top: -15px;}
+  100% {  margin-top: 0;}
+}
+@-o-keyframes downup {
+  0% {  margin-top: -15px;}
+  50% { margin-top: 0;}
+  100% {  margin-top: -15px;}
+}
+@keyframes updown {
+  0% {  margin-top: 0;}
+  50% { margin-top: -15px;}
+  100% {  margin-top: 0;}
+}
+@keyframes downup {
+  0% {  margin-top: -15px;}
+  50% { margin-top: 0;}
+  100% {  margin-top: -15px;}
+}
+
 
 /*----------------WAGON---------------*/
 .wagon-container {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  display: inline-block;
+  position: relative;
+  top: 250px;
   width: 520px;
   height: 220px;
 }
@@ -368,6 +516,37 @@ body {
   z-index: 7;
 }
 
+/*-----------Wagon Animations----------*/
+@-webkit-keyframes forward {
+  0% { -webkit-transform: translate(0, 0);}
+  25% { -webkit-transform: translate(0, -15px);}
+  50% { -webkit-transform: translate(15px, -15px);}
+  75% { -webkit-transform: translate(15px, 0)}
+  100% { -webkit-transform: translate(0, 0)}
+}
+
+@-moz-keyframes forward {
+  0% { -moz-transform: translate(0, 0);}
+  25% { -moz-transform: translate(0, -15px);}
+  50% { -moz-transform: translate(15px, -15px);}
+  75% { -moz-transform: translate(15px, 0)}
+  100% { -moz-transform: translate(0, 0)}
+}
+
+@-o-keyframes forward {
+  0% { -o-transform: translate(0, 0);}
+  25% { -o-transform: translate(0, -15px);}
+  50% { -o-transform: translate(15px, -15px);}
+  75% { -o-transform: translate(15px, 0)}
+  100% { -o-transform: translate(0, 0)}
+}
+@keyframes forward {
+  0% { transform: translate(0, 0);}
+  25% { transform: translate(0, -15px);}
+  50% { transform: translate(15px, -15px);}
+  75% { transform: translate(15px, 0)}
+  100% { transform: translate(0, 0)}
+}
 /*-----------WAGON ADD-ONS-------------*/
 .tape {
   background-color: #7D899C;
@@ -416,6 +595,8 @@ body {
   left: 390px;
   top: 143px;
   z-index: 2;
+  -webkit-border-radius: 0 3px 10px 0;
+  -moz-border-radius: 0 3px 10px 0;
   border-radius: 0 3px 10px 0;
 }
 .frontbar:after {
@@ -428,7 +609,12 @@ body {
   top: -50px;
   background-color: #4B291B;
   z-index: 2;
+  -webkit-transform: rotate(75deg);
+  -moz-transform: rotate(75deg);
+  -o-transform: rotate(75deg);
   transform: rotate(75deg);
+  -webkit-border-radius: 0 2px 0 0;
+  -moz-border-radius: 0 2px 0 0;
   border-radius: 0 2px 0 0;
 }
 .frontbar:before {
@@ -441,6 +627,10 @@ body {
   position: absolute;
   top: -135px;
   left: 58px;
+  -webkit-transform: rotate(-15deg);
+  -webkit-border-radius: 2px;
+  -moz-transform: rotate(-15deg);
+  -moz-border-radius: 2px;
   transform: rotate(-15deg);
   border-radius: 2px;
 }
@@ -458,12 +648,16 @@ body {
 .bar.left {
   left: 170px;
   top: 135px;
+  -webkit-transform: rotate(-50deg);
+  -moz-transform: rotate(-50deg);
   transform: rotate(-50deg);
   z-index: 0;
 }
 
 .bar.right {
   left: 360px;
+  -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
   transform: rotate(50deg);
   top: 140px;
 }
@@ -472,6 +666,8 @@ body {
   width: 60px;
   height: 60px;
   background-color: #181818;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   position: absolute;
   top: 150px;
@@ -489,6 +685,8 @@ body {
 .wheel > .middle {
   width: 40px;
   height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   background-color: #7C8998;
   position: relative;
@@ -501,6 +699,8 @@ body {
 .middle > .center {
   width: 20px;
   height: 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   background-color: #434040;
   position: relative;
@@ -514,6 +714,8 @@ body {
   background-color: #C1956B;
   width: 300px;
   height: 15px;
+  -webkit-border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
   border-radius: 0 10px 10px 0;
   position: absolute;
   left: 110px;
@@ -527,6 +729,8 @@ body {
   height: 80px;
   top: 40px;
   left: 0;
+  -webkit-border-radius: 0 40px 40px 0;
+  -moz-border-radius: 0 40px 40px 0;
   border-radius: 0 40px 40px 0;
   z-index: 5;
 }
