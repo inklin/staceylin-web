@@ -1,56 +1,46 @@
 /* Apply a natural box layout model to all elements, but allowing components to change  */
-html {
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
 body {
-  color: #505756;
-  font-family: Helvetica, Arial;
-  font-weight: 350;
-  font-size: 23px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #808080;
+  font-size: 1.5em;
 }
-
-header {
-  text-align: left;
-  font-family: Arial;
-  font-size: 30px;
-  font-weight: 500;
+.content {
+  padding: 10% 10% 0 10%;
+}
+.title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 4em;
+  color: #2A2B35;
+}
+a {
   color: #0ABAB5;
-  margin-left: 20px;
-  margin-top: 40px;
+  text-decoration: none;
+  position: relative;
 }
-
-h2 {
-  font-family: Helvetica;
-  color: orange;
-  font-size: 25px;
+a::after {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  content: "";
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(5px);
 }
-
-h3 {
-  font-family: Helvetica;
-  text-transform: uppercase;
+a:hover::after, a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(10px);
+}
+.contact-link {
+  margin: 0 10px;
+  font-size: 0.8em;
   color: #0ABAB5;
-  font-size: 20px;
-}
-
-.intro {
-  margin-left: 20px;
-}
-
-.latest {
-  padding: 20px;
-  text-align: center;
-}
-
-.contact {
-  padding-left: 20px;
-}
-
-.complete {
-  padding-left: 20px;
-  font-size: 20px;
 }
