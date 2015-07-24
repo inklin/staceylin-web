@@ -209,7 +209,7 @@ body {
   -moz-border-radius: 0 60% 0 0;
   border-radius: 0 60% 0 0;
   left: 40px;
-  top: 90px;
+  top: 91px;
 }
 .jacket:after {
   content: "";
@@ -232,7 +232,7 @@ body {
   border-color: transparent transparent #4c3427 transparent;
   position: relative;
   z-index: 5;
-  top: 12px;
+  top: 13px;
   left: -10px;
 }
 .arm-right {
@@ -243,7 +243,7 @@ body {
   border-color: transparent transparent transparent #4c3427;
   position: relative;
   left: 240px;
-  top: -66px;
+  top: -65px;
   z-index: 5;
 }
 .bow {
