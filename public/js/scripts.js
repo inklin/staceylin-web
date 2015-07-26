@@ -1,52 +1,24 @@
 $(document).ready(function(){
   var workItems = [
     { name: 'dog',
-      image: 'img/dog.png',
+      image: 'img/friendlydog.png',
       description: "I drew the Softbank mascot using CSS.",
       layout: 'portrait',
       link: 'friendlydog'
     },
     {
-      name: 'inbox zero',
-      image: 'img/inboxzero.png',
-      description: "I replicated Google Inbox's animation with CSS.",
-      layout: 'landscape',
-      link: 'inbox-zero'
-    },
-    {
       name: 'music player',
-      image: 'img/musicplayer.png',
+      image: 'img/music-player.png',
       description: "I created a looping music player using HTML5 audio, jQuery, and CSS.",
       layout: 'portrait',
       link: 'music-player'
     },
     {
-      name: 'cherry blossom',
-      image: 'img/cherryblossom.png',
-      description: "I drew trees using HTML5 canvas with recursive functions in JavaScript.",
+      name: 'bing bong',
+      image: 'img/bingbong.png',
+      description: "I created a looping music player using HTML5 audio, jQuery, and CSS.",
       layout: 'landscape',
-      link: 'cherry-blossoms'
-    },
-    {
-      name: 'weather',
-      image: 'img/weather.png',
-      description: "I used geolocation and a weather api to display the current weather.",
-      layout: 'landscape',
-      link: 'current-weather'
-    },
-    {
-      name: 'spiral',
-      image: 'img/spiral.png',
-      description: "I drew Archimedean spirals with HTML5 canvas.",
-      layout: 'portrait',
-      link: 'spiral'
-    },
-    {
-      name: 'elephants',
-      image: 'img/elephants.png',
-      description: "I used AngularJS to create this simple quiz app.",
-      layout: 'landscape',
-      link: 'how-many-elephants'
+      link: 'bing-bong'
     },
     {
       name: 'pool clock',
@@ -56,11 +28,53 @@ $(document).ready(function(){
       link: 'pool-clock'
     },
     {
+      name: 'spiral',
+      image: 'img/spiral.png',
+      description: "I drew Archimedean spirals with HTML5 canvas.",
+      layout: 'square',
+      link: 'spiral'
+    },
+    {
+      name: 'elephants',
+      image: 'img/elephant.png',
+      description: "I used AngularJS to create this simple quiz app.",
+      layout: 'landscape',
+      link: 'how-many-elephants'
+    },
+    {
+      name: 'inbox zero',
+      image: 'img/inboxzero.png',
+      description: "I replicated Google Inbox's animation with CSS.",
+      layout: 'landscape',
+      link: 'inbox-zero'
+    },
+    {
       name: 'neon lights',
       image: 'img/neonlights.png',
       description: "I used CSS3 animations to create flickering neon lights.",
       layout: 'landscape',
       link: 'neon-lights'
+    },
+    {
+      name: 'tic tac toe',
+      image: 'img/tictactoe.png',
+      description: "A simple tic tac toe game with JavaScript.",
+      layout: 'square',
+      link: 'tictactoe'
+    },
+    {
+      name: 'cherry blossom',
+      image: 'img/cherryblossom.png',
+      description: "I drew trees using HTML5 canvas with recursive functions in JavaScript.",
+      layout: 'portrait',
+      link: 'cherry-blossoms'
+    },
+    {
+      name: 'weather',
+      image: 'img/weather.png',
+      description: "I used geolocation and a weather api to display the current weather.",
+      layout: 'square',
+      link: 'current-weather'
     },
     {
       name: 'triangle',
@@ -73,7 +87,7 @@ $(document).ready(function(){
       name: 'digital clock',
       image: 'img/clock.png',
       description: "One of my very first pages, a digital clock with JavaScript.",
-      layout: 'landscape',
+      layout: 'square',
       link: 'digital-clock'
     },
     {
@@ -94,7 +108,7 @@ $(document).ready(function(){
   var grid = $('.portfolio').masonry({
       // options
       itemSelector: '.work-item',
-      columnWidth: 200
+      columnWidth: 100,
   });
 
 });

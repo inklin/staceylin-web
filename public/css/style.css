@@ -47,18 +47,28 @@ body {
   font-size: 0.8em;
   color: #0ABAB5;
 }
-
+.work-item {
+}
+.work-item.square {
+  width: 295px;
+  height: 295px;
+}
 .work-item.portrait {
   width: 295px;
-  height: 340px;
+  height: 387px;
 }
 .work-item.landscape {
-  width: 380px;
-  height: 220px;
+  width: 295px;
+  height: 229px;
 }
 .background {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
+}
+.portfolio {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
