@@ -5,17 +5,19 @@
     box-sizing: border-box;
 }
 body {
-  font-family: 'Times New Roman', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  color: #000;
+  color: #707070;
   font-size: 1.3em;
   text-align: center;
   background-color: #FFF;
 }
 .content {
-  margin: 50px 50px 50px 50px;
+  margin: 70px 50px 50px 50px;
 }
 .profile-photo {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   width: 130px;
   height: 130px;
@@ -32,7 +34,8 @@ body {
   margin: 5px 0;
 }
 .link {
-  color: rgba(0,0,0,0.5);
+  color: #2A2B35;
+  font-weight: bold;
   text-decoration: none;
   position: relative;
 }
@@ -43,14 +46,20 @@ body {
   width: 100%;
   height: 4px;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #e6e6e6;
   content: "";
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   -webkit-transform: translateY(5px);
+  -moz-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transform: translateY(5px);
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transform: translateY(5px);
 }
 .link:hover::after, .link:focus::after {
   opacity: 1;
   -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
 }
 .contact {
   margin: 50px 0 0 0;
@@ -66,7 +75,6 @@ body {
 .portfolio {
   margin: 0 auto;
 }
-
 .masonry-container {
   max-width: 1060px;
   width: 80%;
@@ -85,6 +93,36 @@ body {
 .work-item.landscape {
   height: 194px;
 }
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  line-height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #2A2B35;
+  opacity: 0;
+  color: #FFF;
+  padding: 0 25px;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.mask:hover {
+  opacity: 1;
+}
+.mask h2 {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.mask p {
+  font-size: 0.8em;
+}
 .background {
   width: 100%;
   height: 100%;
@@ -92,21 +130,25 @@ body {
   background-size: contain;
 }
 
-/*---------------ABOUT ME--------------*/
-.about {
-  margin: 50px 0 0 0;
-}
-.about-photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  display: inline-block;
-}
-.about-title {
-  text-transform: uppercase;
-  text-align: left;
-}
-.about-text {
-  display: inline-block;
-  vertical-align: top;
+/*------------MOBILE---------------*/
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    body {
+      font-size: 1.7em;
+    }
+    .link {
+      text-decoration: underline;
+    }
+    .content span {
+      margin: 10px 0;
+    }
+    .contact-link {
+      text-decoration: none;
+      font-size: 1em;
+    }
 }

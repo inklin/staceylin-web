@@ -3,33 +3,33 @@ $(document).ready(function(){
     {
       name: 'cherry blossom',
       image: 'img/cherryblossom.png',
-      description: "I drew trees using HTML5 canvas with recursive functions in JavaScript.",
+      description: "I drew trees using HTML5 canvas with a recursive function in JavaScript.",
       layout: 'portrait',
       link: 'cherry-blossoms'
     },
     {
       name: 'weather',
       image: 'img/weather.png',
-      description: "I used geolocation and a weather api to display the current weather.",
+      description: "I used geolocation and a weather API to display the current weather.",
       layout: 'square',
-      link: 'current-weather'
+      link: 'weather'
     },
     { name: 'dog',
       image: 'img/friendlydog.png',
-      description: "I drew the Softbank mascot using CSS.",
+      description: "Pure CSS dog and animation, based on the Softbank dog mascot.",
       layout: 'portrait',
-      link: 'friendlydog'
+      link: 'friendly-dog'
     },
     { name: 'Draw a Face',
       image: 'img/drawaface.png',
-      description: "I drew Rocket and Groot with html2canvas.js",
+      description: "I drew Rocket and Groot with processing.js. This was my first page.",
       layout: 'square',
       link: 'drawaface'
     },
     {
       name: 'bing bong',
       image: 'img/bingbong.png',
-      description: "I created a looping music player using HTML5 audio, jQuery, and CSS.",
+      description: "I recreated Inside Out's Bing Bong with CSS animations.",
       layout: 'landscape',
       link: 'bing-bong'
     },
@@ -41,18 +41,18 @@ $(document).ready(function(){
       link: 'inbox-zero'
     },
     {
-      name: 'pool clock',
-      image: 'img/poolclock.png',
-      description: "I used HTML5 canvas to create this pool clock.",
+      name: 'elephants',
+      image: 'img/elephants.png',
+      description: "I used AngularJS to create this simple quiz app.",
       layout: 'square',
-      link: 'pool-clock'
+      link: 'how-many-elephants'
     },
     {
       name: 'tic tac toe',
       image: 'img/tictactoe.png',
       description: "A simple tic tac toe game with JavaScript.",
       layout: 'square',
-      link: 'tictactoe'
+      link: 'tic-tac-toe'
     },
     {
       name: 'triangle',
@@ -87,40 +87,40 @@ $(document).ready(function(){
       image: 'img/clock.png',
       description: "One of my very first pages, a digital clock with JavaScript.",
       layout: 'square',
-      link: 'digital-clock'
+      link: 'digitalclock'
     },
     {
       name: 'neon lights',
       image: 'img/neonlights.png',
       description: "I used CSS3 animations to create flickering neon lights.",
       layout: 'landscape',
-      link: 'neon-lights'
+      link: 'neonlights'
     },
     {
       name: 'pong',
       image: 'img/pong.png',
-      description: "I used HTML5 canvas and JavaScript to create the classic game Pong.",
+      description: "I used HTML5 canvas and JavaScript to create the classic game of Pong.",
       layout: 'landscape',
       link: 'pool-clock'
     },
     { name: 'Rainbow Piano',
       image: 'img/piano.png',
-      description: "A rainbow piano using Math sine and JavaScript.",
+      description: "A rainbow piano using Math sine function and JavaScript.",
       layout: 'landscape',
       link: 'rainbowpiano'
     },
     { name: 'Buzz Quiz',
       image: 'img/buzzquiz.png',
-      description: "A simple personality quiz based on Buzzfeed quizzes.",
+      description: "A simple personality quiz inspired by Buzzfeed quizzes.",
       layout: 'portrait',
-      link: 'buzzquiz'
+      link: 'buzz-quiz'
     },
     {
-      name: 'elephants',
-      image: 'img/elephants.png',
-      description: "I used AngularJS to create this simple quiz app.",
+      name: 'pool clock',
+      image: 'img/poolclock.png',
+      description: "I used HTML5 canvas and JavaScript to create this pool clock.",
       layout: 'square',
-      link: 'how-many-elephants'
+      link: 'pool-clock'
     },
     {
       name: 'love calculator',
@@ -133,7 +133,7 @@ $(document).ready(function(){
 
   for (var i = 0; i < workItems.length; i++){
     var item = workItems[i];
-    var portfolioItem = "<div class='work-item " + item.layout + "' ><a href='" + item.link + "' target='new'><img src='" + item.image + "' class='background'></a></div>";
+    var portfolioItem = "<a href='" + item.link + "' target='new'><div class='work-item " + item.layout + "' ><div class='mask'><h2>" + item.name + "</h2><p>" + item.description + "</p></div><img src='" + item.image + "' class='background'></div></a>";
     $('.portfolio').append(portfolioItem);
   }
 
