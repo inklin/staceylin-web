@@ -5,21 +5,34 @@
     box-sizing: border-box;
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-weight: 300;
-  color: #808080;
-  font-size: 1.5em;
+  color: #000;
+  font-size: 1.3em;
+  text-align: center;
+  background-color: #FFF;
 }
 .content {
-  padding: 80px 10% 0 10%;
+  margin: 50px 50px 50px 50px;
+}
+.profile-photo {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
 }
 .title {
   font-family: 'Libre Baskerville', serif;
   font-size: 4em;
   color: #2A2B35;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+.content span {
+  display: block;
+  margin: 5px 0;
 }
 .link {
-  color: #0ABAB5;
+  color: rgba(0,0,0,0.5);
   text-decoration: none;
   position: relative;
 }
@@ -40,26 +53,37 @@ body {
   -webkit-transform: translateY(10px);
 }
 .contact {
-  margin: 30px 0;
+  margin: 50px 0 0 0;
 }
 .contact-link {
-  margin: 0 10px;
-  font-size: 0.8em;
-  color: #0ABAB5;
+  font-family: Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #2A2B35;
+  margin: 0 30px 0 0;
+  font-size: 0.7em;
+}
+.portfolio {
+  margin: 0 auto;
+}
+
+.masonry-container {
+  max-width: 1060px;
+  width: 80%;
+  margin: 0 auto;
 }
 .work-item {
+  width: 250px;
+  margin: 20px 0 0 0;
 }
 .work-item.square {
-  width: 295px;
-  height: 295px;
+  height: 250px;
 }
 .work-item.portrait {
-  width: 295px;
-  height: 387px;
+  height: 328px;
 }
 .work-item.landscape {
-  width: 295px;
-  height: 229px;
+  height: 194px;
 }
 .background {
   width: 100%;
@@ -67,8 +91,22 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.portfolio {
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
+
+/*---------------ABOUT ME--------------*/
+.about {
+  margin: 50px 0 0 0;
+}
+.about-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.about-title {
+  text-transform: uppercase;
+  text-align: left;
+}
+.about-text {
+  display: inline-block;
+  vertical-align: top;
 }

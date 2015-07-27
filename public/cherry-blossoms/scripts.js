@@ -22,7 +22,7 @@ $(document).ready(function() {
 
   function init(){
     // Draw the background of the canvas
-    ctx.fillStyle = "#EFFBF5";
+    ctx.fillStyle = "#67A2B3";
     ctx.fillRect(0, 0, w, h);
 
     // Draw the tree trunk
