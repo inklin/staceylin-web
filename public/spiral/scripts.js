@@ -72,7 +72,6 @@ $(document).ready(function() {
     } else {
       shapeIndex = ( shapeIndex + 1 ) % shapeMaxIndex;
       incrementSize = shapeArray[shapeIndex];
-      console.log(incrementSize);
     }
   }
 
