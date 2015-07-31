@@ -28,6 +28,7 @@ $(document).ready(function(){
         x: x,
         y: y,
       }],
+      pathLimit: randomNum(10, 35),
       diverge: diverge,
       hasFired: false
     });
@@ -35,15 +36,22 @@ $(document).ready(function(){
 
   // Update Lightning 
   var updateLightning = function (){
-    var lightningIndex = Lightning.length - 1;
-    while (Lightning[lightningIndex]){
-      var light = Lightning[lightningIndex];
+    var i = Lightning.length - 1;
+    while (i--){
+      var light = Lightning[i];
 
+      // Get the last path object and add to it
+      light.path.push({
+        x: light.path[light.path.length - 1].x + randomNum(0, light.xRange),
+        y: light.path[light.path.length - 1].y + randomNum(0, light.yRange)
+      });
 
-      lightningIndex --;
+      if (light.path.length > light.path.pathLimit){
+        Lightning.splice(lightningIndex, 1);
+      }
+
+      light.hasFired = true;
     }
   };
-
-
 
 });
