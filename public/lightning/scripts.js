@@ -36,7 +36,7 @@ $(document).ready(function(){
 
   // Update Lightning 
   var updateLightning = function (){
-    var i = Lightning.length - 1;
+    var i = Lightning.length;
     while (i--){
       var light = Lightning[i];
 
@@ -53,5 +53,17 @@ $(document).ready(function(){
       light.hasFired = true;
     }
   };
+
+  // Render the Lightning
+  var renderLightning = function(){
+    var i = Lightning.length;
+    while (i--){
+      var light = Lightning[i];
+
+      
+    }
+  };
+
+
 
 });
