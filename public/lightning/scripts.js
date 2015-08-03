@@ -60,7 +60,17 @@ $(document).ready(function(){
     while (i--){
       var light = Lightning[i];
 
-      
+      ctx.strokeStyle = "#FFF";
+      ctx.lineWidth = 2;
+
+      ctx.beginPath();
+      var pathCount = light.path.length;
+
+      for (var j = 0; j < pathCount; j++){
+        ctx.lineTo(light.path[j].x, light.path[j].y);
+      }
+
+      ctx.stoke();
     }
   };
 
