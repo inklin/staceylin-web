@@ -7,7 +7,7 @@ $(document).ready(function(){
   var width = $(window).width();
   var height = $(window).height();
   var currentLightTime = 0;
-  var totalLightTime = 45;
+  var totalLightTime = 40;
 
   canvas.width = width;
   canvas.height = height;
@@ -17,7 +17,7 @@ $(document).ready(function(){
 
   // Random number min inclusive, max exclusive
   var randomNum = function (min, max){
-    return (Math.random() * (max - min) + min);
+    return (Math.floor(Math.random() * (max - min) + min));
   };
 
   // Create Lightning
@@ -25,8 +25,8 @@ $(document).ready(function(){
     Lightning.push({
       x: x,
       y: y,
-      xRange: randomNum(5, 30),
-      yRange: randomNum(10, 25),
+      xRange: randomNum(20, 70),
+      yRange: randomNum(20, 40),
       path: [{
         x: x,
         y: y,
@@ -65,18 +65,20 @@ $(document).ready(function(){
 
       ctx.strokeStyle = 'hsla(0, 100%, 100%, '+randomNum(10, 100)/100+')';
 
-      if(randomNum(0, 30) === 0){
+      if(randomNum(0, 5) === 0){
         ctx.lineWidth = 2;
       }
-      if(randomNum(0, 60) === 0){
+      if(randomNum(0, 25) === 0){
         ctx.lineWidth = 3;
       }
-      if(randomNum(0, 90) === 0){
+      if(randomNum(0, 50) === 0){
         ctx.lineWidth = 4;
       }
-      if(randomNum(0, 120) === 0){
+
+      if(randomNum(0, 100) === 0){
         ctx.lineWidth = 5;
       }
+
       if(randomNum(0, 150) === 0){
         ctx.lineWidth = 6;
       }
@@ -142,7 +144,7 @@ $(document).ready(function(){
       }
       setInterval(function(){
         lightningLoop();
-      }, 80);
+      }, 40);
     }, 100);
   };
 

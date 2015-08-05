@@ -24,6 +24,7 @@ canvas {
 }
 
 .css-typing {
+  padding: 1em;
   color: #FFF;
   font-size: 2em;
   position: fixed;
