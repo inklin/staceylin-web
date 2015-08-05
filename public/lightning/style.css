@@ -1,11 +1,53 @@
 body {
-
+  font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 canvas {
-  background-color: black;
+  background-color: #000;
 }
+
 .navigation {
   position: absolute;
-  top: 0;
+  top: 30px;
+  left: 40px;
+  color: #FFF;
+  font-size: 0.9em;
+  word-spacing: 30px;
+  text-transform: uppercase;
+}
+.navigation a {
+  color: #FFF;
+}
+.navigation a:visited {
+  color: #FFD700;
+}
+
+.css-typing {
+  color: #FFF;
+  font-size: 2em;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  width: 600px;
+  margin-left: -300px;
+  white-space: nowrap;
+  letter-spacing: 3px;
+  overflow: hidden;
+  -webkit-animation: typing 5s steps(50, end);
+  -moz-animation: typing 5s steps(50, end);
+  -o-animation: typing 5s steps(50, end);
+  animation: typing 5s steps(50, end);
+}
+
+@-webkit-keyframes typing {
+  from {width: 0;}
+}
+@-moz-keyframes typing {
+  from {width: 0;}
+}
+@-o-keyframes typing {
+  from {width: 0;}
+}
+@keyframes typing {
+  from {width: 0;}
 }

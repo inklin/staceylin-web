@@ -25,8 +25,8 @@ $(document).ready(function(){
     Lightning.push({
       x: x,
       y: y,
-      xRange: randomNum(5, 35),
-      yRange: randomNum(5, 35),
+      xRange: randomNum(5, 30),
+      yRange: randomNum(10, 25),
       path: [{
         x: x,
         y: y,
@@ -110,7 +110,7 @@ $(document).ready(function(){
     if (currentLightTime >= totalLightTime){
 
       var newX = randomNum(100, width - 100);
-      var newY = randomNum(0, height / 2);
+      var newY = randomNum(100, height / 2);
       var createCount = randomNum(1, 3);
       while(createCount > 0){
         createLightning(newX, newY, true);
@@ -136,13 +136,21 @@ $(document).ready(function(){
   };
 
   var initLightning = function(){
-    for (var i = 0; i < 5; i++){
-      createLightning(100, 200, true);
-    }
-    setInterval(function(){
-      lightningLoop();
-    }, 80);
+    setTimeout(function(){
+      for (var i = 0; i < 4; i++){
+        createLightning(width/2, height/2, true);
+      }
+      setInterval(function(){
+        lightningLoop();
+      }, 80);
+    }, 100);
   };
+
+  setTimeout(function(){
+    $('.intro').fadeOut(2000, function(){
+      initLightning();
+    });
+  }, 6000);
 
 
 });
