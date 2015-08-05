@@ -6,6 +6,9 @@ $(document).ready(function(){
 
   var width = $(window).width();
   var height = $(window).height();
+  var currentLightTime = 0;
+  var totalLightTime = 45;
+
   canvas.width = width;
   canvas.height = height;
 
@@ -22,13 +25,13 @@ $(document).ready(function(){
     Lightning.push({
       x: x,
       y: y,
-      xRange: randomNum(5, 30),
-      yRange: randomNum(5, 30),
+      xRange: randomNum(5, 35),
+      yRange: randomNum(5, 35),
       path: [{
         x: x,
         y: y,
       }],
-      pathLimit: randomNum(10, 35),
+      pathLimit: randomNum(10, 25),
       diverge: diverge,
       hasFired: false
     });
@@ -42,12 +45,12 @@ $(document).ready(function(){
 
       // Get the last path object and add to it
       light.path.push({
-        x: light.path[light.path.length - 1].x + randomNum(0, light.xRange),
+        x: light.path[light.path.length - 1].x + (randomNum(0, light.xRange)-(light.xRange/2)),
         y: light.path[light.path.length - 1].y + randomNum(0, light.yRange)
       });
 
-      if (light.path.length > light.path.pathLimit){
-        Lightning.splice(lightningIndex, 1);
+      if (light.path.length > light.pathLimit){
+        Lightning.splice(i, 1);
       }
 
       light.hasFired = true;
@@ -60,20 +63,86 @@ $(document).ready(function(){
     while (i--){
       var light = Lightning[i];
 
-      ctx.strokeStyle = "#FFF";
-      ctx.lineWidth = 2;
+      ctx.strokeStyle = 'hsla(0, 100%, 100%, '+randomNum(10, 100)/100+')';
+
+      if(randomNum(0, 30) === 0){
+        ctx.lineWidth = 2;
+      }
+      if(randomNum(0, 60) === 0){
+        ctx.lineWidth = 3;
+      }
+      if(randomNum(0, 90) === 0){
+        ctx.lineWidth = 4;
+      }
+      if(randomNum(0, 120) === 0){
+        ctx.lineWidth = 5;
+      }
+      if(randomNum(0, 150) === 0){
+        ctx.lineWidth = 6;
+      }
 
       ctx.beginPath();
       var pathCount = light.path.length;
+      ctx.moveTo(light.x, light.y);
 
       for (var j = 0; j < pathCount; j++){
         ctx.lineTo(light.path[j].x, light.path[j].y);
+
+        if (light.diverge){
+          if (randomNum(0, 100) === 0){
+            light.diverge = false;
+            createLightning(light.path[j].x, light.path[j].y, false);
+          }
+        }
       }
 
-      ctx.stoke();
+      if (!light.hasFired){
+        ctx.fillStyle = 'rgba(255, 255, 255, '+randomNum(4, 12)/100+')';
+        ctx.fillRect(0, 0, width, height);
+      }
+
+      ctx.stroke();
     }
   };
 
+  var lightningTimer = function(){
+    currentLightTime++;
+    if (currentLightTime >= totalLightTime){
+
+      var newX = randomNum(100, width - 100);
+      var newY = randomNum(0, height / 2);
+      var createCount = randomNum(1, 3);
+      while(createCount > 0){
+        createLightning(newX, newY, true);
+        createCount --;
+      }
+      // Reset light time and create a new time limit
+      currentLightTime = 0;
+      totalLightTime = randomNum(40, 80);
+    }
+  };
+
+  // Clear canvas
+  var clearCanvas = function(){
+      ctx.fillStyle = 'rgba(0,0,0,'+randomNum(1, 30)/100+')';
+      ctx.fillRect(0,0, width, height);
+  };
+  
+  var lightningLoop = function(){
+    clearCanvas();
+    updateLightning();
+    lightningTimer();
+    renderLightning();
+  };
+
+  var initLightning = function(){
+    for (var i = 0; i < 5; i++){
+      createLightning(100, 200, true);
+    }
+    setInterval(function(){
+      lightningLoop();
+    }, 80);
+  };
 
 
 });
