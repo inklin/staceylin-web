@@ -7,7 +7,7 @@ $(document).ready(function(){
   var width = $(window).width();
   var height = $(window).height();
   var currentLightTime = 0;
-  var totalLightTime = 40;
+  var totalLightTime = 50;
 
   canvas.width = width;
   canvas.height = height;
@@ -71,15 +71,15 @@ $(document).ready(function(){
       if(randomNum(0, 25) === 0){
         ctx.lineWidth = 3;
       }
-      if(randomNum(0, 50) === 0){
+      if(randomNum(0, 100) === 0){
         ctx.lineWidth = 4;
       }
 
-      if(randomNum(0, 100) === 0){
+      if(randomNum(0, 150) === 0){
         ctx.lineWidth = 5;
       }
 
-      if(randomNum(0, 150) === 0){
+      if(randomNum(0, 180) === 0){
         ctx.lineWidth = 6;
       }
 
@@ -110,10 +110,9 @@ $(document).ready(function(){
   var lightningTimer = function(){
     currentLightTime++;
     if (currentLightTime >= totalLightTime){
-
       var newX = randomNum(100, width - 100);
       var newY = randomNum(100, height / 2);
-      var createCount = randomNum(1, 3);
+      var createCount = randomNum(2, 3);
       while(createCount > 0){
         createLightning(newX, newY, true);
         createCount --;
@@ -139,12 +138,12 @@ $(document).ready(function(){
 
   var initLightning = function(){
     setTimeout(function(){
-      for (var i = 0; i < 4; i++){
+      for (var i = 0; i < 3; i++){
         createLightning(width/2, height/2, true);
       }
       setInterval(function(){
         lightningLoop();
-      }, 40);
+      }, 50);
     }, 100);
   };
 
