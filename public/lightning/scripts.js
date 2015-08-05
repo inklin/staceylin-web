@@ -31,7 +31,7 @@ $(document).ready(function(){
         x: x,
         y: y,
       }],
-      pathLimit: randomNum(10, 25),
+      pathLimit: randomNum(10, 20),
       diverge: diverge,
       hasFired: false
     });
