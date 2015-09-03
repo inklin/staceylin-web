@@ -4,16 +4,16 @@ $(document).ready(function() {
     var hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
-    var meridian = "AM"
+    var meridian = "AM";
     /* pad with zeros if required */
     /* converting hours to am and pm */
     if (hours > 12){
       hours = hours - 12;
-      var meridian = "PM"
+      meridian = "PM";
     }
 
     if (hours === 12){
-      var meridian = "PM"
+      meridian = "PM";
     }
 
     /* 0AM and 0PM should be 12 */
