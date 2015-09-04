@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Typing Test | Stacey Lin</title>
+    <title>Words Per Minute | Stacey Lin</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="/js/jquery-1.11.2.min.js"></script>
@@ -27,19 +27,18 @@
         </div>
         <!-- Input box -->
         <div>
-          <textarea id="userInput" type="text" placeholder="type the words here"></textarea>
+          <textarea id="user-input" type="text" placeholder="type the words here"></textarea>
         </div>
-        <!-- Stats -->
-        <div>
-          <div>
-            <p id="result"></p>
-          </div>
-          <div id="mistakes">
-          </div>
-          <div>
-            <p id="adjustedResult"></p>
-          </div>
+        <!-- Result -->
+
+        <div class="modal">
+          <!-- Result -->
+          <p id="result"></p>
+          <div id="mistakes"></div>
+          <p id="adjustedResult"></p>
+          <button id="reset-btn">Reset Test</button>
         </div>
+
       </div>  
 
     </div>
