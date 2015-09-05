@@ -10,7 +10,7 @@ $(document).ready(function() {
 
   function init(){
     testStarted = false;
-    seconds = 10;
+    seconds = 60;
 
     var texts = [];
     textIndex = getRandomNum(0, 3);

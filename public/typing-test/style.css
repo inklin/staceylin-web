@@ -6,13 +6,32 @@ body {
 h1 {
   text-align: center;
   font-size: 30px;
-  margin: 30px;
+  margin: 20px 0 20px 0;
+}
+
+.navigation {
+  padding: 15px 0 0 30px;
+  word-spacing: 20px;
+  text-transform: lowercase;
+}
+.navigation a {
+  color: #2F4F4F;
+}
+.navigation a:visited {
+  color: #121f1f;
+}
+
+.instruction {
+  text-align: center;
+  margin: 20px;
+  font-size: 15px;
+  color: #2F4F4F;
+  font-style: italic;
 }
 
 .test-container {
   width: 850px;
   margin: 0 auto;
-  position: relative;
 }
 
 .left-container {
