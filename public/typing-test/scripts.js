@@ -13,9 +13,9 @@ $(document).ready(function() {
     seconds = 60;
 
     var texts = [];
-    textIndex = getRandomNum(0, 3);
+    textIndex = getRandomNum(0, texts.length - 1);
     while (textIndex === currentIndex){
-      textIndex = getRandomNum(0, 3);
+      textIndex = getRandomNum(0, texts.length - 1);
     }
     currentIndex = textIndex;
     texts[0] = "<p>When Dorothy was left alone she began to feel hungry. So she went to the cupboard and cut herself some bread, which she spread with butter." +
@@ -47,6 +47,7 @@ $(document).ready(function() {
     "</p><p>The two children were so fond of one another that they always held each other by the hand when they went out together, and when Snow-white said: 'We will not leave each other,' Rose-red answered: 'Never so long as we live,' " +
     "and their mother would add: 'What one has she must share with the other.'</p><p>They often ran about the forest alone and gathered red berries, and no beasts did them any harm, but came close to them trustfully. The little hare would " +
     "eat a cabbage-leaf out of their hands, the roe grazed by their side, the stag leapt merrily by them, and the birds sat still upon the boughs, and sang whatever they knew.</p>";
+
     $('.text-container').html(texts[currentIndex]);
 
     $('#timer').html('01:00');
