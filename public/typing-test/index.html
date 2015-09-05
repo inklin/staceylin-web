@@ -3,6 +3,7 @@
 <html>
   <head>
     <title>Words Per Minute | Stacey Lin</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="/js/jquery-1.11.2.min.js"></script>
@@ -17,29 +18,28 @@
 
     <div class="content">
       <h1> Words per Minute</h1>
-      <div>
-        <!-- Timer -->
-        <div>
-          <span id="timer">01:00</span>
+        <div class="test-container">
+          <!-- Timer -->
+          <div class="left-container">
+            <div class="timer-container">
+              <span id="timer">01:00</span>
+            </div>
+            <!-- Result -->
+            <div class="results-container">
+              <p id="totalResult" class="results"></p>
+              <p class="results">Mistakes: <span id="mistakes-number"></span></p>
+              <div id="mistakes"></div>
+              <p id="adjustedResult" class="results"></p>
+              <button id="reset-btn" class="reset">Reset Test</button>
+            </div>
+          </div>
+          <div class="right-container">
+            <!-- Words to type -->
+            <div class="text-container" id="text-passage"></div>
+            <!-- Input box -->
+            <textarea id="user-input" type="text" placeholder="Type the text here." rows="10"></textarea>
+          </div>
         </div>
-        <!-- Words to type -->
-        <div id="text-container">
-        </div>
-        <!-- Input box -->
-        <div>
-          <textarea id="user-input" type="text" placeholder="type the words here"></textarea>
-        </div>
-        <!-- Result -->
-
-        <div class="modal">
-          <!-- Result -->
-          <p id="result"></p>
-          <div id="mistakes"></div>
-          <p id="adjustedResult"></p>
-          <button id="reset-btn">Reset Test</button>
-        </div>
-
-      </div>  
 
     </div>
   </body>

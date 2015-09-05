@@ -2,17 +2,22 @@ $(document).ready(function() {
   
   var testStarted;
   var seconds;
-  
+  var currentIndex;
+
   function getRandomNum(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   function init(){
     testStarted = false;
-    seconds = 60;
+    seconds = 10;
 
     var texts = [];
-    var textIndex = getRandomNum(0, 2);
+    textIndex = getRandomNum(0, 3);
+    while (textIndex === currentIndex){
+      textIndex = getRandomNum(0, 3);
+    }
+    currentIndex = textIndex;
     texts[0] = "<p>When Dorothy was left alone she began to feel hungry. So she went to the cupboard and cut herself some bread, which she spread with butter." +
     " She gave some to Toto, and taking a pail from the shelf she carried it down to the little brook and filled it with clear, sparkling water. " +
     "Toto ran over to the trees and began to bark at the birds sitting there. Dorothy went to get him, and saw such delicious fruit hanging from the branches that she gathered some of it," +
@@ -36,7 +41,13 @@ $(document).ready(function() {
     "before you do it.'</p><p>'I will take great care,' said Little Red-Cap to her mother, and gave her hand on it.</p><p>The grandmother lived out in the wood, half a league from the village, and just as Little Red-Cap " +
     "entered the wood, a wolf met her. Red-Cap did not know what a wicked creature he was, and was not at all afraid of him.</p><p>'Good day, Little Red-Cap,' said he.</p><p>'Thank you kindly, wolf.'</p>" +
     "<p>'Whither away so early, Little Red-Cap?'</p><p>'To my grandmother's.'</p>";
-    $('#text-container').html(texts[textIndex]);
+    texts[3] = "<p>There was once a poor widow who lived in a lonely cottage. In front of the cottage was a garden wherein stood two rose-trees, one of which bore white and the other red roses. She had two children who were " +
+    "like the two rose-trees, and one was called Snow-white, and the other Rose-red. They were as good and happy, as busy and cheerful as ever two children in the world were, only Snow-white was more quiet and gentle than Rose-red. " +
+    "Rose-red liked better to run about in the meadows and fields seeking flowers and catching butterflies; but Snow-white sat at home with her mother, and helped her with her housework, or read to her when there was nothing to do. " +
+    "</p><p>The two children were so fond of one another that they always held each other by the hand when they went out together, and when Snow-white said: 'We will not leave each other,' Rose-red answered: 'Never so long as we live,' " +
+    "and their mother would add: 'What one has she must share with the other.'</p><p>They often ran about the forest alone and gathered red berries, and no beasts did them any harm, but came close to them trustfully. The little hare would " +
+    "eat a cabbage-leaf out of their hands, the roe grazed by their side, the stag leapt merrily by them, and the birds sat still upon the boughs, and sang whatever they knew.</p>";
+    $('.text-container').html(texts[currentIndex]);
 
     $('#timer').html('01:00');
     $('#user-input').val("");
@@ -45,9 +56,9 @@ $(document).ready(function() {
   function countDown(){
     var timer = $('#timer');
     seconds--;
-    addZero(seconds);
+    seconds = addZero(seconds);
     timer.html("00:" + seconds);
-    if (seconds > 0){
+    if (seconds >= 1){
       setTimeout(countDown, 1000);
     } else {
       timer.html("00:00");
@@ -56,11 +67,11 @@ $(document).ready(function() {
   }
 
   /* Format the time */
-  function addZero(time){
-    if (time < 0){
-      time = "0" + time;
+  function addZero(number){
+    if (number < 10){
+      number = "0" + number;
     }
-    return time;
+    return number;
   }
 
   function getResult(){
@@ -68,7 +79,7 @@ $(document).ready(function() {
     var correctWords = 0;
     var mistakeAnswerPairs = {};
     var userInput = $('#user-input').val();
-    var text = $('#text-container').text();
+    var text = $('#text-passage').text();
 
     var userWordArray = splitWords(userInput);
     var textWordArray = splitWords(text);
@@ -91,14 +102,17 @@ $(document).ready(function() {
       for (var mistake in mistakeAnswerPairs){
         mistakeCount ++;
         answer = mistakeAnswerPairs[mistake];
-        mistakeContainer.append("<p>You typed " + mistake + ", the correct word was " + answer + ".</p>");
+        mistakeContainer.append("<p>" + mistake + ": " + answer + "</p>");
       }
+      $('#mistakes-number').text(mistakeCount);
     }
 
     function showResults(){
-      $('#result').text("You typed " + totalWords + " wpm");
-      $('#adjustedResult').text("Your adjusted score is " + correctWords + " wpm!");
+      $('#totalResult').text("Total: " + totalWords + " wpm");
+      $('#adjustedResult').text("Adjusted Total: " + correctWords + " wpm");
       showMistakes();
+
+      $('.results-container').show();
     }
 
     showResults();
@@ -111,6 +125,13 @@ $(document).ready(function() {
     return array;
   }
 
+  function resetTest(){
+    $('#totalResult').text('');
+    $('#adjustedResult').text('');
+    $('#mistakes').text('');
+    init();
+  }
+
   /* Start Test */
   $('#user-input').on('input', function(){
     if (!testStarted){
@@ -121,7 +142,8 @@ $(document).ready(function() {
 
   /* Reset Test */
   $('#reset-btn').click(function(){
-    init();
+    resetTest();
+    $('.results-container').hide();
   });
 
   init();
