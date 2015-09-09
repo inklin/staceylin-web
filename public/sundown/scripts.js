@@ -1,11 +1,9 @@
 $(document).ready(function() {
-  
-  // Get current time
-  function getTime() {
-    var date = new Date(),
-        hours = date.getHours(),
-        minutes = date.getMinutes(),
-        seconds = date.getSeconds();
+
+  var time;
+
+  function getTime(){
+    time = Date.now();
   }
 
   getTime();
@@ -20,19 +18,42 @@ $(document).ready(function() {
       getSundown(latitude, longitude);
     });
 
-
   }
-
   getLocation();
 
   function getSundown(lat, lon){
     var sunset;
     var sunrise;
+    var remainingTime;
 
-    var weatherAPI = "http://api.openweathermap.org/data/2.5/weather?lat={"+ lat + "}&lon={" + lon + "}";
+    var weatherAPI = "http://api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon=" + lon;
+
     $.getJSON (weatherAPI, function(data){
-      sunset = data.sys.sunset;
-      sunrise = data.sys.sunrise;
+
+      // convert sunset time from seconds to milliseconds
+      sunset = data.sys.sunset * 1000;
+
+      if (sunset > time){
+        remainingTime = sunset - time;
+        console.log('It is still day out');
+        console.log(remainingTime);
+        convertMilliseconds(remainingTime);
+
+      } else {
+        console.log("You should be sleeping!");
+      }
     });
   }
+
+  function convertMilliseconds(time_in_milliseconds){
+    var time_in_seconds = time_in_milliseconds / 1000;
+    var seconds = Math.floor(time_in_seconds % 60);
+    var minutes = Math.floor((time_in_seconds / 60) % 60);
+    var hours = Math.floor(time_in_seconds / (60 * 60));
+
+    console.log(hours);
+    console.log(minutes);
+  }
+
+
 });
