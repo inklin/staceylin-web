@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
-  var time;
-
-  function getTime(){
-    time = Date.now();
+  function init(){
+    if ('geolocation' in navigator){
+      getLocation();
+    } else {
+      alert('Sorry, it seems geolocation is not available for your browser.');
+    }
   }
-
-  getTime();
 
   // Get user location
   function getLocation(){
@@ -19,22 +19,28 @@ $(document).ready(function() {
     });
 
   }
-  getLocation();
 
+  // Make api call and get sundown time for the location
   function getSundown(lat, lon){
     var sunset;
-    var sunrise;
     var remainingTime;
 
     var weatherAPI = "http://api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon=" + lon;
 
     $.getJSON (weatherAPI, function(data){
-
       // convert sunset time from seconds to milliseconds
       sunset = data.sys.sunset * 1000;
 
-      if (sunset > time){
-        remainingTime = sunset - time;
+      showRemaining(sunset);
+    });
+  }
+
+  // Calculate and show remaining time until sundown 
+  function showRemaining(sunset_time){
+    var time = Date.now();
+
+    if (sunset_time > time){
+        remainingTime = sunset_time - time;
         console.log('It is still day out');
         console.log(remainingTime);
         convertMilliseconds(remainingTime);
@@ -42,9 +48,9 @@ $(document).ready(function() {
       } else {
         console.log("You should be sleeping!");
       }
-    });
   }
 
+  // Convert time in milliseconds to hours, minutes, seconds
   function convertMilliseconds(time_in_milliseconds){
     var time_in_seconds = time_in_milliseconds / 1000;
     var seconds = Math.floor(time_in_seconds % 60);
@@ -53,7 +59,8 @@ $(document).ready(function() {
 
     console.log(hours);
     console.log(minutes);
+    console.log(seconds);
   }
 
-
+  init();
 });
