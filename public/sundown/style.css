@@ -7,7 +7,7 @@ body {
   position: relative;
   width: 12em;
   height: 12em;
-  margin: 0 auto;
+  margin: 200px auto 0 auto;
 }
 /* sun */
 .sun {
@@ -22,8 +22,19 @@ body {
 
 .water {
   background-color: #01D9D9;
-  width: 10em;
-  height: 0.8em;
+  left: 50%;
   position: absolute;
-  bottom: 0;
+  border-radius: 1em;
+  height: 0.5em;
+  -webkit-transform: translateX(-50%);
+}
+
+.water.top {
+  width: 9.4em;
+  bottom: 1.8em;
+}
+
+.water.bottom {
+  width: 6.5em;
+  bottom: 0.6em;
 }
