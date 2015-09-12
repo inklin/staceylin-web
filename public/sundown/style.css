@@ -1,3 +1,29 @@
 body {
+  background-color: #F3F5DF;
+}
 
+/* Sunset */
+.sun-container {
+  position: relative;
+  width: 12em;
+  height: 12em;
+  margin: 0 auto;
+}
+/* sun */
+.sun {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #FF6F5D, #FF427D 60%);
+  border-radius: 50%;
+  position: absolute;
+  -webkit-clip-path: inset(0 0 50px 0);
+  clip-path: inset(0 0 50px 0);
+}
+
+.water {
+  background-color: #01D9D9;
+  width: 10em;
+  height: 0.8em;
+  position: absolute;
+  bottom: 0;
 }
