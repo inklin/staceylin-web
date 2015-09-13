@@ -1,5 +1,16 @@
 body {
   background-color: #F3F5DF;
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 1.3em;
+}
+
+a {
+  color: #008080;
+}
+.navigation {
+  font-size: 0.8em;
+  margin: 20px 0 0 50px;
+  word-spacing: 50px;
 }
 
 /* Sunset */
@@ -7,7 +18,7 @@ body {
   position: relative;
   width: 12em;
   height: 12em;
-  margin: 200px auto 0 auto;
+  margin: 150px auto 0 auto;
 }
 /* sun */
 .sun {
@@ -27,14 +38,43 @@ body {
   border-radius: 1em;
   height: 0.5em;
   -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .water.top {
   width: 9.4em;
-  bottom: 1.8em;
+  bottom: 1.3em;
 }
 
 .water.bottom {
   width: 6.5em;
-  bottom: 0.6em;
+  bottom: 0.2em;
+}
+
+/* Night time color setup */
+.sun-container.night .sun {
+  background: linear-gradient(to bottom, #FCE98B, #FCAE3E 80%);
+}
+
+.sun-container.night .water {
+  background-color: #16428E;
+}
+
+body.night {
+  background-color: #0A162C;
+  color: #E9ECF2;
+}
+
+.information {
+  text-align: center;
+  margin: 50px 0 30px 0;
+}
+
+.remaining-time {
+  margin: 20px 0;
+}
+
+.credit {
+  margin: 50px 0 0 0;
+  font-size: 0.8em;
 }

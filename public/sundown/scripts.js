@@ -14,7 +14,6 @@ $(document).ready(function() {
     navigator.geolocation.getCurrentPosition(function(position){
       var latitude = position.coords.latitude;
       var longitude = position.coords.longitude;
-
       getSundown(latitude, longitude);
     });
 
@@ -23,6 +22,7 @@ $(document).ready(function() {
   // Make api call and get sundown time for the location
   function getSundown(lat, lon){
     var sunset;
+    var sunrise;
     var remainingTime;
 
     var weatherAPI = "http://api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon=" + lon;
@@ -30,23 +30,26 @@ $(document).ready(function() {
     $.getJSON (weatherAPI, function(data){
       // convert sunset time from seconds to milliseconds
       sunset = data.sys.sunset * 1000;
-
-      showRemaining(sunset);
+      sunrise = data.sys.sunrise * 1000;
+      showRemaining(sunset, sunrise);
     });
   }
 
   // Calculate and show remaining time until sundown 
-  function showRemaining(sunset_time){
+  function showRemaining(sunset_time, sunrise_time){
     var time = Date.now();
+    var formattedTime;
 
-    if (sunset_time > time){
+    if (sunset_time < sunrise_time){
         remainingTime = sunset_time - time;
-        console.log('It is still day out');
-        console.log(remainingTime);
-        convertMilliseconds(remainingTime);
-
+        formattedTime = convertMilliseconds(remainingTime);
+        $('.remaining-time').text(formattedTime + ' before sundown');
       } else {
-        console.log("You should be sleeping!");
+        remainingTime = sunrise_time - time;
+        formattedTime = convertMilliseconds(remainingTime);
+        $('.remaining-time').text(formattedTime + ' before sunrise');
+        $('body').addClass('night');
+        $('.sun-container').addClass('night');
       }
   }
 
@@ -57,9 +60,7 @@ $(document).ready(function() {
     var minutes = Math.floor((time_in_seconds / 60) % 60);
     var hours = Math.floor(time_in_seconds / (60 * 60));
 
-    console.log(hours);
-    console.log(minutes);
-    console.log(seconds);
+    return hours + ' hours ' + minutes + ' minutes';
   }
 
   init();
