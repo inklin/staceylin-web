@@ -3,6 +3,7 @@ $(document).ready(function() {
   var testStarted;
   var seconds;
   var currentIndex;
+  var texts = [];
 
   function getRandomNum(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -12,7 +13,6 @@ $(document).ready(function() {
     testStarted = false;
     seconds = 60;
 
-    var texts = [];
     texts[0] = "<p>When Dorothy was left alone she began to feel hungry. So she went to the cupboard and cut herself some bread, which she spread with butter." +
     " She gave some to Toto, and taking a pail from the shelf she carried it down to the little brook and filled it with clear, sparkling water. " +
     "Toto ran over to the trees and began to bark at the birds sitting there. Dorothy went to get him, and saw such delicious fruit hanging from the branches that she gathered some of it," +
@@ -131,7 +131,20 @@ $(document).ready(function() {
     $('#totalResult').text('');
     $('#adjustedResult').text('');
     $('#mistakes').text('');
-    init();
+    
+    seconds = 60;
+    testStarted = false;
+
+    textIndex = getRandomNum(0, texts.length - 1);
+    while (textIndex === currentIndex){
+      textIndex = getRandomNum(0, texts.length - 1);
+    }
+    currentIndex = textIndex;
+
+    $('.text-container').html(texts[currentIndex]);
+
+    $('#timer').html('01:00');
+    $('#user-input').val("");
   }
 
   /* Start Test */
