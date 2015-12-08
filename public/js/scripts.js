@@ -101,7 +101,7 @@ $(document).ready(function(){
       image: 'img/pong.png',
       description: "I used HTML5 canvas and JavaScript to create the classic game of Pong.",
       layout: 'landscape',
-      link: 'pool-clock'
+      link: 'pong'
     },
     { name: 'Rainbow Piano',
       image: 'img/piano.png',
